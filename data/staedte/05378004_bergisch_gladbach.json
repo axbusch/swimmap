@@ -1,0 +1,26 @@
+{
+ "ags": "05378004",
+ "stadt": "Bergisch Gladbach",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Bäderbetriebsgesellschaft Bergisch Gladbach. Öffentliches Hallenbad: Kombibad Paffrath (dienstags nur Schul-/Vereinsschwimmen). Hans-Zanders-Bad ist reines Schul- und Vereinsbad; Mediterana private Therme (nicht gezählt). Wasserfläche Hallenbad nicht einzeln veröffentlicht.",
+ "baeder": [
+  {
+   "name": "Kombibad Paffrath (Hallenbad)",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Bäderbetriebsgesellschaft Bergisch Gladbach",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo,Mi,Fr 06:15-21:30",
+    "Do 06:15-21:00",
+    "Sa 06:15-20:00",
+    "So 08:00-18:00"
+   ],
+   "quelle": {
+    "url": "https://www.baeder-gl.de/kombibad-paffrath/oeffnungszeiten.aspx",
+    "abgerufen": "2026-11-04"
+   }
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "ags": "05970040",
+ "stadt": "Siegen",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Stadt Siegen; Wasserflächen aus Beckenmaßen. Weidenau: zeitweise nur Sportbecken bzw. 3 Bahnen öffentlich (Teilflächen). Damenbad als Zielgruppe. Hallenbad Eiserfeld wegen Sanierung geschlossen (0 h).",
+ "baeder": [
+  {
+   "name": "Hallenbad Löhrtor",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadt Siegen, Abteilung Sport und Bäder",
+   "wasserflaeche_m2": 450,
+   "slots": [
+    "Di 07:00-16:00",
+    "Di 17:30-19:30 ziel Damenbad",
+    "Mi 06:00-10:00",
+    "Mi 14:00-16:30",
+    "Mi 19:00-21:30",
+    "Do 07:00-10:00",
+    "Do 14:00-20:30",
+    "Fr 14:00-21:00",
+    "Sa,So 08:00-17:00"
+   ],
+   "quelle": {
+    "url": "https://www.siegen.de/leben-in-siegen/freizeit-sport/schwimmbaeder-hallenbaeder-freibaeder-und-naturfreibaeder/hallenbad-loehrtor",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Hallenbad Weidenau",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadt Siegen, Abteilung Sport und Bäder",
+   "wasserflaeche_m2": 625,
+   "slots": [
+    "Mo,Di,Do,Fr 06:00-08:00",
+    "Mo 14:00-17:00",
+    "Di 13:00-17:00",
+    "Do 08:00-10:00 teil 0.5 nur Sportbecken",
+    "Do,Fr 14:00-18:00",
+    "Do,Fr 18:00-19:00 teil 0.5 nur Sportbecken",
+    "Do,Fr 19:00-20:00",
+    "Fr 08:00-09:00 teil 0.3 3 Bahnen Sportbecken",
+    "Fr 09:00-10:00",
+    "Sa,So 08:00-14:00"
+   ],
+   "quelle": {
+    "url": "https://www.siegen.de/leben-in-siegen/freizeit-sport/schwimmbaeder-hallenbaeder-freibaeder-und-naturfreibaeder/hallenbad-weidenau",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Hallenbad Eiserfeld",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadt Siegen, Abteilung Sport und Bäder",
+   "wasserflaeche_m2": 440,
+   "slots": [],
+   "quelle": {
+    "url": "https://www.siegen.de/leben-in-siegen/freizeit-sport/schwimmbaeder-hallenbaeder-freibaeder-und-naturfreibaeder/hallenbad-eiserfeld",
+    "abgerufen": "2026-11-04"
+   },
+   "hinweis": "Sanierung, geschlossen"
+  }
+ ]
+}

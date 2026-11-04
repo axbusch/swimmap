@@ -586,7 +586,8 @@ function renderNrw() {
   }).join('');
   document.getElementById('missing').innerHTML =
     (noArea.length ? `<p class="missing"><b>Wasserflächen nicht veröffentlicht (${noArea.length}):</b> ${noArea.map(s => esc(s.stadt)).join(', ')} – für diese Kennzahl nicht vergleichbar.</p>` : '') +
-    (open.length ? `<p class="missing"><b>Noch nicht erfasst (${open.length} von ${NRW.staedte.length}):</b> ${open.map(s => esc(s.stadt)).join(', ')}</p>` : '');
+    (open.length ? `<p class="missing"><b>Noch nicht erfasst (${open.length} von ${NRW.staedte.length}):</b> ${open.map(s => `<span title="${esc(s.hinweis)}">${esc(s.stadt)}</span>`).join(', ')} – Betreiberseiten automatisiert nicht abrufbar.</p>` : '') +
+    '<div class="callout">Vergleichbarkeit: Viele Städte nennen durchgehende Öffnungszeiten, in denen Schul- und Vereinsbetrieb parallel läuft. Münster weist diese Zeiten meist als nicht öffentlich aus. Details im Reiter Methodik und je Stadt in der Tabelle (Hinweis per Maus).</div>';
   const dash = (v, f) => (v == null ? '–' : f(v));
   const rows = NRW.staedte.filter(s => s.kennzahlen)
     .sort((a, b) => b.kennzahlen.stunden_je_10k_ew - a.kennzahlen.stunden_je_10k_ew).map(s => {
@@ -623,6 +624,15 @@ function renderMethodik() {
     <li><b>Wasserfläche je 1.000 Einwohner:</b> reine Infrastruktur-Kennzahl der Bäder mit öffentlichen Zeiten. Münster: <b>${fmt1(k.wasserflaeche_m2_je_1000_ew)}</b> m².</li>
   </ul>
   <p>Für den NRW-Vergleich zählen nur <b>kommunale Hallenbäder</b> (Stadt oder städtische Bäder-/Stadtwerkegesellschaft), weil Freibäder saisonal sind und Bäder anderer Träger sehr unterschiedlich zugänglich sind. Freibäder und andere Träger lassen sich in der Münster-Karte zuschalten.</p>
+  <h3>Regeln für die Vergleichsstädte</h3>
+  <ul>
+    <li><b>Freizeitbäder:</b> Reine Freizeitbereiche (Wellenbad, Rutschen, Erlebnisbecken) zählen nicht zur Kernkennzahl. Sportbecken in Freizeitbädern zählen, wenn sie eigene Zeiten haben oder der Betreiber keine Trennung ausweist.</li>
+    <li><b>Getrennt betriebene Hallen</b> eines Standorts (z. B. zwei Schwimmhallen mit eigenen Zeiten) zählen einzeln.</li>
+    <li><b>Schließungen:</b> Revisionen und vorübergehende Schließungen ändern nichts, gezählt wird der reguläre Plan. Bäder, die wegen Sanierung oder Neubau langfristig (etwa ein Jahr und mehr) geschlossen sind, zählen mit 0 Stunden.</li>
+    <li><b>Teilbelegung:</b> Nennt ein Betreiber, dass nur ein Teil der Bahnen öffentlich ist, wird das als Teilfläche erfasst. Viele Betreiber nennen dagegen durchgehende Öffnungszeiten mit Schul- und Vereinsbetrieb parallel. Deren Stunden sind eher eine Obergrenze. Münster weist Schul- und Vereinszeiten meist als komplett nicht öffentlich aus. Das verschiebt den Vergleich tendenziell zu Ungunsten Münsters.</li>
+    <li><b>Wasserflächen</b> veröffentlichen nur einige Betreiber. Fehlen sie bei einem Bad mit öffentlichen Zeiten, wird die Stadt in den Flächen-Kennzahlen nicht gewertet.</li>
+    <li><b>Offene Städte:</b> Einige Betreiberseiten waren automatisiert nicht abrufbar (Bot-Schutz, nicht erreichbar, dynamisch nachgeladen). Diese Städte sind als „noch nicht erfasst“ markiert, der Grund steht in den Daten.</li>
+  </ul>
   <h2>Einzugsbereiche</h2>
   <p>Für jede bewohnte und unbewohnte 100-m-Zelle des Zensus-2022-Gitters im Stadtgebiet wird die Reisezeit zu jedem Bad berechnet:</p>
   <ul>

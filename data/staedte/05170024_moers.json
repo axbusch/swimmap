@@ -1,0 +1,44 @@
+{
+ "ags": "05170024",
+ "stadt": "Moers",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "ENNI Sport & Bäder; Zeiten aus dem Öffnungszeiten-Kalender der Betreiberseite für die Woche 9.–15.11.2026. Solimare Aktivbad: zwei warme Kursbecken (Familien/Kurse), werktags Schul-/Vereinssport. Sportpark Rheinkamp: Sportbad 25 m, 6 Bahnen. Wasserflächen nicht veröffentlicht.",
+ "baeder": [
+  {
+   "name": "Solimare Aktivbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "ENNI Sport & Bäder Niederrhein GmbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 06:30-08:00",
+    "Mo 17:00-21:30",
+    "Fr 06:30-08:00",
+    "Sa,So 10:00-17:00"
+   ],
+   "quelle": {
+    "url": "https://www.enni.de/freizeit/oeffnungszeiten-freizeiteinrichtungen/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Sportpark Rheinkamp (Hallenbad)",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "ENNI Sport & Bäder Niederrhein GmbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 13:00-14:45",
+    "Di-Fr 06:30-08:00",
+    "Di-Fr 13:00-14:45",
+    "Di,Do 17:00-21:30",
+    "Sa,So 10:00-17:00"
+   ],
+   "quelle": {
+    "url": "https://www.enni.de/freizeit/oeffnungszeiten-freizeiteinrichtungen/",
+    "abgerufen": "2026-11-04"
+   }
+  }
+ ]
+}

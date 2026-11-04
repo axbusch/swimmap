@@ -43,7 +43,7 @@ Die ausführliche Methodik und die Grenzen der Auswertung stehen auf der Webseit
 |---|---|---|
 | `data/muenster_baeder.json` | Bäder, Zeitslots, Wasserflächen, Einschränkungen | stadt-muenster.de/sportamt/baeder (Abruf 04.11.2026) u. a., je Bad verlinkt |
 | `data/nrw_population.csv` | Einwohner der 29 NRW-Großstädte | IT.NRW, Tabelle 12411-02i, 31.12.2025, Basis Zensus 2022 (dl-de/by-2-0) |
-| `data/nrw_staedte.json` | Bäder und Zeiten der Vergleichsstädte | je Bad verlinkt |
+| `data/staedte/*.json` | Bäder und Zeiten der Vergleichsstädte (eine Datei je Stadt, Format in `data/staedte/README.md`) | je Bad verlinkt, Abruf 04.11.2026 |
 
 Abgeleitete bzw. große Rohdaten (nicht im Repository, werden von den Skripten geladen):
 
@@ -73,6 +73,15 @@ Hinweis: Der GTFS-Feed gilt jeweils nur einige Wochen. Der Stichtag muss im Gül
 ## Daten aktualisieren
 
 Öffnungszeiten ändern sich häufig (Ferien, Revisionen, Personalmangel). Zum Aktualisieren die Slots in
-`data/muenster_baeder.json` bzw. `data/nrw_staedte.json` anpassen, `stand` und `quelle.abgerufen` setzen und
+`data/muenster_baeder.json` bzw. `data/staedte/<AGS>_<stadt>.json` anpassen, `stand` und `quelle.abgerufen` setzen und
 `scripts/04_build_web.py` ausführen. Die Reisezeiten müssen nur neu berechnet werden, wenn Bäder hinzukommen oder
 wegfallen.
+
+## Stand NRW-Vergleich
+
+26 von 29 Großstädten sind erfasst. Offen sind Wuppertal (Bot-Schutz der Stadtseite), Mülheim an der Ruhr
+(Badinfos dynamisch nachgeladen) und Solingen (Betreiberseite nicht erreichbar). Für diese Städte genügt es, die
+Zeiten im Browser abzulesen und eine Datei nach dem Muster in `data/staedte/` anzulegen.
+
+Recherche-Hilfen in `scripts/tools/`: `fetch_text.py` (Seite → Text), `eaero.py` (eaero-Öffnungszeiten-Widgets),
+`render_text.py` (JavaScript-Seiten über Edge/Playwright; `pip install playwright`).
