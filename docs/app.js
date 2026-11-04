@@ -81,10 +81,17 @@ const calcPools = () => (state.focus ? [BY_ID[state.focus]] : activePools());
 /* Laden                                                               */
 /* ------------------------------------------------------------------ */
 async function load() {
-  const get = p => fetch(p).then(r => { if (!r.ok) throw new Error(p + ': ' + r.status); return r.json(); });
-  const [ms, raster, nrw, grenze] = await Promise.all([
-    get('data/muenster.json'), get('data/raster.json'), get('data/nrw.json'), get('data/grenze.geojson'),
-  ]);
+  let ms, raster, nrw, grenze;
+  const B = window.SWIMMAP_DATA;
+  if (B) {
+    // eingebettete Daten (data/bundle.js) – funktioniert auch bei file://
+    ({ muenster: ms, raster, nrw, grenze } = B);
+  } else {
+    const get = p => fetch(p).then(r => { if (!r.ok) throw new Error(p + ': ' + r.status); return r.json(); });
+    [ms, raster, nrw, grenze] = await Promise.all([
+      get('data/muenster.json'), get('data/raster.json'), get('data/nrw.json'), get('data/grenze.geojson'),
+    ]);
+  }
   MS = ms; R = raster; NRW = nrw;
   MS.baeder.forEach(b => (BY_ID[b.id] = b));
   R.baeder.forEach((id, i) => (IDX[id] = i));

@@ -87,3 +87,14 @@ for ags, (name, ew) in pop.items():
 (WEB / "nrw.json").write_text(json.dumps({"staedte": staedte, "methodik": nrw_src.get("methodik", "")},
                                          ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 print("NRW:", sum(1 for s in staedte if s["status"] != "offen"), "von", len(staedte), "Städten erfasst")
+
+# --- Bundle für file:// ----------------------------------------------------
+# Browser blockieren fetch() bei lokal geöffneten Dateien. Ein <script> mit den
+# Daten funktioniert dagegen überall (Doppelklick, GitHub Pages, Webserver).
+bundle = {name: json.loads((WEB / f"{name}.json").read_text(encoding="utf-8"))
+          for name in ("muenster", "raster", "nrw")}
+bundle["grenze"] = json.loads((WEB / "grenze.geojson").read_text(encoding="utf-8"))
+(WEB / "bundle.js").write_text(
+    "/* automatisch erzeugt von scripts/04_build_web.py */\nwindow.SWIMMAP_DATA = "
+    + json.dumps(bundle, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
+print("Bundle:", round((WEB / "bundle.js").stat().st_size / 1e6, 2), "MB")

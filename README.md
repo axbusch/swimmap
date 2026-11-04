@@ -6,14 +6,18 @@ Interaktive Karte der öffentlichen Schwimmbäder in Münster (Westfalen) mit
 - **Einzugsbereichen** zu Fuß, mit dem Rad und mit dem ÖPNV (Reisezeit auf 100-m-Raster),
 - **Kennzahlen** zum Vergleich mit den übrigen NRW-Großstädten (Stunden je 10.000 Einwohner u. a.).
 
-Die Webseite liegt in [`docs/`](docs/) und ist eine statische Seite (Leaflet, keine API-Schlüssel). Sie läuft
-z. B. über GitHub Pages (Quelle: Branch `master`, Ordner `/docs`) oder lokal:
+Die Webseite liegt in [`docs/`](docs/) und ist eine statische Seite (Leaflet, keine API-Schlüssel). Zum
+Anschauen genügt ein Doppelklick auf `docs/index.html`, weil die Daten als `docs/data/bundle.js` eingebettet sind.
+Veröffentlichen lässt sie sich z. B. über GitHub Pages (Quelle: Branch `master`, Ordner `/docs`). Alternativ
+lokal mit einem Webserver:
 
 ```sh
 cd docs
 python -m http.server 8000
 # http://localhost:8000
 ```
+
+Für Karte und Hintergrundkacheln ist eine Internetverbindung nötig.
 
 ## Methodik in Kürze
 
