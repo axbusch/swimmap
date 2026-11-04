@@ -18,6 +18,7 @@ Stadtkennzahlen (Kern: städtische Hallenbäder):
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 TAGE = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
@@ -82,12 +83,40 @@ def slots_of(bad: dict) -> list[dict]:
     return [x for s in bad.get("slots", []) for x in parse_slot(s)]
 
 
+ABEND_AB = 17.0  # werktags ab 17 Uhr = für Berufstätige/Schüler nutzbar
+
+ZIELGRUPPEN = [  # (Suchmuster, Bezeichnung)
+    (r"tin", "TIN* (trans, inter, nicht-binär)"),
+    (r"schwanger|behinderung", "Schwangere & Menschen mit Behinderung"),
+    (r"frauen.*kind|eltern|kind", "Eltern/Frauen mit Kindern"),
+    (r"frau|damen|mädchen", "Frauen"),
+    (r"herren|männer", "Männer"),
+    (r"senior|60", "Senior:innen"),
+    (r"jahreskarte", "nur Jahreskarten-Inhaber"),
+    (r"chill|ab 18", "Erwachsene (ab 18)"),
+]
+
+
+def zielgruppe_label(hinweis: str | None) -> str:
+    h = (hinweis or "").lower()
+    for pat, label in ZIELGRUPPEN:
+        if re.search(pat, h):
+            return label
+    return hinweis or "Zielgruppe"
+
+
+def _overlap(a: float, b: float, lo: float, hi: float) -> float:
+    return max(0.0, min(b, hi) - max(a, lo))
+
+
 def bad_kennzahlen(bad: dict) -> dict:
     flaeche = bad.get("wasserflaeche_m2")
-    h = hv = hz = wfh = 0.0
+    h = hv = hz = wfh = abend = we = 0.0
     pro_tag = {t: 0.0 for t in TAGE}
+    zg = {}
     for s in slots_of(bad):
-        d = slot_dauer(s) * s.get("haeufigkeit", 1.0)
+        f = s.get("haeufigkeit", 1.0)
+        d = slot_dauer(s) * f
         art = s["art"]
         if art in OEFFENTLICH:
             h += d
@@ -96,12 +125,21 @@ def bad_kennzahlen(bad: dict) -> dict:
                 hv += d
             if flaeche:
                 wfh += d * flaeche * s.get("flaechenanteil", 1.0)
+            if s["tag"] in ("Sa", "So"):
+                we += d
+            else:
+                abend += _overlap(_h(s["von"]), _h(s["bis"]), ABEND_AB, 24.0) * f
         elif art == "zielgruppe":
             hz += d
+            lab = zielgruppe_label(s.get("hinweis"))
+            zg[lab] = zg.get(lab, 0.0) + d
     return {
         "stunden_woche": round(h, 2),
         "stunden_voll_woche": round(hv, 2),
         "stunden_zielgruppe_woche": round(hz, 2),
+        "zielgruppen": {k: round(v, 2) for k, v in sorted(zg.items(), key=lambda x: -x[1])},
+        "stunden_abend_woche": round(abend, 2),
+        "stunden_wochenende_woche": round(we, 2),
         "m2h_woche": round(wfh, 1) if flaeche else None,
         "stunden_pro_tag": {k: round(v, 2) for k, v in pro_tag.items()},
     }
@@ -121,33 +159,30 @@ def stadt_kennzahlen(baeder: list[dict], einwohner: int, filt=None) -> dict:
     m2h = sum(k["m2h_woche"] or 0 for k in ks)
     flaeche = sum((b.get("wasserflaeche_m2") or 0) for b, k in zip(sel, ks) if k["stunden_woche"] > 0)
     flaeche_fehlt = [b["name"] for b, k in zip(sel, ks) if k["stunden_woche"] > 0 and not b.get("wasserflaeche_m2")]
-    if flaeche_fehlt:  # unvollständige Flächen würden die Kennzahl verzerren
-        return {
-            "anzahl_baeder": len(sel),
-            "anzahl_baeder_oeffentlich": sum(1 for k in ks if k["stunden_woche"] > 0),
-            "stunden_woche": round(h, 1),
-            "m2h_woche": None,
-            "wasserflaeche_oeffentlich_m2": None,
-            "einwohner": einwohner,
-            "stunden_je_10k_ew": round(h / einwohner * 10_000, 2),
-            "m2h_je_1000_ew": None,
-            "wasserflaeche_m2_je_1000_ew": None,
-            "datenluecken": [f"Wasserfläche fehlt: {n}" for n in flaeche_fehlt]
-                            + [b["name"] for b in sel if b.get("zeiten_unbekannt")],
-        }
-    return {
+    abend = sum(k["stunden_abend_woche"] for k in ks)
+    we = sum(k["stunden_wochenende_woche"] for k in ks)
+    out = {
         "anzahl_baeder": len(sel),
         "anzahl_baeder_oeffentlich": sum(1 for k in ks if k["stunden_woche"] > 0),
         "stunden_woche": round(h, 1),
+        "stunden_abend_woche": round(abend, 1),
+        "stunden_wochenende_woche": round(we, 1),
         "m2h_woche": round(m2h),
         "wasserflaeche_oeffentlich_m2": round(flaeche, 1),
         "einwohner": einwohner,
         "stunden_je_10k_ew": round(h / einwohner * 10_000, 2),
+        "abend_je_10k_ew": round(abend / einwohner * 10_000, 2),
+        "wochenende_je_10k_ew": round(we / einwohner * 10_000, 2),
         "m2h_je_1000_ew": round(m2h / einwohner * 1_000, 1),
         "wasserflaeche_m2_je_1000_ew": round(flaeche / einwohner * 1_000, 2),
         "datenluecken": [b["name"] for b, k in zip(sel, ks) if b.get("zeiten_unbekannt") or (k["stunden_woche"] > 0 and not b.get("wasserflaeche_m2"))],
     }
-
+    if flaeche_fehlt:  # unvollständige Flächen würden die Kennzahl verzerren
+        out.update({"m2h_woche": None, "wasserflaeche_oeffentlich_m2": None, "m2h_je_1000_ew": None,
+                    "wasserflaeche_m2_je_1000_ew": None,
+                    "datenluecken": [f"Wasserfläche fehlt: {n}" for n in flaeche_fehlt]
+                    + [b["name"] for b in sel if b.get("zeiten_unbekannt")]})
+    return out
 
 if __name__ == "__main__":
     root = Path(__file__).resolve().parents[1]

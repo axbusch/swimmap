@@ -237,3 +237,4 @@ header.top select { font: inherit; font-size: 15px; padding: 4px 8px; border-rad
 .checks label[hidden] { display: none; }
 
 .kpi-note { grid-column: 1 / -1; margin: 2px 0 0; }
+.zg { text-decoration: underline dotted; cursor: help; }

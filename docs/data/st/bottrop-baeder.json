@@ -95,6 +95,11 @@
     "stunden_woche": 43.0,
     "stunden_voll_woche": 43.0,
     "stunden_zielgruppe_woche": 1.5,
+    "zielgruppen": {
+     "Frauen": 1.5
+    },
+    "stunden_abend_woche": 5.5,
+    "stunden_wochenende_woche": 10.0,
     "m2h_woche": 22747.0,
     "stunden_pro_tag": {
      "Mo": 3.5,
@@ -199,6 +204,11 @@
     "stunden_woche": 42.0,
     "stunden_voll_woche": 42.0,
     "stunden_zielgruppe_woche": 1.5,
+    "zielgruppen": {
+     "Frauen": 1.5
+    },
+    "stunden_abend_woche": 5.5,
+    "stunden_wochenende_woche": 10.0,
     "m2h_woche": 10500.0,
     "stunden_pro_tag": {
      "Mo": 3.5,
@@ -248,6 +258,9 @@
     "stunden_woche": 11.75,
     "stunden_voll_woche": 11.75,
     "stunden_zielgruppe_woche": 0.0,
+    "zielgruppen": {},
+    "stunden_abend_woche": 0.0,
+    "stunden_wochenende_woche": 10.0,
     "m2h_woche": 3671.9,
     "stunden_pro_tag": {
      "Mo": 1.75,

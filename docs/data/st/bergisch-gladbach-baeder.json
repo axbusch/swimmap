@@ -58,6 +58,9 @@
     "stunden_woche": 84.25,
     "stunden_voll_woche": 84.25,
     "stunden_zielgruppe_woche": 0.0,
+    "zielgruppen": {},
+    "stunden_abend_woche": 17.5,
+    "stunden_wochenende_woche": 23.75,
     "m2h_woche": null,
     "stunden_pro_tag": {
      "Mo": 15.25,

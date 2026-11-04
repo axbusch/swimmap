@@ -42,6 +42,14 @@ const METRICS = {
     label: 'Stunden je 10.000 EW', fmt: v => fmt1(v),
     note: 'Öffentliche Schwimmstunden pro Woche aller kommunalen Hallenbäder zusammen, je 10.000 Einwohner.',
   },
+  abend_je_10k_ew: {
+    label: 'Abends', fmt: v => fmt1(v),
+    note: 'Öffentliche Schwimmstunden werktags (Mo–Fr) ab 17 Uhr je 10.000 Einwohner – die Zeiten, die Berufstätige und Schulkinder nach Schule/Arbeit nutzen können.',
+  },
+  wochenende_je_10k_ew: {
+    label: 'Wochenende', fmt: v => fmt1(v),
+    note: 'Öffentliche Schwimmstunden an Samstagen und Sonntagen je 10.000 Einwohner.',
+  },
   m2h_je_1000_ew: {
     label: 'Wasserflächen-Stunden', fmt: v => fmt0(v),
     note: 'Öffentliche Stunden × Wasserfläche (m²·h pro Woche) je 1.000 Einwohner – berücksichtigt, wie groß die Bäder sind.',
@@ -425,7 +433,11 @@ function badSection(b, multi) {
   const warn = b.zeiten_unbekannt ? '<div class="callout">Öffentliche Zeiten derzeit nicht veröffentlicht.</div>'
     : b.zeiten_unsicher ? '<div class="callout">Zeiten aus Drittquelle, nicht vom Betreiber bestätigt.</div>'
     : b.cat === 'geschlossen' ? `<div class="callout">${esc(b.hinweis || 'Derzeit geschlossen.')}</div>` : '';
-  const zg = k.stunden_zielgruppe_woche > 0 ? ` + ${fmt1(k.stunden_zielgruppe_woche)} h Zielgruppen` : '';
+  const zgList = Object.entries(k.zielgruppen || {});
+  const zg = k.stunden_zielgruppe_woche > 0
+    ? ` + <span class="zg" title="${esc(zgList.map(([g, h]) => `${g}: ${fmt1(h)} h`).join(' · '))}">${fmt1(k.stunden_zielgruppe_woche)} h Zielgruppen</span>` : '';
+  const zgLine = zgList.length
+    ? `<div class="note">Zielgruppenzeiten: ${zgList.map(([g, h]) => `${esc(g)} ${fmt1(h)} h`).join(' · ')}</div>` : '';
   const saison = b.saison ? `<div>Saison 2026: ${fmtDate(b.saison.von)} – ${fmtDate(b.saison.bis)}</div>` : '';
   const sommer = b.sommer ? `<div class="note">Sommer: ${esc(b.sommer)}</div>` : '';
   const hinweis = b.hinweis && b.cat !== 'geschlossen' ? `<div class="note">${esc(b.hinweis)}</div>` : '';
@@ -436,6 +448,8 @@ function badSection(b, multi) {
   return `${multi ? `<h5>${esc(b.name)} <span class="tag">${esc(CATS[b.cat].label.split(' (')[0])}</span></h5>` : ''}
     ${warn}
     <div><b>${fmt1(k.stunden_woche)} h</b> öffentliches Schwimmen pro Woche${zg}</div>
+    ${zgLine}
+    <div class="note">davon werktags ab 17 Uhr ${fmt1(k.stunden_abend_woche || 0)} h · am Wochenende ${fmt1(k.stunden_wochenende_woche || 0)} h</div>
     <div>${flaeche}${k.m2h_woche ? ` · ${fmt0(k.m2h_woche)} m²·h` : ''}</div>
     ${saison}${b.slots && b.slots.length ? weekSvg(b) : ''}${sommer}${hinweis}${ein}${q}`;
 }
@@ -531,6 +545,13 @@ function renderLegend() {
   } else { leg.innerHTML = ''; note.textContent = ''; }
 }
 
+// Kennzeichnung für öffentliche Zeiten, die höchstens jede zweite Woche stattfinden
+function selten(b) {
+  const s = (b.slots || []).filter(x => x.art !== 'zielgruppe' && (x.haeufigkeit ?? 1) <= 0.5);
+  if (!s.length) return '';
+  return s.every(x => x.tag === 'Sa' || x.tag === 'So') ? 'jedes 2. Wochenende' : 'teils nicht jede Woche';
+}
+
 function renderPools() {
   const list = document.getElementById('pools');
   const pools = activeBaeder().slice().sort((a, b) => b.kennzahlen.stunden_woche - a.kennzahlen.stunden_woche);
@@ -544,7 +565,7 @@ function renderPools() {
     const badge = b.cat === 'geschlossen' ? '<span class="badge">geschlossen</span>'
       : b.zeiten_unbekannt ? '<span class="badge">Zeiten unbekannt</span>'
       : b.zeiten_unsicher ? '<span class="badge">Zeiten unsicher</span>'
-      : (b.slots || []).some(s => (s.haeufigkeit ?? 1) <= 0.5) ? '<span class="badge">jedes 2. Wochenende</span>' : '';
+      : selten(b) ? `<span class="badge">${selten(b)}</span>` : '';
     const cov = comp.perSt[b.standort_id];
     li.innerHTML = `
       <span class="dot" style="background:${css(CATS[b.cat].cssVar)}"></span>
@@ -565,6 +586,54 @@ function renderPools() {
       `<p><button type="button" id="unfocus">Alle Bäder anzeigen</button></p>`;
     det.querySelector('#unfocus').addEventListener('click', () => setFocus(null));
   } else det.innerHTML = '';
+}
+
+/* Wochenraster: wie viele (gewählte) Bäder sind zu welcher Zeit öffentlich offen? */
+const WG_H0 = 6, WG_H1 = 23, WG_STEP = 0.5;
+const WG_CLASSES = [
+  { min: 5, color: '#104281', label: '5+' },
+  { min: 4, color: '#1c5cab', label: '4' },
+  { min: 3, color: '#2a78d6', label: '3' },
+  { min: 2, color: '#5598e7', label: '2' },
+  { min: 0.75, color: '#9ec5f4', label: '1' },
+  { min: 0.01, color: '#cde2fb', label: 'nicht jede Woche' },
+];
+function renderWeekGrid() {
+  const el = document.getElementById('weekgrid');
+  const pools = activeBaeder().filter(b => b.cat !== 'geschlossen' && b.cat !== 'freibad');
+  const nb = Math.round((WG_H1 - WG_H0) / WG_STEP);
+  const toH = s => { const [a, c] = s.split(':').map(Number); return a + c / 60; };
+  const grid = TAGE.map(() => Array.from({ length: nb }, () => ({ v: 0, names: [] })));
+  for (const b of pools) {
+    for (const s of b.slots || []) {
+      if (s.art === 'zielgruppe') continue;
+      const d = TAGE.indexOf(s.tag), a = toH(s.von), e = toH(s.bis), f = s.haeufigkeit ?? 1;
+      for (let i = 0; i < nb; i++) {
+        const t0 = WG_H0 + i * WG_STEP, t1 = t0 + WG_STEP;
+        const ov = Math.max(0, Math.min(e, t1) - Math.max(a, t0)) / WG_STEP;
+        if (ov >= 0.5) { grid[d][i].v += f; grid[d][i].names.push(b.name); }
+      }
+    }
+  }
+  const W = 360, L0 = 24, T0 = 14, ROW = 16, cw = (W - L0 - 2) / nb, H = T0 + ROW * 7 + 2;
+  let gapH = 0;
+  let s = `<svg class="week" viewBox="0 0 ${W} ${H}" role="img" aria-label="Wochenraster geöffneter Bäder">`;
+  for (let h = WG_H0; h <= 21; h += 3) s += `<text x="${L0 + (h - WG_H0) / WG_STEP * cw}" y="9" text-anchor="middle">${h}</text>`;
+  TAGE.forEach((t, d) => {
+    s += `<text x="0" y="${T0 + ROW * d + ROW / 2 + 3}">${t}</text>`;
+    for (let i = 0; i < nb; i++) {
+      const c = grid[d][i], t0 = WG_H0 + i * WG_STEP;
+      if (c.v === 0 && t0 >= 6 && t0 < 22) gapH += WG_STEP;
+      const cls = WG_CLASSES.find(k => c.v >= k.min);
+      const hh = String(Math.floor(t0)).padStart(2, '0') + ':' + (t0 % 1 ? '30' : '00');
+      const tip = `${t} ${hh}: ${c.v === 0 ? 'kein Bad öffentlich offen' : `${fmt1(c.v).replace(',0', '')} Bad/Bäder offen – ${c.names.join(', ')}`}`;
+      s += `<rect x="${L0 + i * cw + 0.5}" y="${T0 + ROW * d + 1}" width="${cw - 1}" height="${ROW - 2}" rx="2" fill="${cls ? cls.color : css('--surface-2')}"><title>${esc(tip)}</title></rect>`;
+    }
+  });
+  s += '</svg>';
+  const leg = WG_CLASSES.slice().reverse().map(c => `<span><i style="background:${c.color}"></i>${c.label}</span>`).join('');
+  el.innerHTML = s + `<div class="week-legend"><span><i style="background:${css('--surface-2')}"></i>keins</span>${leg}</div>
+    <p class="note">${pools.length ? `Zwischen 6 und 22 Uhr hat an <b>${fmt1(gapH)} Stunden pro Woche</b> keines der gewählten Bäder öffentlich geöffnet (von 112 Stunden).` : 'Keine Bäder gewählt.'} Ohne Freibäder und Zielgruppenzeiten.</p>`;
 }
 
 function setFocus(id, fly) {
@@ -613,6 +682,7 @@ function update() {
   renderKpis();
   renderLegend();
   renderPools();
+  renderWeekGrid();
 }
 
 /* ------------------------------------------------------------------ */

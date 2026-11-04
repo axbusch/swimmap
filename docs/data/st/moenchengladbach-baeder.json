@@ -59,6 +59,9 @@
     "stunden_woche": 84.0,
     "stunden_voll_woche": 84.0,
     "stunden_zielgruppe_woche": 0.0,
+    "zielgruppen": {},
+    "stunden_abend_woche": 16.0,
+    "stunden_wochenende_woche": 24.0,
     "m2h_woche": 88620.0,
     "stunden_pro_tag": {
      "Mo": 15.0,
@@ -150,6 +153,9 @@
     "stunden_woche": 32.5,
     "stunden_voll_woche": 32.5,
     "stunden_zielgruppe_woche": 0.0,
+    "zielgruppen": {},
+    "stunden_abend_woche": 2.0,
+    "stunden_wochenende_woche": 19.5,
     "m2h_woche": 7312.5,
     "stunden_pro_tag": {
      "Mo": 2.0,
@@ -217,6 +223,9 @@
     "stunden_woche": 68.0,
     "stunden_voll_woche": 68.0,
     "stunden_zielgruppe_woche": 0.0,
+    "zielgruppen": {},
+    "stunden_abend_woche": 16.0,
+    "stunden_wochenende_woche": 24.0,
     "m2h_woche": 39916.0,
     "stunden_pro_tag": {
      "Mo": 11.0,
@@ -285,6 +294,9 @@
     "stunden_woche": 66.0,
     "stunden_voll_woche": 66.0,
     "stunden_zielgruppe_woche": 0.0,
+    "zielgruppen": {},
+    "stunden_abend_woche": 16.0,
+    "stunden_wochenende_woche": 22.0,
     "m2h_woche": 20658.0,
     "stunden_pro_tag": {
      "Mo": 0.0,
@@ -358,6 +370,9 @@
     "stunden_woche": 77.0,
     "stunden_voll_woche": 77.0,
     "stunden_zielgruppe_woche": 0.0,
+    "zielgruppen": {},
+    "stunden_abend_woche": 20.0,
+    "stunden_wochenende_woche": 22.0,
     "m2h_woche": 29953.0,
     "stunden_pro_tag": {
      "Mo": 11.0,
@@ -427,6 +442,9 @@
     "stunden_woche": 55.0,
     "stunden_voll_woche": 55.0,
     "stunden_zielgruppe_woche": 0.0,
+    "zielgruppen": {},
+    "stunden_abend_woche": 10.0,
+    "stunden_wochenende_woche": 10.0,
     "m2h_woche": 30195.0,
     "stunden_pro_tag": {
      "Mo": 0.0,

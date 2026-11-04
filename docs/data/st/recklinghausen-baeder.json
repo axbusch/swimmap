@@ -58,6 +58,9 @@
     "stunden_woche": 43.0,
     "stunden_voll_woche": 43.0,
     "stunden_zielgruppe_woche": 0.0,
+    "zielgruppen": {},
+    "stunden_abend_woche": 0.0,
+    "stunden_wochenende_woche": 5.0,
     "m2h_woche": null,
     "stunden_pro_tag": {
      "Mo": 7.0,
@@ -166,6 +169,12 @@
     "stunden_woche": 38.0,
     "stunden_voll_woche": 38.0,
     "stunden_zielgruppe_woche": 7.0,
+    "zielgruppen": {
+     "Frauen": 4.0,
+     "nur Jahreskarten-Inhaber": 3.0
+    },
+    "stunden_abend_woche": 14.5,
+    "stunden_wochenende_woche": 15.5,
     "m2h_woche": null,
     "stunden_pro_tag": {
      "Mo": 6.0,
