@@ -37,6 +37,7 @@
           <div class="lbl">Einzugsbereich</div>
           <div class="seg" id="mode" role="group" aria-label="Verkehrsmittel"></div>
           <div class="seg" id="thr" role="group" aria-label="Reisezeit" style="margin-top:6px"></div>
+          <div class="seg" id="group" role="group" aria-label="Bezugsgruppe" style="margin-top:6px"></div>
         </div>
         <div class="ctrl">
           <div class="lbl">Kartenebene</div>
@@ -60,7 +61,7 @@
         <p class="note">Nur kommunale Hallenbäder, allgemeines öffentliches Schwimmen, regulärer Winter-Wochenplan. Einwohner: IT.NRW, 31.12.2025. Klick auf eine Stadt öffnet ihre Karte.</p>
         <div class="ctrl">
           <div class="lbl">Kennzahl</div>
-          <div class="seg" id="metric" role="group" aria-label="Kennzahl"></div>
+          <select id="metric" class="metricsel" aria-label="Kennzahl"></select>
         </div>
         <p class="note" id="metric-note"></p>
         <div class="bars" id="bars"></div>

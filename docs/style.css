@@ -238,3 +238,4 @@ header.top select { font: inherit; font-size: 15px; padding: 4px 8px; border-rad
 
 .kpi-note { grid-column: 1 / -1; margin: 2px 0 0; }
 .zg { text-decoration: underline dotted; cursor: help; }
+.metricsel { font: inherit; font-size: 14px; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); max-width: 100%; }

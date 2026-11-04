@@ -10,6 +10,10 @@ const MODES = {
   pt: { label: 'ÖPNV', short: 'mit Bus & Bahn' },
 };
 const THRS = [10, 15, 20, 30];
+const GROUPS = {
+  alle: { label: 'Alle Einwohner', plural: 'Einwohner', sing: 'Einwohner' },
+  kinder: { label: 'Kinder 6–15', plural: 'Kinder (6–15 J.)', sing: 'Kind (6–15 J.)' },
+};
 // Reihenfolge = Priorität für die Markerfarbe eines Standorts
 const CATS = {
   hallenbad: { label: 'Kommunale Hallenbäder', letter: 'H', cssVar: '--cat-hallenbad', def: true },
@@ -50,6 +54,22 @@ const METRICS = {
     label: 'Wochenende', fmt: v => fmt1(v),
     note: 'Öffentliche Schwimmstunden an Samstagen und Sonntagen je 10.000 Einwohner.',
   },
+  ew_rad15: {
+    label: 'Einwohner: Bad ≤ 15 min Rad', fmt: v => fmtPct(v),
+    note: 'Anteil der Einwohner (Zensus-Raster), die ein kommunales Hallenbad mit öffentlichen Zeiten in höchstens 15 Minuten mit dem Rad erreichen.',
+  },
+  kinder_rad15: {
+    label: 'Kinder 6–15: Bad ≤ 15 min Rad', fmt: v => fmtPct(v),
+    note: 'Anteil der Schulkinder (6–15 Jahre, Zensus 2022), die ein kommunales Hallenbad in höchstens 15 Minuten mit dem Rad erreichen.',
+  },
+  kinder_fuss15: {
+    label: 'Kinder 6–15: Bad ≤ 15 min zu Fuß', fmt: v => fmtPct(v),
+    note: 'Anteil der Schulkinder (6–15 Jahre), die ein kommunales Hallenbad in höchstens 15 Minuten zu Fuß erreichen.',
+  },
+  kinder_oepnv20: {
+    label: 'Kinder 6–15: Bad ≤ 20 min ÖPNV', fmt: v => fmtPct(v),
+    note: 'Anteil der Schulkinder (6–15 Jahre), die ein kommunales Hallenbad in höchstens 20 Minuten mit Bus und Bahn (Tür-zu-Tür, dienstags 17–19 Uhr) erreichen.',
+  },
   m2h_je_1000_ew: {
     label: 'Wasserflächen-Stunden', fmt: v => fmt0(v),
     note: 'Öffentliche Stunden × Wasserfläche (m²·h pro Woche) je 1.000 Einwohner – berücksichtigt, wie groß die Bäder sind.',
@@ -81,6 +101,7 @@ const state = {
   layer: 'tt',
   focus: null,      // Standort-ID
   metric: 'stunden_je_10k_ew',
+  group: 'alle',     // Bezugsgruppe für Anteile
 };
 const INDEX = window.SWIMMAP_INDEX;
 const CITIES = {};          // geladene Stadtdaten je slug
@@ -179,8 +200,10 @@ function setCityChrome() {
 /* Berechnung                                                          */
 /* ------------------------------------------------------------------ */
 function compute() {
-  const n = C.raster.zellen, thr = state.thr, mode = state.mode, ew = C.raster.ew;
-  const ewSum = C.raster.ew_summe || 1;
+  const n = C.raster.zellen, thr = state.thr, mode = state.mode;
+  // Bezugsgruppe: alle Einwohner oder Schulkinder 6–15 (Zensus-Altersraster)
+  const ew = state.group === 'kinder' && C.raster.kinder ? C.raster.kinder : C.raster.ew;
+  const ewSum = (state.group === 'kinder' && C.raster.kinder ? C.raster.kinder_summe : C.raster.ew_summe) || 1;
   const cb = catchBaeder().filter(b => TT[mode] && RIDX[b.standort_id] !== undefined);
   // Stunden nur innerhalb einer Saison summieren
   const winterSel = cb.some(b => !isSummer(b));
@@ -384,7 +407,7 @@ function onHover(e) {
   const name = k >= 0 ? ST[C.raster.standorte[k]].name : '–';
   const tt = t === 255 ? 'über 120 min' : `${t} min ${MODES[state.mode].short}`;
   box.innerHTML =
-    `<b>${fmt0(C.raster.ew[i])}</b> Einwohner in dieser 100-m-Zelle<br>` +
+    `<b>${fmt0(C.raster.ew[i])}</b> Einwohner in dieser 100-m-Zelle${C.raster.kinder ? `, davon ca. ${fmt0(C.raster.kinder[i])} Kinder (6–15)` : ''}<br>` +
     `${state.focus ? 'Zum Bad' : 'Nächstes Bad'}: <b>${esc(name)}</b>, ${tt}<br>` +
     `Erreichbar in ≤ ${state.thr} min: <b>${fmt0(comp.hrs[i])} h</b> öffentl. Schwimmzeit/Woche`;
   box.style.display = 'block';
@@ -498,7 +521,10 @@ function initControls(tab) {
   }
   segButtons(document.getElementById('thr'), THRS.map(t => [t, `${t} min`]), 'thr', update);
   segButtons(document.getElementById('layer'), [['tt', 'Reisezeit'], ['hours', 'Erreichbare Stunden'], ['none', 'Aus']], 'layer', update);
-  segButtons(document.getElementById('metric'), Object.entries(METRICS).map(([k, m]) => [k, m.label]), 'metric', () => { renderNrw(); writeHash(); });
+  const msel = document.getElementById('metric');
+  msel.innerHTML = Object.entries(METRICS).map(([k, m]) => `<option value="${k}" ${k === state.metric ? 'selected' : ''}>${esc(m.label)}</option>`).join('');
+  msel.addEventListener('change', () => { state.metric = msel.value; renderNrw(); writeHash(); });
+  segButtons(document.getElementById('group'), Object.entries(GROUPS).map(([k, g]) => [k, g.label]), 'group', update);
 
   const tabs = [...document.querySelectorAll('[role=tab]')];
   tabs.forEach(t => t.addEventListener('click', () => {
@@ -520,8 +546,8 @@ function renderKpis() {
   const tiles = [
     [fmt0(comp.hoursTotal) + ' h', `öffentliche Schwimmzeit pro Woche, ${saison} (${comp.nActive} Bäder/Bereiche${extra})`],
     [fmt1(comp.per10k) + ' h', `je 10.000 Einwohner und Woche (${saison})`],
-    [fmtPct(comp.share), `der Einwohner ${scope} in ≤ ${state.thr} min ${m}`],
-    [fmt0(comp.avgHours) + ' h', `Ø erreichbare öffentl. Stunden/Woche je Einwohner (≤ ${state.thr} min ${m})`],
+    [fmtPct(comp.share), `der ${GROUPS[state.group].plural} ${scope} in ≤ ${state.thr} min ${m}`],
+    [fmt0(comp.avgHours) + ' h', `Ø erreichbare öffentl. Stunden/Woche je ${GROUPS[state.group].sing} (≤ ${state.thr} min ${m})`],
   ];
   const kern = C.kennzahlen_stadt;
   const nurKern = !state.focus && Object.keys(CATS).every(k => state.cats[k] === (k === 'hallenbad' || k === 'geschlossen'));
@@ -572,7 +598,7 @@ function renderPools() {
       <span class="name">${esc(b.name)}${badge}</span>
       <span class="hval">${fmt1(k.stunden_woche)} h</span>
       <span></span><span class="hbar"><i style="width:${(k.stunden_woche / max) * 100}%"></i></span><span></span>
-      <span></span><span class="meta">${b.wasserflaeche_m2 ? fmt0(b.wasserflaeche_m2) + ' m²' : 'Fläche nicht veröffentlicht'}${cov !== undefined && b.cat !== 'geschlossen' ? ` · ${fmtPct(cov)} der Einwohner in ≤ ${state.thr} min ${MODES[state.mode].short}` : ''}</span>`;
+      <span></span><span class="meta">${b.wasserflaeche_m2 ? fmt0(b.wasserflaeche_m2) + ' m²' : 'Fläche nicht veröffentlicht'}${cov !== undefined && b.cat !== 'geschlossen' ? ` · ${fmtPct(cov)} der ${GROUPS[state.group].plural} in ≤ ${state.thr} min ${MODES[state.mode].short}` : ''}</span>`;
     const go = () => setFocus(state.focus === b.standort_id ? null : b.standort_id, true);
     li.addEventListener('click', go);
     li.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
@@ -659,6 +685,7 @@ function readHash() {
   }
   if (p.get('focus')) state.focus = p.get('focus');
   if (METRICS[p.get('metric')]) state.metric = p.get('metric');
+  if (GROUPS[p.get('group')]) state.group = p.get('group');
   return p.get('tab');
 }
 function writeHash() {
@@ -668,6 +695,7 @@ function writeHash() {
   p.set('cats', Object.keys(CATS).filter(k => state.cats[k]).join(','));
   if (state.focus) p.set('focus', state.focus);
   if (state.metric !== 'stunden_je_10k_ew') p.set('metric', state.metric);
+  if (state.group !== 'alle') p.set('group', state.group);
   const tab = document.querySelector('[role=tab][aria-selected=true]');
   if (tab && tab.id !== 'tab-ms') p.set('tab', tab.id.slice(4));
   history.replaceState(null, '', '#' + p.toString());
@@ -752,6 +780,11 @@ function renderMethodik() {
     <li><b>Wasserflächen-Stunden je 1.000 Einwohner:</b> Σ (Stunden × Wasserfläche) ÷ Einwohner × 1.000. Ein großes Bad mit vielen Stunden zählt mehr als ein kleines Lehrschwimmbecken. Münster: <b>${fmt0(k.m2h_je_1000_ew)}</b> m²·h.</li>
     <li><b>Wasserfläche je 1.000 Einwohner:</b> reine Infrastruktur-Kennzahl der Bäder mit öffentlichen Zeiten. Münster: <b>${fmt1(k.wasserflaeche_m2_je_1000_ew)}</b> m².</li>
   </ul>
+  <ul>
+    <li><b>Abends / Wochenende:</b> öffentliche Stunden werktags (Mo–Fr) ab 17 Uhr bzw. an Samstagen und Sonntagen, je 10.000 Einwohner – die Zeiten, die Berufstätige, Schulkinder und Familien tatsächlich nutzen können.</li>
+    <li><b>Erreichbarkeit:</b> Anteil der Einwohner bzw. der Schulkinder (6–15 Jahre), die ein kommunales Hallenbad mit öffentlichen Zeiten in höchstens 15 Minuten mit dem Rad, 15 Minuten zu Fuß oder 20 Minuten mit dem ÖPNV erreichen. Kinderzahlen aus dem Zensus-2022-Raster „Alter in infrastrukturellen Altersgruppen“; geheim gehaltene Einzelwerte in schwach besetzten Zellen wurden anteilig geschätzt (ca. 11 % der Kinder).</li>
+    <li><b>Wochenraster:</b> Zahl der gewählten Bäder, die je halbe Stunde öffentliches Schwimmen anbieten (Slots, die nicht jede Woche stattfinden, anteilig). Zielgruppenzeiten und Freibäder sind nicht enthalten.</li>
+  </ul>
   <p>Für den NRW-Vergleich zählen nur <b>kommunale Hallenbäder</b> (Stadt oder städtische Bäder-/Stadtwerkegesellschaft). Freibäder und Bäder anderer Träger sind nur für Münster erfasst und dort in der Karte zuschaltbar.</p>
   <h3>Regeln für die Vergleichsstädte</h3>
   <ul>
@@ -781,7 +814,7 @@ function renderMethodik() {
   </ul>
   <h2>Daten &amp; Code</h2>
   <p>Rohdaten mit Quellen: <a href="data/nrw.json">nrw.json</a> sowie je Stadt <code>data/st/&lt;stadt&gt;-baeder.json</code> (z. B. <a href="data/st/muenster-baeder.json">Münster</a>). Die Skripte zur Erhebung und Berechnung liegen im Repository (Ordner <code>scripts/</code>).</p>
-  <p class="note">Kartengrundlage: basemap.de / BKG (CC BY 4.0) bzw. © OpenStreetMap-Mitwirkende (ODbL). Wegenetz und Lage der Bäder: OpenStreetMap (ODbL). ÖPNV: gtfs.de, DELFI e.V. (CC BY 4.0). Bevölkerung: Zensus 2022, Statistische Ämter des Bundes und der Länder (dl-de/by-2-0). Einwohner: IT.NRW (dl-de/by-2-0).</p>`;
+  <p class="note">Kartengrundlage: basemap.de / BKG (CC BY 4.0) bzw. © OpenStreetMap-Mitwirkende (ODbL). Wegenetz und Lage der Bäder: OpenStreetMap (ODbL). ÖPNV: gtfs.de, DELFI e.V. (CC BY 4.0). Bevölkerung und Altersgruppen: Zensus 2022, Statistische Ämter des Bundes und der Länder (dl-de/by-2-0). Einwohner: IT.NRW (dl-de/by-2-0).</p>`;
 }
 
 init().catch(err => {

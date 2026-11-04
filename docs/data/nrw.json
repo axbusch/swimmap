@@ -33,7 +33,13 @@
      "Wasserfläche fehlt: Wahnbad",
      "Wasserfläche fehlt: Zollstockbad",
      "Wasserfläche fehlt: Zündorfbad"
-    ]
+    ],
+    "ew_rad15": 0.748,
+    "kinder_rad15": 0.704,
+    "ew_fuss15": 0.1463,
+    "kinder_fuss15": 0.1294,
+    "ew_oepnv20": 0.4257,
+    "kinder_oepnv20": 0.366
    },
    "karte": true,
    "baeder": [
@@ -136,7 +142,13 @@
      "Wasserfläche fehlt: Familienbad Niederheid",
      "Wasserfläche fehlt: Gartenhallenbad Unterrath",
      "Wasserfläche fehlt: Badehaus Benrath – Sportbereich"
-    ]
+    ],
+    "ew_rad15": 0.8582,
+    "kinder_rad15": 0.8305,
+    "ew_fuss15": 0.1664,
+    "kinder_fuss15": 0.1324,
+    "ew_oepnv20": 0.5248,
+    "kinder_oepnv20": 0.4558
    },
    "karte": true,
    "baeder": [
@@ -223,7 +235,13 @@
     "wochenende_je_10k_ew": 1.12,
     "m2h_je_1000_ew": 297.5,
     "wasserflaeche_m2_je_1000_ew": 5.98,
-    "datenluecken": []
+    "datenluecken": [],
+    "ew_rad15": 0.5647,
+    "kinder_rad15": 0.5532,
+    "ew_fuss15": 0.1391,
+    "kinder_fuss15": 0.1388,
+    "ew_oepnv20": 0.4166,
+    "kinder_oepnv20": 0.401
    },
    "karte": true,
    "baeder": [
@@ -294,7 +312,13 @@
     "wasserflaeche_m2_je_1000_ew": null,
     "datenluecken": [
      "Wasserfläche fehlt: Alte Badeanstalt (Altenessen)"
-    ]
+    ],
+    "ew_rad15": 0.8764,
+    "kinder_rad15": 0.8797,
+    "ew_fuss15": 0.1614,
+    "kinder_fuss15": 0.1605,
+    "ew_oepnv20": 0.5447,
+    "kinder_oepnv20": 0.5545
    },
    "karte": true,
    "baeder": [
@@ -391,7 +415,13 @@
      "Wasserfläche fehlt: Allwetterbad Walsum",
      "Wasserfläche fehlt: Hallenbad Neudorf",
      "Wasserfläche fehlt: Rhein-Ruhr-Bad Hamborn"
-    ]
+    ],
+    "ew_rad15": 0.6175,
+    "kinder_rad15": 0.6362,
+    "ew_fuss15": 0.092,
+    "kinder_fuss15": 0.0832,
+    "ew_oepnv20": 0.2322,
+    "kinder_oepnv20": 0.2367
    },
    "karte": true,
    "baeder": [
@@ -452,7 +482,13 @@
      "Wasserfläche fehlt: Hallenfreibad Hofstede",
      "Wasserfläche fehlt: Hallenbad Linden",
      "Wasserfläche fehlt: Hallenbad Querenburg"
-    ]
+    ],
+    "ew_rad15": 0.4247,
+    "kinder_rad15": 0.4247,
+    "ew_fuss15": 0.0539,
+    "kinder_fuss15": 0.054,
+    "ew_oepnv20": 0.2453,
+    "kinder_oepnv20": 0.2412
    },
    "karte": true,
    "baeder": [
@@ -526,7 +562,13 @@
      "Wasserfläche fehlt: Sportbad Aquawede (Brackwede)",
      "Wasserfläche fehlt: Sportbad Sennestadt",
      "Wasserfläche fehlt: Familienbad Heepen"
-    ]
+    ],
+    "ew_rad15": 0.6242,
+    "kinder_rad15": 0.5955,
+    "ew_fuss15": 0.0946,
+    "kinder_fuss15": 0.0796,
+    "ew_oepnv20": 0.2895,
+    "kinder_oepnv20": 0.2457
    },
    "karte": true,
    "baeder": [
@@ -583,7 +625,13 @@
     "wochenende_je_10k_ew": 1.33,
     "m2h_je_1000_ew": 175.2,
     "wasserflaeche_m2_je_1000_ew": 5.42,
-    "datenluecken": []
+    "datenluecken": [],
+    "ew_rad15": 0.6588,
+    "kinder_rad15": 0.6111,
+    "ew_fuss15": 0.1323,
+    "kinder_fuss15": 0.0932,
+    "ew_oepnv20": 0.3222,
+    "kinder_oepnv20": 0.2625
    },
    "karte": true,
    "baeder": [
@@ -640,7 +688,13 @@
     "wochenende_je_10k_ew": 2.79,
     "m2h_je_1000_ew": 420.3,
     "wasserflaeche_m2_je_1000_ew": 10.02,
-    "datenluecken": []
+    "datenluecken": [],
+    "ew_rad15": 0.817,
+    "kinder_rad15": 0.7583,
+    "ew_fuss15": 0.1765,
+    "kinder_fuss15": 0.1618,
+    "ew_oepnv20": 0.4352,
+    "kinder_oepnv20": 0.3802
    },
    "karte": true,
    "baeder": [
@@ -715,7 +769,13 @@
     "wochenende_je_10k_ew": 2.83,
     "m2h_je_1000_ew": 549.4,
     "wasserflaeche_m2_je_1000_ew": 8.02,
-    "datenluecken": []
+    "datenluecken": [],
+    "ew_rad15": 0.7045,
+    "kinder_rad15": 0.7039,
+    "ew_fuss15": 0.1321,
+    "kinder_fuss15": 0.1356,
+    "ew_oepnv20": 0.3353,
+    "kinder_oepnv20": 0.3332
    },
    "karte": true,
    "baeder": [
@@ -776,7 +836,13 @@
      "Wasserfläche fehlt: Hallenbad Buer",
      "Wasserfläche fehlt: Hallenbad Horst",
      "Wasserfläche fehlt: Sport-Paradies – Frühschwimmen"
-    ]
+    ],
+    "ew_rad15": 0.4512,
+    "kinder_rad15": 0.4094,
+    "ew_fuss15": 0.0763,
+    "kinder_fuss15": 0.065,
+    "ew_oepnv20": 0.2446,
+    "kinder_oepnv20": 0.2117
    },
    "karte": true,
    "baeder": [
@@ -831,7 +897,13 @@
      "Wasserfläche fehlt: Elisabethhalle",
      "Wasserfläche fehlt: Schwimmhalle Süd",
      "Wasserfläche fehlt: Schwimmhalle Brand"
-    ]
+    ],
+    "ew_rad15": 0.7551,
+    "kinder_rad15": 0.6961,
+    "ew_fuss15": 0.2242,
+    "kinder_fuss15": 0.1548,
+    "ew_oepnv20": 0.5136,
+    "kinder_oepnv20": 0.4015
    },
    "karte": true,
    "baeder": [
@@ -891,7 +963,13 @@
     "datenluecken": [
      "Wasserfläche fehlt: Badezentrum Bockum",
      "Wasserfläche fehlt: Bad am Stadtpark Fischeln"
-    ]
+    ],
+    "ew_rad15": 0.5918,
+    "kinder_rad15": 0.5885,
+    "ew_fuss15": 0.056,
+    "kinder_fuss15": 0.0504,
+    "ew_oepnv20": 0.2608,
+    "kinder_oepnv20": 0.2619
    },
    "karte": true,
    "baeder": [
@@ -939,7 +1017,13 @@
     "datenluecken": [
      "Wasserfläche fehlt: Hallenbad Oberhausen",
      "Wasserfläche fehlt: Hallenbad Sterkrade"
-    ]
+    ],
+    "ew_rad15": 0.8017,
+    "kinder_rad15": 0.8051,
+    "ew_fuss15": 0.1621,
+    "kinder_fuss15": 0.1753,
+    "ew_oepnv20": 0.3876,
+    "kinder_oepnv20": 0.4057
    },
    "karte": true,
    "baeder": [
@@ -986,7 +1070,13 @@
     "wasserflaeche_m2_je_1000_ew": null,
     "datenluecken": [
      "Wasserfläche fehlt: Westfalenbad – Schwimmen"
-    ]
+    ],
+    "ew_rad15": 0.4578,
+    "kinder_rad15": 0.4843,
+    "ew_fuss15": 0.0288,
+    "kinder_fuss15": 0.0302,
+    "ew_oepnv20": 0.1846,
+    "kinder_oepnv20": 0.1984
    },
    "karte": true,
    "baeder": [
@@ -1030,7 +1120,13 @@
      "Wasserfläche fehlt: Lagune Herringen",
      "Wasserfläche fehlt: Sport-Aquarium Bockum-Hövel",
      "Wasserfläche fehlt: Maximare – 50-m-Sportbecken"
-    ]
+    ],
+    "ew_rad15": 0.7867,
+    "kinder_rad15": 0.7899,
+    "ew_fuss15": 0.1426,
+    "kinder_fuss15": 0.1412,
+    "ew_oepnv20": 0.3149,
+    "kinder_oepnv20": 0.3023
    },
    "karte": true,
    "baeder": [
@@ -1101,7 +1197,13 @@
     "wasserflaeche_m2_je_1000_ew": null,
     "datenluecken": [
      "Wasserfläche fehlt: Hallenbad Wiembachtal"
-    ]
+    ],
+    "ew_rad15": 0.3248,
+    "kinder_rad15": 0.3085,
+    "ew_fuss15": 0.0588,
+    "kinder_fuss15": 0.0598,
+    "ew_oepnv20": 0.1795,
+    "kinder_oepnv20": 0.1713
    },
    "karte": true,
    "baeder": [
@@ -1155,7 +1257,13 @@
     "datenluecken": [
      "Wasserfläche fehlt: Wananas",
      "Wasserfläche fehlt: Südpool (Hallenbad)"
-    ]
+    ],
+    "ew_rad15": 0.7802,
+    "kinder_rad15": 0.7918,
+    "ew_fuss15": 0.0983,
+    "kinder_fuss15": 0.0869,
+    "ew_oepnv20": 0.2218,
+    "kinder_oepnv20": 0.2144
    },
    "karte": true,
    "baeder": [
@@ -1204,7 +1312,13 @@
      "Wasserfläche fehlt: Schwimmoper",
      "Wasserfläche fehlt: Alisobad Elsen",
      "Wasserfläche fehlt: Residenzbad Schloss Neuhaus"
-    ]
+    ],
+    "ew_rad15": 0.8125,
+    "kinder_rad15": 0.7725,
+    "ew_fuss15": 0.1536,
+    "kinder_fuss15": 0.1373,
+    "ew_oepnv20": 0.4223,
+    "kinder_oepnv20": 0.404
    },
    "karte": true,
    "baeder": [
@@ -1255,7 +1369,13 @@
     "wochenende_je_10k_ew": 3.64,
     "m2h_je_1000_ew": 1096.9,
     "wasserflaeche_m2_je_1000_ew": 15.3,
-    "datenluecken": []
+    "datenluecken": [],
+    "ew_rad15": 0.6856,
+    "kinder_rad15": 0.6646,
+    "ew_fuss15": 0.1953,
+    "kinder_fuss15": 0.1785,
+    "ew_oepnv20": 0.4197,
+    "kinder_oepnv20": 0.4021
    },
    "karte": true,
    "baeder": [
@@ -1306,7 +1426,13 @@
     "wochenende_je_10k_ew": 2.53,
     "m2h_je_1000_ew": 311.6,
     "wasserflaeche_m2_je_1000_ew": 9.21,
-    "datenluecken": []
+    "datenluecken": [],
+    "ew_rad15": 0.9179,
+    "kinder_rad15": 0.9208,
+    "ew_fuss15": 0.166,
+    "kinder_fuss15": 0.1612,
+    "ew_oepnv20": 0.4218,
+    "kinder_oepnv20": 0.436
    },
    "karte": true,
    "baeder": [
@@ -1360,7 +1486,13 @@
     "datenluecken": [
      "Wasserfläche fehlt: Hallenbad Herner Straße",
      "Wasserfläche fehlt: Südbad (Hallenbad)"
-    ]
+    ],
+    "ew_rad15": 0.817,
+    "kinder_rad15": 0.8206,
+    "ew_fuss15": 0.1177,
+    "kinder_fuss15": 0.1245,
+    "ew_oepnv20": 0.3276,
+    "kinder_oepnv20": 0.3487
    },
    "karte": true,
    "baeder": [
@@ -1408,7 +1540,13 @@
     "datenluecken": [
      "Wasserfläche fehlt: H2O Badeparadies",
      "Wasserfläche fehlt: Sportbad am Stadtpark"
-    ]
+    ],
+    "ew_rad15": 0.6868,
+    "kinder_rad15": 0.6961,
+    "ew_fuss15": 0.138,
+    "kinder_fuss15": 0.1375,
+    "ew_oepnv20": 0.3364,
+    "kinder_oepnv20": 0.3234
    },
    "karte": true,
    "baeder": [
@@ -1455,7 +1593,13 @@
     "wasserflaeche_m2_je_1000_ew": null,
     "datenluecken": [
      "Wasserfläche fehlt: Kombibad Paffrath (Hallenbad)"
-    ]
+    ],
+    "ew_rad15": 0.3784,
+    "kinder_rad15": 0.3847,
+    "ew_fuss15": 0.0458,
+    "kinder_fuss15": 0.0429,
+    "ew_oepnv20": 0.114,
+    "kinder_oepnv20": 0.1094
    },
    "karte": true,
    "baeder": [
@@ -1494,7 +1638,13 @@
     "wochenende_je_10k_ew": 2.93,
     "m2h_je_1000_ew": 476.5,
     "wasserflaeche_m2_je_1000_ew": 10.49,
-    "datenluecken": []
+    "datenluecken": [],
+    "ew_rad15": 0.6659,
+    "kinder_rad15": 0.636,
+    "ew_fuss15": 0.1224,
+    "kinder_fuss15": 0.0858,
+    "ew_oepnv20": 0.3631,
+    "kinder_oepnv20": 0.3098
    },
    "karte": true,
    "baeder": [
@@ -1548,7 +1698,13 @@
     "datenluecken": [
      "Wasserfläche fehlt: Solimare Aktivbad",
      "Wasserfläche fehlt: Sportpark Rheinkamp (Hallenbad)"
-    ]
+    ],
+    "ew_rad15": 0.6785,
+    "kinder_rad15": 0.6669,
+    "ew_fuss15": 0.0733,
+    "kinder_fuss15": 0.0621,
+    "ew_oepnv20": 0.29,
+    "kinder_oepnv20": 0.2763
    },
    "karte": true,
    "baeder": [

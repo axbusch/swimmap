@@ -47,12 +47,27 @@ for ags, (name, ew) in einwohner().items():
         ids = json.loads(ids_f.read_text())
         if ids == [x["id"] for x in s["standorte"]]:
             cells = pd.read_csv(out / "raster.csv")
+            kids = cells["k615"].to_numpy() if "k615" in cells else None
             tt = {}
+            arrs = {}
             for mode in ("walk", "bike", "pt"):
                 f = out / f"tt_{mode}.npy"
                 if f.exists():
                     a = np.load(f)
+                    arrs[mode] = a
                     tt[mode] = [base64.b64encode(a[i].tobytes()).decode() for i in range(a.shape[0])]
+            # Erreichbarkeit der kommunalen Hallenbäder (Kernkategorie) für den Vergleich
+            kern_st = [i for i, sid in enumerate(ids)
+                       if any(b.get("standort_id") == sid and b["cat"] == "hallenbad" and b["kennzahlen"]["stunden_woche"] > 0
+                              for b in s["baeder"])]
+            ew_c = cells.ew.to_numpy()
+            if kern_st:
+                for key, mode, t in (("rad15", "bike", 15), ("fuss15", "walk", 15), ("oepnv20", "pt", 20)):
+                    if mode in arrs:
+                        m = arrs[mode][kern_st].min(0) <= t
+                        k[f"ew_{key}"] = round(float(ew_c[m].sum() / max(1, ew_c.sum())), 4)
+                        if kids is not None:
+                            k[f"kinder_{key}"] = round(float(kids[m].sum() / max(1, kids.sum())), 4)
             city = {
                 "slug": slug, "stadt": name, "ags": ags, "einwohner": ew, "stand": s["stand"], "hinweis": s["hinweis"],
                 "bezug": s["bezug"] or "Regulärer Wochenplan Winterhalbjahr 2026/27",
@@ -62,6 +77,8 @@ for ags, (name, ew) in einwohner().items():
                 "grenze": json.loads((out / "grenze.geojson").read_text(encoding="utf-8")),
                 "raster": {"zellen": len(cells), "lat": [round(v, 5) for v in cells.lat],
                            "lon": [round(v, 5) for v in cells.lon], "ew": cells.ew.astype(int).tolist(),
+                           "kinder": [round(float(v), 1) for v in kids] if kids is not None else None,
+                           "kinder_summe": round(float(kids.sum())) if kids is not None else None,
                            "ew_summe": int(cells.ew.sum()), "standorte": ids, "tt": tt},
                 "oepnv": gtfs_meta,
             }
