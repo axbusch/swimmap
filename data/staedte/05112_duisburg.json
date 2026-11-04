@@ -1,0 +1,74 @@
+{
+ "ags": "05112",
+ "stadt": "Duisburg",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "DuisburgSport betreibt 4 öffentliche Hallenbäder (Walsum als Allwetterbad mit Cabrio-Dach). Südbad und Schwimmstadion nur für Schule/Verein/Hochschulsport (nicht gezählt). Wasserfläche nur für Toeppersee veröffentlicht (930 m²).",
+ "baeder": [
+  {
+   "name": "Allwetterbad Walsum",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "DuisburgSport (Stadt Duisburg)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Di-Fr 06:30-20:00",
+    "Sa,So 08:00-18:00"
+   ],
+   "quelle": {
+    "url": "https://www.baederportal-duisburg.de/unsere-baeder/allwetterbad-walsum/preise-oeffnungszeiten",
+    "abgerufen": "2026-11-04"
+   },
+   "ausstattung": "50-m-Edelstahlbecken mit Cabrio-Dach"
+  },
+  {
+   "name": "Hallenbad Neudorf",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "DuisburgSport (Stadt Duisburg)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Di-Fr 06:30-21:00",
+    "Sa 08:00-12:00",
+    "So 08:00-14:00"
+   ],
+   "quelle": {
+    "url": "https://www.baederportal-duisburg.de/unsere-baeder/hallenbad-neudorf/preise-oeffnungszeiten",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Hallenbad Toeppersee",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "DuisburgSport (Stadt Duisburg)",
+   "wasserflaeche_m2": 930,
+   "slots": [
+    "Di-Fr 06:30-12:00",
+    "Di-Fr 15:00-19:30",
+    "Sa 08:30-14:00",
+    "So 08:00-15:00"
+   ],
+   "quelle": {
+    "url": "https://www.baederportal-duisburg.de/unsere-baeder/hallenbad-toeppersee/preise-oeffnungszeiten",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Rhein-Ruhr-Bad Hamborn",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "DuisburgSport (Stadt Duisburg)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo-Fr 08:00-22:00",
+    "Sa,So 08:00-21:00"
+   ],
+   "quelle": {
+    "url": "https://www.baederportal-duisburg.de/unsere-baeder/rhein-ruhr-bad-hamborn/aktionspreise-oeffnungszeiten",
+    "abgerufen": "2026-11-04"
+   },
+   "ausstattung": "Erlebnis-, Sport- und Mehrzweckbecken"
+  }
+ ]
+}

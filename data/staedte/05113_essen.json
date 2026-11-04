@@ -1,0 +1,224 @@
+{
+ "ags": "05113",
+ "stadt": "Essen",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Städtische Bäder der Sport- und Bäderbetriebe Essen; mehrere Bäder werden von Vereinen im Auftrag der Stadt geführt (Borbeck, Kupferdreh, Werden, Alte Badeanstalt) – zu städtischen Tarifen, daher kommunal gezählt. Friedrichsbad ist an den Essener Sportbund verpachtet (andere Träger). Wasserflächen aus Beckenmaßen; für die Alte Badeanstalt fehlen Maße, daher keine Flächenkennzahl. Rüttenscheid: 50-m-Becken nur auf mind. 2 Bahnen öffentlich (als Teilfläche).",
+ "baeder": [
+  {
+   "name": "Schwimmzentrum Rüttenscheid – Mehrzweckhalle",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Sport- und Bäderbetriebe Essen",
+   "wasserflaeche_m2": 434.5,
+   "slots": [
+    "Di,Mi 06:30-21:30",
+    "Do 06:30-18:45",
+    "Do 19:00-21:00 ziel Schwangere und Menschen mit Behinderung",
+    "Fr 06:30-21:30",
+    "Sa 06:30-17:45",
+    "So 08:00-14:45"
+   ],
+   "quelle": {
+    "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/schwimmzentrum_ruettenscheid.de.html",
+    "abgerufen": "2026-11-04"
+   },
+   "ausstattung": "Mehrzweckbecken 25 × 12,5 m, Lehrschwimmbecken 12,5 × 8 m, Kinderbecken"
+  },
+  {
+   "name": "Schwimmzentrum Rüttenscheid – 50-m-Becken",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Sport- und Bäderbetriebe Essen",
+   "wasserflaeche_m2": 1050,
+   "slots": [
+    "Di,Mi,Fr 06:30-16:00 teil 0.25 mind. 2 Bahnen",
+    "Di,Mi,Fr 20:00-21:30 teil 0.25",
+    "Do 06:30-16:00 teil 0.25",
+    "Sa 06:30-14:00 teil 0.25",
+    "So 08:00-14:45 teil 0.25"
+   ],
+   "quelle": {
+    "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/schwimmzentrum_ruettenscheid.de.html",
+    "abgerufen": "2026-11-04"
+   },
+   "ausstattung": "50 × 21 m"
+  },
+  {
+   "name": "Sportbad Thurmfeld",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Sport- und Bäderbetriebe Essen",
+   "wasserflaeche_m2": 667,
+   "slots": [
+    "Mo-Fr 06:00-10:00"
+   ],
+   "quelle": {
+    "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/sportbad_thurmfeld.de.html",
+    "abgerufen": "2026-11-04"
+   },
+   "wasserflaeche_geschaetzt": true,
+   "ausstattung": "25-m-Becken 8 Bahnen (≈500 m², geschätzt), Lehrschwimmbecken 167 m²"
+  },
+  {
+   "name": "Nord-Ost-Bad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Sport- und Bäderbetriebe Essen",
+   "wasserflaeche_m2": 425,
+   "slots": [
+    "Mo,Di 07:00-10:00",
+    "Mi 07:00-10:00",
+    "Mi 16:00-21:00",
+    "Do 07:00-10:00",
+    "Fr 07:00-21:00",
+    "Sa 07:00-13:00",
+    "So 08:00-13:00"
+   ],
+   "quelle": {
+    "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/nord_ost_bad.de.html",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Schwimmzentrum Kettwig",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Sport- und Bäderbetriebe Essen",
+   "wasserflaeche_m2": 322.5,
+   "slots": [
+    "Mo 06:30-10:00",
+    "Di 06:30-10:00",
+    "Di 16:00-21:00",
+    "Mi 06:30-10:00",
+    "Do 06:30-21:00",
+    "Fr 06:30-18:00",
+    "Sa 08:00-16:00",
+    "So 08:00-13:00"
+   ],
+   "quelle": {
+    "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/schwimmzentrum_kettwig.de.html",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Bad und Sport Oststadt",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Sport- und Bäderbetriebe Essen",
+   "wasserflaeche_m2": 382.75,
+   "slots": [
+    "Mo 06:30-10:00",
+    "Di 06:30-10:00",
+    "Di 16:00-21:00",
+    "Mi 06:30-10:00",
+    "Do 06:30-21:00",
+    "Fr 06:30-10:00",
+    "Fr 16:00-19:00",
+    "Sa 06:30-16:00",
+    "So 08:00-13:00"
+   ],
+   "quelle": {
+    "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/bad_und_sport_oststadt.de.html",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Stadtbad Borbeck",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "TuS 84/10 Essen e. V. (Betriebsführung für die Stadt)",
+   "wasserflaeche_m2": 312.5,
+   "slots": [
+    "Mo 07:00-09:15",
+    "Di 06:30-09:15",
+    "Mi 07:00-09:15",
+    "Mi 16:00-19:30",
+    "Do 06:30-09:15",
+    "Fr 07:00-11:15",
+    "Fr 14:00-20:00",
+    "Sa 07:00-13:00",
+    "So 08:00-12:00"
+   ],
+   "quelle": {
+    "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/stadtbad_borbeck.de.html",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Stadtbad Kupferdreh",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "IG Stadtbad Kupferdreh e. V. (im Namen der Stadt)",
+   "wasserflaeche_m2": 250,
+   "slots": [
+    "Mo-Mi 07:00-10:00",
+    "Do 07:00-10:00",
+    "Do 16:00-21:00",
+    "Fr 07:00-13:00",
+    "Fr 16:00-21:00",
+    "Sa 07:00-13:00"
+   ],
+   "quelle": {
+    "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/stadtbad_kupferdreh.de.html",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Stadtbad Werden",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Werdener Turnerbund 1886 e. V. (Betriebsführung)",
+   "wasserflaeche_m2": 250,
+   "slots": [
+    "Mo 07:00-10:00",
+    "Di 07:00-10:00",
+    "Di 16:00-19:15",
+    "Mi 07:00-21:00",
+    "Do,Fr 07:00-10:00",
+    "Sa 07:00-13:15"
+   ],
+   "quelle": {
+    "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/stadtbad_werden.de.html",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Alte Badeanstalt (Altenessen)",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "SGZ Altenessen e. V. (Trägerverein)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo,Di 07:00-10:00",
+    "Mo,Di 15:00-18:00",
+    "Mi 07:00-10:00",
+    "Do,Fr 07:00-10:00",
+    "Do,Fr 15:00-18:00",
+    "Sa 07:00-13:00"
+   ],
+   "quelle": {
+    "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/alte_badeanstalt.de.html",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Friedrichsbad",
+   "typ": "hallenbad",
+   "kategorie": "andere",
+   "traeger": "Essener Sportbund e. V. (Pacht)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 07:00-08:00",
+    "Di 07:00-09:00",
+    "Mi 07:50-09:00",
+    "Do 07:00-09:00",
+    "Fr 07:00-08:45"
+   ],
+   "quelle": {
+    "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/friedrichsbad.de.html",
+    "abgerufen": "2026-11-04"
+   }
+  }
+ ]
+}

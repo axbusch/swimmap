@@ -1,0 +1,99 @@
+{
+ "ags": "05314",
+ "stadt": "Bonn",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Stadt Bonn veröffentlicht je Zeitfenster die öffentlich nutzbaren Bahnen/Becken; daraus wurden Flächenanteile berechnet (Bahnenangaben wie '2 bis 4' als Mittelwert). Hardtbergbad (Sanierung seit 2024) und Kurfürstenbad (Neubau) geschlossen. Friesdorf: Freibad, im Winter mit Traglufthalle als Hallenbad.",
+ "baeder": [
+  {
+   "name": "Frankenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Bundesstadt Bonn, Sport- und Bäderamt",
+   "wasserflaeche_m2": 783.5,
+   "slots": [
+    "Mo 06:30-08:00 teil 0.88",
+    "Mo 15:00-17:00 teil 0.36 3–6 Bahnen Sportbecken",
+    "Di 06:30-08:00 teil 0.80",
+    "Di 14:00-16:00 teil 0.40 4–6 Bahnen Sportbecken",
+    "Mi 06:30-08:00 teil 0.88",
+    "Mi 13:00-21:00 teil 0.88 Sport- und Mehrzweckbecken",
+    "Do 06:30-08:00 teil 0.88",
+    "Fr 06:30-08:00 teil 0.88",
+    "Fr 14:00-16:00 teil 0.64",
+    "Sa 09:00-15:00 teil 0.56 5 Bahnen Sport + 2 Bahnen MZB",
+    "So 09:00-16:00"
+   ],
+   "quelle": {
+    "url": "https://baeder.bonn.de/oeffnungszeiten",
+    "abgerufen": "2026-11-04"
+   },
+   "ausstattung": "Sportbecken 25 × 15 m, Mehrzweckbecken 25 × 12,5 m, Lehrbecken 12 × 8 m"
+  },
+  {
+   "name": "Beueler Bütt",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Bundesstadt Bonn, Sport- und Bäderamt",
+   "wasserflaeche_m2": 387.5,
+   "slots": [
+    "Di 06:30-08:00",
+    "Di 14:00-21:00 teil 0.68 3 Bahnen + Lehrbecken",
+    "Mi 06:30-08:00",
+    "Mi 08:00-09:30 teil 0.48 3 Bahnen",
+    "Do 06:30-08:00",
+    "Fr 06:30-08:00",
+    "Fr 08:00-15:30 teil 0.48 2–4 Bahnen",
+    "Fr 15:30-21:00 teil 0.68 2–4 Bahnen + Lehrbecken",
+    "Sa 09:00-18:00 teil 0.73 4–5 Bahnen",
+    "So 09:00-16:00"
+   ],
+   "quelle": {
+    "url": "https://baeder.bonn.de/oeffnungszeiten",
+    "abgerufen": "2026-11-04"
+   },
+   "ausstattung": "Mehrzweckbecken 25 × 12,5 m, Lehrbecken 12,5 × 6 m"
+  },
+  {
+   "name": "Friesi (Traglufthalle Friesdorf)",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Bundesstadt Bonn, Sport- und Bäderamt",
+   "wasserflaeche_m2": 583.4,
+   "slots": [
+    "Mo 06:30-08:00",
+    "Mo 08:00-15:45 teil 0.36 3 Bahnen",
+    "Di 06:30-08:00",
+    "Di 08:00-15:00 teil 0.36 3 Bahnen",
+    "Di 15:00-21:00 teil 0.76 4 Bahnen + Lehrbecken",
+    "Mi 08:00-15:45 teil 0.36 3 Bahnen",
+    "Do 06:30-08:00",
+    "Do 08:00-13:00 teil 0.36 3 Bahnen",
+    "Do 13:00-17:30",
+    "Fr 06:30-08:00",
+    "Fr 08:00-15:00 teil 0.36 3 Bahnen",
+    "Sa 09:00-15:15 teil 0.74 5 Bahnen + ½ Lehrbecken",
+    "Sa 15:15-16:00",
+    "So 09:00-16:00"
+   ],
+   "quelle": {
+    "url": "https://baeder.bonn.de/oeffnungszeiten",
+    "abgerufen": "2026-11-04"
+   },
+   "ausstattung": "Mehrzweckbecken 25 × 16,67 m, Lehrschwimmbecken 10 × 16,67 m (Traglufthalle im Winter)"
+  },
+  {
+   "name": "Hardtbergbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Bundesstadt Bonn, Sport- und Bäderamt",
+   "wasserflaeche_m2": null,
+   "slots": [],
+   "quelle": {
+    "url": "https://baeder.bonn.de/oeffnungszeiten",
+    "abgerufen": "2026-11-04"
+   },
+   "hinweis": "seit Ende Freibadsaison 2024 wegen Sanierung geschlossen"
+  }
+ ]
+}

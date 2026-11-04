@@ -1,0 +1,75 @@
+{
+ "ags": "05911",
+ "stadt": "Bochum",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "WasserWelten Bochum; reguläre Zeiten laut eaero-Widget KW 45 (kurzfristige Ausnahmen wie Wettkämpfe nicht berücksichtigt). Laut Betreiber variieren Bahnbelegungen durch Kurse/Vereine während der Öffnungszeit (Parallelbetrieb). Hallenbad Langendreer wegen Modernisierung geschlossen (0 h). Wasserflächen nicht veröffentlicht.",
+ "baeder": [
+  {
+   "name": "Hallenfreibad Hofstede",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "WasserWelten Bochum GmbH (Stadtwerke Bochum)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 16:00-20:00",
+    "Di-Fr 06:30-20:00",
+    "Sa,So 07:30-20:00"
+   ],
+   "quelle": {
+    "url": "https://wasserwelten-bochum.de/unsere-baeder/hofstede/",
+    "abgerufen": "2026-11-04"
+   },
+   "ausstattung": "Hallenbad 25 m, 6 Bahnen"
+  },
+  {
+   "name": "Hallenbad Linden",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "WasserWelten Bochum GmbH (Stadtwerke Bochum)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 16:00-20:00",
+    "Di-Fr 06:30-20:00",
+    "Sa,So 07:30-20:00"
+   ],
+   "quelle": {
+    "url": "https://wasserwelten-bochum.de/unsere-baeder/linden/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Hallenbad Querenburg",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "WasserWelten Bochum GmbH (Stadtwerke Bochum)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 16:00-20:00",
+    "Di-Do 06:30-12:00",
+    "Di 15:00-19:00",
+    "Mi,Do 15:00-20:00",
+    "Fr 06:30-20:00",
+    "Sa,So 07:30-20:00"
+   ],
+   "quelle": {
+    "url": "https://wasserwelten-bochum.de/unsere-baeder/querenburg/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Hallenbad Langendreer",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "WasserWelten Bochum GmbH (Stadtwerke Bochum)",
+   "wasserflaeche_m2": null,
+   "slots": [],
+   "quelle": {
+    "url": "https://wasserwelten-bochum.de/unsere-baeder/langendreer/",
+    "abgerufen": "2026-11-04"
+   },
+   "hinweis": "wegen Modernisierung geschlossen (Stand 11/2026)",
+   "ausstattung": "25-m-Becken"
+  }
+ ]
+}

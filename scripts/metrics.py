@@ -145,7 +145,7 @@ def stadt_kennzahlen(baeder: list[dict], einwohner: int, filt=None) -> dict:
         "stunden_je_10k_ew": round(h / einwohner * 10_000, 2),
         "m2h_je_1000_ew": round(m2h / einwohner * 1_000, 1),
         "wasserflaeche_m2_je_1000_ew": round(flaeche / einwohner * 1_000, 2),
-        "datenluecken": [b["name"] for b in sel if b.get("zeiten_unbekannt") or not b.get("wasserflaeche_m2")],
+        "datenluecken": [b["name"] for b, k in zip(sel, ks) if b.get("zeiten_unbekannt") or (k["stunden_woche"] > 0 and not b.get("wasserflaeche_m2"))],
     }
 
 
