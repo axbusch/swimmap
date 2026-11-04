@@ -1,0 +1,110 @@
+{
+ "ags": "05915",
+ "stadt": "Hamm",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Stadtwerke Hamm (Wintersaison). Frauen-, Frauen-mit-Kindern- und Chill-Out-Zeiten (ab 18 J.) als Zielgruppe. Maximare (Tochter der Stadtwerke): 50-m-Sportbecken zählt zur Kernkennzahl, Aquawelt als Freizeitbereich. Wasserflächen nicht veröffentlicht.",
+ "baeder": [
+  {
+   "name": "Familien-Oase Heessen",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadtwerke Hamm GmbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 06:30-13:30",
+    "Di 06:30-17:00",
+    "Di 19:00-21:00",
+    "Mi 06:30-17:00",
+    "Mi 18:30-21:00",
+    "Do 06:30-17:00",
+    "Do 19:00-21:00 ziel Frauenschwimmen",
+    "Fr 06:30-21:00 Warmbadetag",
+    "Sa 08:00-18:00",
+    "So 08:00-12:00"
+   ],
+   "quelle": {
+    "url": "https://www.stadtwerke-hamm.de/privatkunden/baeder/hallenbaeder/familien-oase-heessen",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Lagune Herringen",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadtwerke Hamm GmbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 06:30-13:30",
+    "Di 06:30-18:00",
+    "Mi 06:30-17:00",
+    "Mi 19:00-21:00 ziel Frauen",
+    "Do 06:30-20:00 Warmbadetag",
+    "Do 20:00-22:00 ziel Chill-Out ab 18",
+    "Fr 06:30-14:30",
+    "Fr 14:30-17:30 ziel Frauen (mit Kindern)",
+    "Sa 08:00-18:00",
+    "So 08:00-12:00"
+   ],
+   "quelle": {
+    "url": "https://www.stadtwerke-hamm.de/privatkunden/baeder/hallenbaeder/lagune-herringen",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Sport-Aquarium Bockum-Hövel",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadtwerke Hamm GmbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 06:30-13:30",
+    "Di 06:30-18:00",
+    "Di 19:00-21:00 ziel Frauen",
+    "Mi 06:30-21:00",
+    "Do 06:30-17:00",
+    "Fr 06:30-21:00 Warmbadetag",
+    "Sa 08:00-18:00",
+    "So 08:00-12:00"
+   ],
+   "quelle": {
+    "url": "https://www.stadtwerke-hamm.de/privatkunden/baeder/hallenbaeder/sport-aquarium-bockum-hoevel",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Maximare – 50-m-Sportbecken",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Maximare Erlebnistherme Bad Hamm GmbH (Stadtwerke Hamm)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 06:00-15:00",
+    "Di-Fr 06:00-22:00",
+    "Sa,So 09:00-22:00"
+   ],
+   "quelle": {
+    "url": "https://www.maximare.com/infobereich-maximare/oeffnungszeiten",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Maximare – Aquawelt",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Maximare Erlebnistherme Bad Hamm GmbH (Stadtwerke Hamm)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo-Do 08:00-20:00",
+    "Fr 08:00-22:00",
+    "Sa 09:00-22:00",
+    "So 09:00-20:00"
+   ],
+   "quelle": {
+    "url": "https://www.maximare.com/infobereich-maximare/oeffnungszeiten",
+    "abgerufen": "2026-11-04"
+   },
+   "freizeitbad": true
+  }
+ ]
+}
