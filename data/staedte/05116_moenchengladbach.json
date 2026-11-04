@@ -1,0 +1,134 @@
+{
+ "ags": "05116",
+ "stadt": "Mönchengladbach",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Betreiber NEW (Stadtwerke). Wasserflächen laut Betreiber je Becken. Vitusbad und Schlossbad: Sport- und Freizeitbereich getrennt (Freizeitbereich nicht in Kernkennzahl); laut Betreiber im Sportbereich wochentags eingeschränkter Betrieb durch Schul-/Vereinsschwimmen. Stadtbad Rheydt bis voraussichtlich 31.01.2027 wegen Umbau geschlossen – regulärer Plan gezählt. Bad Ransberg: Zeiten außerhalb der Ferien.",
+ "baeder": [
+  {
+   "name": "Vitusbad – Sportbecken",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "NEW Bäder GmbH (NEW AG, Stadtwerke)",
+   "wasserflaeche_m2": 1055,
+   "slots": [
+    "Mo 06:00-21:00",
+    "Mi-Fr 06:00-21:00",
+    "Sa,So 08:00-20:00"
+   ],
+   "quelle": {
+    "url": "https://www.new.de/baeder/baeder-uebersicht/vitusbad",
+    "abgerufen": "2026-11-04"
+   },
+   "ausstattung": "50-m-Sportbecken, 8 Bahnen"
+  },
+  {
+   "name": "Vitusbad – Mehrzweck-/Sprungbecken",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "NEW Bäder GmbH (NEW AG, Stadtwerke)",
+   "wasserflaeche_m2": 225,
+   "slots": [
+    "Mo 06:00-08:00",
+    "Mi,Fr 06:00-08:00",
+    "Mi,Fr 16:00-18:00",
+    "Do 06:00-08:00",
+    "Do 16:00-17:00",
+    "Sa 08:00-09:00",
+    "Sa 11:00-17:30",
+    "So 08:00-20:00"
+   ],
+   "quelle": {
+    "url": "https://www.new.de/baeder/baeder-uebersicht/vitusbad",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Vitusbad – Freizeitbereich",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "NEW Bäder GmbH (NEW AG, Stadtwerke)",
+   "wasserflaeche_m2": 587,
+   "slots": [
+    "Mo 10:00-21:00",
+    "Mi-Fr 10:00-21:00",
+    "Sa,So 08:00-20:00"
+   ],
+   "quelle": {
+    "url": "https://www.new.de/baeder/baeder-uebersicht/vitusbad",
+    "abgerufen": "2026-11-04"
+   },
+   "freizeitbad": true
+  },
+  {
+   "name": "Schlossbad Niederrhein – Sportbereich",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "NEW Bäder GmbH (NEW AG, Stadtwerke)",
+   "wasserflaeche_m2": 313,
+   "slots": [
+    "Di-Fr 10:00-21:00",
+    "Sa,So 09:00-20:00"
+   ],
+   "quelle": {
+    "url": "https://www.new.de/baeder/baeder-uebersicht/schlossbad-niederrhein",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Schlossbad Niederrhein – Freizeitbereich",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "NEW Bäder GmbH (NEW AG, Stadtwerke)",
+   "wasserflaeche_m2": 389,
+   "slots": [
+    "Mo-Fr 10:00-21:00",
+    "Sa,So 09:00-20:00"
+   ],
+   "quelle": {
+    "url": "https://www.new.de/baeder/baeder-uebersicht/schlossbad-niederrhein",
+    "abgerufen": "2026-11-04"
+   },
+   "freizeitbad": true
+  },
+  {
+   "name": "Bad Ransberg",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "NEW Bäder GmbH (NEW AG, Stadtwerke)",
+   "wasserflaeche_m2": 561,
+   "slots": [
+    "Mo 13:30-16:00",
+    "Di 06:45-21:00",
+    "Mi 06:45-08:30",
+    "Mi 13:30-17:00",
+    "Do 06:45-21:00",
+    "Fr 06:45-08:30",
+    "Fr 13:30-16:00",
+    "Sa 07:00-20:00",
+    "So 08:00-20:00"
+   ],
+   "quelle": {
+    "url": "https://www.new.de/baeder/baeder-uebersicht/bad-ransberg",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Stadtbad Rheydt",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "NEW Bäder GmbH (NEW AG, Stadtwerke)",
+   "wasserflaeche_m2": 549,
+   "slots": [
+    "Di 06:00-21:00",
+    "Mi-Fr 09:00-19:00",
+    "Sa,So 09:00-14:00"
+   ],
+   "quelle": {
+    "url": "https://www.new.de/baeder/baeder-uebersicht/stadtbad-rheydt",
+    "abgerufen": "2026-11-04"
+   },
+   "hinweis": "31.08.2026 bis vsl. 31.01.2027 wegen Umbau geschlossen"
+  }
+ ]
+}
