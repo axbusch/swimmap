@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schwimmzeiten Münster</title>
+  <meta name="description" content="Öffentliche Schwimmzeiten der Bäder in Münster, Einzugsbereiche zu Fuß, mit dem Rad und mit dem ÖPNV sowie ein Vergleich mit den NRW-Großstädten.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Schwimmzeiten in Münster</h1>
+    <span class="sub" id="stand">Öffentliche Schwimmzeiten, Einzugsbereiche und NRW-Vergleich</span>
+  </header>
+  <div class="layout">
+    <div id="map" role="region" aria-label="Karte der Bäder in Münster"></div>
+    <aside class="panel">
+      <div class="tabs" role="tablist">
+        <button role="tab" id="tab-ms" aria-controls="p-ms" aria-selected="true">Münster</button>
+        <button role="tab" id="tab-nrw" aria-controls="p-nrw" aria-selected="false">NRW-Vergleich</button>
+        <button role="tab" id="tab-meth" aria-controls="p-meth" aria-selected="false">Methodik</button>
+      </div>
+
+      <section class="tabpanel" id="p-ms" role="tabpanel" aria-labelledby="tab-ms">
+        <div class="kpis" id="kpis"></div>
+
+        <div class="ctrl">
+          <div class="lbl">Bäder</div>
+          <div class="checks" id="cats"></div>
+        </div>
+        <div class="ctrl">
+          <div class="lbl">Einzugsbereich</div>
+          <div class="seg" id="mode" role="group" aria-label="Verkehrsmittel"></div>
+          <div class="seg" id="thr" role="group" aria-label="Reisezeit" style="margin-top:6px"></div>
+        </div>
+        <div class="ctrl">
+          <div class="lbl">Kartenebene</div>
+          <div class="seg" id="layer" role="group" aria-label="Kartenebene"></div>
+          <div class="legend" id="legend"></div>
+          <p class="note" id="layer-note"></p>
+        </div>
+
+        <h2>Öffentliche Stunden je Bad</h2>
+        <p class="note">Stunden pro Woche im regulären Winterplan. Klick zeigt Wochenplan und Einzugsbereich des Bades.</p>
+        <ul class="poollist" id="pools"></ul>
+        <div id="detail"></div>
+      </section>
+
+      <section class="tabpanel" id="p-nrw" role="tabpanel" aria-labelledby="tab-nrw" hidden>
+        <h2>Münster im Vergleich der NRW-Großstädte</h2>
+        <p class="note">Nur kommunale Hallenbäder, allgemeines öffentliches Schwimmen, regulärer Winter-Wochenplan. Einwohner: IT.NRW, 31.12.2025.</p>
+        <div class="ctrl">
+          <div class="lbl">Kennzahl</div>
+          <div class="seg" id="metric" role="group" aria-label="Kennzahl"></div>
+        </div>
+        <p class="note" id="metric-note"></p>
+        <div class="bars" id="bars"></div>
+        <div id="missing"></div>
+        <details>
+          <summary>Tabelle aller erfassten Städte</summary>
+          <div id="nrw-table"></div>
+        </details>
+      </section>
+
+      <section class="tabpanel" id="p-meth" role="tabpanel" aria-labelledby="tab-meth" hidden>
+        <div id="methodik"></div>
+      </section>
+    </aside>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
