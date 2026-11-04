@@ -82,6 +82,9 @@ for ags, (name, ew) in einwohner().items():
                            "ew_summe": int(cells.ew.sum()), "standorte": ids, "tt": tt},
                 "oepnv": gtfs_meta,
             }
+            sf = CACHE / "muenster_schliessungen_out.json"
+            if ags == "05515" and sf.exists():  # Schließtage-Chronik (nur Münster, 06_schliesstage.py)
+                city["schliessungen"] = json.loads(sf.read_text(encoding="utf-8"))
             (WEB / "st" / f"{slug}.js").write_text(
                 "/* erzeugt von scripts/04_build_web.py */\nwindow.SWIMMAP_CITY("
                 + json.dumps(city, ensure_ascii=False, separators=(",", ":")) + ");\n", encoding="utf-8")

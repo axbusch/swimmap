@@ -90,3 +90,20 @@ Zeiten im Browser abzulesen und eine Datei nach dem Muster in `data/staedte/` an
 
 Recherche-Hilfen in `scripts/tools/`: `fetch_text.py` (Seite → Text), `eaero.py` (eaero-Öffnungszeiten-Widgets),
 `render_text.py` (JavaScript-Seiten über Edge/Playwright; `pip install playwright`).
+
+## Ausgefallene Schwimmzeiten (Münster)
+
+`data/muenster_schliessungen.json` enthält alle per Pressemitteilung der Stadt Münster bekannt gegebenen Schließungen
+der Hallenbäder seit 01.01.2024 (Grund, Kategorie, Quelle). Die Pressemitteilungen stammen aus der öffentlichen API
+`pressemitteilungen.stadt-muenster.de/api/items`. `scripts/06_schliesstage.py` rechnet daraus je Tag und Bad:
+
+- **Schließtag** = Tag, an dem das Bad laut Regelplan öffentliches Schwimmen hätte, aber ganz geschlossen war.
+- **Ausgefallene Stunden** = Regelplan-Stunden an Schließtagen + ausgefallene Stunden bei Teilschließungen.
+- Kategorien: Revision (geplant), Defekt/Hygiene (ungeplant), Sommerbetrieb (Personal in Freibädern),
+  Ferienschließung, Feiertag, kurzfristig. Bei Überschneidung zählt der Tag einmal.
+- Nicht gegengerechnet: zusätzliche Ferien-/Feiertagszeiten. Nicht per Pressemitteilung gemeldete Ausfälle fehlen
+  (Werte eher Untergrenze). Feiertage ohne angekündigte Öffnung = geschlossen.
+
+```sh
+python scripts/06_schliesstage.py && python scripts/04_build_web.py
+```

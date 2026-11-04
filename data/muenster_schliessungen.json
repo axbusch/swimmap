@@ -1,0 +1,84 @@
+{
+  "stand": "2026-11-04",
+  "zeitraum": {"von": "2024-01-01", "bis": "2026-11-04"},
+  "methodik": "Schließtag = Kalendertag, an dem das Bad laut damals gültigem Regelplan öffentliches Schwimmen anbieten würde, aber für die Öffentlichkeit ganz geschlossen war. Zusätzliche Ferien-/Feiertagsöffnungen außerhalb des Regelplans sind nicht gegengerechnet. Teilschließungen (z. B. früheres Schließen) gehen nur in die Stunden ein. Feiertage ohne angekündigte Öffnung gelten als geschlossen. Quelle sind die Pressemitteilungen der Stadt Münster (pressemitteilungen.stadt-muenster.de).",
+  "kategorien": {
+    "revision": "Revision/Sanierung (geplant)",
+    "defekt": "Defekt/Hygiene/verlängerte Arbeiten (ungeplant)",
+    "sommer": "Sommerbetrieb (Personal in Freibädern)",
+    "ferien": "Ferienschließung",
+    "feiertag": "Feiertag",
+    "personal": "Kurzfristig (Personal/Veranstaltung)"
+  },
+  "plaene": {
+    "ms-mitte": [{"von": "2024-01-01", "tage": ["Mo", "Mi", "Fr", "Sa", "So"]}],
+    "ms-ost": [{"von": "2024-01-01", "tage": ["Di", "Do", "Fr", "Sa", "So"]}],
+    "ms-kinderhaus": [{"von": "2024-01-01", "tage": ["Di", "Do", "Fr", "Sa", "So"]}],
+    "ms-hiltrup": [{"von": "2024-01-01", "tage": ["Di", "Do", "Sa", "So"]}],
+    "ms-sued": [
+      {"von": "2024-04-22", "tage": ["Di", "Mi", "Fr"], "hinweis": "Eröffnung 22.04.2024; zunächst keine Wochenendzeiten"},
+      {"von": "2025-01-11", "tage": ["Di", "Mi", "Fr", "Sa", "So"], "hinweis": "Wochenendzeiten ab 11.01.2025"}
+    ]
+  },
+  "feiertage": {
+    "2024": {"2024-01-01": [], "2024-02-12": ["ms-kinderhaus", "ms-hiltrup"], "2024-03-29": [], "2024-03-31": ["ms-mitte"], "2024-04-01": ["ms-mitte"], "2024-05-01": [], "2024-05-09": [], "2024-05-19": [], "2024-05-20": [], "2024-05-30": ["ms-hiltrup"], "2024-10-03": ["ms-kinderhaus", "ms-sued"], "2024-11-01": ["ms-mitte", "ms-hiltrup"], "2024-12-24": [], "2024-12-25": [], "2024-12-26": [], "2024-12-31": []},
+    "2025": {"2025-01-01": [], "2025-03-03": ["ms-kinderhaus", "ms-hiltrup"], "2025-04-18": [], "2025-04-20": ["ms-mitte"], "2025-04-21": ["ms-mitte"], "2025-05-01": [], "2025-05-29": ["ms-sued"], "2025-06-08": [], "2025-06-09": [], "2025-06-19": ["ms-ost"], "2025-10-03": ["ms-ost", "ms-kinderhaus"], "2025-11-01": ["ms-mitte", "ms-hiltrup"], "2025-12-24": [], "2025-12-25": [], "2025-12-26": [], "2025-12-31": []},
+    "2026": {"2026-01-01": [], "2026-02-16": ["ms-kinderhaus", "ms-hiltrup"], "2026-04-03": [], "2026-04-05": ["ms-mitte"], "2026-04-06": ["ms-mitte"], "2026-05-01": [], "2026-05-14": ["ms-mitte"], "2026-05-24": [], "2026-05-25": [], "2026-06-04": ["ms-ost"], "2026-10-03": ["ms-sued", "ms-kinderhaus"], "2026-11-01": []}
+  },
+  "feiertage_hinweis": "Liste: Bäder, die laut Pressemitteilung am Feiertag öffneten (Rosenmontag, Heiligabend und Silvester wie Feiertage behandelt). 1. Mai, Pfingsten und Christi Himmelfahrt 2024 sowie Allerheiligen 2026 ohne Ankündigung = geschlossen angenommen.",
+  "schliessungen": [
+    {"bad": "ms-ost", "von": "2024-01-01", "bis": "2024-06-07", "kat": "defekt", "grund": "Legionellenbefall im Duschwasser (geschlossen seit 03.11.2023)", "quelle": "PM 03.01.2024, 07.05.2024, 04.06.2024"},
+    {"bad": "ms-ost", "von": "2024-07-28", "bis": "2024-08-24", "kat": "revision", "grund": "jährliche Sommerschließzeit", "quelle": "PM 04.06.2024, 26.07.2024"},
+    {"bad": "ms-ost", "von": "2024-08-25", "bis": "2024-12-18", "kat": "defekt", "grund": "erneut erhöhte Legionellenwerte, Sanierung", "quelle": "PM 21.08.2024, 11.09.2024, 17.12.2024"},
+    {"bad": "ms-ost", "von": "2025-04-13", "bis": "2025-04-27", "kat": "ferien", "grund": "Osterferien: für die Öffentlichkeit geschlossen (Schwimmkurse)", "quelle": "PM 04.04.2025"},
+    {"bad": "ms-ost", "von": "2025-08-03", "bis": "2025-08-31", "kat": "revision", "grund": "Fliesenarbeiten Springerbecken, Wartung", "quelle": "PM 04.07.2025"},
+    {"bad": "ms-ost", "von": "2026-08-09", "bis": "2026-09-06", "kat": "revision", "grund": "Wartung und Revision", "quelle": "PM 10.04.2026, 10.07.2026"},
+    {"bad": "ms-ost", "von": "2026-09-07", "bis": "2026-10-09", "kat": "defekt", "grund": "Revision verlängert: Schäden an Beckenkopf und Fliesen", "quelle": "PM 28.08.2026, 01.10.2026"},
+    {"bad": "ms-ost", "von": "2026-10-17", "bis": "2026-11-01", "kat": "ferien", "grund": "Herbstferien: Vereine holen ausgefallenes Training nach", "quelle": "PM 01.10.2026, 12.10.2026"},
+
+    {"bad": "ms-mitte", "von": "2024-06-30", "bis": "2024-07-27", "kat": "revision", "grund": "Sommerpause/Revision", "quelle": "PM 28.06.2024"},
+    {"bad": "ms-mitte", "von": "2024-07-28", "bis": "2024-08-24", "kat": "defekt", "grund": "Sommerpause verlängert: zusätzliche Wartungs- und Reparaturarbeiten", "quelle": "PM 26.07.2024, 21.08.2024"},
+    {"bad": "ms-mitte", "von": "2024-11-20", "bis": "2024-11-20", "kat": "personal", "grund": "Personalversammlung, 14–18 Uhr geschlossen", "teil_stunden": 4, "quelle": "PM 18.11.2024"},
+    {"bad": "ms-mitte", "von": "2024-12-23", "bis": "2025-01-05", "kat": "ferien", "grund": "Weihnachtsferien geschlossen", "quelle": "PM 17.12.2024"},
+    {"bad": "ms-mitte", "von": "2025-07-06", "bis": "2025-08-31", "kat": "revision", "grund": "Fliesen-/Malerarbeiten, Sanierung Schwallwasserbecken", "quelle": "PM 04.07.2025"},
+    {"bad": "ms-mitte", "von": "2025-10-13", "bis": "2025-10-26", "kat": "ferien", "grund": "Herbstferien geschlossen", "quelle": "PM 08.10.2025"},
+    {"bad": "ms-mitte", "von": "2025-11-19", "bis": "2025-11-19", "kat": "personal", "grund": "Personalversammlung, 12.30–18 Uhr geschlossen", "teil_stunden": 5.5, "quelle": "PM 14.11.2025"},
+    {"bad": "ms-mitte", "von": "2026-05-01", "bis": "2026-07-12", "kat": "sommer", "tage": ["Sa", "So"], "grund": "Wochenendzeiten entfallen während der Freibadsaison", "quelle": "PM 10.04.2026"},
+    {"bad": "ms-mitte", "von": "2026-06-26", "bis": "2026-06-26", "kat": "personal", "grund": "Personalausfälle, ab 14 Uhr geschlossen", "teil_stunden": 8, "quelle": "PM 26.06.2026"},
+    {"bad": "ms-mitte", "von": "2026-07-13", "bis": "2026-09-06", "kat": "revision", "grund": "Reparaturen an Abwasserleitungen, Fliesen und Fugen", "quelle": "PM 10.04.2026, 10.07.2026"},
+
+    {"bad": "ms-kinderhaus", "von": "2024-06-30", "bis": "2024-08-24", "kat": "sommer", "grund": "Sommerpause (Personal in Freibädern), Revision", "quelle": "PM 28.06.2024, 21.08.2024"},
+    {"bad": "ms-kinderhaus", "von": "2024-10-14", "bis": "2024-10-26", "kat": "ferien", "grund": "Herbstferien: nur Schwimmprojekt 'NRW kann schwimmen!'", "quelle": "PM 11.10.2024"},
+    {"bad": "ms-kinderhaus", "von": "2025-05-01", "bis": "2025-09-27", "kat": "sommer", "grund": "Freibadsaison: nur Schul- und Vereinsschwimmen", "quelle": "PM 10.04.2025, 09.09.2025"},
+    {"bad": "ms-kinderhaus", "von": "2025-12-04", "bis": "2025-12-04", "kat": "personal", "grund": "interne Veranstaltung, ab 16 Uhr geschlossen", "teil_stunden": 6, "quelle": "PM 01.12.2025"},
+    {"bad": "ms-kinderhaus", "von": "2025-12-22", "bis": "2026-01-04", "kat": "ferien", "grund": "Weihnachtsferien geschlossen", "quelle": "PM 15.12.2025"},
+    {"bad": "ms-kinderhaus", "von": "2026-05-01", "bis": "2026-09-27", "kat": "sommer", "grund": "Freibadsaison: nur Schul- und Vereinsschwimmen (Fachkräftemangel)", "quelle": "PM 10.04.2026, 28.08.2026"},
+
+    {"bad": "ms-hiltrup", "von": "2024-01-01", "bis": "2024-01-19", "kat": "defekt", "grund": "Legionellen (geschlossen seit Anfang Dezember 2023)", "quelle": "PM 03.01.2024, 18.01.2024"},
+    {"bad": "ms-hiltrup", "von": "2024-05-26", "bis": "2024-08-24", "kat": "sommer", "grund": "Freibadsaison: nur Schul- und Vereinsbetrieb; ab 04.06. zusätzlich Legionellen", "ausser": ["2024-05-30"], "quelle": "PM 21.05.2024, 04.06.2024, 21.08.2024"},
+    {"bad": "ms-hiltrup", "von": "2024-12-23", "bis": "2025-01-05", "kat": "ferien", "grund": "Weihnachtsferien geschlossen", "quelle": "PM 17.12.2024"},
+    {"bad": "ms-hiltrup", "von": "2025-05-15", "bis": "2025-05-17", "kat": "defekt", "grund": "Defekt an der Lüftungsanlage", "quelle": "PM 15.05.2025"},
+    {"bad": "ms-hiltrup", "von": "2025-05-18", "bis": "2025-09-15", "kat": "sommer", "grund": "Freibadsaison Hiltrup: betriebsbedingt geschlossen (Wiederöffnung nach 14.09. angenommen)", "quelle": "PM 13.05.2025, 04.07.2025, 09.09.2025"},
+    {"bad": "ms-hiltrup", "von": "2025-12-04", "bis": "2025-12-04", "kat": "personal", "grund": "interne Veranstaltung, ab 16 Uhr geschlossen", "teil_stunden": 6, "quelle": "PM 01.12.2025"},
+    {"bad": "ms-hiltrup", "von": "2025-12-22", "bis": "2026-01-04", "kat": "ferien", "grund": "Weihnachtsferien geschlossen", "quelle": "PM 15.12.2025"},
+    {"bad": "ms-hiltrup", "von": "2026-03-30", "bis": "2026-04-12", "kat": "ferien", "grund": "Osterferien geschlossen", "quelle": "PM 23.03.2026"},
+    {"bad": "ms-hiltrup", "von": "2026-05-24", "bis": "2026-06-28", "kat": "sommer", "grund": "Freibadsaison: nur Schul- und Vereinsschwimmen", "quelle": "PM 10.04.2026"},
+    {"bad": "ms-hiltrup", "von": "2026-06-29", "bis": "2026-09-13", "kat": "revision", "grund": "Deckenarbeiten, komplett geschlossen", "quelle": "PM 10.04.2026, 28.08.2026"},
+    {"bad": "ms-hiltrup", "von": "2026-10-17", "bis": "2026-10-31", "kat": "ferien", "grund": "Herbstferien: keine öffentlichen Schwimmzeiten", "quelle": "PM 12.10.2026"},
+
+    {"bad": "ms-sued", "von": "2024-06-28", "bis": "2024-06-28", "kat": "personal", "grund": "kurzfristige Personalausfälle, einen Tag früher in die Sommerpause", "quelle": "PM 28.06.2024"},
+    {"bad": "ms-sued", "von": "2024-06-29", "bis": "2024-07-27", "kat": "sommer", "grund": "Sommerpause", "quelle": "PM 28.06.2024, 26.07.2024"},
+    {"bad": "ms-sued", "von": "2024-10-21", "bis": "2024-10-25", "kat": "revision", "grund": "Wartung/Revision (aus dem Sommer verschoben)", "quelle": "PM 11.10.2024"},
+    {"bad": "ms-sued", "von": "2025-04-13", "bis": "2025-04-27", "kat": "ferien", "grund": "Osterferien: für die Öffentlichkeit geschlossen", "quelle": "PM 04.04.2025"},
+    {"bad": "ms-sued", "von": "2025-05-01", "bis": "2025-09-27", "kat": "sommer", "tage": ["Sa", "So"], "grund": "Wochenendzeiten entfallen während der Freibadsaison", "quelle": "PM 10.04.2025, 09.09.2025"},
+    {"bad": "ms-sued", "von": "2025-07-06", "bis": "2025-08-03", "kat": "revision", "grund": "Austausch Dachfenster, Fliesenarbeiten", "quelle": "PM 04.07.2025"},
+    {"bad": "ms-sued", "von": "2025-10-13", "bis": "2025-10-26", "kat": "ferien", "grund": "Herbstferien geschlossen", "quelle": "PM 08.10.2025"},
+    {"bad": "ms-sued", "von": "2025-12-22", "bis": "2026-01-04", "kat": "ferien", "grund": "Weihnachtsferien geschlossen", "quelle": "PM 15.12.2025"},
+    {"bad": "ms-sued", "von": "2026-03-30", "bis": "2026-04-12", "kat": "ferien", "grund": "Osterferien geschlossen", "quelle": "PM 23.03.2026"},
+    {"bad": "ms-sued", "von": "2026-05-01", "bis": "2026-09-27", "kat": "sommer", "grund": "Freibadsaison: nur Schul- und Vereinsschwimmen (Fachkräftemangel)", "quelle": "PM 10.04.2026, 28.08.2026"}
+  ],
+  "ohne_oeffentlichen_betrieb": [
+    {"bad": "ms-roxel", "von": "2022-06", "bis": "2026-11-13", "grund": "seit Juni 2022 ausschließlich Schul- und Vereinsbetrieb; öffentliche Wochenendzeiten ab 14.11.2026", "quelle": "PM 16.09.2026"},
+    {"bad": "ms-wolbeck", "von": "2022-06", "bis": "2026-11-06", "grund": "seit Juni 2022 ausschließlich Schul- und Vereinsbetrieb; 2026 zusätzlich Deckenerneuerung (29.06.–11.10.); öffentliche Wochenendzeiten ab 07.11.2026", "quelle": "PM 10.04.2026, 01.10.2026, 16.09.2026"}
+  ]
+}

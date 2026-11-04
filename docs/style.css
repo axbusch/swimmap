@@ -17,6 +17,7 @@
   --cat-geschlossen: #898781;
   --bar: #2a78d6;
   --bar-highlight: #eb6834;
+  --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --series-4: #eda100; --series-5: #e87ba4; --series-7: #6250d6;
   --slot-oeffentlich: #2a78d6;
   --slot-teil: #86b6ef;
   --slot-zielgruppe: #eb6834;
@@ -47,6 +48,8 @@
     --cat-geschlossen: #898781;
     --bar: #3987e5;
     --bar-highlight: #d95926;
+  --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500; --series-5: #d55181; --series-7: #9085e9;
+    --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500; --series-5: #d55181; --series-7: #9085e9;
     --slot-oeffentlich: #3987e5;
     --slot-teil: #1c5cab;
     --slot-zielgruppe: #d95926;
@@ -73,6 +76,7 @@
   --cat-geschlossen: #898781;
   --bar: #3987e5;
   --bar-highlight: #d95926;
+  --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500; --series-5: #d55181; --series-7: #9085e9;
   --slot-oeffentlich: #3987e5;
   --slot-teil: #1c5cab;
   --slot-zielgruppe: #d95926;
@@ -239,3 +243,13 @@ header.top select { font: inherit; font-size: 15px; padding: 4px 8px; border-rad
 .kpi-note { grid-column: 1 / -1; margin: 2px 0 0; }
 .zg { text-decoration: underline dotted; cursor: help; }
 .metricsel { font: inherit; font-size: 14px; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); max-width: 100%; }
+
+/* Schließtage */
+table.closures td { vertical-align: middle; }
+table.closures td:not(:first-child) { text-align: left; min-width: 70px; }
+.stack { display: flex; height: 10px; background: var(--grid); border-radius: 3px; overflow: hidden; gap: 1px; margin-bottom: 2px; }
+.stack i { display: block; height: 100%; }
+table.events td { text-align: left; font-variant-numeric: normal; vertical-align: top; }
+table.events td:first-child { white-space: nowrap; }
+i.sw { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 5px; vertical-align: baseline; }
+table.data tr.sum td { border-top: 2px solid var(--axis); }
