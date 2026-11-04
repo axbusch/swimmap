@@ -813,7 +813,7 @@ function renderMethodik() {
     <li>Im Sommer entfällt das öffentliche Schwimmen in mehreren Hallenbädern. Dann übernehmen die Freibäder. Der Vergleich bezieht sich auf den Winterbetrieb.</li>
   </ul>
   <h2>Daten &amp; Code</h2>
-  <p>Rohdaten mit Quellen: <a href="data/nrw.json">nrw.json</a> sowie je Stadt <code>data/st/&lt;stadt&gt;-baeder.json</code> (z. B. <a href="data/st/muenster-baeder.json">Münster</a>). Die Skripte zur Erhebung und Berechnung liegen im Repository (Ordner <code>scripts/</code>).</p>
+  <p>Rohdaten mit Quellen: <a href="data/nrw.json">nrw.json</a> sowie je Stadt <code>data/st/&lt;stadt&gt;-baeder.json</code> (z. B. <a href="data/st/muenster-baeder.json">Münster</a>). Die Skripte zur Erhebung und Berechnung liegen im <a href="https://github.com/axbusch/swimmap" target="_blank" rel="noopener">Repository</a> (Ordner <code>scripts/</code>); ausführliche Projektbeschreibung und Anleitung zum Nachrechnen in der <a href="https://github.com/axbusch/swimmap#readme" target="_blank" rel="noopener">README</a>.</p>
   <p class="note">Kartengrundlage: basemap.de / BKG (CC BY 4.0) bzw. © OpenStreetMap-Mitwirkende (ODbL). Wegenetz und Lage der Bäder: OpenStreetMap (ODbL). ÖPNV: gtfs.de, DELFI e.V. (CC BY 4.0). Bevölkerung und Altersgruppen: Zensus 2022, Statistische Ämter des Bundes und der Länder (dl-de/by-2-0). Einwohner: IT.NRW (dl-de/by-2-0).</p>`;
 }
 
