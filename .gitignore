@@ -1,0 +1,8 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Große bzw. abgeleitete Rohdaten (werden von den Skripten neu geladen)
+cache/
+raw/
