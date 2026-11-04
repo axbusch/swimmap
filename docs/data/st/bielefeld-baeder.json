@@ -1,0 +1,428 @@
+{
+ "stadt": "Bielefeld",
+ "stand": "2026-11-04",
+ "hinweis": "Betreiber: Bielefelder Bäder und Freizeit GmbH (BBF, Stadtwerke Bielefeld). Zeiten laut Wochenansicht der Betreiberseite für 4.–10.11.2026. Wasserflächen nicht veröffentlicht (nur Ishara-Sportbecken 15 × 25 m). Kombibad Jöllenbeck im Bau.",
+ "baeder": [
+  {
+   "id": "bielefeld-0",
+   "name": "Ishara – Sportlandschaft",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "bielefeld-s0",
+   "traeger": "BBF (Stadtwerke Bielefeld)",
+   "wasserflaeche_m2": null,
+   "ausstattung": "Sportbecken 15 × 25 m (6 Bahnen), Lehrschwimmbecken, Sprunganlage",
+   "slots": [
+    {
+     "tag": "Mo",
+     "von": "13:00",
+     "bis": "15:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Di",
+     "von": "06:00",
+     "bis": "07:30",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Di",
+     "von": "13:30",
+     "bis": "17:30",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Mi",
+     "von": "06:00",
+     "bis": "07:30",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Mi",
+     "von": "10:00",
+     "bis": "17:30",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Do",
+     "von": "06:00",
+     "bis": "07:30",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Do",
+     "von": "13:30",
+     "bis": "17:30",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Fr",
+     "von": "06:00",
+     "bis": "07:30",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Fr",
+     "von": "10:00",
+     "bis": "20:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Fr",
+     "von": "20:30",
+     "bis": "22:00",
+     "art": "oeffentlich",
+     "hinweis": "Late-Night-Schwimmen"
+    },
+    {
+     "tag": "Sa",
+     "von": "10:00",
+     "bis": "20:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "So",
+     "von": "10:00",
+     "bis": "20:00",
+     "art": "oeffentlich"
+    }
+   ],
+   "quelle": {
+    "url": "https://www.bielefelderbaeder.de/baeder/freizeitbad-ishara/sportlandschaft-ishara/",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 55.0,
+    "stunden_voll_woche": 55.0,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 2.0,
+     "Di": 5.5,
+     "Mi": 9.0,
+     "Do": 5.5,
+     "Fr": 13.0,
+     "Sa": 10.0,
+     "So": 10.0
+    }
+   }
+  },
+  {
+   "id": "bielefeld-1",
+   "name": "Ishara – Badewelt",
+   "cat": "freizeit",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "bielefeld-s0",
+   "traeger": "BBF (Stadtwerke Bielefeld)",
+   "wasserflaeche_m2": null,
+   "ausstattung": "Freizeitbereich: Warmwasserbecken, Strömungskanal mit Wellenbereich, Rutsche",
+   "slots": [
+    {
+     "tag": "Mo",
+     "von": "10:00",
+     "bis": "20:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Di",
+     "von": "10:00",
+     "bis": "20:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Mi",
+     "von": "10:00",
+     "bis": "20:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Do",
+     "von": "10:00",
+     "bis": "20:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Fr",
+     "von": "10:00",
+     "bis": "20:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Sa",
+     "von": "10:00",
+     "bis": "20:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "So",
+     "von": "10:00",
+     "bis": "20:00",
+     "art": "oeffentlich"
+    }
+   ],
+   "quelle": {
+    "url": "https://www.bielefelderbaeder.de/baeder/freizeitbad-ishara/badewelt-ishara/",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 70.0,
+    "stunden_voll_woche": 70.0,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 10.0,
+     "Di": 10.0,
+     "Mi": 10.0,
+     "Do": 10.0,
+     "Fr": 10.0,
+     "Sa": 10.0,
+     "So": 10.0
+    }
+   },
+   "freizeitbad": true
+  },
+  {
+   "id": "bielefeld-2",
+   "name": "Sportbad Aquawede (Brackwede)",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "bielefeld-s1",
+   "traeger": "BBF (Stadtwerke Bielefeld)",
+   "wasserflaeche_m2": null,
+   "ausstattung": "25-m-Schwimmerbecken, Nichtschwimmerbecken, Sprungbecken (1/3/5 m)",
+   "slots": [
+    {
+     "tag": "Mo",
+     "von": "06:30",
+     "bis": "21:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Di",
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Di",
+     "von": "14:00",
+     "bis": "18:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Mi",
+     "von": "06:30",
+     "bis": "22:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Do",
+     "von": "14:30",
+     "bis": "15:30",
+     "art": "zielgruppe",
+     "hinweis": "Seniorenschwimmen"
+    },
+    {
+     "tag": "Fr",
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Fr",
+     "von": "14:00",
+     "bis": "18:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Sa",
+     "von": "09:00",
+     "bis": "18:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "So",
+     "von": "09:00",
+     "bis": "18:00",
+     "art": "oeffentlich"
+    }
+   ],
+   "quelle": {
+    "url": "https://www.bielefelderbaeder.de/baeder/hallenbaeder/sportbad-aquawede/",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 59.0,
+    "stunden_voll_woche": 59.0,
+    "stunden_zielgruppe_woche": 1.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 14.5,
+     "Di": 5.5,
+     "Mi": 15.5,
+     "Do": 0.0,
+     "Fr": 5.5,
+     "Sa": 9.0,
+     "So": 9.0
+    }
+   }
+  },
+  {
+   "id": "bielefeld-3",
+   "name": "Sportbad Sennestadt",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "bielefeld-s2",
+   "traeger": "BBF (Stadtwerke Bielefeld)",
+   "wasserflaeche_m2": null,
+   "ausstattung": "Sportbecken 6 × 25 m, Nichtschwimmerbecken mit Hubboden",
+   "slots": [
+    {
+     "tag": "Mo",
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Do",
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Fr",
+     "von": "11:00",
+     "bis": "18:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Sa",
+     "von": "10:00",
+     "bis": "18:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "So",
+     "von": "10:00",
+     "bis": "18:00",
+     "art": "oeffentlich"
+    }
+   ],
+   "quelle": {
+    "url": "https://www.bielefelderbaeder.de/baeder/hallenbaeder/sportbad-sennestadt/",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 26.0,
+    "stunden_voll_woche": 26.0,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 1.5,
+     "Di": 0.0,
+     "Mi": 0.0,
+     "Do": 1.5,
+     "Fr": 7.0,
+     "Sa": 8.0,
+     "So": 8.0
+    }
+   }
+  },
+  {
+   "id": "bielefeld-4",
+   "name": "Familienbad Heepen",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "bielefeld-s3",
+   "traeger": "BBF (Stadtwerke Bielefeld)",
+   "wasserflaeche_m2": null,
+   "ausstattung": "25-m-Sportbecken (Variobecken), Nichtschwimmerbecken, Planschbecken, 1/3-m-Brett",
+   "slots": [
+    {
+     "tag": "Mo",
+     "von": "14:00",
+     "bis": "18:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Di",
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Di",
+     "von": "14:00",
+     "bis": "17:30",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Mi",
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Mi",
+     "von": "14:00",
+     "bis": "18:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Do",
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Do",
+     "von": "14:00",
+     "bis": "18:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Fr",
+     "von": "06:30",
+     "bis": "20:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "Sa",
+     "von": "08:00",
+     "bis": "20:00",
+     "art": "oeffentlich"
+    },
+    {
+     "tag": "So",
+     "von": "08:00",
+     "bis": "20:00",
+     "art": "oeffentlich"
+    }
+   ],
+   "quelle": {
+    "url": "https://www.bielefelderbaeder.de/baeder/hallenbaeder/familienbad-heepen/",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 57.5,
+    "stunden_voll_woche": 57.5,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 4.0,
+     "Di": 5.0,
+     "Mi": 5.5,
+     "Do": 5.5,
+     "Fr": 13.5,
+     "Sa": 12.0,
+     "So": 12.0
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,177 @@
+{
+ "stadt": "Moers",
+ "stand": "2026-11-04",
+ "hinweis": "ENNI Sport & Bäder; Zeiten aus dem Öffnungszeiten-Kalender der Betreiberseite für die Woche 9.–15.11.2026. Solimare Aktivbad: zwei warme Kursbecken (Familien/Kurse), werktags Schul-/Vereinssport. Sportpark Rheinkamp: Sportbad 25 m, 6 Bahnen. Wasserflächen nicht veröffentlicht.",
+ "baeder": [
+  {
+   "id": "moers-0",
+   "name": "Solimare Aktivbad",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "moers-s0",
+   "traeger": "ENNI Sport & Bäder Niederrhein GmbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Mo"
+    },
+    {
+     "von": "17:00",
+     "bis": "21:30",
+     "art": "oeffentlich",
+     "tag": "Mo"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "10:00",
+     "bis": "17:00",
+     "art": "oeffentlich",
+     "tag": "Sa"
+    },
+    {
+     "von": "10:00",
+     "bis": "17:00",
+     "art": "oeffentlich",
+     "tag": "So"
+    }
+   ],
+   "quelle": {
+    "url": "https://www.enni.de/freizeit/oeffnungszeiten-freizeiteinrichtungen/",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 21.5,
+    "stunden_voll_woche": 21.5,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 6.0,
+     "Di": 0.0,
+     "Mi": 0.0,
+     "Do": 0.0,
+     "Fr": 1.5,
+     "Sa": 7.0,
+     "So": 7.0
+    }
+   }
+  },
+  {
+   "id": "moers-1",
+   "name": "Sportpark Rheinkamp (Hallenbad)",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "moers-s1",
+   "traeger": "ENNI Sport & Bäder Niederrhein GmbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    {
+     "von": "13:00",
+     "bis": "14:45",
+     "art": "oeffentlich",
+     "tag": "Mo"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "13:00",
+     "bis": "14:45",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "13:00",
+     "bis": "14:45",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "13:00",
+     "bis": "14:45",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "13:00",
+     "bis": "14:45",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "17:00",
+     "bis": "21:30",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "17:00",
+     "bis": "21:30",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "10:00",
+     "bis": "17:00",
+     "art": "oeffentlich",
+     "tag": "Sa"
+    },
+    {
+     "von": "10:00",
+     "bis": "17:00",
+     "art": "oeffentlich",
+     "tag": "So"
+    }
+   ],
+   "quelle": {
+    "url": "https://www.enni.de/freizeit/oeffnungszeiten-freizeiteinrichtungen/",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 37.75,
+    "stunden_voll_woche": 37.75,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 1.75,
+     "Di": 7.75,
+     "Mi": 3.25,
+     "Do": 7.75,
+     "Fr": 3.25,
+     "Sa": 7.0,
+     "So": 7.0
+    }
+   }
+  }
+ ]
+}

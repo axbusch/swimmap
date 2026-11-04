@@ -1,0 +1,382 @@
+{
+ "stadt": "Bonn",
+ "stand": "2026-11-04",
+ "hinweis": "Stadt Bonn veröffentlicht je Zeitfenster die öffentlich nutzbaren Bahnen/Becken; daraus wurden Flächenanteile berechnet (Bahnenangaben wie '2 bis 4' als Mittelwert). Hardtbergbad (Sanierung seit 2024) und Kurfürstenbad (Neubau) geschlossen. Friesdorf: Freibad, im Winter mit Traglufthalle als Hallenbad.",
+ "baeder": [
+  {
+   "id": "bonn-0",
+   "name": "Frankenbad",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "bonn-s0",
+   "traeger": "Bundesstadt Bonn, Sport- und Bäderamt",
+   "wasserflaeche_m2": 783.5,
+   "ausstattung": "Sportbecken 25 × 15 m, Mehrzweckbecken 25 × 12,5 m, Lehrbecken 12 × 8 m",
+   "slots": [
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.88,
+     "tag": "Mo"
+    },
+    {
+     "von": "15:00",
+     "bis": "17:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.36,
+     "hinweis": "3–6 Bahnen Sportbecken",
+     "tag": "Mo"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.8,
+     "tag": "Di"
+    },
+    {
+     "von": "14:00",
+     "bis": "16:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.4,
+     "hinweis": "4–6 Bahnen Sportbecken",
+     "tag": "Di"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.88,
+     "tag": "Mi"
+    },
+    {
+     "von": "13:00",
+     "bis": "21:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.88,
+     "hinweis": "Sport- und Mehrzweckbecken",
+     "tag": "Mi"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.88,
+     "tag": "Do"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.88,
+     "tag": "Fr"
+    },
+    {
+     "von": "14:00",
+     "bis": "16:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.64,
+     "tag": "Fr"
+    },
+    {
+     "von": "09:00",
+     "bis": "15:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.56,
+     "hinweis": "5 Bahnen Sport + 2 Bahnen MZB",
+     "tag": "Sa"
+    },
+    {
+     "von": "09:00",
+     "bis": "16:00",
+     "art": "oeffentlich",
+     "tag": "So"
+    }
+   ],
+   "quelle": {
+    "url": "https://baeder.bonn.de/oeffnungszeiten",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 34.5,
+    "stunden_voll_woche": 7.0,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": 20903.8,
+    "stunden_pro_tag": {
+     "Mo": 3.5,
+     "Di": 3.5,
+     "Mi": 9.5,
+     "Do": 1.5,
+     "Fr": 3.5,
+     "Sa": 6.0,
+     "So": 7.0
+    }
+   }
+  },
+  {
+   "id": "bonn-1",
+   "name": "Beueler Bütt",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "bonn-s1",
+   "traeger": "Bundesstadt Bonn, Sport- und Bäderamt",
+   "wasserflaeche_m2": 387.5,
+   "ausstattung": "Mehrzweckbecken 25 × 12,5 m, Lehrbecken 12,5 × 6 m",
+   "slots": [
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "14:00",
+     "bis": "21:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.68,
+     "hinweis": "3 Bahnen + Lehrbecken",
+     "tag": "Di"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "08:00",
+     "bis": "09:30",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.48,
+     "hinweis": "3 Bahnen",
+     "tag": "Mi"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "08:00",
+     "bis": "15:30",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.48,
+     "hinweis": "2–4 Bahnen",
+     "tag": "Fr"
+    },
+    {
+     "von": "15:30",
+     "bis": "21:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.68,
+     "hinweis": "2–4 Bahnen + Lehrbecken",
+     "tag": "Fr"
+    },
+    {
+     "von": "09:00",
+     "bis": "18:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.73,
+     "hinweis": "4–5 Bahnen",
+     "tag": "Sa"
+    },
+    {
+     "von": "09:00",
+     "bis": "16:00",
+     "art": "oeffentlich",
+     "tag": "So"
+    }
+   ],
+   "quelle": {
+    "url": "https://baeder.bonn.de/oeffnungszeiten",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 43.5,
+    "stunden_voll_woche": 13.0,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": 12551.1,
+    "stunden_pro_tag": {
+     "Mo": 0.0,
+     "Di": 8.5,
+     "Mi": 3.0,
+     "Do": 1.5,
+     "Fr": 14.5,
+     "Sa": 9.0,
+     "So": 7.0
+    }
+   }
+  },
+  {
+   "id": "bonn-2",
+   "name": "Friesi (Traglufthalle Friesdorf)",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "bonn-s2",
+   "traeger": "Bundesstadt Bonn, Sport- und Bäderamt",
+   "wasserflaeche_m2": 583.4,
+   "ausstattung": "Mehrzweckbecken 25 × 16,67 m, Lehrschwimmbecken 10 × 16,67 m (Traglufthalle im Winter)",
+   "slots": [
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Mo"
+    },
+    {
+     "von": "08:00",
+     "bis": "15:45",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.36,
+     "hinweis": "3 Bahnen",
+     "tag": "Mo"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "08:00",
+     "bis": "15:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.36,
+     "hinweis": "3 Bahnen",
+     "tag": "Di"
+    },
+    {
+     "von": "15:00",
+     "bis": "21:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.76,
+     "hinweis": "4 Bahnen + Lehrbecken",
+     "tag": "Di"
+    },
+    {
+     "von": "08:00",
+     "bis": "15:45",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.36,
+     "hinweis": "3 Bahnen",
+     "tag": "Mi"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "08:00",
+     "bis": "13:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.36,
+     "hinweis": "3 Bahnen",
+     "tag": "Do"
+    },
+    {
+     "von": "13:00",
+     "bis": "17:30",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "08:00",
+     "bis": "15:00",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.36,
+     "hinweis": "3 Bahnen",
+     "tag": "Fr"
+    },
+    {
+     "von": "09:00",
+     "bis": "15:15",
+     "art": "teiloeffentlich",
+     "flaechenanteil": 0.74,
+     "hinweis": "5 Bahnen + ½ Lehrbecken",
+     "tag": "Sa"
+    },
+    {
+     "von": "15:15",
+     "bis": "16:00",
+     "art": "oeffentlich",
+     "tag": "Sa"
+    },
+    {
+     "von": "09:00",
+     "bis": "16:00",
+     "art": "oeffentlich",
+     "tag": "So"
+    }
+   ],
+   "quelle": {
+    "url": "https://baeder.bonn.de/oeffnungszeiten",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 65.0,
+    "stunden_voll_woche": 18.25,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": 23251.4,
+    "stunden_pro_tag": {
+     "Mo": 9.25,
+     "Di": 14.5,
+     "Mi": 7.75,
+     "Do": 11.0,
+     "Fr": 8.5,
+     "Sa": 7.0,
+     "So": 7.0
+    }
+   }
+  },
+  {
+   "id": "bonn-3",
+   "name": "Hardtbergbad",
+   "cat": "geschlossen",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "bonn-s3",
+   "traeger": "Bundesstadt Bonn, Sport- und Bäderamt",
+   "wasserflaeche_m2": null,
+   "slots": [],
+   "quelle": {
+    "url": "https://baeder.bonn.de/oeffnungszeiten",
+    "abgerufen": "2026-11-04"
+   },
+   "hinweis": "seit Ende Freibadsaison 2024 wegen Sanierung geschlossen",
+   "kennzahlen": {
+    "stunden_woche": 0.0,
+    "stunden_voll_woche": 0.0,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 0.0,
+     "Di": 0.0,
+     "Mi": 0.0,
+     "Do": 0.0,
+     "Fr": 0.0,
+     "Sa": 0.0,
+     "So": 0.0
+    }
+   }
+  }
+ ]
+}

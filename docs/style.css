@@ -235,3 +235,5 @@ header.top select { font: inherit; font-size: 15px; padding: 4px 8px; border-rad
 #detail h4.sub { margin: 10px 0 2px; font-size: 13px; }
 #city-note details { margin-top: 8px; }
 .checks label[hidden] { display: none; }
+
+.kpi-note { grid-column: 1 / -1; margin: 2px 0 0; }

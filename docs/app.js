@@ -318,10 +318,11 @@ function drawCity() {
   boundaryLayer = L.geoJSON(C.grenze, { interactive: false, style: { color: '#52514e', weight: 1.5, fill: false, dashArray: '4 3' } }).addTo(map);
   // ohne Animation: ein animiertes fitBounds würde durch spätere setView/setZoom abgebrochen
   const bb = boundaryLayer.getBounds();
+  map.invalidateSize({ animate: false });
   map.setView(bb.getCenter(), Math.max(10, map.getBoundsZoom(bb, false, L.point(20, 20))), { animate: false });
   for (const s of C.standorte) {
     const mk = L.marker([s.lat, s.lon], { title: s.name, keyboard: true, riseOnHover: true });
-    mk.bindPopup(() => standortPopup(s), { maxWidth: 360 });
+    mk.bindPopup(() => standortPopup(s), { maxWidth: 360, maxHeight: Math.max(260, Math.round(map.getSize().y * 0.8)) });
     mk.on('click', () => setFocus(s.id, false));
     markers[s.id] = mk;
   }
@@ -508,8 +509,12 @@ function renderKpis() {
     [fmtPct(comp.share), `der Einwohner ${scope} in ≤ ${state.thr} min ${m}`],
     [fmt0(comp.avgHours) + ' h', `Ø erreichbare öffentl. Stunden/Woche je Einwohner (≤ ${state.thr} min ${m})`],
   ];
+  const kern = C.kennzahlen_stadt;
+  const nurKern = !state.focus && Object.keys(CATS).every(k => state.cats[k] === (k === 'hallenbad' || k === 'geschlossen'));
+  const hinweis = kern && !nurKern
+    ? `<p class="note kpi-note">Kernkennzahl für den NRW-Vergleich (nur kommunale Hallenbäder): <b>${fmt1(kern.stunden_je_10k_ew)} h</b> je 10.000 Einwohner.</p>` : '';
   document.getElementById('kpis').innerHTML =
-    tiles.map(([v, l]) => `<div class="kpi"><div class="v">${v}</div><div class="l">${esc(l)}</div></div>`).join('');
+    tiles.map(([v, l]) => `<div class="kpi"><div class="v">${v}</div><div class="l">${esc(l)}</div></div>`).join('') + hinweis;
 }
 
 function renderLegend() {
@@ -692,7 +697,7 @@ function renderMethodik() {
   <p>Für jede bewohnte und unbewohnte 100-m-Zelle des Zensus-2022-Gitters im Stadtgebiet wird die Reisezeit zu jedem Bad-Standort berechnet:</p>
   <ul>
     <li><b>Zu Fuß:</b> 4,5 km/h auf dem Fußwegenetz von OpenStreetMap.</li>
-    <li><b>Rad:</b> 15 km/h auf dem Radnetz von OpenStreetMap, Einbahnregeln beachtet.</li>
+    <li><b>Rad:</b> 15 km/h auf dem Radnetz von OpenStreetMap, Einbahnregeln beachtet. Steigungen sind nicht berücksichtigt; in hügeligen Städten (z. B. Remscheid, Siegen, Hagen, Wuppertal) sind die Radzeiten daher eher zu optimistisch.</li>
     <li><b>ÖPNV:</b> Tür-zu-Tür. Fußweg zur Haltestelle (bis 1 km, Luftlinie × 1,3), Fahrplan ${esc(oe.stichtag)} (Dienstag), Umstiege mit bis zu 500 m Fußweg und 1 min Puffer, Fußweg zum Bad. Ausgewertet für eine Ankunft am Bad zwischen 17 und 19 Uhr im 15-Minuten-Takt; gezeigt wird der Median. Ist man zu Fuß schneller, gilt die Fußzeit. Datengrundlage: ${esc(oe.quelle)}, ${fmt0(oe.verbindungen)} Teilfahrten in NRW.</li>
     <li>Gerechnet wird nur innerhalb der jeweiligen Stadtgrenze; Bäder in Nachbarstädten werden nicht berücksichtigt.</li>
   </ul>

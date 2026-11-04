@@ -1,0 +1,153 @@
+{
+ "stadt": "Remscheid",
+ "stand": "2026-11-04",
+ "hinweis": "H2O Sauna- und Badeparadies (Freizeitbad mit 25-m-Sportbecken; Sport- und Freizeitbereich nicht getrennt ausgewiesen, daher ganz gezählt) und Sportbad am Stadtpark (überwiegend Vereine, öffentlich nur Frühschwimmen und Einzelstunden). Wasserflächen nicht veröffentlicht.",
+ "baeder": [
+  {
+   "id": "remscheid-0",
+   "name": "H2O Badeparadies",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "remscheid-s0",
+   "traeger": "H2O Remscheid (Stadtwerke/Stadt Remscheid)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    {
+     "von": "10:00",
+     "bis": "22:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "10:00",
+     "bis": "22:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "10:00",
+     "bis": "22:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "10:00",
+     "bis": "22:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "10:00",
+     "bis": "22:00",
+     "art": "oeffentlich",
+     "tag": "Sa"
+    },
+    {
+     "von": "10:00",
+     "bis": "21:00",
+     "art": "oeffentlich",
+     "tag": "So"
+    }
+   ],
+   "quelle": {
+    "url": "https://www.h2o-badeparadies.de/preise-oeffnungszeiten/",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 71.0,
+    "stunden_voll_woche": 71.0,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 0.0,
+     "Di": 12.0,
+     "Mi": 12.0,
+     "Do": 12.0,
+     "Fr": 12.0,
+     "Sa": 12.0,
+     "So": 11.0
+    }
+   }
+  },
+  {
+   "id": "remscheid-1",
+   "name": "Sportbad am Stadtpark",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "remscheid-s1",
+   "traeger": "H2O Remscheid (Stadtwerke/Stadt Remscheid)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Mo"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "13:00",
+     "bis": "14:00",
+     "art": "oeffentlich",
+     "tag": "Mo"
+    },
+    {
+     "von": "13:00",
+     "bis": "14:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "14:00",
+     "bis": "15:00",
+     "art": "oeffentlich",
+     "tag": "Sa"
+    }
+   ],
+   "quelle": {
+    "url": "https://www.h2o-badeparadies.de/sportbad-am-stadtpark/",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 10.5,
+    "stunden_voll_woche": 10.5,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 2.5,
+     "Di": 1.5,
+     "Mi": 2.5,
+     "Do": 1.5,
+     "Fr": 1.5,
+     "Sa": 1.0,
+     "So": 0.0
+    }
+   }
+  }
+ ]
+}

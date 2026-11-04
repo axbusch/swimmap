@@ -1,0 +1,277 @@
+{
+ "stadt": "Bochum",
+ "stand": "2026-11-04",
+ "hinweis": "WasserWelten Bochum; reguläre Zeiten laut eaero-Widget KW 45 (kurzfristige Ausnahmen wie Wettkämpfe nicht berücksichtigt). Laut Betreiber variieren Bahnbelegungen durch Kurse/Vereine während der Öffnungszeit (Parallelbetrieb). Hallenbad Langendreer wegen Modernisierung geschlossen (0 h). Wasserflächen nicht veröffentlicht.",
+ "baeder": [
+  {
+   "id": "bochum-0",
+   "name": "Hallenfreibad Hofstede",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "bochum-s0",
+   "traeger": "WasserWelten Bochum GmbH (Stadtwerke Bochum)",
+   "wasserflaeche_m2": null,
+   "ausstattung": "Hallenbad 25 m, 6 Bahnen",
+   "slots": [
+    {
+     "von": "16:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Mo"
+    },
+    {
+     "von": "06:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "06:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "06:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "06:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "07:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Sa"
+    },
+    {
+     "von": "07:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "So"
+    }
+   ],
+   "quelle": {
+    "url": "https://wasserwelten-bochum.de/unsere-baeder/hofstede/",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 83.0,
+    "stunden_voll_woche": 83.0,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 4.0,
+     "Di": 13.5,
+     "Mi": 13.5,
+     "Do": 13.5,
+     "Fr": 13.5,
+     "Sa": 12.5,
+     "So": 12.5
+    }
+   }
+  },
+  {
+   "id": "bochum-1",
+   "name": "Hallenbad Linden",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "bochum-s1",
+   "traeger": "WasserWelten Bochum GmbH (Stadtwerke Bochum)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    {
+     "von": "16:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Mo"
+    },
+    {
+     "von": "06:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "06:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "06:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "06:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "07:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Sa"
+    },
+    {
+     "von": "07:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "So"
+    }
+   ],
+   "quelle": {
+    "url": "https://wasserwelten-bochum.de/unsere-baeder/linden/",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 83.0,
+    "stunden_voll_woche": 83.0,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 4.0,
+     "Di": 13.5,
+     "Mi": 13.5,
+     "Do": 13.5,
+     "Fr": 13.5,
+     "Sa": 12.5,
+     "So": 12.5
+    }
+   }
+  },
+  {
+   "id": "bochum-2",
+   "name": "Hallenbad Querenburg",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "bochum-s2",
+   "traeger": "WasserWelten Bochum GmbH (Stadtwerke Bochum)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    {
+     "von": "16:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Mo"
+    },
+    {
+     "von": "06:30",
+     "bis": "12:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "06:30",
+     "bis": "12:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "06:30",
+     "bis": "12:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "15:00",
+     "bis": "19:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "15:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "15:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "06:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "07:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Sa"
+    },
+    {
+     "von": "07:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "So"
+    }
+   ],
+   "quelle": {
+    "url": "https://wasserwelten-bochum.de/unsere-baeder/querenburg/",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 73.0,
+    "stunden_voll_woche": 73.0,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 4.0,
+     "Di": 9.5,
+     "Mi": 10.5,
+     "Do": 10.5,
+     "Fr": 13.5,
+     "Sa": 12.5,
+     "So": 12.5
+    }
+   }
+  },
+  {
+   "id": "bochum-3",
+   "name": "Hallenbad Langendreer",
+   "cat": "geschlossen",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "bochum-s3",
+   "traeger": "WasserWelten Bochum GmbH (Stadtwerke Bochum)",
+   "wasserflaeche_m2": null,
+   "ausstattung": "25-m-Becken",
+   "slots": [],
+   "quelle": {
+    "url": "https://wasserwelten-bochum.de/unsere-baeder/langendreer/",
+    "abgerufen": "2026-11-04"
+   },
+   "hinweis": "wegen Modernisierung geschlossen (Stand 11/2026)",
+   "kennzahlen": {
+    "stunden_woche": 0.0,
+    "stunden_voll_woche": 0.0,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 0.0,
+     "Di": 0.0,
+     "Mi": 0.0,
+     "Do": 0.0,
+     "Fr": 0.0,
+     "Sa": 0.0,
+     "So": 0.0
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,197 @@
+{
+ "stadt": "Krefeld",
+ "stand": "2026-11-04",
+ "hinweis": "Laut Stadt Krefeld gibt es nur im Badezentrum Bockum und im Bad am Stadtpark Fischeln ein öffentliches Schwimmangebot; die Hallenbäder Uerdingen und die Lehrschwimmbäder (Gartenstadt, Linn) dienen Schulen/Vereinen. Zeiten ab 21.09.2026. Wasserflächen nicht veröffentlicht.",
+ "baeder": [
+  {
+   "id": "krefeld-0",
+   "name": "Badezentrum Bockum",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "krefeld-s0",
+   "traeger": "Stadt Krefeld, Fachbereich Sport und Sportförderung",
+   "wasserflaeche_m2": null,
+   "ausstattung": "50-m-Sportbecken, Sprunganlage bis 7 m, Lehrschwimmbecken",
+   "slots": [
+    {
+     "von": "14:30",
+     "bis": "21:00",
+     "art": "oeffentlich",
+     "tag": "Mo"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "14:30",
+     "bis": "19:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "14:30",
+     "bis": "19:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "14:30",
+     "bis": "19:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "14:30",
+     "bis": "21:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "08:00",
+     "bis": "16:00",
+     "art": "oeffentlich",
+     "tag": "Sa"
+    },
+    {
+     "von": "08:00",
+     "bis": "16:00",
+     "art": "oeffentlich",
+     "tag": "So"
+    }
+   ],
+   "quelle": {
+    "url": "https://www.krefeld.de/schwimmen",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 48.5,
+    "stunden_voll_woche": 48.5,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 6.5,
+     "Di": 6.0,
+     "Mi": 8.0,
+     "Do": 6.0,
+     "Fr": 6.0,
+     "Sa": 8.0,
+     "So": 8.0
+    }
+   }
+  },
+  {
+   "id": "krefeld-1",
+   "name": "Bad am Stadtpark Fischeln",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "krefeld-s1",
+   "traeger": "Stadt Krefeld, Fachbereich Sport und Sportförderung",
+   "wasserflaeche_m2": null,
+   "ausstattung": "Variobecken 25 m",
+   "slots": [
+    {
+     "von": "06:00",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Mo"
+    },
+    {
+     "von": "06:00",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "06:00",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "06:00",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "14:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Mo"
+    },
+    {
+     "von": "14:30",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "14:30",
+     "bis": "17:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "14:30",
+     "bis": "17:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "14:30",
+     "bis": "17:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "08:00",
+     "bis": "13:00",
+     "art": "oeffentlich",
+     "tag": "Sa"
+    }
+   ],
+   "quelle": {
+    "url": "https://www.krefeld.de/schwimmen",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 31.5,
+    "stunden_voll_woche": 31.5,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 7.5,
+     "Di": 4.5,
+     "Mi": 4.5,
+     "Do": 5.5,
+     "Fr": 4.5,
+     "Sa": 5.0,
+     "So": 0.0
+    }
+   }
+  }
+ ]
+}

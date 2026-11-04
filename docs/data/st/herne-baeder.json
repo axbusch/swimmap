@@ -1,0 +1,225 @@
+{
+ "stadt": "Herne",
+ "stand": "2026-11-04",
+ "hinweis": "Herner Bädergesellschaft. Wananas (Sport- und Erlebnisbad, ersetzt Hallenbad Eickel): Öffnungszeiten laut Tarifseite (Mo 14–20, Di–So 8–20) plus Frühschwimmen im Sportbad Di–So 6–8 Uhr; Sport- und Erlebnisbereich nicht getrennt ausgewiesen. Südpool: laut Betreiber eingeschränkter öffentlicher Betrieb wegen Vereinsbelegungen. Wasserflächen nicht veröffentlicht.",
+ "baeder": [
+  {
+   "id": "herne-0",
+   "name": "Wananas",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "herne-s0",
+   "traeger": "Herner Bädergesellschaft (HBG, Stadtwerke Herne)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    {
+     "von": "14:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Mo"
+    },
+    {
+     "von": "06:00",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "hinweis": "Frühschwimmen Sportbad",
+     "tag": "Di"
+    },
+    {
+     "von": "06:00",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "hinweis": "Frühschwimmen Sportbad",
+     "tag": "Mi"
+    },
+    {
+     "von": "06:00",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "hinweis": "Frühschwimmen Sportbad",
+     "tag": "Do"
+    },
+    {
+     "von": "06:00",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "hinweis": "Frühschwimmen Sportbad",
+     "tag": "Fr"
+    },
+    {
+     "von": "06:00",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "hinweis": "Frühschwimmen Sportbad",
+     "tag": "Sa"
+    },
+    {
+     "von": "06:00",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "hinweis": "Frühschwimmen Sportbad",
+     "tag": "So"
+    },
+    {
+     "von": "08:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "08:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "08:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "08:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "08:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Sa"
+    },
+    {
+     "von": "08:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "So"
+    }
+   ],
+   "quelle": {
+    "url": "https://www.wananas.de/preise-zeiten/",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 90.0,
+    "stunden_voll_woche": 90.0,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 6.0,
+     "Di": 14.0,
+     "Mi": 14.0,
+     "Do": 14.0,
+     "Fr": 14.0,
+     "Sa": 14.0,
+     "So": 14.0
+    }
+   }
+  },
+  {
+   "id": "herne-1",
+   "name": "Südpool (Hallenbad)",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "herne-s1",
+   "traeger": "Herner Bädergesellschaft (HBG, Stadtwerke Herne)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "Sa"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:00",
+     "art": "oeffentlich",
+     "tag": "So"
+    },
+    {
+     "von": "09:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "09:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "09:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "09:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "Sa"
+    },
+    {
+     "von": "09:00",
+     "bis": "20:00",
+     "art": "oeffentlich",
+     "tag": "So"
+    },
+    {
+     "von": "09:00",
+     "bis": "16:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    }
+   ],
+   "quelle": {
+    "url": "https://www.suedpool-herne.de/",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 71.0,
+    "stunden_voll_woche": 71.0,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": null,
+    "stunden_pro_tag": {
+     "Mo": 0.0,
+     "Di": 12.5,
+     "Mi": 8.5,
+     "Do": 12.5,
+     "Fr": 12.5,
+     "Sa": 12.5,
+     "So": 12.5
+    }
+   }
+  }
+ ]
+}

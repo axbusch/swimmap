@@ -31,7 +31,7 @@
      "Wasserfläche fehlt: Zündorfbad"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Agrippabad",
@@ -93,6 +93,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://koelnbaeder.de/baeder/zuendorfbad/"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -125,7 +130,7 @@
      "Wasserfläche fehlt: Badehaus Benrath – Sportbereich"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Rheinblick 741",
@@ -181,6 +186,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/badehaus-benrath/"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -203,7 +213,7 @@
     "wasserflaeche_m2_je_1000_ew": 5.98,
     "datenluecken": []
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Nordbad",
@@ -241,6 +251,11 @@
      "wasserflaeche_m2": 412.5,
      "quelle": "https://sportwelt-dortmund.de/hallenbaeder/mengede/"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -265,7 +280,7 @@
      "Wasserfläche fehlt: Alte Badeanstalt (Altenessen)"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Schwimmzentrum Rüttenscheid – Mehrzweckhalle",
@@ -327,6 +342,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/alte_badeanstalt.de.html"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -353,7 +373,7 @@
      "Wasserfläche fehlt: Rhein-Ruhr-Bad Hamborn"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Allwetterbad Walsum",
@@ -379,6 +399,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://www.baederportal-duisburg.de/unsere-baeder/rhein-ruhr-bad-hamborn/aktionspreise-oeffnungszeiten"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -405,7 +430,7 @@
      "Wasserfläche fehlt: Hallenbad Querenburg"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Hallenfreibad Hofstede",
@@ -431,6 +456,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://wasserwelten-bochum.de/unsere-baeder/langendreer/"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -470,7 +500,7 @@
      "Wasserfläche fehlt: Familienbad Heepen"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Ishara – Sportlandschaft",
@@ -496,6 +526,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://www.bielefelderbaeder.de/baeder/hallenbaeder/familienbad-heepen/"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -518,7 +553,7 @@
     "wasserflaeche_m2_je_1000_ew": 5.42,
     "datenluecken": []
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Frankenbad",
@@ -544,6 +579,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://baeder.bonn.de/oeffnungszeiten"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -637,7 +677,7 @@
     "wasserflaeche_m2_je_1000_ew": 8.02,
     "datenluecken": []
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Vitusbad – Sportbecken",
@@ -663,6 +703,11 @@
      "wasserflaeche_m2": 549,
      "quelle": "https://www.new.de/baeder/baeder-uebersicht/stadtbad-rheydt"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -689,7 +734,7 @@
      "Wasserfläche fehlt: Sport-Paradies – Frühschwimmen"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Hallenbad Buer",
@@ -709,6 +754,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://www.sport-paradies.de/preise-zeiten-badeparadies"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -735,7 +785,7 @@
      "Wasserfläche fehlt: Schwimmhalle Brand"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Elisabethhalle",
@@ -761,6 +811,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://www.aachen.de/in-aachen-leben/sportportal/schwimmbaeder/oeffnungszeiten-schwimmbaeder-260914.pdf"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -786,7 +841,7 @@
      "Wasserfläche fehlt: Bad am Stadtpark Fischeln"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Badezentrum Bockum",
@@ -800,6 +855,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://www.krefeld.de/schwimmen"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -825,7 +885,7 @@
      "Wasserfläche fehlt: Hallenbad Sterkrade"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Hallenbad Oberhausen",
@@ -839,6 +899,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://sbo.oberhausen.de/dienstleistungen/schwimmbaeder/hallenbad-sterkrade"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -863,7 +928,7 @@
      "Wasserfläche fehlt: Westfalenbad – Schwimmen"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Westfalenbad – Schwimmen",
@@ -871,6 +936,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://www.hagenbad.de/baeder/westfalenbad"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -898,7 +968,7 @@
      "Wasserfläche fehlt: Maximare – 50-m-Sportbecken"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Familien-Oase Heessen",
@@ -924,6 +994,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://www.maximare.com/infobereich-maximare/oeffnungszeiten"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -960,7 +1035,7 @@
      "Wasserfläche fehlt: Hallenbad Wiembachtal"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Hallenbad Wiembachtal",
@@ -968,6 +1043,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://www.bad-wiembachtal.de/preise/"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -1005,7 +1085,7 @@
      "Wasserfläche fehlt: Südpool (Hallenbad)"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Wananas",
@@ -1019,6 +1099,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://www.suedpool-herne.de/"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -1045,7 +1130,7 @@
      "Wasserfläche fehlt: Residenzbad Schloss Neuhaus"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Schwimmoper",
@@ -1065,6 +1150,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://www.paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus/"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -1087,7 +1177,7 @@
     "wasserflaeche_m2_je_1000_ew": 15.3,
     "datenluecken": []
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Südbad (Hallenbereich)",
@@ -1107,6 +1197,11 @@
      "wasserflaeche_m2": 1137,
      "quelle": "https://www.stadtwerke-neuss.de/baeder-eishalle/stadtbad"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -1129,7 +1224,7 @@
     "wasserflaeche_m2_je_1000_ew": 9.21,
     "datenluecken": []
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Hallenbad im Sportpark",
@@ -1149,6 +1244,11 @@
      "wasserflaeche_m2": 312.5,
      "quelle": "https://www.bottrop.de/sport/baeder/Hallenbad_Boy_Welheim.php"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -1174,7 +1274,7 @@
      "Wasserfläche fehlt: Südbad (Hallenbad)"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Hallenbad Herner Straße",
@@ -1188,6 +1288,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://www.recklinghausen.de/inhalte/startseite/freizeit_tourismus/sport/frei_und_hallenbaeder/index.asp"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -1213,7 +1318,7 @@
      "Wasserfläche fehlt: Sportbad am Stadtpark"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "H2O Badeparadies",
@@ -1227,6 +1332,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://www.h2o-badeparadies.de/sportbad-am-stadtpark/"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -1251,7 +1361,7 @@
      "Wasserfläche fehlt: Kombibad Paffrath (Hallenbad)"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Kombibad Paffrath (Hallenbad)",
@@ -1259,6 +1369,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://www.baeder-gl.de/kombibad-paffrath/oeffnungszeiten.aspx"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -1281,7 +1396,7 @@
     "wasserflaeche_m2_je_1000_ew": 10.49,
     "datenluecken": []
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Hallenbad Löhrtor",
@@ -1301,6 +1416,11 @@
      "wasserflaeche_m2": 440,
      "quelle": "https://www.siegen.de/leben-in-siegen/freizeit-sport/schwimmbaeder-hallenbaeder-freibaeder-und-naturfreibaeder/hallenbad-eiserfeld"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   },
   {
@@ -1326,7 +1446,7 @@
      "Wasserfläche fehlt: Sportpark Rheinkamp (Hallenbad)"
     ]
    },
-   "karte": false,
+   "karte": true,
    "baeder": [
     {
      "name": "Solimare Aktivbad",
@@ -1340,6 +1460,11 @@
      "wasserflaeche_m2": null,
      "quelle": "https://www.enni.de/freizeit/oeffnungszeiten-freizeiteinrichtungen/"
     }
+   ],
+   "modi": [
+    "walk",
+    "bike",
+    "pt"
    ]
   }
  ],

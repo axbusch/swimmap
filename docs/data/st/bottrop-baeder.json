@@ -1,0 +1,264 @@
+{
+ "stadt": "Bottrop",
+ "stand": "2026-11-04",
+ "hinweis": "Stadt Bottrop; 'Frühschwimmen' und 'Familienbad' = öffentlicher Badebetrieb, 'Frauenbad' als Zielgruppe. Wasserflächen aus Beckenmaßen der Stadt. Laut Stadt kann Kurs-/Vereinsbetrieb parallel einschränken.",
+ "baeder": [
+  {
+   "id": "bottrop-0",
+   "name": "Hallenbad im Sportpark",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "bottrop-s0",
+   "traeger": "Stadt Bottrop, Sport- und Bäderbetrieb",
+   "wasserflaeche_m2": 529,
+   "slots": [
+    {
+     "von": "06:30",
+     "bis": "10:00",
+     "art": "oeffentlich",
+     "tag": "Mo"
+    },
+    {
+     "von": "06:30",
+     "bis": "10:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "06:30",
+     "bis": "10:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "06:30",
+     "bis": "10:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:30",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "08:30",
+     "bis": "10:00",
+     "art": "zielgruppe",
+     "hinweis": "Frauenbad",
+     "tag": "Fr"
+    },
+    {
+     "von": "13:30",
+     "bis": "17:30",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "13:30",
+     "bis": "17:30",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "13:30",
+     "bis": "17:30",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "16:00",
+     "bis": "21:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "09:00",
+     "bis": "14:00",
+     "art": "oeffentlich",
+     "tag": "Sa"
+    },
+    {
+     "von": "09:00",
+     "bis": "14:00",
+     "art": "oeffentlich",
+     "tag": "So"
+    }
+   ],
+   "quelle": {
+    "url": "https://www.bottrop.de/sport/baeder/Hallenbad_im_Sportpark.php",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 43.0,
+    "stunden_voll_woche": 43.0,
+    "stunden_zielgruppe_woche": 1.5,
+    "m2h_woche": 22747.0,
+    "stunden_pro_tag": {
+     "Mo": 3.5,
+     "Di": 7.5,
+     "Mi": 7.5,
+     "Do": 8.5,
+     "Fr": 6.0,
+     "Sa": 5.0,
+     "So": 5.0
+    }
+   }
+  },
+  {
+   "id": "bottrop-1",
+   "name": "Hallenbad Kirchhellen",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "bottrop-s1",
+   "traeger": "Stadt Bottrop, Sport- und Bäderbetrieb",
+   "wasserflaeche_m2": 250,
+   "slots": [
+    {
+     "von": "06:30",
+     "bis": "10:00",
+     "art": "oeffentlich",
+     "tag": "Mo"
+    },
+    {
+     "von": "06:30",
+     "bis": "10:00",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "06:30",
+     "bis": "10:00",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "06:30",
+     "bis": "08:30",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "08:30",
+     "bis": "10:00",
+     "art": "zielgruppe",
+     "hinweis": "Frauenbad",
+     "tag": "Mi"
+    },
+    {
+     "von": "06:30",
+     "bis": "09:00",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "13:30",
+     "bis": "17:30",
+     "art": "oeffentlich",
+     "tag": "Di"
+    },
+    {
+     "von": "13:30",
+     "bis": "17:30",
+     "art": "oeffentlich",
+     "tag": "Do"
+    },
+    {
+     "von": "13:30",
+     "bis": "17:30",
+     "art": "oeffentlich",
+     "tag": "Fr"
+    },
+    {
+     "von": "16:00",
+     "bis": "21:00",
+     "art": "oeffentlich",
+     "tag": "Mi"
+    },
+    {
+     "von": "08:00",
+     "bis": "13:00",
+     "art": "oeffentlich",
+     "tag": "Sa"
+    },
+    {
+     "von": "08:00",
+     "bis": "13:00",
+     "art": "oeffentlich",
+     "tag": "So"
+    }
+   ],
+   "quelle": {
+    "url": "https://www.bottrop.de/sport/baeder/Hallenbad_Kirchhellen.php",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 42.0,
+    "stunden_voll_woche": 42.0,
+    "stunden_zielgruppe_woche": 1.5,
+    "m2h_woche": 10500.0,
+    "stunden_pro_tag": {
+     "Mo": 3.5,
+     "Di": 7.5,
+     "Mi": 7.0,
+     "Do": 7.5,
+     "Fr": 6.5,
+     "Sa": 5.0,
+     "So": 5.0
+    }
+   }
+  },
+  {
+   "id": "bottrop-2",
+   "name": "Hallenbad Boy/Welheim",
+   "cat": "hallenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "standort_id": "bottrop-s2",
+   "traeger": "Stadt Bottrop, Sport- und Bäderbetrieb",
+   "wasserflaeche_m2": 312.5,
+   "slots": [
+    {
+     "von": "06:30",
+     "bis": "08:15",
+     "art": "oeffentlich",
+     "tag": "Mo"
+    },
+    {
+     "von": "07:00",
+     "bis": "12:00",
+     "art": "oeffentlich",
+     "tag": "Sa"
+    },
+    {
+     "von": "07:00",
+     "bis": "12:00",
+     "art": "oeffentlich",
+     "tag": "So"
+    }
+   ],
+   "quelle": {
+    "url": "https://www.bottrop.de/sport/baeder/Hallenbad_Boy_Welheim.php",
+    "abgerufen": "2026-11-04"
+   },
+   "kennzahlen": {
+    "stunden_woche": 11.75,
+    "stunden_voll_woche": 11.75,
+    "stunden_zielgruppe_woche": 0.0,
+    "m2h_woche": 3671.9,
+    "stunden_pro_tag": {
+     "Mo": 1.75,
+     "Di": 0.0,
+     "Mi": 0.0,
+     "Do": 0.0,
+     "Fr": 0.0,
+     "Sa": 5.0,
+     "So": 5.0
+    }
+   }
+  }
+ ]
+}
