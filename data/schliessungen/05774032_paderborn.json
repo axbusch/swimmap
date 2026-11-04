@@ -1,0 +1,81 @@
+{
+  "stadt": "Paderborn",
+  "ags": "05774032",
+  "stand": "2026-11-04",
+  "zeitraum": {"von": "2025-01-01", "bis": "2025-12-31"},
+  "plaene": {
+    "paderborn-0": [{"von": "2025-01-01", "tage": ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"], "hinweis": "Schwimmoper; Regelplan 2025 identisch mit heutigem (paderbaeder.de, Wayback 25.03.2025 und 14.05.2025)"}],
+    "paderborn-1": [{"von": "2025-01-01", "tage": ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"], "hinweis": "Alisobad Elsen; Regelplan 2025 identisch mit heutigem (Wayback 25.01.2025, 24.05.2025, 18.10.2025); laut Plan 'Feiertags geschlossen'"}],
+    "paderborn-2": [{"von": "2025-01-01", "tage": ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"], "hinweis": "Residenzbad Schloß Neuhaus; Regelplan 2025 identisch mit heutigem (Wayback 25.01.2025, 10.11.2025). Laut Plan Sa/So 'in der Freibadsaison geschlossen' (2025: 01.06.–14.09.) – als Schließung kat 'sommer' erfasst"}]
+  },
+  "feiertage": {
+    "2025": {
+      "2025-01-01": [],
+      "2025-04-18": ["paderborn-0"],
+      "2025-04-20": [],
+      "2025-04-21": ["paderborn-0"],
+      "2025-05-01": [],
+      "2025-05-29": ["paderborn-0"],
+      "2025-06-08": [],
+      "2025-06-09": [],
+      "2025-06-19": [],
+      "2025-10-03": ["paderborn-0"],
+      "2025-11-01": ["paderborn-0"],
+      "2025-12-24": ["paderborn-0"],
+      "2025-12-25": [],
+      "2025-12-26": ["paderborn-0"],
+      "2025-12-31": ["paderborn-0"]
+    }
+  },
+  "feiertage_hinweis": "Quellen: Pressemitteilungen der Stadt Paderborn (paderborn.de/pressearbeit/pressemitteilungen) und archivierte Badseiten (paderbaeder.de, Wayback). Schwimmoper: Neujahr geschlossen (PM 20.12.2024); Karfreitag und Ostermontag 7–20 Uhr geöffnet, Ostersonntag geschlossen (PM 11.04.2025); Christi Himmelfahrt 7–13 Uhr geöffnet (Hinweis auf paderbaeder.de/Alisobad, Wayback 24.05.2025); 03.10. und 01.11. 7–20 Uhr geöffnet (paderbaeder.de, Wayback 17.09. und 25.10.2025); Heiligabend und Silvester nur 6–13 Uhr (statt Mi 6–23 Uhr), 1. Weihnachtstag geschlossen, 2. Weihnachtstag 7–20 Uhr (PM 18.12.2025). Alisobad: laut Regelplan 'Feiertags geschlossen', zusätzlich ausdrücklich belegt für Neujahr, Himmelfahrt, Pfingstsonntag/-montag, Fronleichnam, Allerheiligen, Silvester; Ostern lag in der Ferienschließung. Residenzbad: ausdrücklich geschlossen an Neujahr (Ferienschließung), Karfreitag, Ostersonntag, Ostermontag (Ferienschließung), Fronleichnam, 03.10. (Defekt), 24.–26.12. und 31.12. (PM 18.12.2025). ANNAHME (keine Quelle gefunden): 1. Mai, Pfingstsonntag, Pfingstmontag und Fronleichnam für die Schwimmoper als geschlossen eingetragen – die Schwimmoper öffnete 2025 an allen anderen belegten Feiertagen außer Ostersonntag/1. Weihnachtstag/Neujahr, eine Öffnung ist daher wahrscheinlich. Rosenmontag 03.03.2025: keine abweichende Regel gefunden (2026 war das Alisobad am Rosenmontag geschlossen).",
+  "schliessungen": [
+    {"bad": "paderborn-0", "von": "2025-04-19", "bis": "2025-04-19", "kat": "personal", "grund": "Karsamstag: Schwimmbereich wegen Paderborner Osterlauf nur 6–8 Uhr geöffnet", "teil_stunden": 12, "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/april/109010100000298794.php (PM 11.04.2025)"},
+    {"bad": "paderborn-0", "von": "2025-05-10", "bis": "2025-05-11", "kat": "personal", "grund": "PaderSchwimmCup des 1. PSV, ganztägig geschlossen", "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/mai/109010100000299768.php (PM 09.05.2025); paderbaeder.de (Wayback 25.03.2025)"},
+    {"bad": "paderborn-0", "von": "2025-06-14", "bis": "2025-06-15", "kat": "personal", "grund": "DLRG-Landesmeisterschaften im Rettungsschwimmen, ganztägig geschlossen", "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/juni/109010100000301310.php (PM 13.06.2025)"},
+    {"bad": "paderborn-0", "von": "2025-07-10", "bis": "2025-07-10", "kat": "personal", "grund": "betriebsinterne Veranstaltung: ab 13 Uhr (nach Frühschwimmen/Schulschwimmen) geschlossen", "teil_stunden": 3.75, "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/juli/109010100000302827.php (PM 09.07.2025); paderbaeder.de (Wayback 08.07.2025)"},
+    {"bad": "paderborn-0", "von": "2025-07-11", "bis": "2025-08-03", "kat": "revision", "grund": "vorgezogene Sommerpause für Revisionsarbeiten", "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/juli/109010100000302827.php (PM 09.07.2025); paderbaeder.de/hallenbad-schwimmoper (Wayback 08.07.2025)"},
+
+    {"bad": "paderborn-1", "von": "2025-04-14", "bis": "2025-04-21", "kat": "ferien", "grund": "erste Osterferienwoche bis einschließlich Ostermontag geschlossen", "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/april/109010100000298794.php (PM 11.04.2025)"},
+    {"bad": "paderborn-1", "von": "2025-07-10", "bis": "2025-07-10", "kat": "personal", "grund": "betriebsinterne Veranstaltung: ab 13 Uhr geschlossen", "teil_stunden": 3.5, "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/juli/109010100000302827.php (PM 09.07.2025); paderbaeder.de (Wayback 29.06.2025)"},
+    {"bad": "paderborn-1", "von": "2025-08-04", "bis": "2025-08-26", "kat": "sommer", "grund": "zweite Hälfte der Sommerferien geschlossen (Grund nicht genannt; Schwimmoper übernimmt nach ihrer Revision)", "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/juli/109010100000302827.php (PM 09.07.2025); paderbaeder.de (Wayback 29.06.2025)"},
+    {"bad": "paderborn-1", "von": "2025-08-30", "bis": "2025-09-14", "kat": "personal", "tage": ["Sa", "So"], "grund": "Wochenenden nach den Sommerferien wegen anhaltender Krankheitsausfälle geschlossen", "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/august/109010100000306003.php (PM 21.08.2025)"},
+    {"bad": "paderborn-1", "von": "2025-10-13", "bis": "2025-10-19", "kat": "ferien", "grund": "erste Herbstferienwoche geschlossen", "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/oktober/109010100000308912.php (PM 10.10.2025); paderbaeder.de (Wayback 18.10.2025)"},
+    {"bad": "paderborn-1", "von": "2025-12-22", "bis": "2025-12-29", "kat": "ferien", "grund": "Weihnachtsferien: 22.–29.12. geschlossen (Silvester/Neujahr ebenfalls)", "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/dezember/109010100000312587.php (PM 18.12.2025)"},
+
+    {"bad": "paderborn-2", "von": "2025-01-01", "bis": "2025-01-06", "kat": "ferien", "grund": "Weihnachtsferien: 30.12.2024–06.01.2025 geschlossen", "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2024/dezember/109010100000293668.php (PM 20.12.2024); paderbaeder.de (Wayback 20.12.2024)"},
+    {"bad": "paderborn-2", "von": "2025-04-21", "bis": "2025-04-27", "kat": "ferien", "grund": "zweite Osterferienwoche geschlossen", "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/april/109010100000298794.php (PM 11.04.2025)"},
+    {"bad": "paderborn-2", "von": "2025-05-03", "bis": "2025-05-03", "kat": "personal", "grund": "Trainingslager des 1. PSV: ab 10 Uhr geschlossen", "teil_stunden": 8, "quelle": "paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus (Wayback 25.03.2025)"},
+    {"bad": "paderborn-2", "von": "2025-05-04", "bis": "2025-05-04", "kat": "personal", "grund": "Trainingslager des 1. PSV: ganztägig geschlossen", "quelle": "paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus (Wayback 25.03.2025)"},
+    {"bad": "paderborn-2", "von": "2025-05-24", "bis": "2025-05-31", "kat": "personal", "tage": ["Sa", "So"], "grund": "Wochenendschließung wegen vermehrter Krankheitsausfälle schon ab 24.05. statt wie üblich ab 01.06.", "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/mai/109010100000300238.php (PM 20.05.2025)"},
+    {"bad": "paderborn-2", "von": "2025-06-01", "bis": "2025-07-11", "kat": "sommer", "tage": ["Sa", "So"], "grund": "Wochenenden während der Freibadsaison geschlossen (übliche Regel)", "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/mai/109010100000300238.php (PM 20.05.2025)"},
+    {"bad": "paderborn-2", "von": "2025-07-01", "bis": "2025-07-01", "kat": "personal", "grund": "Krankheitsausfälle: ab 13.30 Uhr geschlossen (inkl. 4 h Zielgruppenzeiten Eltern-Kind/Senioren und Damen)", "teil_stunden": 7.5, "quelle": "paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus (Wayback 13.07.2025)"},
+    {"bad": "paderborn-2", "von": "2025-07-02", "bis": "2025-07-02", "kat": "personal", "grund": "Krankheitsausfälle: ab 13.30 Uhr geschlossen", "teil_stunden": 4.5, "quelle": "paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus (Wayback 13.07.2025)"},
+    {"bad": "paderborn-2", "von": "2025-07-03", "bis": "2025-07-03", "kat": "personal", "grund": "Krankheitsausfälle: ab 13.30 Uhr geschlossen", "teil_stunden": 5, "quelle": "paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus (Wayback 13.07.2025)"},
+    {"bad": "paderborn-2", "von": "2025-07-04", "bis": "2025-07-04", "kat": "personal", "grund": "Krankheitsausfälle: ab 13.30 Uhr geschlossen", "teil_stunden": 6.5, "quelle": "paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus (Wayback 13.07.2025)"},
+    {"bad": "paderborn-2", "von": "2025-07-07", "bis": "2025-07-07", "kat": "personal", "grund": "Krankheitsausfälle: ab 13.30 Uhr geschlossen", "teil_stunden": 6.5, "quelle": "paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus (Wayback 13.07.2025)"},
+    {"bad": "paderborn-2", "von": "2025-07-08", "bis": "2025-07-08", "kat": "personal", "grund": "Krankheitsausfälle: ab 13.30 Uhr geschlossen (inkl. 4 h Zielgruppenzeiten Eltern-Kind/Senioren und Damen)", "teil_stunden": 7.5, "quelle": "paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus (Wayback 13.07.2025)"},
+    {"bad": "paderborn-2", "von": "2025-07-09", "bis": "2025-07-09", "kat": "personal", "grund": "Krankheitsausfälle: ab 13.30 Uhr geschlossen", "teil_stunden": 4.5, "quelle": "paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus (Wayback 13.07.2025)"},
+    {"bad": "paderborn-2", "von": "2025-07-10", "bis": "2025-07-10", "kat": "personal", "grund": "betriebsinterne Veranstaltung (zusätzlich Krankheitsausfälle): ab 13 Uhr geschlossen", "teil_stunden": 5, "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/juli/109010100000302827.php (PM 09.07.2025); paderbaeder.de (Wayback 29.06.2025)"},
+    {"bad": "paderborn-2", "von": "2025-07-11", "bis": "2025-07-11", "kat": "personal", "grund": "Krankheitsausfälle: ab 13.30 Uhr geschlossen", "teil_stunden": 6.5, "quelle": "paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus (Wayback 13.07.2025)"},
+    {"bad": "paderborn-2", "von": "2025-07-12", "bis": "2025-08-31", "kat": "sommer", "grund": "Sommerschließung (lt. PM 12.07.–26.08.; Saisonstart erst am 01.09.), Grund nicht genannt", "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/juli/109010100000302827.php (PM 09.07.2025); https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/august/109010100000306003.php (PM 21.08.2025)"},
+    {"bad": "paderborn-2", "von": "2025-09-01", "bis": "2025-09-14", "kat": "sommer", "tage": ["Sa", "So"], "grund": "Wochenenden bis Ende der Freibadsaison geschlossen (übliche Regel)", "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/august/109010100000306003.php (PM 21.08.2025)"},
+    {"bad": "paderborn-2", "von": "2025-10-01", "bis": "2025-10-19", "kat": "defekt", "grund": "Hubboden: geplatzte Hydraulikleitung, Reinigung von Leitungen und Becken; geplante Öffnung 14.10. verschoben, Inbetriebnahme dauerte länger. Beginn der Schließung nicht exakt belegt (spätestens 01.10., Bericht im Bezirksausschuss), ANNAHME 01.10.", "quelle": "Westfalen-Blatt 02.10.2025 (https://www.westfalen-blatt.de/owl/kreis-paderborn/paderborn/residenzbad-oeffnet-herbstferien-sanierung-3405310); NW 03.10.2025 (https://www.nw.de/lokal/kreis_paderborn/paderborn/24187179_Paderborner-Hallenbad-geschlossen-Wieder-ein-Defekt-im-Residenzbad.html); https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/oktober/109010100000308912.php (PM 10.10.2025); paderbaeder.de (Wayback 18.10.2025)"},
+    {"bad": "paderborn-2", "von": "2025-10-20", "bis": "2025-10-26", "kat": "ferien", "grund": "zweite Herbstferienwoche planmäßig geschlossen (Wiederöffnung am 27.10.)", "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/oktober/109010100000308912.php (PM 10.10.2025); paderbaeder.de (Wayback 18.10.2025)"},
+    {"bad": "paderborn-2", "von": "2025-11-08", "bis": "2025-11-08", "kat": "personal", "grund": "ab 10 Uhr geschlossen (Grund nicht genannt, vermutlich Vereinsveranstaltung)", "teil_stunden": 8, "quelle": "paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus (Wayback 10.11.2025)"},
+    {"bad": "paderborn-2", "von": "2025-11-09", "bis": "2025-11-09", "kat": "personal", "grund": "ganztägig geschlossen (Grund nicht genannt, vermutlich Vereinsveranstaltung)", "quelle": "paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus (Wayback 10.11.2025)"},
+    {"bad": "paderborn-2", "von": "2025-11-15", "bis": "2025-11-15", "kat": "personal", "grund": "Lehrgang des 1. PSV: ab 10 Uhr geschlossen", "teil_stunden": 8, "quelle": "paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus (Wayback 10.11.2025)"},
+    {"bad": "paderborn-2", "von": "2025-11-16", "bis": "2025-11-16", "kat": "personal", "grund": "Lehrgang des 1. PSV: ganztägig geschlossen", "quelle": "paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus (Wayback 10.11.2025)"},
+    {"bad": "paderborn-2", "von": "2025-12-29", "bis": "2025-12-31", "kat": "ferien", "grund": "Weihnachtsferien: 29.12.2025–06.01.2026 geschlossen", "quelle": "https://www.paderborn.de/pressearbeit/pressemitteilungen/2025/dezember/109010100000312587.php (PM 18.12.2025)"}
+  ],
+  "ohne_oeffentlichen_betrieb": [],
+  "qualitaet": "gut – Die Stadt Paderborn veröffentlicht zu jeden Ferien (Ostern, Sommer, Herbst, Weihnachten) und zu den meisten Sonderschließungen Pressemitteilungen mit Zeiten aller drei Hallenbäder; ergänzend Wayback-Schnappschüsse der Badseiten (Status-Banner mit Schließhinweisen) für Jan., Feb., März, Mai, Juni, Juli, Aug., Sept., Okt., Nov. 2025. Lücken: kurzfristige Schließungen zwischen den Schnappschüssen (v. a. Mitte Feb.–Mitte Mai für Alisobad, Mitte Juli–Mitte Okt. für Alisobad/Residenzbad, Mitte Nov.–Dez. für alle) wären nur erfasst, wenn es eine Pressemitteilung gab.",
+  "offene_punkte": [
+    "Residenzbad Hubboden-Defekt Herbst 2025: genauer Beginn der Schließung nicht belegt (Ende Sept./Anfang Okt.; hier ab 01.10. angenommen). Es gab keine Pressemitteilung der Stadt, und vom 13.07. bis 18.10.2025 gibt es keine Wayback-Schnappschüsse der Badseite.",
+    "Schwimmoper an 1. Mai, Pfingstsonntag, Pfingstmontag und Fronleichnam 2025: keine Angabe gefunden, als geschlossen eingetragen (eine Öffnung ist wahrscheinlich, siehe feiertage_hinweis).",
+    "Rosenmontag 03.03.2025: unklar, ob das Alisobad wie 2026 geschlossen war; nicht eingetragen.",
+    "Residenzbad 08./09.11.2025: Schließung belegt, Grund nicht angegeben (als 'personal' eingeordnet).",
+    "Teilschließungen am Residenzbad Anfang Juli: teil_stunden zählen alle Plan-Slots ab 13.30 Uhr; dienstags sind 4 h Zielgruppenzeiten (Eltern-Kind/Senioren, Damen) enthalten. Wer nur allgemeine Zeiten zählt, rechnet dienstags mit 3,5 h.",
+    "Heiligabend/Silvester (Mi): Die Schwimmoper öffnete nur 6–13 Uhr statt 6–23 Uhr; das ist nur über 'feiertage' (als geöffnet) abgebildet, die verkürzte Zeit nicht.",
+    "Ferien-Sonderöffnungszeiten (z. B. durchgehend 6–21 Uhr) sind nicht gegengerechnet; erfasst sind nur ganz- oder teilweise Schließungen gegenüber dem Regelplan."
+  ]
+}

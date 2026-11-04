@@ -1,0 +1,699 @@
+{
+ "stadt": "Aachen",
+ "ags": "05334002",
+ "stand": "2026-11-04",
+ "zeitraum": {
+  "von": "2025-01-01",
+  "bis": "2025-12-31"
+ },
+ "plaene": {
+  "aachen-0": [
+   {
+    "von": "2025-01-01",
+    "tage": [
+     "Mo",
+     "Di",
+     "Do",
+     "Fr",
+     "Sa"
+    ],
+    "hinweis": "Regelplan ab 04.01.2025 laut Serviceportal (Wayback 12.02.2025) bzw. ab 15.09.2025 (PM 09.09.2025); gleiche Wochentage wie Plan ab 14.09.2026. Sommerplan 02.05.–14.09.2025 ohne Samstag als Schließung 'sommer' erfasst"
+   }
+  ],
+  "aachen-1": [
+   {
+    "von": "2025-01-01",
+    "tage": [
+     "Mo",
+     "Di",
+     "Mi",
+     "Do",
+     "Fr",
+     "Sa",
+     "So"
+    ],
+    "hinweis": "täglich; Sommerplan 02.05.–14.09.2025 mit kürzeren Zeiten (Mi 9–17, Sa/So 10–17), aber gleichen Wochentagen"
+   }
+  ],
+  "aachen-2": [
+   {
+    "von": "2025-01-01",
+    "tage": [
+     "Mo",
+     "Di",
+     "Mi",
+     "Do",
+     "Fr",
+     "Sa",
+     "So"
+    ],
+    "hinweis": "täglich, ganzjährig gleiche Wochentage"
+   }
+  ],
+  "aachen-3": [
+   {
+    "von": "2025-01-01",
+    "tage": [
+     "Mo",
+     "Di",
+     "Mi",
+     "Do",
+     "Fr",
+     "Sa",
+     "So"
+    ],
+    "hinweis": "2025 ganzjährig in Betrieb; Wochentage laut Serviceportal ab 04.01.2025 (Wayback 12.02.2025), PM 28.04.2025 und PM 09.09.2025 (Mo 12–22, Di 6.30 bzw. im Sommer 9–17, Mi 6.30–17, Do/Fr 6.30–18, Sa 8–16, So 8–13.30). Deckensanierung erst seit 10.08.2026, daher in der Städtedatei ohne Slots – Slots für 2025 aus diesen Angaben übernommen (Dienstag ganzjährig 6.30–17 angesetzt).",
+    "slots": [
+     "Mo 12:00-22:00",
+     "Di 06:30-17:00",
+     "Mi 06:30-17:00",
+     "Do-Fr 06:30-18:00",
+     "Sa 08:00-16:00",
+     "So 08:00-13:30"
+    ]
+   }
+  ]
+ },
+ "feiertage": {
+  "2025": {
+   "2025-01-01": [
+    "aachen-1"
+   ],
+   "2025-03-03": [],
+   "2025-04-18": [
+    "aachen-1"
+   ],
+   "2025-04-20": [
+    "aachen-1"
+   ],
+   "2025-04-21": [
+    "aachen-1"
+   ],
+   "2025-05-01": [
+    "aachen-1"
+   ],
+   "2025-05-29": [
+    "aachen-1"
+   ],
+   "2025-06-08": [
+    "aachen-1"
+   ],
+   "2025-06-09": [
+    "aachen-1"
+   ],
+   "2025-06-19": [
+    "aachen-1"
+   ],
+   "2025-10-03": [
+    "aachen-1"
+   ],
+   "2025-11-01": [
+    "aachen-1"
+   ],
+   "2025-12-24": [
+    "aachen-1"
+   ],
+   "2025-12-25": [],
+   "2025-12-26": [
+    "aachen-1"
+   ],
+   "2025-12-31": [
+    "aachen-1"
+   ]
+  }
+ },
+ "feiertage_hinweis": "Alle Angaben aus Pressemitteilungen der Stadt Aachen: Neujahr 2025 aus PM 17.12.2024 (Süd 10.30–17.30 Uhr, übrige Hallen geschlossen); Rosenmontag 03.03. aus PM 21.02.2025 (alle vier Hallen geschlossen; Fettdonnerstag 27.02. und Karnevalssonntag 02.03. als Schließungen/Teilschließungen erfasst); Ostern PM 14.04.2025; 1. Mai PM 28.04.2025; Himmelfahrt PM 23.05.2025; Pfingsten PM 02.06.2025; Fronleichnam PM 12.06.2025; 3.10. PM 25.09.2025; Allerheiligen PM 23.10.2025; Weihnachten/Silvester PM 15.12.2025 (Süd Heiligabend/Silvester 7–12.30, 2. Weihnachtstag 10.30–17.30, 1. Weihnachtstag geschlossen; Elisabethhalle, Brand und Ulla-Klinger-Halle an allen diesen Tagen geschlossen). An Feiertagen öffnet nur die Schwimmhalle Süd, verkürzt (meist 9–16 Uhr). Keine Annahmen nötig.",
+ "schliessungen": [
+  {
+   "bad": "aachen-0",
+   "von": "2025-02-27",
+   "bis": "2025-02-27",
+   "kat": "personal",
+   "grund": "Fettdonnerstag (Karneval): nur 6.30–12.30 Uhr geöffnet",
+   "teil_stunden": 0.5,
+   "quelle": "PM Stadt Aachen 21.02.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/februar/200225-karneval-verwaltung/)"
+  },
+  {
+   "bad": "aachen-0",
+   "von": "2025-05-02",
+   "bis": "2025-07-13",
+   "kat": "sommer",
+   "grund": "Freibadsaison/Fachkräftemangel: Sommer-Öffnungszeiten ohne Samstag (zusätzlich Di/Fr nur bis 13 Uhr, nicht als Stunden erfasst)",
+   "tage": [
+    "Sa"
+   ],
+   "quelle": "PM Stadt Aachen 28.04.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/april/280425-oeffnungszeiten-schwimmhallen/); Serviceportal 'Öffnungszeiten ab dem 02. Mai 2025' (Wayback 14.06.2025)"
+  },
+  {
+   "bad": "aachen-0",
+   "von": "2025-07-14",
+   "bis": "2025-08-24",
+   "kat": "sommer",
+   "grund": "Sommerferien: Halle geschlossen (grundsätzlich sechs Wochen in den Schulsommerferien)",
+   "quelle": "PM Stadt Aachen 28.04.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/april/280425-oeffnungszeiten-schwimmhallen/); Serviceportal 'Öffnungszeiten ab dem 02. Mai 2025' (Wayback 14.06.2025)"
+  },
+  {
+   "bad": "aachen-0",
+   "von": "2025-08-25",
+   "bis": "2025-09-13",
+   "kat": "sommer",
+   "grund": "Freibadsaison: Sommer-Öffnungszeiten ohne Samstag bis 14.09.",
+   "tage": [
+    "Sa"
+   ],
+   "quelle": "PM Stadt Aachen 28.04.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/april/280425-oeffnungszeiten-schwimmhallen/); Serviceportal 'Öffnungszeiten ab dem 02. Mai 2025' (Wayback 14.06.2025); PM Stadt Aachen 09.09.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/september/090925-ende-freibadsaison/)"
+  },
+  {
+   "bad": "aachen-0",
+   "von": "2025-12-09",
+   "bis": "2025-12-09",
+   "kat": "personal",
+   "grund": "Personalversammlung: nur 6.30–8 Uhr geöffnet",
+   "teil_stunden": 5,
+   "quelle": "PM Stadt Aachen 02.12.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/dezember/021225-elisabethhalle-personalversammlung/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-02-27",
+   "bis": "2025-02-27",
+   "kat": "personal",
+   "grund": "Fettdonnerstag (Karneval): ganztägig geschlossen",
+   "quelle": "PM Stadt Aachen 21.02.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/februar/200225-karneval-verwaltung/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-06-13",
+   "bis": "2025-06-13",
+   "kat": "personal",
+   "grund": "interne städtische Veranstaltung: nur 6.30–13 Uhr",
+   "teil_stunden": 8,
+   "quelle": "PM Stadt Aachen 13.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/130623-schwimmbaeder-oeffnungszeiten-interne-veranstaltung/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-06-17",
+   "bis": "2025-06-17",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 9–17 statt 6.30–21 Uhr",
+   "teil_stunden": 6.5,
+   "quelle": "PM Stadt Aachen 13.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/130625-personalmangel-suedhalle/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-06-20",
+   "bis": "2025-06-20",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 10–19 statt 6.30–21 Uhr",
+   "teil_stunden": 5.5,
+   "quelle": "PM Stadt Aachen 13.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/130625-personalmangel-suedhalle/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-06-21",
+   "bis": "2025-06-22",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): Wochenende geschlossen",
+   "quelle": "PM Stadt Aachen 13.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/130625-personalmangel-suedhalle/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-06-23",
+   "bis": "2025-06-23",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 10–17 statt 6.30–21 Uhr",
+   "teil_stunden": 7.5,
+   "quelle": "PM Stadt Aachen 18.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/180625-einschraenkungen-suedhalle-kw26/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-06-24",
+   "bis": "2025-06-24",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 10–17 statt 6.30–21 Uhr",
+   "teil_stunden": 7.5,
+   "quelle": "PM Stadt Aachen 18.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/180625-einschraenkungen-suedhalle-kw26/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-06-25",
+   "bis": "2025-06-25",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 12–17 statt 9–17 Uhr",
+   "teil_stunden": 3,
+   "quelle": "PM Stadt Aachen 18.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/180625-einschraenkungen-suedhalle-kw26/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-06-26",
+   "bis": "2025-06-26",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 12–17 statt 12–21 Uhr",
+   "teil_stunden": 4,
+   "quelle": "PM Stadt Aachen 18.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/180625-einschraenkungen-suedhalle-kw26/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-06-27",
+   "bis": "2025-06-27",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 10–17 statt 6.30–21 Uhr",
+   "teil_stunden": 7.5,
+   "quelle": "PM Stadt Aachen 18.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/180625-einschraenkungen-suedhalle-kw26/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-06-30",
+   "bis": "2025-06-30",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 10–17 statt 6.30–21 Uhr",
+   "teil_stunden": 7.5,
+   "quelle": "PM Stadt Aachen 26.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/260625-eingeschraenkte-oeffnungszeiten-halle-sued/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-07-01",
+   "bis": "2025-07-01",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 10–17 statt 6.30–21 Uhr",
+   "teil_stunden": 7.5,
+   "quelle": "PM Stadt Aachen 26.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/260625-eingeschraenkte-oeffnungszeiten-halle-sued/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-07-02",
+   "bis": "2025-07-02",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 10–17 statt 9–17 Uhr",
+   "teil_stunden": 1,
+   "quelle": "PM Stadt Aachen 26.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/260625-eingeschraenkte-oeffnungszeiten-halle-sued/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-07-03",
+   "bis": "2025-07-03",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 12–17 statt 12–21 Uhr",
+   "teil_stunden": 4,
+   "quelle": "PM Stadt Aachen 26.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/260625-eingeschraenkte-oeffnungszeiten-halle-sued/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-07-04",
+   "bis": "2025-07-04",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 10–17 statt 6.30–21 Uhr",
+   "teil_stunden": 7.5,
+   "quelle": "PM Stadt Aachen 26.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/260625-eingeschraenkte-oeffnungszeiten-halle-sued/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-07-05",
+   "bis": "2025-07-06",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): Wochenende geschlossen",
+   "quelle": "PM Stadt Aachen 26.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/260625-eingeschraenkte-oeffnungszeiten-halle-sued/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-07-07",
+   "bis": "2025-07-07",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 10–19 statt 6.30–21 Uhr",
+   "teil_stunden": 5.5,
+   "quelle": "PM Stadt Aachen 02.07.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juli/020725-einschraenkungen-schwimmbaeder/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-07-08",
+   "bis": "2025-07-08",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 10–19 statt 6.30–21 Uhr",
+   "teil_stunden": 5.5,
+   "quelle": "PM Stadt Aachen 02.07.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juli/020725-einschraenkungen-schwimmbaeder/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-07-11",
+   "bis": "2025-07-11",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 10–19 statt 6.30–21 Uhr",
+   "teil_stunden": 5.5,
+   "quelle": "PM Stadt Aachen 02.07.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juli/020725-einschraenkungen-schwimmbaeder/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-07-12",
+   "bis": "2025-07-13",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): Wochenende geschlossen",
+   "quelle": "PM Stadt Aachen 02.07.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juli/020725-einschraenkungen-schwimmbaeder/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-07-19",
+   "bis": "2025-07-20",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): Wochenende geschlossen",
+   "quelle": "PM Stadt Aachen 17.07.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juli/17072025-ulla-klinger-suedhalle-aenderungen/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-08-01",
+   "bis": "2025-08-03",
+   "kat": "defekt",
+   "grund": "technisches Problem, geschlossen 'bis mindestens Montag' (Beginn 01.08. = Datum der PM, angenommen)",
+   "quelle": "PM Stadt Aachen 01.08.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/august/010825-suedhalle-technischer-defekt/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-08-04",
+   "bis": "2025-08-04",
+   "kat": "defekt",
+   "grund": "Defekt behoben, Öffnung erst um 14 Uhr",
+   "teil_stunden": 7.5,
+   "quelle": "PM Stadt Aachen 04.08.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/august/040825-suedhalle-defekt-behoben/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-08-06",
+   "bis": "2025-08-08",
+   "kat": "revision",
+   "grund": "geplante Reparaturarbeiten, komplett geschlossen",
+   "quelle": "PM Stadt Aachen 29.07.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juli/290725-suedhalle-reparaturen/); PM Stadt Aachen 04.08.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/august/040825-suedhalle-defekt-behoben/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-08-18",
+   "bis": "2025-08-18",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 10–17 statt 6.30–21 Uhr",
+   "teil_stunden": 7.5,
+   "quelle": "PM Stadt Aachen 14.08.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/august/1408-einschraenkungen-baeder/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-08-19",
+   "bis": "2025-08-19",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 10–17 statt 6.30–21 Uhr",
+   "teil_stunden": 7.5,
+   "quelle": "PM Stadt Aachen 14.08.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/august/1408-einschraenkungen-baeder/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-08-20",
+   "bis": "2025-08-20",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 10–17 statt 9–17 Uhr",
+   "teil_stunden": 1,
+   "quelle": "PM Stadt Aachen 14.08.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/august/1408-einschraenkungen-baeder/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-08-21",
+   "bis": "2025-08-21",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 12–17 statt 12–21 Uhr",
+   "teil_stunden": 4,
+   "quelle": "PM Stadt Aachen 14.08.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/august/1408-einschraenkungen-baeder/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-08-22",
+   "bis": "2025-08-22",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 10–17 statt 6.30–21 Uhr",
+   "teil_stunden": 7.5,
+   "quelle": "PM Stadt Aachen 14.08.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/august/1408-einschraenkungen-baeder/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-09-01",
+   "bis": "2025-09-01",
+   "kat": "personal",
+   "grund": "kurzfristiger Personalmangel: Schließung um 14 Uhr",
+   "teil_stunden": 7,
+   "quelle": "PM Stadt Aachen 01.09.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/september/010925-suedhalle-kurzfristig-geschlossen/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-09-06",
+   "bis": "2025-09-07",
+   "kat": "personal",
+   "grund": "kurzfristiger Personalmangel: Wochenende komplett geschlossen",
+   "quelle": "PM Stadt Aachen 05.09.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/september/050925-schwimmhallenschliessungen-we/)"
+  },
+  {
+   "bad": "aachen-1",
+   "von": "2025-10-24",
+   "bis": "2025-10-24",
+   "kat": "personal",
+   "grund": "interne Veranstaltung: ganztägig geschlossen",
+   "quelle": "PM Stadt Aachen 16.10.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/oktober/161025-veranstaltung-schwimmhalle-sued/)"
+  },
+  {
+   "bad": "aachen-2",
+   "von": "2025-02-27",
+   "bis": "2025-02-27",
+   "kat": "personal",
+   "grund": "Fettdonnerstag (Karneval): nur 6.30–12.30 Uhr geöffnet",
+   "teil_stunden": 4.5,
+   "quelle": "PM Stadt Aachen 21.02.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/februar/200225-karneval-verwaltung/)"
+  },
+  {
+   "bad": "aachen-2",
+   "von": "2025-03-02",
+   "bis": "2025-03-02",
+   "kat": "personal",
+   "grund": "Karnevalssonntag: geschlossen",
+   "quelle": "PM Stadt Aachen 21.02.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/februar/200225-karneval-verwaltung/)"
+  },
+  {
+   "bad": "aachen-2",
+   "von": "2025-05-04",
+   "bis": "2025-05-04",
+   "kat": "personal",
+   "grund": "Veranstaltung: ganztägig geschlossen",
+   "quelle": "PM Stadt Aachen 29.04.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/april/290425-schwimmhalle-brand/)"
+  },
+  {
+   "bad": "aachen-2",
+   "von": "2025-11-08",
+   "bis": "2025-11-09",
+   "kat": "personal",
+   "grund": "Veranstaltung des Brander Schwimmvereins: komplett geschlossen",
+   "quelle": "PM Stadt Aachen 30.10.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/oktober/301025-veranstaltung-schwimmhalle-brand/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-02-27",
+   "bis": "2025-02-27",
+   "kat": "personal",
+   "grund": "Fettdonnerstag (Karneval): nur 6.30–12.30 Uhr geöffnet",
+   "teil_stunden": 5.5,
+   "quelle": "PM Stadt Aachen 21.02.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/februar/200225-karneval-verwaltung/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-03-02",
+   "bis": "2025-03-02",
+   "kat": "personal",
+   "grund": "Karnevalssonntag: geschlossen",
+   "quelle": "PM Stadt Aachen 21.02.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/februar/200225-karneval-verwaltung/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-06-13",
+   "bis": "2025-06-13",
+   "kat": "personal",
+   "grund": "interne städtische Veranstaltung: nur 6.30–13 Uhr",
+   "teil_stunden": 5,
+   "quelle": "PM Stadt Aachen 13.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/130623-schwimmbaeder-oeffnungszeiten-interne-veranstaltung/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-06-16",
+   "bis": "2025-06-16",
+   "kat": "personal",
+   "grund": "kurzfristiger krankheitsbedingter Ausfall/Fachkräftemangel: für öffentlichen Badebetrieb geschlossen",
+   "quelle": "PM Stadt Aachen 16.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/160625-ulla-klinger-halle/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-06-17",
+   "bis": "2025-06-18",
+   "kat": "revision",
+   "grund": "Arbeiten am Fernwärmeanschluss: komplett geschlossen",
+   "quelle": "PM Stadt Aachen 12.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/120625-oeffnungszeiten-schwimmbaeder-25-kw/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-06-28",
+   "bis": "2025-06-29",
+   "kat": "personal",
+   "grund": "verschärfter Personalmangel: Wochenende komplett geschlossen",
+   "quelle": "PM Stadt Aachen 25.06.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juni/250625-ulla-klinger-halle-geschlossen/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-07-21",
+   "bis": "2025-07-21",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): Montag geschlossen",
+   "quelle": "PM Stadt Aachen 17.07.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juli/17072025-ulla-klinger-suedhalle-aenderungen/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-07-22",
+   "bis": "2025-07-22",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 6.30–13 statt 9–17 Uhr",
+   "teil_stunden": 1.5,
+   "quelle": "PM Stadt Aachen 17.07.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juli/17072025-ulla-klinger-suedhalle-aenderungen/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-07-23",
+   "bis": "2025-07-23",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 6.30–13 statt 6.30–17 Uhr",
+   "teil_stunden": 4,
+   "quelle": "PM Stadt Aachen 17.07.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juli/17072025-ulla-klinger-suedhalle-aenderungen/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-07-24",
+   "bis": "2025-07-24",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 6.30–13 statt 6.30–18 Uhr",
+   "teil_stunden": 5,
+   "quelle": "PM Stadt Aachen 17.07.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juli/17072025-ulla-klinger-suedhalle-aenderungen/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-07-25",
+   "bis": "2025-07-25",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 6.30–13 statt 6.30–18 Uhr",
+   "teil_stunden": 5,
+   "quelle": "PM Stadt Aachen 17.07.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juli/17072025-ulla-klinger-suedhalle-aenderungen/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-07-28",
+   "bis": "2025-07-28",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): Montag geschlossen",
+   "quelle": "PM Stadt Aachen 28.07.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juli/280725-oeffnungszeiten-ulla-klinger-halle/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-07-29",
+   "bis": "2025-07-29",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 6.30–13 statt 9–17 Uhr",
+   "teil_stunden": 1.5,
+   "quelle": "PM Stadt Aachen 28.07.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juli/280725-oeffnungszeiten-ulla-klinger-halle/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-07-30",
+   "bis": "2025-07-30",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 6.30–13 statt 6.30–17 Uhr",
+   "teil_stunden": 4,
+   "quelle": "PM Stadt Aachen 28.07.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juli/280725-oeffnungszeiten-ulla-klinger-halle/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-07-31",
+   "bis": "2025-07-31",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 6.30–13 statt 6.30–18 Uhr",
+   "teil_stunden": 5,
+   "quelle": "PM Stadt Aachen 28.07.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juli/280725-oeffnungszeiten-ulla-klinger-halle/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-08-01",
+   "bis": "2025-08-01",
+   "kat": "sommer",
+   "grund": "Personalmangel (Freibad hat Vorrang): 6.30–13 statt 6.30–18 Uhr",
+   "teil_stunden": 5,
+   "quelle": "PM Stadt Aachen 28.07.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/juli/280725-oeffnungszeiten-ulla-klinger-halle/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-08-14",
+   "bis": "2025-08-14",
+   "kat": "personal",
+   "grund": "erkranktes Personal: Schließung um 13 Uhr",
+   "teil_stunden": 5,
+   "quelle": "PM Stadt Aachen 14.08.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/august/140825-ulla-klinger-halle-oeffnungszeiten/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-08-15",
+   "bis": "2025-08-15",
+   "kat": "personal",
+   "grund": "erkranktes Personal: nur 6.30–13 Uhr",
+   "teil_stunden": 5,
+   "quelle": "PM Stadt Aachen 14.08.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/august/140825-ulla-klinger-halle-oeffnungszeiten/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-08-16",
+   "bis": "2025-08-16",
+   "kat": "personal",
+   "grund": "erkranktes Personal: komplett geschlossen",
+   "quelle": "PM Stadt Aachen 14.08.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/august/140825-ulla-klinger-halle-oeffnungszeiten/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-09-02",
+   "bis": "2025-09-02",
+   "kat": "personal",
+   "grund": "kurzfristiger Personalmangel: nur 9–14 Uhr (statt 9–17)",
+   "teil_stunden": 3,
+   "quelle": "PM Stadt Aachen 01.09.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/september/010925-schliessung-ulla-klinger-halle/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-09-07",
+   "bis": "2025-09-07",
+   "kat": "personal",
+   "grund": "kurzfristiger Personalmangel: geschlossen",
+   "quelle": "PM Stadt Aachen 05.09.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/september/050925-schwimmhallenschliessungen-we/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-09-09",
+   "bis": "2025-09-09",
+   "kat": "personal",
+   "grund": "anhaltender Personalmangel: nur bis 14 Uhr (statt 17 Uhr)",
+   "teil_stunden": 3,
+   "quelle": "PM Stadt Aachen 08.09.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/september/080925-ulla-klinger-einschraenkung/)"
+  },
+  {
+   "bad": "aachen-3",
+   "von": "2025-11-04",
+   "bis": "2025-11-04",
+   "kat": "personal",
+   "grund": "kurzfristiger Personalmangel: Schließung 13.15 Uhr (statt 17 Uhr)",
+   "teil_stunden": 3.75,
+   "quelle": "PM Stadt Aachen 04.11.2025 (https://www.aachen.de/services/presse/pressemitteilungen/2025/november/041125-ulla-klinger-personalmangel/)"
+  }
+ ],
+ "ohne_oeffentlichen_betrieb": [],
+ "qualitaet": "gut – die Stadt Aachen veröffentlicht nahezu jede Schließung/Einschränkung der Schwimmhallen als Pressemitteilung; die PM-Liste 2025 wurde vollständig ausgewertet (rund 60 Bäder-PMs), dazu Feiertags-PMs für alle Feiertage. Regelpläne 2025 über archivierte Serviceportal-Seiten belegt. Lücken möglich bei sehr kurzfristigen Tagesmeldungen, die nur auf der Website (nicht als PM) erschienen (Beispiel Dez. 2024: 'Ulla-Klinger-Halle schließt heute früher' nur auf der alten Seite Sport/Aktuelles).",
+ "offene_punkte": [
+  "Teilschließungen (teil_stunden) sind gegen den damals gültigen Sommerplan (ab 02.05.2025) gerechnet; die generell kürzeren Sommerzeiten selbst (Elisabethhalle Di/Fr nur bis 13 statt 21 Uhr, Süd Mi 9–17 statt 6.30–21 und Sa/So 10–17, Brand Do ab 9 bzw. ab 17.07. ab 8 Uhr, Ulla-Klinger-Halle Di ab 9 Uhr) sind nicht als Stundenverlust erfasst.",
+  "Schwimmhalle Süd 02.–05.09.2025: PM vom 01.09. kündigte Informationen zu den Folgetagen an; keine weitere PM gefunden – als regulär geöffnet angenommen.",
+  "Schwimmhalle Süd, Defekt ab 01.08.2025: Beginn der Schließung aus dem PM-Datum abgeleitet (evtl. erst im Tagesverlauf).",
+  "Ulla-Klinger-Halle 09.09.2025: Öffnungsbeginn 9 Uhr (Sommer-Dienstag) angenommen; PM nennt nur 'bis 14 Uhr'.",
+  "Ulla-Klinger-Halle 28.01.2025 (Benefizschwimmen '100,5 Das Hitradio'): Halle nur im Rahmen der Veranstaltung nutzbar, Öffentlichkeit konnte aber teilnehmen – nicht als Schließung erfasst.",
+  "Sperrungen nur einzelner Becken nicht als Schließung erfasst: Springerbecken Ulla-Klinger-Halle (09.02., 09.03., 22./23.03., 30.03., 04.05., 18.05., 31.05./01.06., 28./29.06., 04./05.10., 27.10.–02.11., 09.11., 06./07.12.), Nichtschwimmerbecken Südhalle (ca. 24.09.–20.10.), Bachlauf Südhalle (06.–13.05.).",
+  "Elisabethhalle-Sommerschließung 14.07.–24.08. als 'sommer' kategorisiert (Quelle nennt keinen Revisionsgrund; laut Bäderseite 'grundsätzlich in den Schulsommerferien für sechs Wochen geschlossen').",
+  "Fettdonnerstag 27.02. und Karnevalssonntag 02.03. als 'personal' kategorisiert (Brauchtums-Schließtage; keine passende Kategorie)."
+ ]
+}

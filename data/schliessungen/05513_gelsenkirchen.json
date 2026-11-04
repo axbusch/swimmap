@@ -1,0 +1,48 @@
+{
+  "stadt": "Gelsenkirchen",
+  "ags": "05513",
+  "stand": "2026-11-04",
+  "zeitraum": {"von": "2025-01-01", "bis": "2025-12-31"},
+  "plaene": {
+    "gelsenkirchen-0": [{"von": "2025-01-01", "tage": ["Di", "Mi", "Do", "Fr", "Sa", "So"], "hinweis": "Hallenbad Buer; Regelplan 2025 identisch mit heutigem (baeder-gelsenkirchen.de, Wayback 13.02., 12.05., 10.07., 10.10.2025); montags kein öffentlicher Badebetrieb"}],
+    "gelsenkirchen-1": [{"von": "2025-01-01", "tage": ["Di", "Mi", "Do", "Fr", "Sa", "So"], "hinweis": "Hallenbad Horst; Regelplan 2025 identisch mit heutigem (Wayback 15.01. und 12.05.2025); montags kein öffentlicher Badebetrieb"}],
+    "gelsenkirchen-2": [{"von": "2025-01-01", "tage": ["Mo", "Di", "Mi", "Do", "Fr"], "hinweis": "Sport-Paradies, Frühschwimmen Mo–Fr 06:30–07:45 (in NRW-Schulferien bis 08:30), an Wochenenden und Feiertagen kein Frühschwimmen (sport-paradies.de, Wayback 14.01., 19.04., 24.06., 15.08., 16.09.2025)"}]
+  },
+  "feiertage": {
+    "2025": {
+      "2025-01-01": [],
+      "2025-04-18": [],
+      "2025-04-20": [],
+      "2025-04-21": [],
+      "2025-05-01": [],
+      "2025-05-29": [],
+      "2025-06-08": [],
+      "2025-06-09": [],
+      "2025-06-19": [],
+      "2025-10-03": [],
+      "2025-11-01": [],
+      "2025-12-24": [],
+      "2025-12-25": [],
+      "2025-12-26": [],
+      "2025-12-31": []
+    }
+  },
+  "feiertage_hinweis": "Hallenbäder Buer und Horst: Laut Betreiber sind sie 'für den öffentlichen Badebetrieb montags und an allen gesetzlichen Feiertagen geschlossen' (baeder-gelsenkirchen.de, Öffnungszeiten, 2025 durchgehend archiviert). Laut Stadt sind die Bäder außerdem an den Weihnachtsfeiertagen (24.–26.12.) sowie an Silvester und Neujahr geschlossen (gelsenkirchen.de/de/freizeit/fit_und_aktiv/schwimmbaeder). Für Ostern 2025 ausdrücklich bestätigt: Buer und Horst an Karfreitag, Ostersonntag und Ostermontag geschlossen (PM Sport-Paradies 01.04.2025). Sport-Paradies-Frühschwimmen: laut Preisliste 'Samstag, Sonntag, Feiertag – kein Frühschwimmen'; Karfreitag/Ostermontag fielen 2025 ohnehin in die Revisionsschließung. ANNAHME: An Heiligabend und Silvester (beide Mi, keine gesetzlichen Feiertage) gilt auch das Frühschwimmen als geschlossen. Eine Quelle dazu gibt es nicht. Rosenmontag 03.03.2025: Buer/Horst sind montags ohnehin zu, für das Frühschwimmen ist keine Abweichung bekannt.",
+  "schliessungen": [
+    {"bad": "gelsenkirchen-0", "von": "2025-02-13", "bis": "2025-02-13", "kat": "personal", "grund": "ver.di-Warnstreik bei den Stadtwerken: nur bis 13 Uhr geöffnet (Do regulär bis 20.30 Uhr)", "teil_stunden": 7.5, "quelle": "Radio Emscher Lippe 11.02.2025 (https://radioemscherlippe.de/artikel/keine-muellabfuhr-in-gelsenkirchen-2239793.html) und 13.02.2025 (https://www.radioemscherlippe.de/artikel/warnstreiks-in-gladbeck-bottrop-und-gelsenkirchen-2241071.html)"},
+    {"bad": "gelsenkirchen-0", "von": "2025-03-12", "bis": "2025-03-12", "kat": "personal", "grund": "Warnstreik: nur 7–13 Uhr geöffnet (Mi regulär bis 17.30 Uhr)", "teil_stunden": 4.5, "quelle": "baeder-gelsenkirchen.de/hallenbad-buer/öffnungszeiten.html (Hinweis, Wayback 12.05.2025)"},
+
+    {"bad": "gelsenkirchen-1", "von": "2025-02-13", "bis": "2025-02-13", "kat": "personal", "grund": "ver.di-Warnstreik bei den Stadtwerken: nur bis 13 Uhr geöffnet (Do regulär bis 17.30 Uhr)", "teil_stunden": 4.5, "quelle": "Radio Emscher Lippe 11.02.2025 (https://radioemscherlippe.de/artikel/keine-muellabfuhr-in-gelsenkirchen-2239793.html) und 13.02.2025 (https://www.radioemscherlippe.de/artikel/warnstreiks-in-gladbeck-bottrop-und-gelsenkirchen-2241071.html)"},
+
+    {"bad": "gelsenkirchen-2", "von": "2025-04-14", "bis": "2025-04-27", "kat": "revision", "grund": "Sport-Paradies in den Osterferien komplett geschlossen: Wartungs- und Reparaturarbeiten (Lüftung, Prüfung des Hubbodens im Wellenbecken, Freibadbecken neu verfugt); Wiedereröffnung 28.04.", "quelle": "https://www.sport-paradies.de/pressedetail/wichtige-bauarbeiten-das-sport-paradies-bleibt-in-den-osterferien-geschlossen-2 (PM 01.04.2025); Radio Emscher Lippe 28.04.2025 (https://www.radioemscherlippe.de/artikel/gelsenkirchener-sportparadies-oeffnet-wieder-2307808)"}
+  ],
+  "ohne_oeffentlichen_betrieb": [],
+  "qualitaet": "schlecht bis mittel – Die Feiertagsregel ist klar und offiziell belegt. Die Rubriken 'Neuigkeiten' bzw. 'Aktuelles' auf baeder-gelsenkirchen.de werden per JavaScript nachgeladen und sind weder live (nur Online-Ticket-Hinweis) noch in der Wayback Machine für 2025 abrufbar. Die Stadtwerke- und Sport-Paradies-Pressearchive 2025 enthalten zu Buer und Horst keine Schließungsmeldungen, gelsenkirchen.de führt für 2025 keine Bädermeldungen, und die WAZ war nicht abrufbar. Erfasst sind daher nur Ereignisse aus den Pressearchiven, aus Radio Emscher Lippe und aus Hinweisen auf archivierten Öffnungszeiten-Seiten. Kurzfristige Schließungen von Buer und Horst (Defekte, Personal, Veranstaltungen) könnten fehlen. Die Öffnungszeiten-Seite von Buer zeigt im Juli und Oktober 2025 keine Hinweise.",
+  "offene_punkte": [
+    "Warnstreik 12.03.2025: Beleg nur für das Hallenbad Buer (Hinweis auf dessen Öffnungszeiten-Seite). Horst war wahrscheinlich ebenso betroffen (gleicher Betreiber), ist aber nicht belegt (Horst-Seite ohne Hinweis im Schnappschuss vom 12.05.2025) und daher nicht eingetragen.",
+    "Weitere Warnstreiktage im Tarifkonflikt Feb./März 2025 mit Auswirkungen auf die Bäder sind nicht ausgeschlossen. Radio Emscher Lippe nennt die Bäder nur für den 13.02.",
+    "Sommer 2025: kein Hinweis auf eine Sommer-/Revisionsschließung von Buer oder Horst gefunden (Wayback-Schnappschüsse der Buer-Seite vom 10.07. und 10.10.2025 zeigen den Regelplan). Für Horst fehlen Schnappschüsse von Juni bis Dez. 2025.",
+    "Sport-Paradies-Frühschwimmen an Heiligabend und Silvester 2025 sowie in den Weihnachtsferien: keine Angaben; Heiligabend und Silvester als geschlossen angenommen.",
+    "Ob das Frühschwimmen im Sommer (Freibadbetrieb, Traglufthalle abgebaut) im Hallen- oder Außenbecken stattfand, ist unklar; als regulär stattgefunden angenommen (die Frühschwimmer-Seite nennt 2025 durchgehend Mo–Fr)."
+  ]
+}

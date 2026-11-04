@@ -1,0 +1,57 @@
+{
+  "stadt": "Bonn",
+  "ags": "05314",
+  "stand": "2026-11-04",
+  "zeitraum": {"von": "2025-01-01", "bis": "2025-12-31"},
+  "plaene": {
+    "bonn-0": [{"von": "2025-01-01", "tage": ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"], "hinweis": "Wochentage laut Öffnungszeiten-Seite (Wayback 25.03.2025 und 06.10.2025, 'ab dem 15. September 2025') identisch mit heutigem Plan"}],
+    "bonn-1": [{"von": "2025-01-01", "tage": ["Di", "Mi", "Do", "Fr", "Sa", "So"], "hinweis": "montags nur Schul- und Vereinsschwimmen; Wochentage 2025 identisch mit heutigem Plan (Wayback 25.03.2025, 06.10.2025)"}],
+    "bonn-2": [
+      {"von": "2025-01-01", "tage": ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"], "hinweis": "Traglufthalle (Hallenbadsaison 2024/25); Wochentage laut Wayback 25.03.2025 wie heute"},
+      {"von": "2025-05-31", "tage": [], "hinweis": "Freibadsaison 31.05.–31.08.2025: Bad öffentlich als Freibad geöffnet, keine Hallenbadzeiten – zählt nicht als Schließung"},
+      {"von": "2025-09-01", "tage": ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"], "hinweis": "Hallenbadsaison 2025/26 ab 29.09.2025 (Wayback 06.10.2025); 01.–28.09. Aufbau Traglufthalle, siehe schliessungen"}
+    ]
+  },
+  "feiertage": {
+    "2025": {
+      "2025-01-01": [],
+      "2025-03-02": [],
+      "2025-03-03": [],
+      "2025-04-18": ["bonn-0", "bonn-1", "bonn-2"],
+      "2025-04-20": [],
+      "2025-04-21": ["bonn-0", "bonn-1", "bonn-2"],
+      "2025-05-01": ["bonn-0", "bonn-1", "bonn-2"],
+      "2025-05-29": [],
+      "2025-06-08": [],
+      "2025-06-09": [],
+      "2025-06-19": [],
+      "2025-10-03": ["bonn-0", "bonn-1", "bonn-2"],
+      "2025-11-01": ["bonn-0", "bonn-1", "bonn-2"],
+      "2025-12-24": [],
+      "2025-12-25": [],
+      "2025-12-26": [],
+      "2025-12-31": []
+    }
+  },
+  "feiertage_hinweis": "Grundlage ist die feste Regel auf baeder.bonn.de/oeffnungszeiten (Wayback 25.03.2025 und 06.10.2025): 'Unabhängig von den individuellen Öffnungszeiten sind die Schwimmhallen wie folgt geschlossen: Heiligabend, 1. und 2. Weihnachtsfeiertag, Silvester, Neujahr, Karnevalssonntag, Rosenmontag, Ostersonntag'; an allen übrigen Feiertagen gelten die Zeiten 'Sonn- und Feiertag 09:00–16:00'. Karfreitag, Ostermontag, 1. Mai, 3.10. und 1.11. daher als geöffnet abgeleitet (keine Einzelmeldung). Karnevalssonntag (02.03.) und Rosenmontag (03.03.) zusätzlich bestätigt durch die städtische Karnevalsmeldung (bonnnet.de, 17.02.2025). Christi Himmelfahrt, Pfingsten und Fronleichnam fallen in die Sommerschließung bzw. den Freibadbetrieb und sind leer gelassen (die Sommerschließung hat ohnehin Vorrang).",
+  "schliessungen": [
+    {"bad": "bonn-1", "von": "2025-02-27", "bis": "2025-02-27", "kat": "personal", "grund": "Weiberfastnacht: Beueler Bütt ganztägig geschlossen", "quelle": "Stadt Bonn, Öffnungszeiten an Karneval 2025, wiedergegeben auf https://www.bonnnet.de/oeffnungszeiten-der-stadtverwaltung-bonn-an-karneval/ (17.02.2025)"},
+    {"bad": "bonn-2", "von": "2025-02-27", "bis": "2025-02-27", "kat": "personal", "grund": "Weiberfastnacht: Schwimmbad Friesdorf nur 06:30–10:00 geöffnet (regulär 06:30–17:30)", "teil_stunden": 7.5, "quelle": "Stadt Bonn, Öffnungszeiten an Karneval 2025, https://www.bonnnet.de/oeffnungszeiten-der-stadtverwaltung-bonn-an-karneval/ (17.02.2025)"},
+    {"bad": "bonn-2", "von": "2025-05-19", "bis": "2025-05-30", "kat": "revision", "grund": "Abbau der Traglufthalle und Umbau zum Freibad (Hallenbetrieb endet 18.05., Freibad öffnet 31.05.); saisonal geplant", "quelle": "PM Stadt Bonn 29.04.2025 (https://www.bonn.de/pressemitteilungen/april/Freibad-bonn-ruengsdorf-oeffnet-am-19.mai-weitere-baeder-an-christi-himmelfahrt.php); PM 25.07.2025 (Öffnung Friesi 31. Mai)"},
+    {"bad": "bonn-0", "von": "2025-05-29", "bis": "2025-09-14", "kat": "sommer", "grund": "Hallenbadbetrieb ruht während der Freibadsaison, Parallelbetrieb 'aus personellen Gründen nicht möglich' (Betrieb endet Mi 28.05., Wiederbeginn 15.09.)", "quelle": "PM Stadt Bonn 29.04.2025 (https://www.bonn.de/pressemitteilungen/april/Freibad-bonn-ruengsdorf-oeffnet-am-19.mai-weitere-baeder-an-christi-himmelfahrt.php); PM 16.09.2025 Bilanz Freibadsaison"},
+    {"bad": "bonn-1", "von": "2025-05-29", "bis": "2025-09-14", "kat": "sommer", "grund": "Hallenbadbetrieb ruht während der Freibadsaison, Parallelbetrieb 'aus personellen Gründen nicht möglich' (Betrieb endet Mi 28.05., Wiederbeginn 15.09.)", "quelle": "PM Stadt Bonn 29.04.2025 (https://www.bonn.de/pressemitteilungen/april/Freibad-bonn-ruengsdorf-oeffnet-am-19.mai-weitere-baeder-an-christi-himmelfahrt.php); Öffnungszeiten 'ab dem 15. September 2025' (Wayback 06.10.2025)"},
+    {"bad": "bonn-2", "von": "2025-09-01", "bis": "2025-09-28", "kat": "revision", "grund": "Freibad schließt 31.08., Aufbau der Traglufthalle; Hallenbadsaison ab 29.09.; saisonal geplant", "quelle": "PM Stadt Bonn 16.05.2025 und 16.09.2025; baeder.bonn.de Aktuelles 27.08.2025 'Freibad Friesdorf schließt am Sonntag – Aufbau der Traglufthalle beginnt' (Wayback)"}
+  ],
+  "ohne_oeffentlichen_betrieb": [
+    {"bad": "bonn-3", "von": "2024-09", "bis": "2027", "grund": "Hardtbergbad seit Ende der Freibadsaison 2024 wegen Sanierung und Erweiterung geschlossen (Wiederinbetriebnahme laut Stadt frühestens 2027/Anfang 2028)", "quelle": "baeder.bonn.de Hardtbergbad-Seite (abgerufen 04.11.2026); PM Stadt Bonn 21.11.2024, 28.01.2026"}
+  ],
+  "qualitaet": "mittel – die großen planbaren Blöcke (Sommerpause Frankenbad/Beueler Bütt 29.05.–14.09., Umbauphasen Traglufthalle Friesdorf) und die feste Feiertagsregel sind durch Pressemitteilungen und archivierte Öffnungszeiten-Seiten belegt. Kurzfristige Ausfälle (Wettkämpfe im Frankenbad, Technik, Personal) werden von der Stadt kaum gemeldet; die Bäder-News (baeder.bonn.de/aktuelles) enthielten 2025 nur wenige Einträge, die Lokalpresse (General-Anzeiger, Express) wurde nicht systematisch ausgewertet. Tatsächliche kurzfristige Schließungen sind daher eher untererfasst.",
+  "offene_punkte": [
+    "Kurzfristige Schließungen (Wettkampfwochenenden im Frankenbad, technische Störungen, Personalausfälle) 2025 nicht gefunden – General-Anzeiger/Express nicht systematisch geprüft; Warnstreiks im TVöD (Februar/März 2025) mit Folgen für die Bonner Bäder konnten weder bestätigt noch ausgeschlossen werden.",
+    "Letzter Hallenbadtag vor der Sommerpause: Pressemitteilung nennt 'endet … am Mittwoch, 28. Mai 2025' – als letzter Öffnungstag gelesen, Schließung ab 29.05.",
+    "Friesdorf: letzter Hallenbadtag vor dem Abbau der Traglufthalle als 18.05.2025 angenommen (Abbau 'beginnt am 19. Mai'). Die Umbauphasen (19.–30.05., 01.–28.09.) sind als 'revision' eingetragen; der Freibadbetrieb 31.05.–31.08. ist über eine Plan-Periode ohne Tage abgebildet und zählt nicht als Schließung.",
+    "Frankenbad: Lehrschwimmbecken ca. 20.11.–12.12.2025 wegen Wasserrohrbruch gesperrt (PM 20.11.2025 und 12.12.2025); das Bad blieb geöffnet, daher nicht als Schließung eingetragen.",
+    "Frankenbad und Friesdorf hatten an Karnevalsfreitag (28.02.) und Weiberfastnacht (Frankenbad 06:30–10:00) keine Einbußen gegenüber dem Regelplan; nicht eingetragen.",
+    "Regelplan-Stunden einzelner Zeitfenster wichen 2025 leicht vom heutigen Stand ab (z. B. Beueler Bütt Lehrbecken freitags ab 13:00 statt 15:30, samstags 15:30–18:00); die Wochentage sind identisch."
+  ]
+}

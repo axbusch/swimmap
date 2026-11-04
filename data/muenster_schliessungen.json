@@ -1,6 +1,7 @@
 {
   "stand": "2026-11-04",
   "zeitraum": {"von": "2024-01-01", "bis": "2026-11-04"},
+  "qualitaet": "gut – alle Pressemitteilungen der Stadt Münster seit 01.01.2024 über die öffentliche API ausgewertet; nur per Aushang oder Website gemeldete Kurzausfälle können fehlen",
   "methodik": "Schließtag = Kalendertag, an dem das Bad laut damals gültigem Regelplan öffentliches Schwimmen anbieten würde, aber für die Öffentlichkeit ganz geschlossen war. Zusätzliche Ferien-/Feiertagsöffnungen außerhalb des Regelplans sind nicht gegengerechnet. Teilschließungen (z. B. früheres Schließen) gehen nur in die Stunden ein. Feiertage ohne angekündigte Öffnung gelten als geschlossen. Quelle sind die Pressemitteilungen der Stadt Münster (pressemitteilungen.stadt-muenster.de).",
   "kategorien": {
     "revision": "Revision/Sanierung (geplant)",

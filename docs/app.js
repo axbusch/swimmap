@@ -70,6 +70,14 @@ const METRICS = {
     label: 'Kinder 6–15: Bad ≤ 20 min ÖPNV', fmt: v => fmtPct(v),
     note: 'Anteil der Schulkinder (6–15 Jahre), die ein kommunales Hallenbad in höchstens 20 Minuten mit Bus und Bahn (Tür-zu-Tür, dienstags 17–19 Uhr) erreichen.',
   },
+  ist_je_10k_ew: {
+    label: 'Tatsächlich angeboten 2025', fmt: v => fmt1(v), ausfall: true,
+    note: 'Öffentliche Schwimmstunden, die 2025 nach Abzug aller Schließtage (Revision, Defekte, Sommer- und Ferienschließungen, Feiertage, kurzfristige Ausfälle) tatsächlich angeboten wurden – als Durchschnitt pro Woche je 10.000 Einwohner, direkt vergleichbar mit „Stunden je 10.000 EW“. Nur für Städte mit recherchierter Schließtage-Chronik.',
+  },
+  ausfall_anteil: {
+    label: 'Ausgefallen 2025 (Anteil)', fmt: v => fmtPct(v), ausfall: true,
+    note: 'Anteil der Regelplan-Stunden 2025, die wegen Schließungen ausfielen. Hoher Wert = viel Ausfall. Nur für Städte mit recherchierter Schließtage-Chronik; die Quellenlage ist unterschiedlich gut (siehe Tabelle unten).',
+  },
   m2h_je_1000_ew: {
     label: 'Wasserflächen-Stunden', fmt: v => fmt0(v),
     note: 'Öffentliche Stunden × Wasserfläche (m²·h pro Woche) je 1.000 Einwohner – berücksichtigt, wie groß die Bäder sind.',
@@ -687,7 +695,7 @@ function renderSchliessungen() {
     const s = sum[j];
     const aus = s.stunden_plan - s.stunden_ist;
     return `<div class="kpi"><div class="v">${fmt0(aus)} h</div>
-      <div class="l">${j}${j === S.zeitraum.bis.slice(0, 4) ? ` (bis ${fmtDate(S.zeitraum.bis)})` : ''}: öffentliche Schwimmzeit ausgefallen – ${fmtPct(aus / s.stunden_plan)} der Regelplan-Stunden; ${s.schliesstage} von ${s.plantage} Plantagen geschlossen</div></div>`;
+      <div class="l">${j}${j === S.zeitraum.bis.slice(0, 4) && !S.zeitraum.bis.endsWith('-12-31') ? ` (bis ${fmtDate(S.zeitraum.bis)})` : ''}: öffentliche Schwimmzeit ausgefallen – ${fmtPct(aus / s.stunden_plan)} der Regelplan-Stunden; ${s.schliesstage} von ${s.plantage} Plantagen geschlossen</div></div>`;
   }).join('');
   // Tabelle mit gestapelten Balken je Bad und Jahr
   const rows = Object.entries(S.baeder).map(([bid, b]) => {
@@ -700,7 +708,7 @@ function renderSchliessungen() {
       const aus = y.stunden_plan - y.stunden_ist;
       return `<td title="${esc(tip)}"><div class="stack">${segs}</div><span class="note">${y.schliesstage}/${y.plantage} Tage · <b>${fmt0(aus)} h</b> aus</span></td>`;
     }).join('');
-    return `<tr><td>${esc(b.name.replace('Hallenbad ', ''))}</td>${cells}</tr>`;
+    return `<tr><td>${esc(kurzName(b.name))}</td>${cells}</tr>`;
   }).join('');
   const leg = kats.map(k => `<span><i style="background:${schlColor(k)}"></i>${esc(S.kategorien[k])}</span>`).join('');
   // Zeitstrahl: Status jedes Tages je Bad
@@ -720,7 +728,8 @@ function renderSchliessungen() {
   }
   Object.values(S.baeder).forEach((b, r) => {
     const y = T0 + r * ROW;
-    svg += `<text x="0" y="${y + ROW / 2 + 3}">${esc(b.name.replace('Hallenbad ', ''))}</text>`;
+    const nm = kurzName(b.name);
+    svg += `<text x="0" y="${y + ROW / 2 + 3}">${esc(nm.length > 13 ? nm.slice(0, 12) + '…' : nm)}<title>${esc(b.name)}</title></text>`;
     let i = 0;
     while (i < b.strip.length) {
       const c = b.strip[i];
@@ -738,7 +747,7 @@ function renderSchliessungen() {
   svg += '</svg>';
   const ohne = (S.ohne_oeffentlichen_betrieb || []).map(o => `<li><b>${esc(BAD[o.bad] ? BAD[o.bad].name : o.bad)}:</b> ${esc(o.grund)}</li>`).join('');
   const ev = S.ereignisse.slice().sort((a, b) => a.von.localeCompare(b.von)).map(e =>
-    `<tr><td>${fmtDateShort(e.von)}${e.bis !== e.von ? '–' + fmtDateShort(e.bis) : ''}</td><td>${esc((BAD[e.bad] || {}).name || e.bad)}</td><td><i class="sw" style="background:${schlColor(e.kat)}"></i>${esc(e.grund)}${e.tage ? ` (nur ${e.tage.join('/')})` : ''}</td><td class="note">${esc(e.quelle)}</td></tr>`).join('');
+    `<tr><td>${fmtDateShort(e.von)}${e.bis !== e.von ? '–' + fmtDateShort(e.bis) : ''}</td><td>${esc((BAD[e.bad] || {}).name || e.bad)}</td><td><i class="sw" style="background:${schlColor(e.kat)}"></i>${esc(e.grund)}${e.tage ? ` (nur ${e.tage.join('/')})` : ''}</td><td class="note">${quelleHtml(e.quelle)}</td></tr>`).join('');
   const grundRows = kats.map(k => {
     const vals = jahre.map(j => Object.values(S.baeder).reduce((t, b) => t + ((b.jahre[j] || {}).stunden_verloren || {})[k] || 0, 0));
     if (!vals.some(v => v > 0)) return '';
@@ -747,8 +756,15 @@ function renderSchliessungen() {
   const sumRow = `<tr class="sum"><td>Summe ausgefallen</td>${jahre.map(j => `<td><b>${fmt0(sum[j].stunden_plan - sum[j].stunden_ist)} h</b></td>`).join('')}</tr>
     <tr><td>tatsächlich angeboten</td>${jahre.map(j => `<td>${fmt0(sum[j].stunden_ist)} h</td>`).join('')}</tr>
     <tr><td>laut Regelplan</td>${jahre.map(j => `<td>${fmt0(sum[j].stunden_plan)} h</td>`).join('')}</tr>`;
-  el.innerHTML = `<h2>Ausgefallene Schwimmzeiten seit 2024</h2>
-    <p class="note">Öffentliche Schwimmstunden, die laut Regelplan angeboten worden wären, aber wegen Schließungen entfielen – Hallenbäder Mitte, Ost, Kinderhaus, Hiltrup, Süd. Quelle: Pressemitteilungen der Stadt Münster.</p>
+  const ms = state.city === 'muenster';
+  const j0 = S.zeitraum.von.slice(0, 4), j1 = S.zeitraum.bis.slice(0, 4);
+  const namen = Object.values(S.baeder).map(b => kurzName(b.name)).join(', ');
+  const regel = ms
+    ? `der reguläre Wochenplan des Bades (Winterplan, Stand ${fmtDate(S.zeitraum.bis)}); für das Südbad bis 10.01.2025 ohne Wochenende, eröffnet am 22.04.2024. Je Wochentag zählen die öffentlichen Stunden laut Plan.`
+    : `der reguläre Wochenplan des Bades (Winterplan 2026/27, wie in der Karte), übertragen auf ${j0 === j1 ? j0 : j0 + '–' + j1}. Je Wochentag zählen die öffentlichen Stunden laut Plan. Hatte ein Bad damals einen anderen Plan, ist das – soweit bekannt – berücksichtigt.`;
+  el.innerHTML = `<h2>Ausgefallene Schwimmzeiten ${j0 === j1 ? j0 : 'seit ' + j0}</h2>
+    <p class="note">Öffentliche Schwimmstunden, die laut Regelplan angeboten worden wären, aber wegen Schließungen entfielen – ${esc(namen)}. Quelle: ${ms ? 'Pressemitteilungen der Stadt Münster' : 'Meldungen von Betreiber und Stadt, Lokalpresse, archivierte Betreiberseiten (je Ereignis unten)'}.</p>
+    ${S.qualitaet && !ms ? `<p class="note"><b>Datenlage:</b> ${esc(S.qualitaet)}</p>` : ''}
     <div class="kpis">${tiles}</div>
     <h3>Ausgefallene Stunden nach Grund</h3>
     <table class="data"><thead><tr><th>Grund</th>${jahre.map(j => `<th>${j}</th>`).join('')}</tr></thead><tbody>${grundRows}${sumRow}</tbody></table>
@@ -760,19 +776,28 @@ function renderSchliessungen() {
     ${ohne ? `<p class="note">Nicht im Regelplan und daher nicht gezählt:</p><ul class="note">${ohne}</ul>` : ''}
     <details open><summary>So wird gerechnet</summary>
       <ul class="note">
-        <li><b>Regelplan:</b> der reguläre Wochenplan des Bades (Winterplan, Stand ${fmtDate(S.zeitraum.bis)}); für das Südbad bis 10.01.2025 ohne Wochenende, eröffnet am 22.04.2024. Je Wochentag zählen die öffentlichen Stunden laut Plan.</li>
+        <li><b>Regelplan:</b> ${regel}</li>
         <li><b>Schließtag:</b> ein Tag, an dem das Bad laut Regelplan öffentliches Schwimmen hätte, aber für die Öffentlichkeit ganz geschlossen war. Die ausgefallenen Stunden sind die Plan-Stunden dieses Tages.</li>
         <li><b>Teilschließungen</b> (z. B. früher geschlossen wegen Personalversammlung) zählen nur mit den ausgefallenen Stunden, nicht als Schließtag.</li>
         <li><b>Gründe:</b> Revision/Sanierung = geplante Arbeiten; Defekt/Hygiene = ungeplant (z. B. Legionellen, Lüftung) oder verlängerte Arbeiten; Sommerbetrieb = öffentliches Schwimmen entfällt während der Freibadsaison, weil das Personal in den Freibädern eingesetzt wird; Ferienschließung = Bad in den Schulferien geschlossen; Feiertag = geschlossen an Feiertagen, Heiligabend, Silvester und Rosenmontag. Überschneiden sich Gründe, zählt der Tag einmal (Reihenfolge wie oben).</li>
         <li><b>Nicht gegengerechnet</b> sind zusätzliche Schwimmzeiten in den Ferien oder an Feiertagen außerhalb des Regelplans; in den Ferien bieten einzelne Bäder deutlich mehr Stunden an. Die Werte zeigen also den Ausfall gegenüber dem Regelplan, nicht die Bilanz aller Stunden.</li>
-        <li>Feiertage ohne angekündigte Öffnung gelten als geschlossen. Kurzfristige Ausfälle, die nicht per Pressemitteilung bekannt gegeben wurden, fehlen; die Zahlen sind eher eine Untergrenze.</li>
-        <li>Roxel und Wolbeck hatten von Juni 2022 bis November 2026 gar keine öffentlichen Zeiten im Regelplan und sind deshalb nicht enthalten.</li>
+        <li>Feiertage ohne angekündigte Öffnung gelten als geschlossen. Kurzfristige Ausfälle, die nicht öffentlich bekannt gegeben wurden, fehlen; die Zahlen sind eher eine Untergrenze.</li>
+        ${ms ? '<li>Roxel und Wolbeck hatten von Juni 2022 bis November 2026 gar keine öffentlichen Zeiten im Regelplan und sind deshalb nicht enthalten.</li>' : ''}
+        ${(S.offene_punkte || []).length ? `<li><b>Offene Punkte / Annahmen:</b> ${S.offene_punkte.map(esc).join(' · ')}</li>` : ''}
       </ul>
     </details>
     <details><summary>Alle erfassten Schließungen (${S.ereignisse.length})</summary>
       <table class="data events"><thead><tr><th>Zeitraum</th><th>Bad</th><th>Grund</th><th>Quelle</th></tr></thead><tbody>${ev}</tbody></table>
       <p class="note">${esc(S.methodik)} ${esc(S.feiertage_hinweis)}</p></details>`;
 }
+const kurzName = n => n.replace(/^(Hallenbad|Stadtbad|Schwimmhalle) /, '');
+const quelleHtml = q => {
+  const m = String(q || '').match(/https?:\/\/[^\s,;)]+/);
+  if (!m) return esc(q);
+  const rest = q.replace(m[0], '').replace(/^[\s,;–-]+|[\s,;–-]+$/g, '');
+  let host = m[0]; try { host = new URL(m[0]).hostname.replace(/^www\./, ''); } catch (e) { /* bleibt */ }
+  return `<a href="${esc(m[0])}" target="_blank" rel="noopener">${esc(host)}</a>${rest ? ' – ' + esc(rest) : ''}`;
+};
 const fmtDateShort = iso => new Date(iso + 'T12:00:00').toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: '2-digit' });
 
 function setFocus(id, fly) {
@@ -854,7 +879,7 @@ function renderNrw() {
     el.addEventListener('click', go);
     el.addEventListener('keydown', e => { if (e.key === 'Enter') go(); });
   });
-  document.getElementById('missing').innerHTML =
+  document.getElementById('missing').innerHTML = m.ausfall ? ausfallInfo(done, noArea) :
     (noArea.length ? `<p class="missing"><b>Wasserflächen nicht veröffentlicht (${noArea.length}):</b> ${noArea.map(s => esc(s.stadt)).join(', ')} – für diese Kennzahl nicht vergleichbar.</p>` : '') +
     (open.length ? `<p class="missing"><b>Noch nicht erfasst (${open.length} von ${all.length}):</b> ${open.map(s => `<span title="${esc(s.hinweis)}">${esc(s.stadt)}</span>`).join(', ')} – Betreiberseiten automatisiert nicht abrufbar.</p>` : '') +
     '<div class="callout">Vergleichbarkeit: Viele Städte nennen durchgehende Öffnungszeiten, in denen Schul- und Vereinsbetrieb parallel läuft. Münster weist diese Zeiten meist als nicht öffentlich aus. Details im Reiter Methodik und je Stadt in der Tabelle (Hinweis per Maus).</div>';
@@ -870,6 +895,23 @@ function renderNrw() {
     <tbody>${rows}</tbody></table>
     <p class="note">Quellen je Bad in <a href="data/nrw.json">data/nrw.json</a>.</p>`;
 }
+
+function ausfallInfo(done, ohne) {
+  const rows = done.map(s => {
+    const a = s.kennzahlen.ausfall, v = a.stunden_verloren;
+    const haupt = Object.entries(v).filter(([, h]) => h > 0).sort((x, y) => y[1] - x[1]).slice(0, 2)
+      .map(([k, h]) => `${SCHL_NAMEN[k] || k} ${fmt0(h)} h`).join(', ');
+    const tip = `${s.stadt} 2025: ${fmt0(a.stunden_ist)} von ${fmt0(a.stunden_plan)} Regelplan-Stunden in ${a.baeder} Bädern angeboten; größte Gründe: ${haupt}. Quellenlage: ${a.qualitaet || '–'}`;
+    return `<tr title="${esc(tip)}"><td>${esc(s.stadt)}</td><td>${fmtPct(s.kennzahlen.ausfall_anteil)}</td>
+      <td>${fmt1(a.plan_je_10k_ew)} → <b>${fmt1(s.kennzahlen.ist_je_10k_ew)}</b></td>
+      <td class="note">${esc((a.qualitaet || '').split(/\s[–-]\s/)[0])}</td></tr>`;
+  }).join('');
+  return `<h3>Ausfall 2025 im Detail</h3><table class="data"><thead><tr><th>Stadt</th><th>Ausfall</th><th>h/Woche je 10k EW<br>Plan → tatsächlich</th><th>Quellen</th></tr></thead><tbody>${rows}</tbody></table>
+    <p class="note">Stunden und größte Ausfallgründe per Mauszeiger; alle Einzelereignisse mit Quelle in der Kartenansicht der Stadt.</p>
+    <p class="missing"><b>Nicht erhoben (${ohne.length}):</b> ${ohne.map(s => esc(s.stadt)).join(', ')} – für diese Städte liegt (noch) keine Schließtage-Chronik vor.</p>
+    <div class="callout">Ausgefallene Stunden lassen sich nur aus öffentlich gemeldeten Schließungen rekonstruieren. Je nach Stadt melden Betreiber Revisionen und Defekte unterschiedlich vollständig; kurzfristige Ausfälle fehlen oft. Werte sind daher eher Untergrenzen und zwischen Städten nur grob vergleichbar. Grundlage ist jeweils der heutige Regelplan, ggf. korrigiert um bekannte Planänderungen 2025. Zusätzliche Ferienzeiten werden nicht gegengerechnet. Details je Stadt in der Kartenansicht unter „Ausgefallene Schwimmzeiten“.</div>`;
+}
+const SCHL_NAMEN = { defekt: 'Defekt', revision: 'Revision', ferien: 'Ferien', sommer: 'Sommer', feiertag: 'Feiertage', personal: 'kurzfristig' };
 
 /* ------------------------------------------------------------------ */
 /* Methodik                                                            */
@@ -909,8 +951,14 @@ function renderMethodik() {
     <li><b>Lage der Bäder:</b> Koordinaten aus OpenStreetMap (Nominatim/Overpass), geprüft auf Lage im Stadtgebiet. Einzelne Bäder wurden manuell über die Betreiberadresse verortet.</li>
     <li><b>Offene Städte:</b> Einige Betreiberseiten waren automatisiert nicht abrufbar (Bot-Schutz, nicht erreichbar, dynamisch nachgeladen). Diese Städte sind als „noch nicht erfasst“ markiert, der Grund steht in den Daten.</li>
   </ul>
-  <h2>Ausgefallene Schwimmzeiten (Münster)</h2>
-  <p>Für Münster sind alle per Pressemitteilung bekannt gegebenen Schließungen der Hallenbäder seit Januar 2024 erfasst (Revisionen, Defekte, Sommerschließungen, Ferien, Feiertage, kurzfristige Ausfälle). Daraus wird je Tag berechnet, ob ein Bad laut Regelplan öffentlich geöffnet gewesen wäre und ob es tatsächlich geöffnet war. Ausgefallene Stunden = Plan-Stunden an geschlossenen Tagen plus ausgefallene Stunden bei Teilschließungen. Zusätzliche Ferienzeiten werden nicht gegengerechnet. Details und alle Einzelereignisse mit Quelle stehen im Abschnitt „Ausgefallene Schwimmzeiten“ der Münster-Ansicht.</p>
+  <h2>Ausgefallene Schwimmzeiten</h2>
+  <p>Für Münster sind alle per Pressemitteilung bekannt gegebenen Schließungen der Hallenbäder seit Januar 2024 erfasst (Revisionen, Defekte, Sommerschließungen, Ferien, Feiertage, kurzfristige Ausfälle). Daraus wird je Tag berechnet, ob ein Bad laut Regelplan öffentlich geöffnet gewesen wäre und ob es tatsächlich geöffnet war. Ausgefallene Stunden = Plan-Stunden an geschlossenen Tagen plus ausgefallene Stunden bei Teilschließungen. Zusätzliche Ferienzeiten werden nicht gegengerechnet.</p>
+  <p>Für den <b>NRW-Vergleich</b> wurde dieselbe Chronik für das Jahr <b>2025</b> in ausgewählten, ähnlich großen Städten recherchiert (${INDEX.staedte.filter(s => s.kennzahlen && s.kennzahlen.ausfall).map(s => esc(s.stadt)).join(', ')}): Pressemitteilungen von Stadt und Betreiber, archivierte Betreiberseiten (Wayback Machine) und – wo erreichbar – Lokalpresse. Regelplan ist der heutige Wochenplan; belegte Abweichungen 2025 (z. B. andere Wochentage, ein 2026 geschlossenes Bad) sind als eigene Plan-Periode berücksichtigt. Feiertage zählen als geschlossen, wenn keine Öffnung belegt ist.</p>
+  <ul>
+    <li><b>Tatsächlich angeboten 2025:</b> angebotene Jahresstunden ÷ 52,14 Wochen ÷ Einwohner × 10.000 – also im Mittel tatsächlich verfügbare Stunden pro Woche, vergleichbar mit „Stunden je 10.000 EW“.</li>
+    <li><b>Ausgefallen 2025:</b> ausgefallene ÷ Regelplan-Stunden.</li>
+    <li>Die Quellenlage ist unterschiedlich: Wo Betreiber Schließungen nur tagesaktuell auf der Website melden, fehlen kurzfristige Ausfälle (z. B. Gelsenkirchen). Die Werte sind deshalb Untergrenzen; die Einschätzung je Stadt steht in der Tabelle im NRW-Vergleich und in der Kartenansicht.</li>
+  </ul>
   <h2>Einzugsbereiche</h2>
   <p>Für jede bewohnte und unbewohnte 100-m-Zelle des Zensus-2022-Gitters im Stadtgebiet wird die Reisezeit zu jedem Bad-Standort berechnet:</p>
   <ul>

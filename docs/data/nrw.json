@@ -563,6 +563,27 @@
      "Wasserfläche fehlt: Sportbad Sennestadt",
      "Wasserfläche fehlt: Familienbad Heepen"
     ],
+    "ausfall": {
+     "jahr": "2025",
+     "stunden_plan": 10157.5,
+     "stunden_ist": 9027.5,
+     "stunden_verloren": {
+      "defekt": 6.5,
+      "revision": 592.5,
+      "ferien": 0.0,
+      "sommer": 94.5,
+      "feiertag": 405.0,
+      "personal": 31.5
+     },
+     "schliesstage": 122,
+     "plantage": 1208,
+     "baeder": 4,
+     "qualitaet": "mittel – Revisionen, Warnstreiks und der Chlorgas-Vorfall sind durch Pressemitteilungen der Stadtwerke Bielefeld belegt (Pressearchiv 2025 vollständig nach Bäder-Meldungen durchgesehen), Regelpläne durch archivierte Wochenansichten. Schwach ist die Lage bei Feiertagen (keine Regel für 2025 auffindbar) und bei kurzfristigen Einzelschließungen (Veranstaltungen, Wettkämpfe, Personal), die der Betreiber meist nur auf der eigenen Website meldete; deren alte News sind nach dem Relaunch 2026 nicht mehr online und nur lückenhaft archiviert (Wayback sperrte zudem weitere Abrufe).",
+     "plan_je_10k_ew": 5.88
+    },
+    "ausfall_anteil": 0.1112,
+    "ist_je_10k_ew": 5.22,
+    "verloren_je_10k_ew": 34.1,
     "ew_rad15": 0.6242,
     "kinder_rad15": 0.5955,
     "ew_fuss15": 0.0946,
@@ -626,6 +647,27 @@
     "m2h_je_1000_ew": 175.2,
     "wasserflaeche_m2_je_1000_ew": 5.42,
     "datenluecken": [],
+    "ausfall": {
+     "jahr": "2025",
+     "stunden_plan": 6597.3,
+     "stunden_ist": 4836.3,
+     "stunden_verloren": {
+      "defekt": 0.0,
+      "revision": 376.0,
+      "ferien": 0.0,
+      "sommer": 1220.0,
+      "feiertag": 156.0,
+      "personal": 9.0
+     },
+     "schliesstage": 267,
+     "plantage": 950,
+     "baeder": 3,
+     "qualitaet": "mittel – die großen planbaren Blöcke (Sommerpause Frankenbad/Beueler Bütt 29.05.–14.09., Umbauphasen Traglufthalle Friesdorf) und die feste Feiertagsregel sind durch Pressemitteilungen und archivierte Öffnungszeiten-Seiten belegt. Kurzfristige Ausfälle (Wettkämpfe im Frankenbad, Technik, Personal) werden von der Stadt kaum gemeldet; die Bäder-News (baeder.bonn.de/aktuelles) enthielten 2025 nur wenige Einträge, die Lokalpresse (General-Anzeiger, Express) wurde nicht systematisch ausgewertet. Tatsächliche kurzfristige Schließungen sind daher eher untererfasst.",
+     "plan_je_10k_ew": 3.91
+    },
+    "ausfall_anteil": 0.2669,
+    "ist_je_10k_ew": 2.87,
+    "verloren_je_10k_ew": 54.4,
     "ew_rad15": 0.6588,
     "kinder_rad15": 0.6111,
     "ew_fuss15": 0.1323,
@@ -689,6 +731,27 @@
     "m2h_je_1000_ew": 420.3,
     "wasserflaeche_m2_je_1000_ew": 10.02,
     "datenluecken": [],
+    "ausfall": {
+     "jahr": "2025",
+     "stunden_plan": 12895.1,
+     "stunden_ist": 8967.0,
+     "stunden_verloren": {
+      "defekt": 16.0,
+      "revision": 867.4,
+      "ferien": 655.0,
+      "sommer": 2121.0,
+      "feiertag": 251.2,
+      "personal": 17.5
+     },
+     "schliesstage": 385,
+     "plantage": 1248,
+     "baeder": 5,
+     "qualitaet": "gut – alle Pressemitteilungen der Stadt Münster seit 01.01.2024 über die öffentliche API ausgewertet; nur per Aushang oder Website gemeldete Kurzausfälle können fehlen",
+     "plan_je_10k_ew": 8.07
+    },
+    "ausfall_anteil": 0.3046,
+    "ist_je_10k_ew": 5.61,
+    "verloren_je_10k_ew": 128.2,
     "ew_rad15": 0.817,
     "kinder_rad15": 0.7583,
     "ew_fuss15": 0.1765,
@@ -770,6 +833,27 @@
     "m2h_je_1000_ew": 549.4,
     "wasserflaeche_m2_je_1000_ew": 8.02,
     "datenluecken": [],
+    "ausfall": {
+     "jahr": "2025",
+     "stunden_plan": 12390.0,
+     "stunden_ist": 11411.5,
+     "stunden_verloren": {
+      "defekt": 40.0,
+      "revision": 731.5,
+      "ferien": 0.0,
+      "sommer": 0.0,
+      "feiertag": 207.0,
+      "personal": 0.0
+     },
+     "schliesstage": 103,
+     "plantage": 1252,
+     "baeder": 4,
+     "qualitaet": "mittel – die großen geplanten Schließungen (Sommerrevisionen Vitusbad und Stadtbad Rheydt) sind durch eine NEW-Pressemitteilung und archivierte Badseiten belegt, die Feiertagsregeln ab Karfreitag durch archivierte Feiertagstabellen. Kurzfristige Schließungen meldet die NEW nur tagesaktuell als 'Wichtiger Hinweis' auf den Badseiten, die nur sporadisch archiviert sind (9 bis 12 Snapshots pro Bad im Jahr 2025). Weitere kurzfristige Schließungen (Defekte, Wettkämpfe, Personal) sind daher möglich, aber nicht nachweisbar. Lokalpresse (RP Mönchengladbach) war nicht auswertbar.",
+     "plan_je_10k_ew": 8.89
+    },
+    "ausfall_anteil": 0.079,
+    "ist_je_10k_ew": 8.19,
+    "verloren_je_10k_ew": 36.6,
     "ew_rad15": 0.7045,
     "kinder_rad15": 0.7039,
     "ew_fuss15": 0.1321,
@@ -837,6 +921,27 @@
      "Wasserfläche fehlt: Hallenbad Horst",
      "Wasserfläche fehlt: Sport-Paradies – Frühschwimmen"
     ],
+    "ausfall": {
+     "jahr": "2025",
+     "stunden_plan": 6122.2,
+     "stunden_ist": 5816.7,
+     "stunden_verloren": {
+      "defekt": 0.0,
+      "revision": 12.5,
+      "ferien": 0.0,
+      "sommer": 0.0,
+      "feiertag": 276.5,
+      "personal": 16.5
+     },
+     "schliesstage": 46,
+     "plantage": 887,
+     "baeder": 3,
+     "qualitaet": "schlecht bis mittel – Die Feiertagsregel ist klar und offiziell belegt. Die Rubriken 'Neuigkeiten' bzw. 'Aktuelles' auf baeder-gelsenkirchen.de werden per JavaScript nachgeladen und sind weder live (nur Online-Ticket-Hinweis) noch in der Wayback Machine für 2025 abrufbar. Die Stadtwerke- und Sport-Paradies-Pressearchive 2025 enthalten zu Buer und Horst keine Schließungsmeldungen, gelsenkirchen.de führt für 2025 keine Bädermeldungen, und die WAZ war nicht abrufbar. Erfasst sind daher nur Ereignisse aus den Pressearchiven, aus Radio Emscher Lippe und aus Hinweisen auf archivierten Öffnungszeiten-Seiten. Kurzfristige Schließungen von Buer und Horst (Defekte, Personal, Veranstaltungen) könnten fehlen. Die Öffnungszeiten-Seite von Buer zeigt im Juli und Oktober 2025 keine Hinweise.",
+     "plan_je_10k_ew": 4.41
+    },
+    "ausfall_anteil": 0.0499,
+    "ist_je_10k_ew": 4.19,
+    "verloren_je_10k_ew": 11.5,
     "ew_rad15": 0.4512,
     "kinder_rad15": 0.4094,
     "ew_fuss15": 0.0763,
@@ -898,6 +1003,27 @@
      "Wasserfläche fehlt: Schwimmhalle Süd",
      "Wasserfläche fehlt: Schwimmhalle Brand"
     ],
+    "ausfall": {
+     "jahr": "2025",
+     "stunden_plan": 14418.5,
+     "stunden_ist": 13055.2,
+     "stunden_verloren": {
+      "defekt": 48.0,
+      "revision": 59.0,
+      "ferien": 0.0,
+      "sommer": 630.0,
+      "feiertag": 453.5,
+      "personal": 172.8
+     },
+     "schliesstage": 121,
+     "plantage": 1355,
+     "baeder": 4,
+     "qualitaet": "gut – die Stadt Aachen veröffentlicht nahezu jede Schließung/Einschränkung der Schwimmhallen als Pressemitteilung; die PM-Liste 2025 wurde vollständig ausgewertet (rund 60 Bäder-PMs), dazu Feiertags-PMs für alle Feiertage. Regelpläne 2025 über archivierte Serviceportal-Seiten belegt. Lücken möglich bei sehr kurzfristigen Tagesmeldungen, die nur auf der Website (nicht als PM) erschienen (Beispiel Dez. 2024: 'Ulla-Klinger-Halle schließt heute früher' nur auf der alten Seite Sport/Aktuelles).",
+     "plan_je_10k_ew": 10.49
+    },
+    "ausfall_anteil": 0.0946,
+    "ist_je_10k_ew": 9.49,
+    "verloren_je_10k_ew": 51.7,
     "ew_rad15": 0.7551,
     "kinder_rad15": 0.6961,
     "ew_fuss15": 0.2242,
@@ -1313,6 +1439,27 @@
      "Wasserfläche fehlt: Alisobad Elsen",
      "Wasserfläche fehlt: Residenzbad Schloss Neuhaus"
     ],
+    "ausfall": {
+     "jahr": "2025",
+     "stunden_plan": 9443.0,
+     "stunden_ist": 7599.4,
+     "stunden_verloren": {
+      "defekt": 142.0,
+      "revision": 278.8,
+      "ferien": 327.5,
+      "sommer": 654.5,
+      "feiertag": 206.0,
+      "personal": 234.8
+     },
+     "schliesstage": 220,
+     "plantage": 1095,
+     "baeder": 3,
+     "qualitaet": "gut – Die Stadt Paderborn veröffentlicht zu jeden Ferien (Ostern, Sommer, Herbst, Weihnachten) und zu den meisten Sonderschließungen Pressemitteilungen mit Zeiten aller drei Hallenbäder; ergänzend Wayback-Schnappschüsse der Badseiten (Status-Banner mit Schließhinweisen) für Jan., Feb., März, Mai, Juni, Juli, Aug., Sept., Okt., Nov. 2025. Lücken: kurzfristige Schließungen zwischen den Schnappschüssen (v. a. Mitte Feb.–Mitte Mai für Alisobad, Mitte Juli–Mitte Okt. für Alisobad/Residenzbad, Mitte Nov.–Dez. für alle) wären nur erfasst, wenn es eine Pressemitteilung gab.",
+     "plan_je_10k_ew": 11.62
+    },
+    "ausfall_anteil": 0.1952,
+    "ist_je_10k_ew": 9.35,
+    "verloren_je_10k_ew": 118.3,
     "ew_rad15": 0.8125,
     "kinder_rad15": 0.7725,
     "ew_fuss15": 0.1536,

@@ -1,0 +1,61 @@
+{
+  "stadt": "Bielefeld",
+  "ags": "05711",
+  "stand": "2026-11-04",
+  "zeitraum": {"von": "2025-01-01", "bis": "2025-12-31"},
+  "plaene": {
+    "bielefeld-0": [{"von": "2025-01-01", "tage": ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"], "hinweis": "Ishara Sportlandschaft; Wochentage wie heutiger Plan angenommen (2025 nur einzelne Tagesanzeigen archiviert, z. B. Mi 12.03.2025 06:00–07:30, 13:30–17:30). Late-Night-Schwimmen freitags erst ab 09.01.2026"}],
+    "bielefeld-2": [{"von": "2025-01-01", "tage": ["Mo", "Di", "Mi", "Fr", "Sa", "So"], "hinweis": "Wochenansichten 2025 (KW04, KW21, KW38, Wayback) identisch mit heutigem Plan; donnerstags nur Seniorenschwimmen 14:30–15:30"}],
+    "bielefeld-3": [
+      {"von": "2025-01-01", "tage": ["Fr", "Sa", "So"], "hinweis": "2025 öffentlich nur Fr 13–18, Sa/So 10–18 (Wochenansichten KW13, KW28, KW46 2025, Wayback)"},
+      {"von": "2025-12-01", "tage": ["Mo", "Do", "Fr", "Sa", "So"], "hinweis": "ab 01.12.2025 Frühschwimmen Mo/Do 06:30–08:00, freitags ab 11 Uhr (PM Stadtwerke 28.11.2025)"}
+    ],
+    "bielefeld-4": [{"von": "2025-01-01", "tage": ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"], "hinweis": "Wochenansichten 2025 (KW04, KW18, KW46, Wayback) identisch mit heutigem Plan"}]
+  },
+  "feiertage": {
+    "2025": {
+      "2025-01-01": [],
+      "2025-04-18": [],
+      "2025-04-20": [],
+      "2025-04-21": [],
+      "2025-05-01": ["bielefeld-4"],
+      "2025-05-29": [],
+      "2025-06-08": [],
+      "2025-06-09": [],
+      "2025-06-19": [],
+      "2025-10-03": [],
+      "2025-11-01": [],
+      "2025-12-24": [],
+      "2025-12-25": [],
+      "2025-12-26": [],
+      "2025-12-31": []
+    }
+  },
+  "feiertage_hinweis": "Für 2025 liegt keine Feiertagsregel der Bielefelder Bäder vor. Belegt ist nur der 01.05.2025 für das Familienbad Heepen (archivierte Wochenansicht KW18 mit Zeiten 06:30–08:00, 14:00–18:00). Für das Ishara zeigen die Wochenansichten am 01.05. (Saunawelt) und 19.06. (Badewelt) Öffnungszeiten, für die Sportlandschaft selbst aber nicht – 2026 war die Sportlandschaft an einzelnen Feiertagen geschlossen, während die Badewelt öffnete; daher nicht eingetragen. Alle anderen Feiertage ohne Beleg gelten als geschlossen. Achtung: Der Feiertagskalender des Betreibers für 2026 (Live-Abfrage bielefelderbaeder.de, 04.11.2026) zeigt, dass die Hallenbäder an vielen Feiertagen öffnen, aber uneinheitlich (2026: Heepen geöffnet an Karfreitag, Ostern, 1. Mai, Pfingsten, 1.11., 26.12., geschlossen an Himmelfahrt, Fronleichnam, 24./25./31.12., 1.1.; Aquawede geschlossen an Oster- und Pfingstmontag, 24./25./31.12., 1.1.; Ishara-Sportlandschaft geschlossen an Karfreitag, 1. Mai, 25.12., geöffnet 24./31.12. bis 14 Uhr und 1.1. ab 14 Uhr). Dieses Muster wurde nicht auf 2025 übertragen; die Feiertagsschließungen 2025 sind daher vermutlich überschätzt.",
+  "schliessungen": [
+    {"bad": "bielefeld-0", "von": "2025-03-04", "bis": "2025-03-04", "kat": "personal", "grund": "ganztägiger Warnstreik (ver.di) in der Stadtwerke-Gruppe, Bäderbetrieb stillgelegt", "quelle": "PM Stadtwerke Bielefeld 28.02.2025, https://www.stadtwerke-bielefeld.de/presse-aktuelles/presse/artikel/stadtwerke-bielefeld-gruppe-wird-am-dienstag-bestreikt/"},
+    {"bad": "bielefeld-2", "von": "2025-03-04", "bis": "2025-03-04", "kat": "personal", "grund": "ganztägiger Warnstreik (ver.di) in der Stadtwerke-Gruppe, Bäderbetrieb stillgelegt", "quelle": "PM Stadtwerke Bielefeld 28.02.2025, https://www.stadtwerke-bielefeld.de/presse-aktuelles/presse/artikel/stadtwerke-bielefeld-gruppe-wird-am-dienstag-bestreikt/"},
+    {"bad": "bielefeld-3", "von": "2025-03-04", "bis": "2025-03-04", "kat": "personal", "grund": "ganztägiger Warnstreik (ver.di) in der Stadtwerke-Gruppe, Bäderbetrieb stillgelegt (dienstags ohnehin keine öffentlichen Zeiten)", "quelle": "PM Stadtwerke Bielefeld 28.02.2025, https://www.stadtwerke-bielefeld.de/presse-aktuelles/presse/artikel/stadtwerke-bielefeld-gruppe-wird-am-dienstag-bestreikt/"},
+    {"bad": "bielefeld-4", "von": "2025-03-04", "bis": "2025-03-04", "kat": "personal", "grund": "ganztägiger Warnstreik (ver.di) in der Stadtwerke-Gruppe, Bäderbetrieb stillgelegt", "quelle": "PM Stadtwerke Bielefeld 28.02.2025, https://www.stadtwerke-bielefeld.de/presse-aktuelles/presse/artikel/stadtwerke-bielefeld-gruppe-wird-am-dienstag-bestreikt/"},
+    {"bad": "bielefeld-2", "von": "2025-03-12", "bis": "2025-03-12", "kat": "personal", "grund": "Warnstreik (ver.di): Aquawede ganztägig geschlossen (Ishara und Heepen geöffnet)", "quelle": "PM Stadtwerke Bielefeld 10.03.2025, https://www.stadtwerke-bielefeld.de/presse-aktuelles/presse/artikel/zwei-baeder-und-die-eisbahn-geoeffnet/; Startseite bielefelderbaeder.de 12.03.2025 (Wayback)"},
+    {"bad": "bielefeld-4", "von": "2025-03-13", "bis": "2025-03-13", "kat": "defekt", "grund": "Verdacht auf Chlorgasaustritt (Fehlalarm), Evakuierung am frühen Nachmittag, Bad bis Freitagmorgen geschlossen; Ausfall der Nachmittagszeit 14–18 Uhr angenommen", "teil_stunden": 4, "quelle": "PM Stadtwerke Bielefeld 13.03.2025 (zwei Meldungen), https://www.stadtwerke-bielefeld.de/presse-aktuelles/presse/artikel/familienbad-heepen-chlorgas-austritt-konnte-nicht-festgestellt-werden/"},
+    {"bad": "bielefeld-4", "von": "2025-03-14", "bis": "2025-03-14", "kat": "defekt", "grund": "nach Chlorgas-Fehlalarm Öffnung erst um 9 statt 6:30 Uhr", "teil_stunden": 2.5, "quelle": "PM Stadtwerke Bielefeld 13.03.2025, https://www.stadtwerke-bielefeld.de/presse-aktuelles/presse/artikel/familienbad-heepen-chlorgas-austritt-konnte-nicht-festgestellt-werden/"},
+    {"bad": "bielefeld-0", "von": "2025-05-01", "bis": "2025-09-14", "kat": "sommer", "tage": ["Di", "Mi", "Do", "Fr"], "teil_stunden": 1.5, "grund": "Frühschwimmen (06:00–07:30) entfällt während der Wiesenbad-Saison (01.05.–14.09.2025); Dauer 1,5 h und Wochentage Di–Fr wie im heutigen Plan angenommen", "quelle": "PM Stadtwerke Bielefeld 28.04.2025, https://www.stadtwerke-bielefeld.de/presse-aktuelles/presse/artikel/am-1-mai-das-wiesenbad-eroeffnet-die-freibadsaison-1/; PM 04.09.2025 (Wiesenbad bis 14.09.)"},
+    {"bad": "bielefeld-0", "von": "2025-07-14", "bis": "2025-08-03", "kat": "revision", "grund": "jährliche Sommerrevision (dreiwöchige Standardrevision bis 03.08.; Beginn 14.07. = erster Sommerferientag abgeleitet)", "quelle": "PM Stadtwerke Bielefeld 23.07.2025, https://www.stadtwerke-bielefeld.de/presse-aktuelles/presse/artikel/revision-in-den-bielefelder-hallenbaedern/; NW 25.07.2025"},
+    {"bad": "bielefeld-2", "von": "2025-07-14", "bis": "2025-08-03", "kat": "revision", "grund": "jährliche Sommerrevision, u. a. LED-Hallenbeleuchtung, Hubboden (dreiwöchige Standardrevision bis 03.08.; Beginn 14.07. abgeleitet)", "quelle": "PM Stadtwerke Bielefeld 23.07.2025, https://www.stadtwerke-bielefeld.de/presse-aktuelles/presse/artikel/revision-in-den-bielefelder-hallenbaedern/; NW 25.07.2025"},
+    {"bad": "bielefeld-3", "von": "2025-08-04", "bis": "2025-08-26", "kat": "revision", "grund": "jährliche Sommerrevision", "quelle": "PM Stadtwerke Bielefeld 23.07.2025, https://www.stadtwerke-bielefeld.de/presse-aktuelles/presse/artikel/revision-in-den-bielefelder-hallenbaedern/; Startseite bielefelderbaeder.de 09.08.2025 (Wayback)"},
+    {"bad": "bielefeld-4", "von": "2025-08-04", "bis": "2025-08-26", "kat": "revision", "grund": "jährliche Sommerrevision", "quelle": "PM Stadtwerke Bielefeld 23.07.2025, https://www.stadtwerke-bielefeld.de/presse-aktuelles/presse/artikel/revision-in-den-bielefelder-hallenbaedern/; Wochenansicht KW33 2025 'geschlossen' (Wayback)"}
+  ],
+  "qualitaet": "mittel – Revisionen, Warnstreiks und der Chlorgas-Vorfall sind durch Pressemitteilungen der Stadtwerke Bielefeld belegt (Pressearchiv 2025 vollständig nach Bäder-Meldungen durchgesehen), Regelpläne durch archivierte Wochenansichten. Schwach ist die Lage bei Feiertagen (keine Regel für 2025 auffindbar) und bei kurzfristigen Einzelschließungen (Veranstaltungen, Wettkämpfe, Personal), die der Betreiber meist nur auf der eigenen Website meldete; deren alte News sind nach dem Relaunch 2026 nicht mehr online und nur lückenhaft archiviert (Wayback sperrte zudem weitere Abrufe).",
+  "offene_punkte": [
+    "Beginn der Sommerrevision Ishara/Aquawede 2025 nicht wörtlich belegt: Meldungen nennen 'dreiwöchige Standardrevision' bis 03.08.2025, daher Beginn 14.07.2025 (erster Ferientag) abgeleitet.",
+    "Feiertage 2025 bis auf Heepen am 01.05. ohne Beleg und damit als geschlossen gewertet; nach dem Betreiberkalender 2026 öffneten die Bäder an vielen Feiertagen (siehe feiertage_hinweis) – Feiertagsschließungen 2025 vermutlich überschätzt.",
+    "Startseiten-Snapshot vom Sa 09.08.2025 zeigt Sportbad und Sauna Aquawede 'heute geschlossen' (Revision Aquawede laut PM bis 03.08.); die Tagesanzeige ist teils zwischengespeichert (z. B. zeigte der Snapshot vom Mo 02.06.2025 Sonntagszeiten) – nicht eingetragen.",
+    "Warnstreik 12.03.2025: Sportbad Sennestadt ab 13 Uhr geschlossen – mittwochs ohne öffentliche Zeiten, daher nicht eingetragen.",
+    "Chlorgas-Fehlalarm Heepen 13.03.2025: Uhrzeit der Evakuierung ('früher Nachmittag') nicht genau bekannt; Ausfall 14–18 Uhr (4 h) angenommen.",
+    "Ishara-Frühschwimmen: Dauer und Wochentage 2025 (Di–Fr 06:00–07:30) aus heutigem Plan übernommen; nur Mi 12.03.2025 direkt belegt.",
+    "Regelplan-Stunden aus der heutigen Städtedatei weichen 2025 teils ab: Ishara Late-Night freitags (20:30–22:00) erst ab 09.01.2026, Ishara mittwochs 2025 vermutlich ab 13:30 statt 10:00, Sennestadt freitags bis 30.11.2025 erst ab 13 Uhr – Planstunden 2025 dadurch etwas überschätzt.",
+    "Schulferien: ein undatierter Eintrag eines Bäderverzeichnisses nennt Sennestadt 'in den NRW-Schulferien sowie an Feiertagen geschlossen'; für 2025 nicht bestätigt (Sennestadt war z. B. in der ersten Sommerferienhälfte geöffnet), daher nicht eingetragen.",
+    "Kurzfristige Einzelschließungen (Veranstaltungen, Wettkämpfe, Personal) 2025 nicht systematisch auffindbar; NW/Westfalen-Blatt und Radio Bielefeld nur stichprobenartig geprüft."
+  ]
+}

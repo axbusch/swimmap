@@ -91,7 +91,7 @@ Zeiten im Browser abzulesen und eine Datei nach dem Muster in `data/staedte/` an
 Recherche-Hilfen in `scripts/tools/`: `fetch_text.py` (Seite → Text), `eaero.py` (eaero-Öffnungszeiten-Widgets),
 `render_text.py` (JavaScript-Seiten über Edge/Playwright; `pip install playwright`).
 
-## Ausgefallene Schwimmzeiten (Münster)
+## Ausgefallene Schwimmzeiten
 
 `data/muenster_schliessungen.json` enthält alle per Pressemitteilung der Stadt Münster bekannt gegebenen Schließungen
 der Hallenbäder seit 01.01.2024 (Grund, Kategorie, Quelle). Die Pressemitteilungen stammen aus der öffentlichen API
@@ -103,6 +103,14 @@ der Hallenbäder seit 01.01.2024 (Grund, Kategorie, Quelle). Die Pressemitteilun
   Ferienschließung, Feiertag, kurzfristig. Bei Überschneidung zählt der Tag einmal.
 - Nicht gegengerechnet: zusätzliche Ferien-/Feiertagszeiten. Nicht per Pressemitteilung gemeldete Ausfälle fehlen
   (Werte eher Untergrenze). Feiertage ohne angekündigte Öffnung = geschlossen.
+
+**NRW-Vergleich 2025:** Für Bielefeld, Bonn, Aachen, Mönchengladbach, Paderborn und Gelsenkirchen liegt dieselbe
+Chronik für 2025 in `data/schliessungen/<AGS>_<slug>.json` (Pressemitteilungen von Stadt/Betreiber, archivierte
+Betreiberseiten, Lokalpresse; Quelle je Ereignis, Qualitätseinschätzung und offene Punkte je Datei). Format wie
+`muenster_schliessungen.json`; Bad-IDs `<slug>-<Index>` in der Reihenfolge der Städtedatei. Eine Plan-Periode kann
+mit `"slots"` eigene Zeiten haben (z. B. ein heute geschlossenes Bad), `"tage": []` = kein Hallenbetrieb (zählt nicht
+als Schließung). `teil_stunden` zählen unter ihrer Kategorie. Kennzahlen im Vergleich: `ist_je_10k_ew` (tatsächlich
+angebotene Stunden ÷ 52,14 Wochen je 10.000 EW) und `ausfall_anteil`.
 
 ```sh
 python scripts/06_schliesstage.py && python scripts/04_build_web.py

@@ -1,0 +1,204 @@
+{
+ "stadt": "Mönchengladbach",
+ "ags": "05116",
+ "stand": "2026-11-04",
+ "zeitraum": {
+  "von": "2025-01-01",
+  "bis": "2025-12-31"
+ },
+ "plaene": {
+  "moenchengladbach-0": [
+   {
+    "von": "2025-01-01",
+    "tage": [
+     "Mo",
+     "Mi",
+     "Do",
+     "Fr",
+     "Sa",
+     "So"
+    ],
+    "hinweis": "dienstags geschlossen; Plan 2025 identisch mit heutigem (new.de/vitusbad, Wayback 09.01., 15.03., 15.07., 04.08., 08.12.2025)"
+   }
+  ],
+  "moenchengladbach-1": [
+   {
+    "von": "2025-01-01",
+    "tage": [
+     "Mo",
+     "Mi",
+     "Do",
+     "Fr",
+     "Sa",
+     "So"
+    ],
+    "hinweis": "Mehrzweck-/Sprungbecken mit kurzen öffentlichen Fenstern; Wochentage 2025 identisch mit heute (gleiche Quellen wie Sportbecken)"
+   }
+  ],
+  "moenchengladbach-3": [
+   {
+    "von": "2025-01-01",
+    "tage": [
+     "Di",
+     "Mi",
+     "Do",
+     "Fr",
+     "Sa",
+     "So"
+    ],
+    "hinweis": "Sportbereich montags geschlossen, in den Schulferien montags zusätzlich geöffnet (nicht im Plan berücksichtigt); 2025 identisch mit heute (new.de/schlossbad-niederrhein, Wayback 10.01., 14.06., 16.10.2025)"
+   }
+  ],
+  "moenchengladbach-5": [
+   {
+    "von": "2025-01-01",
+    "tage": [
+     "Di",
+     "Mi",
+     "Do",
+     "Fr",
+     "Sa",
+     "So"
+    ],
+    "hinweis": "montags geschlossen; 2025 identisch mit heute (new.de/stadtbad-rheydt, Wayback 14.01., 14.07., 08.12.2025); Umbau-Schließung erst ab 31.08.2026"
+   }
+  ]
+ },
+ "feiertage": {
+  "2025": {
+   "2025-01-01": [],
+   "2025-04-18": [
+    "moenchengladbach-0",
+    "moenchengladbach-1",
+    "moenchengladbach-3",
+    "moenchengladbach-5"
+   ],
+   "2025-04-20": [
+    "moenchengladbach-3"
+   ],
+   "2025-04-21": [
+    "moenchengladbach-3"
+   ],
+   "2025-05-01": [
+    "moenchengladbach-0",
+    "moenchengladbach-1",
+    "moenchengladbach-3",
+    "moenchengladbach-5"
+   ],
+   "2025-05-29": [
+    "moenchengladbach-0",
+    "moenchengladbach-1",
+    "moenchengladbach-3",
+    "moenchengladbach-5"
+   ],
+   "2025-06-08": [
+    "moenchengladbach-0",
+    "moenchengladbach-1",
+    "moenchengladbach-3",
+    "moenchengladbach-5"
+   ],
+   "2025-06-09": [
+    "moenchengladbach-0",
+    "moenchengladbach-1",
+    "moenchengladbach-3"
+   ],
+   "2025-06-19": [
+    "moenchengladbach-0",
+    "moenchengladbach-1",
+    "moenchengladbach-3",
+    "moenchengladbach-5"
+   ],
+   "2025-10-03": [
+    "moenchengladbach-0",
+    "moenchengladbach-1",
+    "moenchengladbach-3",
+    "moenchengladbach-5"
+   ],
+   "2025-11-01": [
+    "moenchengladbach-0",
+    "moenchengladbach-1",
+    "moenchengladbach-3",
+    "moenchengladbach-5"
+   ],
+   "2025-12-24": [
+    "moenchengladbach-0",
+    "moenchengladbach-1"
+   ],
+   "2025-12-25": [],
+   "2025-12-26": [],
+   "2025-12-31": [
+    "moenchengladbach-0",
+    "moenchengladbach-1"
+   ]
+  }
+ },
+ "feiertage_hinweis": "Karfreitag bis Silvester 2025 aus den Feiertagstabellen 'Öffnungszeiten an Feiertagen' der NEW-Badseiten (archiviert: Vitusbad 15.07./04.08./08.12.2025, Schlossbad Niederrhein 14.06./16.10.2025, Stadtbad Rheydt 14.07./08.12.2025); 'geöffnet' = Öffnungszeiten wie sonntags. Für das Vitusbad gilt die Tabelle für das ganze Bad, also auch für das Mehrzweckbecken (angenommen). Neujahr 01.01.2025: keine Quelle gefunden (Tabellen Anfang 2025 nicht archiviert); als geschlossen angenommen, weil 2026 alle drei Bäder an Neujahr geschlossen waren (Tabellen 2026). Rosenmontag 03.03.2025 nicht aufgenommen: keine Quelle für 2025; laut Tabelle 2026 hatte das Vitusbad an Rosenmontag geöffnet, Schlossbad-Sportbereich und Stadtbad Rheydt sind montags ohnehin nicht im Regelplan.",
+ "schliessungen": [
+  {
+   "bad": "moenchengladbach-0",
+   "von": "2025-01-09",
+   "bis": "2025-01-09",
+   "kat": "defekt",
+   "grund": "Sicherheitsschließung wegen Schneelast auf dem Dach (ganzes Vitusbad)",
+   "quelle": "Hinweis 'Wichtiger Hinweis' auf new.de/vitusbad: 'aufgrund der erhöhten Schneelast ... schließen wir das schlossbad niederrhein und das vitusbad für den heutigen Tag' (https://web.archive.org/web/20250109181839/https://www.new.de/baeder/baeder-uebersicht/vitusbad, Datum aus Snapshot 09.01.2025 abgeleitet)"
+  },
+  {
+   "bad": "moenchengladbach-1",
+   "von": "2025-01-09",
+   "bis": "2025-01-09",
+   "kat": "defekt",
+   "grund": "Sicherheitsschließung wegen Schneelast auf dem Dach (ganzes Vitusbad)",
+   "quelle": "Hinweis 'Wichtiger Hinweis' auf new.de/vitusbad: 'aufgrund der erhöhten Schneelast ... schließen wir das schlossbad niederrhein und das vitusbad für den heutigen Tag' (https://web.archive.org/web/20250109181839/https://www.new.de/baeder/baeder-uebersicht/vitusbad, Datum aus Snapshot 09.01.2025 abgeleitet)"
+  },
+  {
+   "bad": "moenchengladbach-3",
+   "von": "2025-01-09",
+   "bis": "2025-01-09",
+   "kat": "defekt",
+   "grund": "Sicherheitsschließung wegen Schneelast auf dem Dach",
+   "quelle": "Hinweis 'Wichtiger Hinweis' auf new.de/vitusbad: 'aufgrund der erhöhten Schneelast ... schließen wir das schlossbad niederrhein und das vitusbad für den heutigen Tag' (https://web.archive.org/web/20250109181839/https://www.new.de/baeder/baeder-uebersicht/vitusbad, Datum aus Snapshot 09.01.2025 abgeleitet)"
+  },
+  {
+   "bad": "moenchengladbach-3",
+   "von": "2025-01-10",
+   "bis": "2025-01-10",
+   "kat": "defekt",
+   "grund": "Sportbereich wegen Schneelast auf dem Dach geschlossen",
+   "quelle": "Hinweis auf new.de/schlossbad-niederrhein: 'aufgrund der erhöhten Schneelast ... bleibt der Sportbereich ... heute geschlossen' (https://web.archive.org/web/20250110124033/https://www.new.de/baeder/baeder-uebersicht/schlossbad-niederrhein, Datum aus Snapshot 10.01.2025 abgeleitet)"
+  },
+  {
+   "bad": "moenchengladbach-5",
+   "von": "2025-07-11",
+   "bis": "2025-08-26",
+   "kat": "revision",
+   "grund": "jährliche Revision plus Umbauarbeiten (längere Schließung als üblich)",
+   "quelle": "NEW-Pressemitteilung 10.07.2025 'Was rund um die NEW-Bäder im Sommer wichtig ist' (https://www.new.de/pressemitteilungen/pressemeldung/was-rund-um-die-new-baeder-im-sommer-wichtig-ist); Hinweis auf new.de/stadtbad-rheydt (https://web.archive.org/web/20250714095142/https://www.new.de/baeder/baeder-uebersicht/stadtbad-rheydt)"
+  },
+  {
+   "bad": "moenchengladbach-0",
+   "von": "2025-08-04",
+   "bis": "2025-08-26",
+   "kat": "revision",
+   "grund": "jährliche Revision/Grundreinigung (ganzes Vitusbad)",
+   "quelle": "NEW-Pressemitteilung 10.07.2025 'Was rund um die NEW-Bäder im Sommer wichtig ist' (https://www.new.de/pressemitteilungen/pressemeldung/was-rund-um-die-new-baeder-im-sommer-wichtig-ist); Hinweis auf new.de/vitusbad (https://web.archive.org/web/20250804063701/https://www.new.de/baeder/baeder-uebersicht/vitusbad, https://web.archive.org/web/20250812210925/https://www.new.de/baeder/baeder-uebersicht/vitusbad)"
+  },
+  {
+   "bad": "moenchengladbach-1",
+   "von": "2025-08-04",
+   "bis": "2025-08-26",
+   "kat": "revision",
+   "grund": "jährliche Revision/Grundreinigung (ganzes Vitusbad)",
+   "quelle": "NEW-Pressemitteilung 10.07.2025 'Was rund um die NEW-Bäder im Sommer wichtig ist' (https://www.new.de/pressemitteilungen/pressemeldung/was-rund-um-die-new-baeder-im-sommer-wichtig-ist); Hinweis auf new.de/vitusbad (https://web.archive.org/web/20250804063701/https://www.new.de/baeder/baeder-uebersicht/vitusbad, https://web.archive.org/web/20250812210925/https://www.new.de/baeder/baeder-uebersicht/vitusbad)"
+  }
+ ],
+ "ohne_oeffentlichen_betrieb": [],
+ "qualitaet": "mittel – die großen geplanten Schließungen (Sommerrevisionen Vitusbad und Stadtbad Rheydt) sind durch eine NEW-Pressemitteilung und archivierte Badseiten belegt, die Feiertagsregeln ab Karfreitag durch archivierte Feiertagstabellen. Kurzfristige Schließungen meldet die NEW nur tagesaktuell als 'Wichtiger Hinweis' auf den Badseiten, die nur sporadisch archiviert sind (9 bis 12 Snapshots pro Bad im Jahr 2025). Weitere kurzfristige Schließungen (Defekte, Wettkämpfe, Personal) sind daher möglich, aber nicht nachweisbar. Lokalpresse (RP Mönchengladbach) war nicht auswertbar.",
+ "offene_punkte": [
+  "Schneelast Januar 2025: Vitusbad am 10.01.2025 ebenfalls geschlossen? Nur der Schlossbad-Hinweis vom 10.01. (Sportbereich) ist archiviert; Tage aus den Snapshot-Zeitpunkten abgeleitet.",
+  "Neujahr 01.01.2025 und Karnevalstage 2025 (Rosenmontag 03.03., Veilchendienstag 04.03.: 2026 war das Stadtbad Rheydt am Veilchendienstag geschlossen) ohne Quelle für 2025.",
+  "Wettkampfbedingte Sperrungen des 50-m-Sportbeckens im Vitusbad (v. a. an Wochenenden) und kurzfristige Personalausfälle 2025 nicht recherchierbar (keine Pressemitteilungen, Hinweise nur tagesaktuell auf new.de).",
+  "Warnstreik 06.02.2025: laut NEW-PM 04.02.2025 sollten die Bäder uneingeschränkt öffnen – nicht als Schließung erfasst.",
+  "Schlossbad Niederrhein: zusätzliche Montagsöffnung des Sportbereichs in den Schulferien nicht gegengerechnet; die Grundreinigung 30.11.–26.12.2024 lag vollständig vor 2025.",
+  "Vitusbad: In der NEW-PM als 'Revisionsarbeiten', auf der Badseite als 'Grundreinigung' bezeichnet – beides als revision erfasst."
+ ]
+}

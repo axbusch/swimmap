@@ -6,6 +6,7 @@
   docs/data/nrw.json          Vergleich als JSON (Download)
   docs/data/st/<slug>-baeder.json  Bäder einer Stadt als JSON (Download)
 """
+from datetime import date
 from pathlib import Path
 import base64
 import json
@@ -28,6 +29,7 @@ METHODIK_NRW = (
 FELDER = ["id", "name", "cat", "typ", "kategorie", "standort_id", "traeger", "adresse", "wasserflaeche_m2",
           "wasserflaeche_geschaetzt", "wasserflaeche_quelle", "ausstattung", "slots", "einschraenkungen", "sommer",
           "saison", "quelle", "hinweis", "zeiten_unsicher", "zeiten_unbekannt", "kennzahlen", "freizeitbad"]
+VERGLEICHSJAHR = "2025"  # Jahr für den Schließtage-Vergleich
 gtfs_meta = json.loads((CACHE / "gtfs_nrw" / "meta.json").read_text(encoding="utf-8"))
 
 index = {"staedte": [], "methodik": METHODIK_NRW, "oepnv": gtfs_meta}
@@ -41,6 +43,20 @@ for ags, (name, ew) in einwohner().items():
            "baeder": [{"name": b["name"], "stunden_woche": b["kennzahlen"]["stunden_woche"],
                        "wasserflaeche_m2": b.get("wasserflaeche_m2"), "quelle": (b.get("quelle") or {}).get("url")}
                       for b in s["baeder"] if ist_kern(b)]}
+    sf = CACHE / "schliessungen" / f"{slug}.json"
+    schl = json.loads(sf.read_text(encoding="utf-8")) if sf.exists() else None
+    if k and schl and VERGLEICHSJAHR in schl["jahre"]:
+        j = schl["jahre"][VERGLEICHSJAHR]
+        if j["stunden_plan"]:
+            tage = (date(int(VERGLEICHSJAHR), 12, 31) - date(int(VERGLEICHSJAHR), 1, 1)).days + 1
+            k["ausfall"] = {"jahr": VERGLEICHSJAHR, "stunden_plan": j["stunden_plan"], "stunden_ist": j["stunden_ist"],
+                            "stunden_verloren": j["stunden_verloren"], "schliesstage": j["schliesstage"],
+                            "plantage": j["plantage"], "baeder": len(schl["baeder"]),
+                            "qualitaet": schl.get("qualitaet")}
+            k["ausfall_anteil"] = round(1 - j["stunden_ist"] / j["stunden_plan"], 4)
+            k["ist_je_10k_ew"] = round(j["stunden_ist"] / (tage / 7) / ew * 1e4, 2)
+            k["ausfall"]["plan_je_10k_ew"] = round(j["stunden_plan"] / (tage / 7) / ew * 1e4, 2)
+            k["verloren_je_10k_ew"] = round((j["stunden_plan"] - j["stunden_ist"]) / ew * 1e4, 1)
     out = CACHE / "st" / slug
     ids_f = out / "tt_standorte.json"
     if k and ids_f.exists() and (out / "tt_walk.npy").exists():
@@ -82,9 +98,8 @@ for ags, (name, ew) in einwohner().items():
                            "ew_summe": int(cells.ew.sum()), "standorte": ids, "tt": tt},
                 "oepnv": gtfs_meta,
             }
-            sf = CACHE / "muenster_schliessungen_out.json"
-            if ags == "05515" and sf.exists():  # Schließtage-Chronik (nur Münster, 06_schliesstage.py)
-                city["schliessungen"] = json.loads(sf.read_text(encoding="utf-8"))
+            if schl:  # Schließtage-Chronik (06_schliesstage.py)
+                city["schliessungen"] = schl
             (WEB / "st" / f"{slug}.js").write_text(
                 "/* erzeugt von scripts/04_build_web.py */\nwindow.SWIMMAP_CITY("
                 + json.dumps(city, ensure_ascii=False, separators=(",", ":")) + ");\n", encoding="utf-8")
