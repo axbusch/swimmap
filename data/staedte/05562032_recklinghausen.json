@@ -19,6 +19,14 @@
    "quelle": {
     "url": "https://www.recklinghausen.de/inhalte/startseite/freizeit_tourismus/sport/frei_und_hallenbaeder/index.asp",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.597477,
+   "lon": 7.203782,
+   "geocode": {
+    "q": "Hallenbad Herner Straße, Recklinghausen",
+    "osm": "way/23068190",
+    "name": "Hallenbad an der Herner Straße, 160, Herner Straße, Hillerheide, Recklinghausen, Kreis Recklinghausen, Nordrhein-Westfalen, 45659, Deutschla",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -42,6 +50,14 @@
    "quelle": {
     "url": "https://www.recklinghausen.de/inhalte/startseite/freizeit_tourismus/sport/frei_und_hallenbaeder/index.asp",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.573002,
+   "lon": 7.223268,
+   "geocode": {
+    "q": "Südbad, Recklinghausen",
+    "osm": "way/23257641",
+    "name": "Südbad, Florian-Polubinski-Weg, König Ludwig, Recklinghausen, Kreis Recklinghausen, Nordrhein-Westfalen, 45663, Deutschland",
+    "typ": "leisure/water_park"
    }
   }
  ]

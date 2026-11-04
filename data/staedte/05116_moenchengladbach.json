@@ -3,7 +3,7 @@
  "stadt": "Mönchengladbach",
  "status": "erfasst",
  "stand": "2026-11-04",
- "hinweis": "Betreiber NEW (Stadtwerke). Wasserflächen laut Betreiber je Becken. Vitusbad und Schlossbad: Sport- und Freizeitbereich getrennt (Freizeitbereich nicht in Kernkennzahl); laut Betreiber im Sportbereich wochentags eingeschränkter Betrieb durch Schul-/Vereinsschwimmen. Stadtbad Rheydt bis voraussichtlich 31.01.2027 wegen Umbau geschlossen – regulärer Plan gezählt. Bad Ransberg: Zeiten außerhalb der Ferien.",
+ "hinweis": "Betreiber NEW (Stadtwerke). Wasserflächen laut Betreiber je Becken. Vitusbad und Schlossbad: Sport- und Freizeitbereich getrennt (Freizeitbereich nicht in Kernkennzahl); laut Betreiber im Sportbereich wochentags eingeschränkter Betrieb durch Schul-/Vereinsschwimmen. Stadtbad Rheydt bis voraussichtlich 31.01.2027 wegen Umbau geschlossen – regulärer Plan gezählt. Bad Ransberg (NEW) liegt in Viersen-Dülken und zählt nicht zu Mönchengladbach.",
  "baeder": [
   {
    "name": "Vitusbad – Sportbecken",
@@ -20,7 +20,15 @@
     "url": "https://www.new.de/baeder/baeder-uebersicht/vitusbad",
     "abgerufen": "2026-11-04"
    },
-   "ausstattung": "50-m-Sportbecken, 8 Bahnen"
+   "ausstattung": "50-m-Sportbecken, 8 Bahnen",
+   "lat": 51.19682,
+   "lon": 6.450765,
+   "geocode": {
+    "q": "Vitusbad, Mönchengladbach",
+    "osm": "node/13342365752",
+    "name": "Vitusbad, Platz der Republik, Hardterbroich-Pesch, Ost, Mönchengladbach, Nordrhein-Westfalen, 41065, Deutschland",
+    "typ": "leisure/water_park"
+   }
   },
   {
    "name": "Vitusbad – Mehrzweck-/Sprungbecken",
@@ -41,6 +49,14 @@
    "quelle": {
     "url": "https://www.new.de/baeder/baeder-uebersicht/vitusbad",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.19682,
+   "lon": 6.450765,
+   "geocode": {
+    "q": "Vitusbad, Mönchengladbach",
+    "osm": "node/13342365752",
+    "name": "Vitusbad, Platz der Republik, Hardterbroich-Pesch, Ost, Mönchengladbach, Nordrhein-Westfalen, 41065, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -58,7 +74,15 @@
     "url": "https://www.new.de/baeder/baeder-uebersicht/vitusbad",
     "abgerufen": "2026-11-04"
    },
-   "freizeitbad": true
+   "freizeitbad": true,
+   "lat": 51.19682,
+   "lon": 6.450765,
+   "geocode": {
+    "q": "Vitusbad, Mönchengladbach",
+    "osm": "node/13342365752",
+    "name": "Vitusbad, Platz der Republik, Hardterbroich-Pesch, Ost, Mönchengladbach, Nordrhein-Westfalen, 41065, Deutschland",
+    "typ": "leisure/water_park"
+   }
   },
   {
    "name": "Schlossbad Niederrhein – Sportbereich",
@@ -73,6 +97,14 @@
    "quelle": {
     "url": "https://www.new.de/baeder/baeder-uebersicht/schlossbad-niederrhein",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.121782,
+   "lon": 6.411491,
+   "geocode": {
+    "q": "Schlossbad Niederrhein, Mönchengladbach",
+    "osm": "way/23647458",
+    "name": "Schlossbad Niederrhein, Auf dem Damm, Wickrath, Wickrath-Mitte, West, Mönchengladbach, Nordrhein-Westfalen, 41189, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -89,28 +121,14 @@
     "url": "https://www.new.de/baeder/baeder-uebersicht/schlossbad-niederrhein",
     "abgerufen": "2026-11-04"
    },
-   "freizeitbad": true
-  },
-  {
-   "name": "Bad Ransberg",
-   "typ": "hallenbad",
-   "kategorie": "staedtisch",
-   "traeger": "NEW Bäder GmbH (NEW AG, Stadtwerke)",
-   "wasserflaeche_m2": 561,
-   "slots": [
-    "Mo 13:30-16:00",
-    "Di 06:45-21:00",
-    "Mi 06:45-08:30",
-    "Mi 13:30-17:00",
-    "Do 06:45-21:00",
-    "Fr 06:45-08:30",
-    "Fr 13:30-16:00",
-    "Sa 07:00-20:00",
-    "So 08:00-20:00"
-   ],
-   "quelle": {
-    "url": "https://www.new.de/baeder/baeder-uebersicht/bad-ransberg",
-    "abgerufen": "2026-11-04"
+   "freizeitbad": true,
+   "lat": 51.121782,
+   "lon": 6.411491,
+   "geocode": {
+    "q": "Schlossbad Niederrhein, Mönchengladbach",
+    "osm": "way/23647458",
+    "name": "Schlossbad Niederrhein, Auf dem Damm, Wickrath, Wickrath-Mitte, West, Mönchengladbach, Nordrhein-Westfalen, 41189, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -128,7 +146,15 @@
     "url": "https://www.new.de/baeder/baeder-uebersicht/stadtbad-rheydt",
     "abgerufen": "2026-11-04"
    },
-   "hinweis": "31.08.2026 bis vsl. 31.01.2027 wegen Umbau geschlossen"
+   "hinweis": "31.08.2026 bis vsl. 31.01.2027 wegen Umbau geschlossen",
+   "lat": 51.171777,
+   "lon": 6.445926,
+   "geocode": {
+    "q": "Stadtbad Rheydt, Mönchengladbach",
+    "osm": "node/11345966097",
+    "name": "Stadtbad Rheydt, Pahlkestraße, Rheydt, Süd, Mönchengladbach, Nordrhein-Westfalen, 41236, Deutschland",
+    "typ": "leisure/sports_centre"
+   }
   }
  ]
 }

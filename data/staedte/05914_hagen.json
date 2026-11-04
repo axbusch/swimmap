@@ -19,7 +19,15 @@
     "url": "https://www.hagenbad.de/baeder/westfalenbad",
     "abgerufen": "2026-11-04"
    },
-   "ausstattung": "50-m-Becken, Sprungtürme"
+   "ausstattung": "50-m-Becken, Sprungtürme",
+   "lat": 51.37437,
+   "lon": 7.47651,
+   "geocode": {
+    "q": "Westfalenbad, Hagen",
+    "osm": "way/138324365",
+    "name": "Westfalenbad, Am Freibad, Ischeland, Altenhagen, Hagen-Mitte, Hagen, Nordrhein-Westfalen, 58097, Deutschland",
+    "typ": "leisure/water_park"
+   }
   },
   {
    "name": "Westfalenbad – Freizeit & Sole",
@@ -35,7 +43,15 @@
     "url": "https://www.hagenbad.de/baeder/westfalenbad",
     "abgerufen": "2026-11-04"
    },
-   "freizeitbad": true
+   "freizeitbad": true,
+   "lat": 51.37437,
+   "lon": 7.47651,
+   "geocode": {
+    "q": "Westfalenbad, Hagen",
+    "osm": "way/138324365",
+    "name": "Westfalenbad, Am Freibad, Ischeland, Altenhagen, Hagen-Mitte, Hagen, Nordrhein-Westfalen, 58097, Deutschland",
+    "typ": "leisure/water_park"
+   }
   }
  ]
 }

@@ -28,7 +28,15 @@
     "url": "https://baeder.bonn.de/oeffnungszeiten",
     "abgerufen": "2026-11-04"
    },
-   "ausstattung": "Sportbecken 25 × 15 m, Mehrzweckbecken 25 × 12,5 m, Lehrbecken 12 × 8 m"
+   "ausstattung": "Sportbecken 25 × 15 m, Mehrzweckbecken 25 × 12,5 m, Lehrbecken 12 × 8 m",
+   "lat": 50.739112,
+   "lon": 7.088142,
+   "geocode": {
+    "q": "Frankenbad, Bonn",
+    "osm": "relation/3377463",
+    "name": "Frankenbad, 45, Adolfstraße, Nordstadt, Stadtbezirk Bonn, Bonn, Nordrhein-Westfalen, 53111, Deutschland",
+    "typ": "leisure/sports_centre"
+   }
   },
   {
    "name": "Beueler Bütt",
@@ -52,7 +60,15 @@
     "url": "https://baeder.bonn.de/oeffnungszeiten",
     "abgerufen": "2026-11-04"
    },
-   "ausstattung": "Mehrzweckbecken 25 × 12,5 m, Lehrbecken 12,5 × 6 m"
+   "ausstattung": "Mehrzweckbecken 25 × 12,5 m, Lehrbecken 12,5 × 6 m",
+   "lat": 50.737176,
+   "lon": 7.124033,
+   "geocode": {
+    "q": "Beueler Bütt, Bonn",
+    "osm": "way/144316942",
+    "name": "Hallenbad Beuel, 29-35, Goetheallee, Beuel-Mitte, Bonn-Beuel, Bonn, Nordrhein-Westfalen, 53225, Deutschland",
+    "typ": "leisure/sports_centre"
+   }
   },
   {
    "name": "Friesi (Traglufthalle Friesdorf)",
@@ -80,7 +96,15 @@
     "url": "https://baeder.bonn.de/oeffnungszeiten",
     "abgerufen": "2026-11-04"
    },
-   "ausstattung": "Mehrzweckbecken 25 × 16,67 m, Lehrschwimmbecken 10 × 16,67 m (Traglufthalle im Winter)"
+   "ausstattung": "Mehrzweckbecken 25 × 16,67 m, Lehrschwimmbecken 10 × 16,67 m (Traglufthalle im Winter)",
+   "lat": 50.697482,
+   "lon": 7.124163,
+   "geocode": {
+    "q": "Friesi, Bonn",
+    "osm": "way/31878043",
+    "name": "Freibad Friesdorf, 14, Margaretenstraße, Friesdorf, Bad Godesberg, Bonn, Nordrhein-Westfalen, 53175, Deutschland",
+    "typ": "amenity/public_bath"
+   }
   },
   {
    "name": "Hardtbergbad",
@@ -93,7 +117,15 @@
     "url": "https://baeder.bonn.de/oeffnungszeiten",
     "abgerufen": "2026-11-04"
    },
-   "hinweis": "seit Ende Freibadsaison 2024 wegen Sanierung geschlossen"
+   "hinweis": "seit Ende Freibadsaison 2024 wegen Sanierung geschlossen",
+   "lat": 50.70561,
+   "lon": 7.043952,
+   "geocode": {
+    "q": "Hardtbergbad, Bonn",
+    "osm": "way/150800219",
+    "name": "Hardtbergbad, In der Dehlen, Duisdorf, Hardtberg, Bonn, Nordrhein-Westfalen, 53125, Deutschland",
+    "typ": "leisure/water_park"
+   }
   }
  ]
 }

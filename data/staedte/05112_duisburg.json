@@ -19,7 +19,15 @@
     "url": "https://www.baederportal-duisburg.de/unsere-baeder/allwetterbad-walsum/preise-oeffnungszeiten",
     "abgerufen": "2026-11-04"
    },
-   "ausstattung": "50-m-Edelstahlbecken mit Cabrio-Dach"
+   "ausstattung": "50-m-Edelstahlbecken mit Cabrio-Dach",
+   "lat": 51.533351,
+   "lon": 6.724502,
+   "geocode": {
+    "q": "Allwetterbad Walsum, Duisburg",
+    "osm": "way/1334626303",
+    "name": "Allwetterbad Walsum, Scholte-Rahm-Straße, Vierlinden, Walsum, Duisburg, Nordrhein-Westfalen, 47178, Deutschland",
+    "typ": "leisure/sports_centre"
+   }
   },
   {
    "name": "Hallenbad Neudorf",
@@ -35,6 +43,14 @@
    "quelle": {
     "url": "https://www.baederportal-duisburg.de/unsere-baeder/hallenbad-neudorf/preise-oeffnungszeiten",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.428137,
+   "lon": 6.787585,
+   "geocode": {
+    "q": "Hallenbad Neudorf, Duisburg",
+    "osm": "way/24989319",
+    "name": "Hallenbad Neudorf, 70-72, Memelstraße, Wabenquartier, Neudorf-Nord, Duisburg-Mitte, Duisburg, Nordrhein-Westfalen, 47057, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -52,6 +68,14 @@
    "quelle": {
     "url": "https://www.baederportal-duisburg.de/unsere-baeder/hallenbad-toeppersee/preise-oeffnungszeiten",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.407802,
+   "lon": 6.677815,
+   "geocode": {
+    "q": "Hallenbad Toeppersee, Duisburg",
+    "osm": "way/306076132",
+    "name": "Hallenbad Toeppersee, 101, Bergheimer Straße, Oestrum, Rheinhausen, Duisburg, Nordrhein-Westfalen, 47239, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -68,7 +92,15 @@
     "url": "https://www.baederportal-duisburg.de/unsere-baeder/rhein-ruhr-bad-hamborn/aktionspreise-oeffnungszeiten",
     "abgerufen": "2026-11-04"
    },
-   "ausstattung": "Erlebnis-, Sport- und Mehrzweckbecken"
+   "ausstattung": "Erlebnis-, Sport- und Mehrzweckbecken",
+   "lat": 51.49493,
+   "lon": 6.767546,
+   "geocode": {
+    "q": "Rhein-Ruhr-Bad Hamborn, Duisburg",
+    "osm": "way/152370882",
+    "name": "Rhein-Ruhr-Bad Hamborn, 2, Kampstraße, Alt-Hamborn, Hamborn, Duisburg, Nordrhein-Westfalen, 47166, Deutschland",
+    "typ": "leisure/water_park"
+   }
   }
  ]
 }

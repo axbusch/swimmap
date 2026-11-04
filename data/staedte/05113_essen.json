@@ -23,7 +23,15 @@
     "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/schwimmzentrum_ruettenscheid.de.html",
     "abgerufen": "2026-11-04"
    },
-   "ausstattung": "Mehrzweckbecken 25 × 12,5 m, Lehrschwimmbecken 12,5 × 8 m, Kinderbecken"
+   "ausstattung": "Mehrzweckbecken 25 × 12,5 m, Lehrschwimmbecken 12,5 × 8 m, Kinderbecken",
+   "lat": 51.434929,
+   "lon": 7.015432,
+   "geocode": {
+    "q": "Schwimmzentrum Rüttenscheid, Essen",
+    "osm": "way/25842954",
+    "name": "Schwimmzentrum Essen-Rüttenscheid, 77, Von-Einem-Straße, Witteringsfeld, Rüttenscheid, Stadtbezirk II, Essen, Nordrhein-Westfalen, 45130, De",
+    "typ": "leisure/sports_centre"
+   }
   },
   {
    "name": "Schwimmzentrum Rüttenscheid – 50-m-Becken",
@@ -42,7 +50,15 @@
     "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/schwimmzentrum_ruettenscheid.de.html",
     "abgerufen": "2026-11-04"
    },
-   "ausstattung": "50 × 21 m"
+   "ausstattung": "50 × 21 m",
+   "lat": 51.434929,
+   "lon": 7.015432,
+   "geocode": {
+    "q": "Schwimmzentrum Rüttenscheid, Essen",
+    "osm": "way/25842954",
+    "name": "Schwimmzentrum Essen-Rüttenscheid, 77, Von-Einem-Straße, Witteringsfeld, Rüttenscheid, Stadtbezirk II, Essen, Nordrhein-Westfalen, 45130, De",
+    "typ": "leisure/sports_centre"
+   }
   },
   {
    "name": "Sportbad Thurmfeld",
@@ -58,7 +74,15 @@
     "abgerufen": "2026-11-04"
    },
    "wasserflaeche_geschaetzt": true,
-   "ausstattung": "25-m-Becken 8 Bahnen (≈500 m², geschätzt), Lehrschwimmbecken 167 m²"
+   "ausstattung": "25-m-Becken 8 Bahnen (≈500 m², geschätzt), Lehrschwimmbecken 167 m²",
+   "lat": 51.467881,
+   "lon": 6.999968,
+   "geocode": {
+    "q": "Sportbad Thurmfeld, Essen",
+    "osm": "way/370757603",
+    "name": "Sportbad Thurmfeld, 84, Reckhammerweg, Segeroth, Nordviertel, Stadtbezirk I, Essen, Nordrhein-Westfalen, 45141, Deutschland",
+    "typ": "leisure/sports_centre"
+   }
   },
   {
    "name": "Nord-Ost-Bad",
@@ -78,6 +102,14 @@
    "quelle": {
     "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/nord_ost_bad.de.html",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.485571,
+   "lon": 7.055708,
+   "geocode": {
+    "q": "Nord-Ost-Bad, Essen",
+    "osm": "way/58527169",
+    "name": "Nord-Ost-Bad, 60, Schonnebeckhöfe, Schonnebeck, Stadtbezirk VI, Essen, Nordrhein-Westfalen, 45309, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -99,6 +131,14 @@
    "quelle": {
     "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/schwimmzentrum_kettwig.de.html",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.373218,
+   "lon": 6.934729,
+   "geocode": {
+    "q": "Schwimmzentrum Kettwig, Essen",
+    "osm": "way/23039603",
+    "name": "Schwimmzentrum Kettwig, Im Teelbruch, Rombeck, Kettwig, Stadtbezirk IX, Essen, Nordrhein-Westfalen, 45219, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -121,6 +161,12 @@
    "quelle": {
     "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/bad_und_sport_oststadt.de.html",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.4433,
+   "lon": 7.1058,
+   "geocode": {
+    "q": "OSM node/269603060 Schwimmzentrum Oststadt",
+    "manuell": true
    }
   },
   {
@@ -143,6 +189,14 @@
    "quelle": {
     "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/stadtbad_borbeck.de.html",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.475313,
+   "lon": 6.954333,
+   "geocode": {
+    "q": "Stadtbad Borbeck, Essen",
+    "osm": "way/26093984",
+    "name": "Sport-u.Gesundheitszentrum TUS84/10, 3, Vinckestraße, Borbeck-Mitte, Stadtbezirk IV, Essen, Nordrhein-Westfalen, 45355, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -162,6 +216,14 @@
    "quelle": {
     "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/stadtbad_kupferdreh.de.html",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.393131,
+   "lon": 7.083853,
+   "geocode": {
+    "q": "Stadtbad Kupferdreh, Essen",
+    "osm": "way/28285593",
+    "name": "Stadtbad Kupferdreh, 45, Schwermannstraße, Kupferdreh, Stadtbezirk VIII, Essen, Nordrhein-Westfalen, 45257, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -181,6 +243,14 @@
    "quelle": {
     "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/stadtbad_werden.de.html",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.389301,
+   "lon": 7.00023,
+   "geocode": {
+    "q": "Stadtbad Werden, Essen",
+    "osm": "way/146286076",
+    "name": "Stadtbad Werden, 2, Körholzstraße, Werden, Stadtbezirk IX, Essen, Nordrhein-Westfalen, 45239, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -200,6 +270,14 @@
    "quelle": {
     "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/alte_badeanstalt.de.html",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.495229,
+   "lon": 7.007933,
+   "geocode": {
+    "q": "Alte Badeanstalt (Altenessen), Essen",
+    "osm": "way/122660120",
+    "name": "Alte BadeAnstalt, 393, Altenessener Straße, Altenessen-Süd, Altenessen, Stadtbezirk V, Essen, Nordrhein-Westfalen, 45326, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -218,6 +296,14 @@
    "quelle": {
     "url": "https://www.essen.de/leben/sport_und_freizeit_/schwimmen/friedrichsbad.de.html",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.453001,
+   "lon": 6.985558,
+   "geocode": {
+    "q": "Friedrichsbad, Essen",
+    "osm": "way/113802510",
+    "name": "Friedrichsbad, Kerckhoffstraße, Frohnhausen, Stadtbezirk III, Essen, Nordrhein-Westfalen, 45144, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   }
  ]

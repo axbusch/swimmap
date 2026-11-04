@@ -1,4 +1,6 @@
-"""Reisezeiten von jeder 100-m-Rasterzelle zu jedem Bad: zu Fuß, Rad, ÖPNV.
+"""Reisezeiten von jeder 100-m-Rasterzelle zu jedem Bad-Standort: zu Fuß, Rad, ÖPNV.
+
+  python 03_erreichbarkeit.py <ags|all> [...] [--modes walk,bike,pt] [--force]
 
 Annahmen (siehe README):
   Fuß  4,5 km/h  (75 m/min), Wegenetz OSM 'walk'
@@ -6,15 +8,16 @@ Annahmen (siehe README):
   ÖPNV Tür-zu-Tür: Fußweg zur Haltestelle (≤ 1 km, Luftlinie × 1,3),
        Fahrplan Stichtag (Dienstag), Umstiege ≤ 500 m Fußweg + 1 min Puffer,
        Fußweg zum Bad. Ankunft am Bad bis T, T = 17:00 … 19:00 im
-       15-min-Takt; ausgewiesen wird der Median über alle T.
-       Wo zu Fuß schneller, gilt die Fußzeit.
+       15-min-Takt; ausgewiesen wird der Median über alle T (Reverse
+       Connection Scan). Wo zu Fuß schneller, gilt die Fußzeit.
 
-Ausgabe: cache/tt_walk.npy, cache/tt_bike.npy, cache/tt_pt.npy
-         (uint8, Form [Bäder, Zellen], Minuten; 255 = > 120 min/unerreichbar)
-         cache/tt_pools.json (Reihenfolge der Bäder)
+Ausgabe je Stadt in cache/st/<slug>/:
+  tt_walk.npy, tt_bike.npy, tt_pt.npy  (uint8 [Standorte, Zellen], Minuten; 255 = > 120 min)
+  tt_standorte.json                    (Reihenfolge der Standort-IDs)
 """
 from pathlib import Path
 import json
+import sys
 
 import networkx as nx
 import numpy as np
@@ -23,23 +26,31 @@ import pandas as pd
 from pyproj import Transformer
 from scipy.spatial import cKDTree
 
+from staedte import alle_mit_daten, lade_stadt
+
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "cache"
 MAXMIN = 120
 WALK_MPM = 75.0
 BIKE_MPM = 250.0
 UMWEG = 1.3
-
-cells = pd.read_csv(CACHE / "raster.csv")
-cxy = cells[["x", "y"]].to_numpy()
-baeder = json.loads((ROOT / "data" / "muenster_baeder.json").read_text(encoding="utf-8"))["baeder"]
 to3035 = Transformer.from_crs(4326, 3035, always_xy=True)
-pxy = np.array([to3035.transform(b["lon"], b["lat"]) for b in baeder])
-json.dump([b["id"] for b in baeder], open(CACHE / "tt_pools.json", "w"))
+
+_GTFS = {}
 
 
-def netz_zeiten(typ: str, mpm: float) -> np.ndarray:
-    G = ox.load_graphml(CACHE / f"net_{typ}.graphml")
+def gtfs():
+    if not _GTFS:
+        d = np.load(CACHE / "gtfs_nrw" / "connections.npz")
+        _GTFS.update({k: d[k] for k in d.files})
+        st = pd.read_csv(CACHE / "gtfs_nrw" / "stops.csv")
+        x, y = to3035.transform(st.stop_lon.to_numpy(), st.stop_lat.to_numpy())
+        _GTFS["sxy"] = np.column_stack([x, y])
+    return _GTFS
+
+
+def netz_zeiten(out: Path, typ: str, mpm: float, cxy, pxy) -> np.ndarray:
+    G = ox.load_graphml(out / f"net_{typ}.graphml")
     G = ox.project_graph(G, to_crs="EPSG:3035")
     nodes = np.array(list(G.nodes))
     nxy = np.array([[G.nodes[n]["x"], G.nodes[n]["y"]] for n in nodes])
@@ -48,109 +59,140 @@ def netz_zeiten(typ: str, mpm: float) -> np.ndarray:
     p_d, p_i = tree.query(pxy)
     Grev = G.reverse(copy=False) if G.is_directed() else G
     idx = {n: i for i, n in enumerate(nodes)}
-    out = np.full((len(baeder), len(cells)), 255, dtype=np.uint8)
-    for k, b in enumerate(baeder):
-        src = nodes[p_i[k]]
-        dist = nx.single_source_dijkstra_path_length(Grev, src, cutoff=MAXMIN * mpm, weight="length")
+    res = np.full((len(pxy), len(cxy)), 255, dtype=np.uint8)
+    for k in range(len(pxy)):
+        dist = nx.single_source_dijkstra_path_length(Grev, nodes[p_i[k]], cutoff=MAXMIN * mpm, weight="length")
         nd = np.full(len(nodes), np.inf)
         for n, dd in dist.items():
             nd[idx[n]] = dd
-        meter = nd[c_i] + c_d + p_d[k]
-        minutes = meter / mpm
-        out[k] = np.where(minutes <= MAXMIN, np.round(minutes), 255).astype(np.uint8)
-        print(f"  {typ} {b['name']}: ≤15 min {(minutes <= 15).sum()} Zellen", flush=True)
-    return out
+        minutes = (nd[c_i] + c_d + p_d[k]) / mpm
+        res[k] = np.where(minutes <= MAXMIN, np.round(minutes), 255).astype(np.uint8)
+    return res
 
 
-def oepnv_zeiten(walk: np.ndarray) -> np.ndarray:
-    st = pd.read_csv(CACHE / "gtfs_ms" / "stops.csv", dtype={"stop_id": str})
-    con = pd.read_csv(CACHE / "gtfs_ms" / "connections.csv", dtype={"trip": str, "dep_stop": str, "arr_stop": str})
-    sid = {s: i for i, s in enumerate(st.stop_id)}
-    sxy = np.array([to3035.transform(lo, la) for lo, la in zip(st.stop_lon, st.stop_lat)])
+def oepnv_zeiten(cxy, pxy, walk: np.ndarray) -> np.ndarray:
+    G = gtfs()
+    pad = 5000
+    lo = cxy.min(0) - pad; hi = cxy.max(0) + pad
+    inbox = np.all((G["sxy"] >= lo) & (G["sxy"] <= hi), axis=1)
+    keep = np.nonzero(inbox)[0]
+    remap = np.full(len(inbox), -1, dtype=np.int64); remap[keep] = np.arange(len(keep))
+    sxy = G["sxy"][keep]
+    m = inbox[G["dep_stop"]] & inbox[G["arr_stop"]]
+    C_dep = remap[G["dep_stop"][m]]; C_arr = remap[G["arr_stop"][m]]
+    C_ds = G["dep_s"][m]; C_as = G["arr_s"][m]
+    _, C_t = np.unique(G["trip"][m], return_inverse=True)
+    order = np.argsort(-C_ds, kind="stable")
+    C_dep, C_arr, C_ds, C_as, C_t = C_dep[order], C_arr[order], C_ds[order], C_as[order], C_t[order]
+    ntrip = int(C_t.max()) + 1 if len(C_t) else 0
+    ns = len(sxy)
     stree = cKDTree(sxy)
-    ns = len(st)
-
-    # Fußwege zwischen Haltestellen (eingehend: foot_in[v] = [(u, sek)])
     foot_in = [[] for _ in range(ns)]
     for u, vs in enumerate(stree.query_ball_point(sxy, 500)):
         for v in vs:
             if u != v:
-                w = np.hypot(*(sxy[u] - sxy[v])) * UMWEG / WALK_MPM * 60 + 60
-                foot_in[v].append((u, w))
-
-    # Zugang Zelle -> Haltestelle (≤ 1 km), als Liste je Zelle
+                foot_in[v].append((u, float(np.hypot(*(sxy[u] - sxy[v]))) * UMWEG / WALK_MPM * 60 + 60))
     acc = stree.query_ball_point(cxy, 1000)
     rows, cols, secs = [], [], []
     for i, js in enumerate(acc):
         for j in js:
             rows.append(i); cols.append(j)
             secs.append(np.hypot(*(cxy[i] - sxy[j])) * UMWEG / WALK_MPM * 60)
-    rows = np.array(rows); cols = np.array(cols); secs = np.array(secs)
-    order = np.argsort(rows, kind="stable")
-    rows, cols, secs = rows[order], cols[order], secs[order]
-    starts = np.searchsorted(rows, np.arange(len(cells)))
-    has = np.bincount(rows, minlength=len(cells)) > 0
-
-    con = con[con.dep_stop.isin(sid) & con.arr_stop.isin(sid)]
-    con = con.sort_values("dep_s", ascending=False)
-    tid = {t: i for i, t in enumerate(con.trip.unique())}
-    C_dep = con.dep_stop.map(sid).to_numpy()
-    C_arr = con.arr_stop.map(sid).to_numpy()
-    C_ds = con.dep_s.to_numpy()
-    C_as = con.arr_s.to_numpy()
-    C_t = con.trip.map(tid).to_numpy()
-    ntrip = len(tid)
+    rows = np.array(rows, dtype=np.int64); cols = np.array(cols, dtype=np.int64); secs = np.array(secs)
+    o = np.argsort(rows, kind="stable"); rows, cols, secs = rows[o], cols[o], secs[o]
+    starts = np.searchsorted(rows, np.arange(len(cxy)))
+    has = np.bincount(rows, minlength=len(cxy)) > 0
+    C_dep_l, C_arr_l, C_ds_l, C_as_l, C_t_l = C_dep.tolist(), C_arr.tolist(), C_ds.tolist(), C_as.tolist(), C_t.tolist()
 
     Ts = [17 * 3600 + 15 * 60 * k for k in range(9)]
-    out = np.full((len(baeder), len(cells)), 255, dtype=np.uint8)
-    for k, b in enumerate(baeder):
-        egress = [(j, np.hypot(*(pxy[k] - sxy[j])) * UMWEG / WALK_MPM * 60)
+    res = np.full((len(pxy), len(cxy)), 255, dtype=np.uint8)
+    for k in range(len(pxy)):
+        egress = [(j, float(np.hypot(*(pxy[k] - sxy[j]))) * UMWEG / WALK_MPM * 60)
                   for j in stree.query_ball_point(pxy[k], 1000)]
-        res = []
+        runs = []
         for T in Ts:
-            S = np.full(ns, -np.inf)   # spätestens an Haltestelle sein (Zugang von außen)
-            A = np.full(ns, -np.inf)   # spätestens per Fahrzeug ankommen (Umstieg)
+            S = [-1e18] * ns; A = [-1e18] * ns
             for j, w in egress:
                 S[j] = max(S[j], T - w); A[j] = max(A[j], T - w)
-            ok = np.zeros(ntrip, dtype=bool)
-            lo = T - (MAXMIN + 30) * 60
-            sel = np.nonzero((C_ds <= T) & (C_ds >= lo) & (C_as <= T))[0]
-            Sl, Al, okl = S.tolist(), A.tolist(), ok.tolist()
-            for c in sel.tolist():
-                t = C_t[c]
-                if okl[t] or C_as[c] <= Al[C_arr[c]]:
-                    okl[t] = True
-                    d, ds = C_dep[c], C_ds[c]
-                    if ds > Sl[d]:
-                        Sl[d] = ds
-                        if ds - 60 > Al[d]:
-                            Al[d] = ds - 60
+            ok = [False] * ntrip
+            lo_t = T - (MAXMIN + 30) * 60
+            i0 = int(np.searchsorted(-C_ds, -T, side="left"))
+            for c in range(i0, len(C_ds_l)):
+                ds = C_ds_l[c]
+                if ds < lo_t:
+                    break
+                if C_as_l[c] > T:
+                    continue
+                t = C_t_l[c]
+                if ok[t] or C_as_l[c] <= A[C_arr_l[c]]:
+                    ok[t] = True
+                    d = C_dep_l[c]
+                    if ds > S[d]:
+                        S[d] = ds
+                        if ds - 60 > A[d]:
+                            A[d] = ds - 60
                         for u, w in foot_in[d]:
-                            if ds - w > Sl[u]:
-                                Sl[u] = ds - w
-                            if ds - w > Al[u]:
-                                Al[u] = ds - w
-            S = np.array(Sl)
-            vals = S[cols] - secs
-            best = np.full(len(cells), -np.inf)
-            nz = has
-            best[nz] = np.maximum.reduceat(vals, starts[nz])
-            tt = (T - best) / 60
-            res.append(tt)
-        med = np.median(np.vstack(res), axis=0)
+                            v = ds - w
+                            if v > S[u]:
+                                S[u] = v
+                            if v > A[u]:
+                                A[u] = v
+            Sa = np.array(S)
+            best = np.full(len(cxy), -np.inf)
+            if has.any():
+                best[has] = np.maximum.reduceat(Sa[cols] - secs, starts[has])
+            runs.append((T - best) / 60)
+        med = np.median(np.vstack(runs), axis=0)
         wk = np.where(walk[k] == 255, np.inf, walk[k].astype(float))
         tot = np.minimum(med, wk)
-        out[k] = np.where(tot <= MAXMIN, np.round(tot), 255).astype(np.uint8)
-        print(f"  ÖPNV {b['name']}: ≤15 min {(tot <= 15).sum()}, ≤30 min {(tot <= 30).sum()} Zellen", flush=True)
-    return out
+        res[k] = np.where(tot <= MAXMIN, np.round(tot), 255).astype(np.uint8)
+    return res
+
+
+def stadt(ags: str, modes, force=False):
+    s = lade_stadt(ags)
+    out = CACHE / "st" / s["slug"]
+    if not (out / "raster.csv").exists():
+        print(f"## {s['stadt']}: Grundlagen fehlen, übersprungen", flush=True); return
+    st = s["standorte"]
+    if not st:
+        print(f"## {s['stadt']}: keine verorteten Standorte", flush=True); return
+    ids = [x["id"] for x in st]
+    old = json.loads((out / "tt_standorte.json").read_text()) if (out / "tt_standorte.json").exists() else None
+    if old != ids:
+        force = True
+    cells = pd.read_csv(out / "raster.csv")
+    cxy = cells[["x", "y"]].to_numpy()
+    pxy = np.array([to3035.transform(x["lon"], x["lat"]) for x in st])
+    print(f"## {s['stadt']}: {len(st)} Standorte, {len(cells)} Zellen", flush=True)
+    for mode in modes:
+        f = out / f"tt_{mode}.npy"
+        if f.exists() and not force:
+            continue
+        if mode == "walk":
+            a = netz_zeiten(out, "walk", WALK_MPM, cxy, pxy)
+        elif mode == "bike":
+            a = netz_zeiten(out, "bike", BIKE_MPM, cxy, pxy)
+        else:
+            a = oepnv_zeiten(cxy, pxy, np.load(out / "tt_walk.npy"))
+        np.save(f, a)
+        ew = cells.ew.to_numpy()
+        share = ew[a.min(0) <= 15].sum() / max(1, ew.sum())
+        print(f"  {mode}: ≤15 min {share:.0%} der Einwohner (alle Standorte)", flush=True)
+    (out / "tt_standorte.json").write_text(json.dumps(ids))
 
 
 if __name__ == "__main__":
-    import sys
-    modes = sys.argv[1:] or ["walk", "bike", "pt"]
-    if "walk" in modes:
-        np.save(CACHE / "tt_walk.npy", netz_zeiten("walk", WALK_MPM))
-    if "bike" in modes:
-        np.save(CACHE / "tt_bike.npy", netz_zeiten("bike", BIKE_MPM))
-    if "pt" in modes:
-        np.save(CACHE / "tt_pt.npy", oepnv_zeiten(np.load(CACHE / "tt_walk.npy")))
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    modes = ["walk", "bike", "pt"]
+    for a in sys.argv[1:]:
+        if a.startswith("--modes="):
+            modes = a.split("=", 1)[1].split(",")
+    force = "--force" in sys.argv
+    todo = alle_mit_daten() if (not args or args == ["all"]) else args
+    for ags in todo:
+        try:
+            stadt(ags, modes, force)
+        except Exception as e:  # noqa: BLE001
+            import traceback; traceback.print_exc()
+            print(f"  FEHLER {ags}: {e}", flush=True)

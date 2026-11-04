@@ -19,7 +19,15 @@
     "url": "https://koelnbaeder.de/baeder/agrippabad/",
     "abgerufen": "2026-11-04"
    },
-   "ausstattung": "Sportbecken 8 Bahnen, Sprungbecken bis 10 m, Rutsche, Lehrschwimmbecken"
+   "ausstattung": "Sportbecken 8 Bahnen, Sprungbecken bis 10 m, Rutsche, Lehrschwimmbecken",
+   "lat": 50.932834,
+   "lon": 6.951323,
+   "geocode": {
+    "q": "Agrippabad, Köln",
+    "osm": "node/14305900012",
+    "name": "Agrippabad-Sauna, 1, Kämmergasse, Cäcilienviertel, Altstadt-Süd, Innenstadt, Köln, Nordrhein-Westfalen, 51676, Deutschland",
+    "typ": "leisure/sauna"
+   }
   },
   {
    "name": "Chorweilerbad",
@@ -39,6 +47,14 @@
    "quelle": {
     "url": "https://koelnbaeder.de/baeder/chorweilerbad/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.022019,
+   "lon": 6.899496,
+   "geocode": {
+    "q": "Chorweilerbad, Köln",
+    "osm": "way/300558490",
+    "name": "Chorweilerbad, 7, Liller Straße, Chorweiler, Köln, Nordrhein-Westfalen, 50765, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -56,6 +72,14 @@
    "quelle": {
     "url": "https://koelnbaeder.de/baeder/genovevabad/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 50.962987,
+   "lon": 7.009772,
+   "geocode": {
+    "q": "Genovevabad, Köln",
+    "osm": "way/300976196",
+    "name": "Genovevabad, 67, Bergisch Gladbacher Straße, Mülheim, Köln, Nordrhein-Westfalen, 51065, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -76,6 +100,14 @@
    "quelle": {
     "url": "https://koelnbaeder.de/baeder/hoehenbergbad/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 50.94211,
+   "lon": 7.019909,
+   "geocode": {
+    "q": "Höhenbergbad, Köln",
+    "osm": "way/299857186",
+    "name": "Höhenbergbad, 4, Schwarzburger Straße, Höhenberg, Kalk, Köln, Nordrhein-Westfalen, 51103, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -95,6 +127,14 @@
    "quelle": {
     "url": "https://koelnbaeder.de/baeder/lentpark/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 50.95863,
+   "lon": 6.964401,
+   "geocode": {
+    "q": "Lentpark, Köln",
+    "osm": "way/191140077",
+    "name": "Lentpark, 30, Lentstraße, Neustadt/Nord, Innenstadt, Köln, Nordrhein-Westfalen, 50668, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -112,6 +152,14 @@
    "quelle": {
     "url": "https://koelnbaeder.de/baeder/ossendorfbad/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 50.964478,
+   "lon": 6.909142,
+   "geocode": {
+    "q": "Ossendorfbad, Köln",
+    "osm": "way/44066322",
+    "name": "Ossendorfbad, 191, Äußere Kanalstraße, Neuehrenfeld, Ehrenfeld, Köln, Nordrhein-Westfalen, 50827, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -128,6 +176,14 @@
    "quelle": {
     "url": "https://koelnbaeder.de/baeder/rodenkirchenbad/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 50.88477,
+   "lon": 7.002246,
+   "geocode": {
+    "q": "Rodenkirchenbad, Köln",
+    "osm": "way/35413356",
+    "name": "Rodenkirchenbad, 67, Mainstraße, Rodenkirchen, Köln, Nordrhein-Westfalen, 50996, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -143,6 +199,14 @@
    "quelle": {
     "url": "https://koelnbaeder.de/baeder/wahnbad/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 50.864628,
+   "lon": 7.087326,
+   "geocode": {
+    "q": "Wahnbad, Köln",
+    "osm": "way/658954230",
+    "name": "Wahnbad, 1, Albert-Schweitzer-Straße, Wahn, Porz, Köln, Nordrhein-Westfalen, 51147, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -161,6 +225,14 @@
    "quelle": {
     "url": "https://koelnbaeder.de/baeder/zollstockbad/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 50.904867,
+   "lon": 6.948612,
+   "geocode": {
+    "q": "Zollstockbad, Köln",
+    "osm": "way/27705484",
+    "name": "Zollstockbad, Leichweg, Raderthal, Rodenkirchen, Köln, Nordrhein-Westfalen, 50968, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -179,6 +251,14 @@
    "quelle": {
     "url": "https://koelnbaeder.de/baeder/zuendorfbad/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 50.866653,
+   "lon": 7.037054,
+   "geocode": {
+    "q": "Zündorfbad, Köln",
+    "osm": "way/28373932",
+    "name": "Zündorfbad, Hauptstraße, Zündorf, Porz, Köln, Nordrhein-Westfalen, 51143, Deutschland",
+    "typ": "leisure/water_park"
    }
   }
  ]

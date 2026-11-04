@@ -20,7 +20,15 @@
     "url": "https://www.dortmund.de/themen/sport/schwimmbaeder/nordbad/",
     "abgerufen": "2026-11-04"
    },
-   "ausstattung": "Schwimmerbecken 25 × 10 m, Freizeitbecken 385 m², Springerbecken 12 × 9 m"
+   "ausstattung": "Schwimmerbecken 25 × 10 m, Freizeitbecken 385 m², Springerbecken 12 × 9 m",
+   "lat": 51.52165,
+   "lon": 7.459284,
+   "geocode": {
+    "q": "Nordbad, Dortmund",
+    "osm": "node/11079663508",
+    "name": "Nordbad, Steinstraße, Innenstadt Nord, Dortmund, Nordrhein-Westfalen, 44147, Deutschland",
+    "typ": "leisure/water_park"
+   }
   },
   {
    "name": "Südbad",
@@ -41,7 +49,15 @@
     "abgerufen": "2026-11-04"
    },
    "ausstattung": "50 × 20 m Schwimmerbecken, Lehrschwimmbecken 20 × 10 m",
-   "hinweis": "laut Belegungsplan Einschränkungen im öffentlichen Betrieb Di–Sa"
+   "hinweis": "laut Belegungsplan Einschränkungen im öffentlichen Betrieb Di–Sa",
+   "lat": 51.507125,
+   "lon": 7.468749,
+   "geocode": {
+    "q": "Südbad, Dortmund",
+    "osm": "way/26391450",
+    "name": "Südbad, 30, Ruhrallee, Saarlandstraßenviertel, Kaiserstraßenviertel, Innenstadt Ost, Dortmund, Nordrhein-Westfalen, 44139, Deutschland",
+    "typ": "leisure/sports_centre"
+   }
   },
   {
    "name": "Hallenbad Brackel",
@@ -57,6 +73,12 @@
    "quelle": {
     "url": "https://sportwelt-dortmund.de/hallenbaeder/brackel/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.52862,
+   "lon": 7.55023,
+   "geocode": {
+    "q": "Oesterstraße 68",
+    "manuell": true
    }
   },
   {
@@ -75,6 +97,14 @@
    "quelle": {
     "url": "https://sportwelt-dortmund.de/hallenbaeder/hombruch/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.472047,
+   "lon": 7.435061,
+   "geocode": {
+    "q": "Hallenbad Hombruch, Dortmund",
+    "osm": "way/23605264",
+    "name": "Hallenbad Hombruch, 63, Deutsch-Luxemburger Straße, Hombruch, Kirchhörde, Hombruch, Dortmund, Nordrhein-Westfalen, 44225, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -93,6 +123,14 @@
    "quelle": {
     "url": "https://sportwelt-dortmund.de/hallenbaeder/luetgendortmund/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.504474,
+   "lon": 7.329177,
+   "geocode": {
+    "q": "Hallenbad Lütgendortmund, Dortmund",
+    "osm": "way/30843917",
+    "name": "Hallenbad Lütgendortmund, 80, Volksgartenstraße, Deipenbeck, Lütgendortmund, Dortmund, Nordrhein-Westfalen, 44388, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -109,6 +147,14 @@
    "quelle": {
     "url": "https://sportwelt-dortmund.de/hallenbaeder/mengede/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.560829,
+   "lon": 7.393817,
+   "geocode": {
+    "q": "Hallenbad Mengede, Dortmund",
+    "osm": "way/33094634",
+    "name": "Hallenbad Mengede, 40, Neumarkstraße, Nette, Mengede, Dortmund, Nordrhein-Westfalen, 44359, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   }
  ]

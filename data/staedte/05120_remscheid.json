@@ -18,6 +18,14 @@
    "quelle": {
     "url": "https://www.h2o-badeparadies.de/preise-oeffnungszeiten/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.197684,
+   "lon": 7.278353,
+   "geocode": {
+    "q": "H2O Badeparadies, Remscheid",
+    "osm": "way/227932945",
+    "name": "H₂O Badeparadies, 109, Hackenberger Straße, Gemarkung Lennep, Lennep, Nagelsberg, Remscheid, Nordrhein-Westfalen, 42897, Deutschland",
+    "typ": "building/sports_centre"
    }
   },
   {
@@ -34,6 +42,12 @@
    "quelle": {
     "url": "https://www.h2o-badeparadies.de/sportbad-am-stadtpark/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.18571,
+   "lon": 7.17104,
+   "geocode": {
+    "q": "Schützenplatz 3",
+    "manuell": true
    }
   }
  ]

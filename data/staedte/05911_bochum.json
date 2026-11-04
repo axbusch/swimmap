@@ -20,7 +20,15 @@
     "url": "https://wasserwelten-bochum.de/unsere-baeder/hofstede/",
     "abgerufen": "2026-11-04"
    },
-   "ausstattung": "Hallenbad 25 m, 6 Bahnen"
+   "ausstattung": "Hallenbad 25 m, 6 Bahnen",
+   "lat": 51.499144,
+   "lon": 7.183919,
+   "geocode": {
+    "q": "Hallenfreibad Hofstede, Bochum",
+    "osm": "way/90973467",
+    "name": "Hallenfreibad Hofstede, 1-3, Stettiner Straße, Marmelshagen, Hofstede, Bochum-Mitte, Bochum, Nordrhein-Westfalen, 44809, Deutschland",
+    "typ": "leisure/water_park"
+   }
   },
   {
    "name": "Hallenbad Linden",
@@ -36,6 +44,12 @@
    "quelle": {
     "url": "https://wasserwelten-bochum.de/unsere-baeder/linden/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.42905,
+   "lon": 7.16082,
+   "geocode": {
+    "q": "OSM way/4832612 Hallenfreibad Linden",
+    "manuell": true
    }
   },
   {
@@ -55,6 +69,14 @@
    "quelle": {
     "url": "https://wasserwelten-bochum.de/unsere-baeder/querenburg/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.448257,
+   "lon": 7.255268,
+   "geocode": {
+    "q": "Hallenbad Querenburg, Bochum",
+    "osm": "way/95039025",
+    "name": "Hallenbad Querenburg, 157, Hustadtring, Querenburg, Bochum-Süd, Bochum, Nordrhein-Westfalen, 44801, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -69,7 +91,15 @@
     "abgerufen": "2026-11-04"
    },
    "hinweis": "wegen Modernisierung geschlossen (Stand 11/2026)",
-   "ausstattung": "25-m-Becken"
+   "ausstattung": "25-m-Becken",
+   "lat": 51.465048,
+   "lon": 7.314413,
+   "geocode": {
+    "q": "Hallenbad Langendreer, Bochum",
+    "osm": "way/118332292",
+    "name": "Hallenbad Langendreer, 50, Eschweg, Kaltehardt, Langendreer, Bochum-Ost, Bochum, Nordrhein-Westfalen, 44892, Deutschland",
+    "typ": "building/sports_centre"
+   }
   }
  ]
 }

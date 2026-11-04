@@ -19,7 +19,15 @@
     "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/freizeitbad/freizeitbad-duesselstrand/",
     "abgerufen": "2026-11-04"
    },
-   "freizeitbad": true
+   "freizeitbad": true,
+   "lat": 51.22433,
+   "lon": 6.810279,
+   "geocode": {
+    "q": "Freizeitbad Düsselstrand, Düsseldorf",
+    "osm": "way/375287705",
+    "name": "Freizeitbad Düsselstrand, 50, Kettwiger Straße, Flingern Süd, Stadtbezirk 2, Düsseldorf, Nordrhein-Westfalen, 40233, Deutschland",
+    "typ": "leisure/water_park"
+   }
   },
   {
    "name": "Rheinblick 741",
@@ -35,6 +43,14 @@
    "quelle": {
     "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/rheinblick-741/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.231758,
+   "lon": 6.733317,
+   "geocode": {
+    "q": "Rheinblick 741, Düsseldorf",
+    "osm": "way/764275590",
+    "name": "Rheinblick 741, 41, Pariser Straße, Oberkassel, Stadtbezirk 4, Düsseldorf, Nordrhein-Westfalen, 40549, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -51,6 +67,12 @@
    "quelle": {
     "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/hallenbad-allwetterbad-flingern/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.22577,
+   "lon": 6.83391,
+   "geocode": {
+    "q": "Flinger Broich 91",
+    "manuell": true
    }
   },
   {
@@ -69,6 +91,14 @@
    "quelle": {
     "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/muenster-therme/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.240898,
+   "lon": 6.783428,
+   "geocode": {
+    "q": "Münster-Therme, Düsseldorf",
+    "osm": "relation/2561816",
+    "name": "Münster-Therme, 13, Münsterstraße, Pempelfort, Stadtbezirk 1, Düsseldorf, Nordrhein-Westfalen, 40477, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -84,6 +114,12 @@
    "quelle": {
     "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/hallenbad-rheinbad/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.26384,
+   "lon": 6.73569,
+   "geocode": {
+    "q": "Europaplatz 1",
+    "manuell": true
    }
   },
   {
@@ -103,6 +139,12 @@
    "quelle": {
     "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/hallenbad-rheinbad/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.26384,
+   "lon": 6.73569,
+   "geocode": {
+    "q": "Europaplatz 1",
+    "manuell": true
    }
   },
   {
@@ -118,6 +160,14 @@
    "quelle": {
     "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/schwimm-in-bilk/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.209181,
+   "lon": 6.775441,
+   "geocode": {
+    "q": "Schwimm' in Bilk, Düsseldorf",
+    "osm": "node/6284604507",
+    "name": "Schwimm in Bilk, 145, Bachstraße, Unterbilk, Stadtbezirk 3, Düsseldorf, Nordrhein-Westfalen, 40217, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -135,6 +185,14 @@
    "quelle": {
     "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/familienbad-niederheid/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.169683,
+   "lon": 6.850856,
+   "geocode": {
+    "q": "Familienbad Niederheid, Düsseldorf",
+    "osm": "node/6284707943",
+    "name": "Familienbad Niederheid, 35, Paul-Thomas-Straße, Holthausen, Stadtbezirk 9, Düsseldorf, Nordrhein-Westfalen, 40589, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -150,6 +208,12 @@
    "quelle": {
     "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/gartenhallenbad-unterrath/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.27221,
+   "lon": 6.7727,
+   "geocode": {
+    "q": "Mettlacher Straße 55",
+    "manuell": true
    }
   },
   {
@@ -166,6 +230,14 @@
    "quelle": {
     "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/badehaus-benrath/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.159991,
+   "lon": 6.878537,
+   "geocode": {
+    "q": "Badehaus Benrath, Düsseldorf",
+    "osm": "way/1134920541",
+    "name": "Badehaus Benrath, 9, Regerstraße, Dorf, Paulsmühle, Benrath, Stadtbezirk 9, Düsseldorf, Nordrhein-Westfalen, 40593, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -182,7 +254,15 @@
     "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/badehaus-benrath/",
     "abgerufen": "2026-11-04"
    },
-   "freizeitbad": true
+   "freizeitbad": true,
+   "lat": 51.159991,
+   "lon": 6.878537,
+   "geocode": {
+    "q": "Badehaus Benrath, Düsseldorf",
+    "osm": "way/1134920541",
+    "name": "Badehaus Benrath, 9, Regerstraße, Dorf, Paulsmühle, Benrath, Stadtbezirk 9, Düsseldorf, Nordrhein-Westfalen, 40593, Deutschland",
+    "typ": "leisure/sports_centre"
+   }
   }
  ]
 }

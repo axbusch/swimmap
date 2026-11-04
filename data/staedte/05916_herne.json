@@ -19,6 +19,14 @@
    "quelle": {
     "url": "https://www.wananas.de/preise-zeiten/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.539851,
+   "lon": 7.171066,
+   "geocode": {
+    "q": "Wananas, Herne",
+    "osm": "way/387426917",
+    "name": "Wananas, 1, Am Wananas, Baukau-West, Wanne, Herne, Nordrhein-Westfalen, 44653, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -35,6 +43,14 @@
    "quelle": {
     "url": "https://www.suedpool-herne.de/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.526769,
+   "lon": 7.231717,
+   "geocode": {
+    "q": "Südpool, Herne",
+    "osm": "way/91300422",
+    "name": "Südpool, 27, Bergstraße, Altenhöfen, Herne-Süd, Herne-Mitte, Herne, Nordrhein-Westfalen, 44625, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   }
  ]

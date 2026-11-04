@@ -90,6 +90,14 @@
    "quelle": {
     "url": "https://www.bielefelderbaeder.de/baeder/freizeitbad-ishara/sportlandschaft-ishara/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 52.031223,
+   "lon": 8.533412,
+   "geocode": {
+    "q": "Ishara, Bielefeld",
+    "osm": "way/19724206",
+    "name": "Ishara, 1, Europa Platz, Mitte, Bielefeld, Nordrhein-Westfalen, 33613, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -147,6 +155,14 @@
    "quelle": {
     "url": "https://www.bielefelderbaeder.de/baeder/freizeitbad-ishara/badewelt-ishara/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 52.031223,
+   "lon": 8.533412,
+   "geocode": {
+    "q": "Ishara, Bielefeld",
+    "osm": "way/19724206",
+    "name": "Ishara, 1, Europa Platz, Mitte, Bielefeld, Nordrhein-Westfalen, 33613, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -216,6 +232,14 @@
    "quelle": {
     "url": "https://www.bielefelderbaeder.de/baeder/hallenbaeder/sportbad-aquawede/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.980543,
+   "lon": 8.496994,
+   "geocode": {
+    "q": "Sportbad Aquawede (Brackwede), Bielefeld",
+    "osm": "way/90382026",
+    "name": "Sportbad & Sauna AquaWede, 4, Duisburger Straße, Brackwede, Bielefeld, Nordrhein-Westfalen, 33647, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -260,6 +284,14 @@
    "quelle": {
     "url": "https://www.bielefelderbaeder.de/baeder/hallenbaeder/sportbad-sennestadt/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.95381,
+   "lon": 8.590129,
+   "geocode": {
+    "q": "Sportbad Sennestadt, Bielefeld",
+    "osm": "way/264353273",
+    "name": "Sportbad Sennestadt, 28, Travestraße, Sennestadt, Bielefeld, Nordrhein-Westfalen, 33689, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -334,6 +366,14 @@
    "quelle": {
     "url": "https://www.bielefelderbaeder.de/baeder/hallenbaeder/familienbad-heepen/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 52.030537,
+   "lon": 8.600149,
+   "geocode": {
+    "q": "Familienbad Heepen, Bielefeld",
+    "osm": "node/1393691674",
+    "name": "Familienbad & Sauna Heepen, 11, Schlauden, Tieplatz, Heepen, Bielefeld, Nordrhein-Westfalen, 33719, Deutschland",
+    "typ": "leisure/water_park"
    }
   }
  ]

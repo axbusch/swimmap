@@ -23,6 +23,14 @@
    "quelle": {
     "url": "https://sbo.oberhausen.de/dienstleistungen/schwimmbaeder/hallenbad-oberhausen",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.466093,
+   "lon": 6.852277,
+   "geocode": {
+    "q": "Hallenbad Oberhausen, Oberhausen",
+    "osm": "way/30932465",
+    "name": "Hallenbad Oberhausen, 75, Lothringer Straße, Alt-Oberhausen, Oberhausen, Nordrhein-Westfalen, 46045, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -42,6 +50,14 @@
    "quelle": {
     "url": "https://sbo.oberhausen.de/dienstleistungen/schwimmbaeder/hallenbad-sterkrade",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.5173,
+   "lon": 6.8556,
+   "geocode": {
+    "q": "Hallenbad Sterkrade, Oberhausen",
+    "osm": "way/50054289",
+    "name": "Hallenbad Sterkrade, 2, Holtener Straße, Tackenberg, Sterkrade, Oberhausen, Nordrhein-Westfalen, 46145, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   }
  ]

@@ -22,6 +22,14 @@
    "quelle": {
     "url": "https://www.bottrop.de/sport/baeder/Hallenbad_im_Sportpark.php",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.526863,
+   "lon": 6.918259,
+   "geocode": {
+    "q": "Hallenbad im Sportpark, Bottrop",
+    "osm": "way/340362782",
+    "name": "Hallenbad im Sportpark, 41, Parkstraße, Stadtmitte, Bottrop, Nordrhein-Westfalen, 46236, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -42,6 +50,14 @@
    "quelle": {
     "url": "https://www.bottrop.de/sport/baeder/Hallenbad_Kirchhellen.php",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.606526,
+   "lon": 6.920501,
+   "geocode": {
+    "q": "Hallenbad Kirchhellen, Bottrop",
+    "osm": "way/563712780",
+    "name": "Hallenbad Kirchhellen, Kirchhellener Ring, Kirchhellen-Mitte, Kirchhellen, Bottrop, Nordrhein-Westfalen, 46244, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -57,6 +73,14 @@
    "quelle": {
     "url": "https://www.bottrop.de/sport/baeder/Hallenbad_Boy_Welheim.php",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.525137,
+   "lon": 6.977805,
+   "geocode": {
+    "q": "Hallenbad Boy/Welheim, Bottrop",
+    "osm": "way/191051113",
+    "name": "Hallenbad Boy/Welheim, Welheimer Straße, Welheim, Bottrop, Nordrhein-Westfalen, 46238, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   }
  ]

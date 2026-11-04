@@ -21,6 +21,14 @@
    "quelle": {
     "url": "https://www.aachen.de/in-aachen-leben/sportportal/schwimmbaeder/oeffnungszeiten-schwimmbaeder-260914.pdf",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 50.773685,
+   "lon": 6.085016,
+   "geocode": {
+    "q": "Elisabethhalle, Aachen",
+    "osm": "way/1088129452",
+    "name": "Elisabethhalle, Elisabethstraße, Burtscheid, Aachen-Mitte, Aachen, Städteregion Aachen, Nordrhein-Westfalen, 52062, Deutschland",
+    "typ": "building/yes"
    }
   },
   {
@@ -38,6 +46,14 @@
    "quelle": {
     "url": "https://www.aachen.de/in-aachen-leben/sportportal/schwimmbaeder/oeffnungszeiten-schwimmbaeder-260914.pdf",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 50.760468,
+   "lon": 6.087633,
+   "geocode": {
+    "q": "Schwimmhalle Süd, Aachen",
+    "osm": "way/103451925",
+    "name": "Schwimmhalle Süd, 8, Amyastraße, Steinebrück, Burtscheid, Aachen-Mitte, Aachen, Städteregion Aachen, Nordrhein-Westfalen, 52066, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -58,6 +74,14 @@
    "quelle": {
     "url": "https://www.aachen.de/in-aachen-leben/sportportal/schwimmbaeder/oeffnungszeiten-schwimmbaeder-260914.pdf",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 50.74652,
+   "lon": 6.156911,
+   "geocode": {
+    "q": "Schwimmhalle Brand, Aachen",
+    "osm": "way/105572591",
+    "name": "Schwimmhalle Brand, 19a, Wolferskaul, Niederforstbach, Brand, Aachen, Städteregion Aachen, Nordrhein-Westfalen, 52078, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -71,7 +95,15 @@
     "url": "https://www.aachen.de/in-aachen-leben/sportportal/schwimmbaeder/oeffnungszeiten-schwimmbaeder-260914.pdf",
     "abgerufen": "2026-11-04"
    },
-   "hinweis": "Deckensanierung, geschlossen bis vsl. Februar 2027"
+   "hinweis": "Deckensanierung, geschlossen bis vsl. Februar 2027",
+   "lat": 50.767744,
+   "lon": 6.057835,
+   "geocode": {
+    "q": "Ulla-Klinger-Halle, Aachen",
+    "osm": "way/51412965",
+    "name": "Ulla-Klinger-Halle, 14, Händelstraße, Kronenberg, Aachen-Mitte, Aachen, Städteregion Aachen, Nordrhein-Westfalen, 52074, Deutschland",
+    "typ": "leisure/sports_centre"
+   }
   }
  ]
 }

@@ -25,6 +25,14 @@
    "quelle": {
     "url": "https://www.siegen.de/leben-in-siegen/freizeit-sport/schwimmbaeder-hallenbaeder-freibaeder-und-naturfreibaeder/hallenbad-loehrtor",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 50.871805,
+   "lon": 8.023014,
+   "geocode": {
+    "q": "Hallenbad Löhrtor, Siegen",
+    "osm": "way/24841887",
+    "name": "Hallenbad Löhrtor, 15, Löhrtor, Siegen, Kreis Siegen-Wittgenstein, Nordrhein-Westfalen, 57072, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -48,6 +56,14 @@
    "quelle": {
     "url": "https://www.siegen.de/leben-in-siegen/freizeit-sport/schwimmbaeder-hallenbaeder-freibaeder-und-naturfreibaeder/hallenbad-weidenau",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 50.8943,
+   "lon": 8.024068,
+   "geocode": {
+    "q": "Hallenbad Weidenau, Siegen",
+    "osm": "way/50373703",
+    "name": "Hallenbad Weidenau, 48, Bismarckstraße, Weidenau, Siegen, Kreis Siegen-Wittgenstein, Nordrhein-Westfalen, 57076, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -61,7 +77,15 @@
     "url": "https://www.siegen.de/leben-in-siegen/freizeit-sport/schwimmbaeder-hallenbaeder-freibaeder-und-naturfreibaeder/hallenbad-eiserfeld",
     "abgerufen": "2026-11-04"
    },
-   "hinweis": "Sanierung, geschlossen"
+   "hinweis": "Sanierung, geschlossen",
+   "lat": 50.838085,
+   "lon": 7.987681,
+   "geocode": {
+    "q": "Hallenbad Eiserfeld, Siegen",
+    "osm": "node/8385333899",
+    "name": "Eiserfeld Hallenbad, Eiserfelder Straße, Eiserfeld, Siegen, Kreis Siegen-Wittgenstein, Nordrhein-Westfalen, 57080, Deutschland",
+    "typ": "highway/bus_stop"
+   }
   }
  ]
 }

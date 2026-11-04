@@ -20,6 +20,14 @@
    "quelle": {
     "url": "https://www.enni.de/freizeit/oeffnungszeiten-freizeiteinrichtungen/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.440036,
+   "lon": 6.617736,
+   "geocode": {
+    "q": "Solimare Aktivbad, Moers",
+    "osm": "node/7385482301",
+    "name": "enni.solimare aktivbad, 144, Filder Straße, Vinn, Moers, Kreis Wesel, Nordrhein-Westfalen, 47447, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -38,6 +46,12 @@
    "quelle": {
     "url": "https://www.enni.de/freizeit/oeffnungszeiten-freizeiteinrichtungen/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.48126,
+   "lon": 6.61012,
+   "geocode": {
+    "q": "Am Sportzentrum 5",
+    "manuell": true
    }
   }
  ]

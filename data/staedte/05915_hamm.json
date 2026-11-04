@@ -26,6 +26,14 @@
    "quelle": {
     "url": "https://www.stadtwerke-hamm.de/privatkunden/baeder/hallenbaeder/familien-oase-heessen",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.714916,
+   "lon": 7.823026,
+   "geocode": {
+    "q": "Familien-Oase Heessen, Hamm",
+    "osm": "way/90842611",
+    "name": "Hallenbad Familien-Oase Heessen, 12, An der Marienkirche, Dasbeck, Heessen, Hamm, Nordrhein-Westfalen, 59073, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -49,6 +57,14 @@
    "quelle": {
     "url": "https://www.stadtwerke-hamm.de/privatkunden/baeder/hallenbaeder/lagune-herringen",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.663753,
+   "lon": 7.7449,
+   "geocode": {
+    "q": "Lagune Herringen, Hamm",
+    "osm": "way/166594338",
+    "name": "Hallenbad Lagune Herringen, 2a, Fritz-Husemann-Straße, Herringen, Hamm, Nordrhein-Westfalen, 59077, Deutschland",
+    "typ": "leisure/swimming_pool"
    }
   },
   {
@@ -70,6 +86,14 @@
    "quelle": {
     "url": "https://www.stadtwerke-hamm.de/privatkunden/baeder/hallenbaeder/sport-aquarium-bockum-hoevel",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.691666,
+   "lon": 7.755303,
+   "geocode": {
+    "q": "Sport-Aquarium Bockum-Hövel, Hamm",
+    "osm": "way/199237563",
+    "name": "Hallenbad Sport-Aquarium Bockum-Hövel, 1, Günter-Degelmann-Weg, Hövel, Bockum-Hövel, Hamm, Nordrhein-Westfalen, 59075, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -86,6 +110,14 @@
    "quelle": {
     "url": "https://www.maximare.com/infobereich-maximare/oeffnungszeiten",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.68768,
+   "lon": 7.835153,
+   "geocode": {
+    "q": "Maximare, Hamm",
+    "osm": "way/139075558",
+    "name": "Maximare, 2, Jürgen-Graef-Allee, Hamm-Mitte, Hamm, Nordrhein-Westfalen, 59065, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -104,7 +136,15 @@
     "url": "https://www.maximare.com/infobereich-maximare/oeffnungszeiten",
     "abgerufen": "2026-11-04"
    },
-   "freizeitbad": true
+   "freizeitbad": true,
+   "lat": 51.68768,
+   "lon": 7.835153,
+   "geocode": {
+    "q": "Maximare, Hamm",
+    "osm": "way/139075558",
+    "name": "Maximare, 2, Jürgen-Graef-Allee, Hamm-Mitte, Hamm, Nordrhein-Westfalen, 59065, Deutschland",
+    "typ": "leisure/water_park"
+   }
   }
  ]
 }

@@ -22,7 +22,15 @@
     "url": "https://www.krefeld.de/schwimmen",
     "abgerufen": "2026-11-04"
    },
-   "ausstattung": "50-m-Sportbecken, Sprunganlage bis 7 m, Lehrschwimmbecken"
+   "ausstattung": "50-m-Sportbecken, Sprunganlage bis 7 m, Lehrschwimmbecken",
+   "lat": 51.3513,
+   "lon": 6.612135,
+   "geocode": {
+    "q": "Badezentrum Bockum, Krefeld",
+    "osm": "relation/1414117",
+    "name": "Badezentrum Bockum, Am Badezentrum, Bockum, Krefeld-Ost, Krefeld, Nordrhein-Westfalen, 47800, Deutschland",
+    "typ": "leisure/water_park"
+   }
   },
   {
    "name": "Bad am Stadtpark Fischeln",
@@ -41,7 +49,13 @@
     "url": "https://www.krefeld.de/schwimmen",
     "abgerufen": "2026-11-04"
    },
-   "ausstattung": "Variobecken 25 m"
+   "ausstattung": "Variobecken 25 m",
+   "lat": 51.30898,
+   "lon": 6.58252,
+   "geocode": {
+    "q": "Kölner Straße 415",
+    "manuell": true
+   }
   }
  ]
 }

@@ -20,7 +20,15 @@
     "url": "https://www.stadtwerke-neuss.de/baeder-eishalle/suedbad",
     "abgerufen": "2026-11-04"
    },
-   "ausstattung": "Schwimmerbecken 25 × 12,5 m, Lehrschwimmbecken, Springerbecken, Freizeitbecken innen 204 m²"
+   "ausstattung": "Schwimmerbecken 25 × 12,5 m, Lehrschwimmbecken, Springerbecken, Freizeitbecken innen 204 m²",
+   "lat": 51.174511,
+   "lon": 6.67867,
+   "geocode": {
+    "q": "Südbad, Neuss",
+    "osm": "way/24805096",
+    "name": "Südbad, 1, Jakob-Koch-Straße, Reuschenberg, Neuss, Rhein-Kreis Neuss, Nordrhein-Westfalen, 41466, Deutschland",
+    "typ": "leisure/water_park"
+   }
   },
   {
    "name": "Nordbad",
@@ -38,6 +46,14 @@
    "quelle": {
     "url": "https://www.stadtwerke-neuss.de/baeder-eishalle/nordbad",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.215314,
+   "lon": 6.670622,
+   "geocode": {
+    "q": "Nordbad, Neuss",
+    "osm": "way/47072045",
+    "name": "Nordbad, 14-16, Neusser Weyhe, Weißenberg, Neuss, Rhein-Kreis Neuss, Nordrhein-Westfalen, 41462, Deutschland",
+    "typ": "leisure/water_park"
    }
   },
   {
@@ -59,7 +75,15 @@
     "abgerufen": "2026-11-04"
    },
    "hinweis": "seit 03.09.2026 wegen technischen Defekts geschlossen",
-   "ausstattung": "Wellenbecken 50 × 21 m, Freizeit- und Planschbecken"
+   "ausstattung": "Wellenbecken 50 × 21 m, Freizeit- und Planschbecken",
+   "lat": 51.201551,
+   "lon": 6.689098,
+   "geocode": {
+    "q": "Stadtbad, Neuss",
+    "osm": "way/87529599",
+    "name": "Stadtbad, 3, Niederwallstraße, Marienviertel, Innenstadt, Neuss, Rhein-Kreis Neuss, Nordrhein-Westfalen, 41460, Deutschland",
+    "typ": "leisure/sports_centre"
+   }
   }
  ]
 }

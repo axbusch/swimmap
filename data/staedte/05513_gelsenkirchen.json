@@ -21,6 +21,14 @@
    "quelle": {
     "url": "https://www.baeder-gelsenkirchen.de/hallenbad-buer/%C3%B6ffnungszeiten.html",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.575147,
+   "lon": 7.053566,
+   "geocode": {
+    "q": "Hallenbad Buer, Gelsenkirchen",
+    "osm": "way/23098601",
+    "name": "Hallenbad Buer, Gustav-Bär-Platz, Buer, Gelsenkirchen-Nord, Gelsenkirchen, Nordrhein-Westfalen, 45894, Deutschland",
+    "typ": "building/yes"
    }
   },
   {
@@ -40,6 +48,14 @@
    "quelle": {
     "url": "https://www.baeder-gelsenkirchen.de/hallenbad-horst/%C3%B6ffnungszeiten.html",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.538689,
+   "lon": 7.027219,
+   "geocode": {
+    "q": "Hallenbad Horst, Gelsenkirchen",
+    "osm": "way/1446481064",
+    "name": "Hallenbad Horst, 15, Turfstraße, Horst, Gelsenkirchen-West, Gelsenkirchen, Nordrhein-Westfalen, 45899, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -54,6 +70,14 @@
    "quelle": {
     "url": "https://www.sport-paradies.de/preise-zeiten-badeparadies",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.553182,
+   "lon": 7.072638,
+   "geocode": {
+    "q": "Sport-Paradies, Gelsenkirchen",
+    "osm": "way/22729853",
+    "name": "Sport-Paradies, Ötte-Tibulsky-Weg, Erle-Berger Feld, Erle, Gelsenkirchen-Ost, Gelsenkirchen, Nordrhein-Westfalen, 45891, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -70,7 +94,15 @@
     "url": "https://www.sport-paradies.de/preise-zeiten-badeparadies",
     "abgerufen": "2026-11-04"
    },
-   "freizeitbad": true
+   "freizeitbad": true,
+   "lat": 51.553182,
+   "lon": 7.072638,
+   "geocode": {
+    "q": "Sport-Paradies, Gelsenkirchen",
+    "osm": "way/22729853",
+    "name": "Sport-Paradies, Ötte-Tibulsky-Weg, Erle-Berger Feld, Erle, Gelsenkirchen-Ost, Gelsenkirchen, Nordrhein-Westfalen, 45891, Deutschland",
+    "typ": "leisure/sports_centre"
+   }
   }
  ]
 }

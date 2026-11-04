@@ -24,7 +24,15 @@
     "url": "https://www.paderbaeder.de/hallenbad-schwimmoper/",
     "abgerufen": "2026-11-04"
    },
-   "ausstattung": "50-m-Becken 8 Bahnen, Sprungtürme, Nichtschwimmer- und Variobecken"
+   "ausstattung": "50-m-Becken 8 Bahnen, Sprungtürme, Nichtschwimmer- und Variobecken",
+   "lat": 51.724071,
+   "lon": 8.752985,
+   "geocode": {
+    "q": "Schwimmoper, Paderborn",
+    "osm": "way/89935169",
+    "name": "Schwimmoper, 1b, Schützenweg, Paderborn, Kreis Paderborn, Nordrhein-Westfalen, 33102, Deutschland",
+    "typ": "leisure/sports_centre"
+   }
   },
   {
    "name": "Alisobad Elsen",
@@ -47,6 +55,14 @@
    "quelle": {
     "url": "https://www.paderbaeder.de/hallenbad-alisobad-elsen/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.74012,
+   "lon": 8.682706,
+   "geocode": {
+    "q": "Alisobad Elsen, Paderborn",
+    "osm": "way/165982262",
+    "name": "Alisobad, 29, Am Schlengerbusch, Elsen, Paderborn, Kreis Paderborn, Nordrhein-Westfalen, 33106, Deutschland",
+    "typ": "leisure/sports_centre"
    }
   },
   {
@@ -73,6 +89,14 @@
    "quelle": {
     "url": "https://www.paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.748459,
+   "lon": 8.712943,
+   "geocode": {
+    "q": "Residenzbad Schloss Neuhaus, Paderborn",
+    "osm": "way/185595438",
+    "name": "Residenzbad, 7, Am Schloßgarten, Mastbruch, Schloß Neuhaus, Paderborn, Kreis Paderborn, Nordrhein-Westfalen, 33104, Deutschland",
+    "typ": "leisure/water_park"
    }
   }
  ]

@@ -22,6 +22,12 @@
    "quelle": {
     "url": "https://www.bad-wiembachtal.de/preise/",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 51.0702,
+   "lon": 7.02066,
+   "geocode": {
+    "q": "Talstraße 62",
+    "manuell": true
    }
   },
   {
@@ -38,7 +44,15 @@
     "url": "https://www.calevornia.de/oeffnungszeiten-preise/",
     "abgerufen": "2026-11-04"
    },
-   "freizeitbad": true
+   "freizeitbad": true,
+   "lat": 51.036026,
+   "lon": 7.003216,
+   "geocode": {
+    "q": "CaLevornia (Freizeitbad), Leverkusen",
+    "osm": "way/251515752",
+    "name": "Freizeitbad Calevornia, 185, Bismarckstraße, Wiesdorf, Stadtbezirk I, Leverkusen, Nordrhein-Westfalen, 51373, Deutschland",
+    "typ": "leisure/water_park"
+   }
   }
  ]
 }

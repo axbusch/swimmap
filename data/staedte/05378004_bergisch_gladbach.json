@@ -20,6 +20,14 @@
    "quelle": {
     "url": "https://www.baeder-gl.de/kombibad-paffrath/oeffnungszeiten.aspx",
     "abgerufen": "2026-11-04"
+   },
+   "lat": 50.997995,
+   "lon": 7.087576,
+   "geocode": {
+    "q": "Kombibad Paffrath, Bergisch Gladbach",
+    "osm": "way/27347737",
+    "name": "Kombibad Paffrath, 2, Borngasse, Hand, Bergisch Gladbach, Rheinisch-Bergischer Kreis, Nordrhein-Westfalen, 51469, Deutschland",
+    "typ": "leisure/water_park"
    }
   }
  ]
