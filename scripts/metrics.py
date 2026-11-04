@@ -58,13 +58,34 @@ def bad_kennzahlen(bad: dict) -> dict:
     }
 
 
+def ist_kern(b: dict) -> bool:
+    """Kernmetrik: kommunale Hallenbäder; reine Freizeitbereiche (Wellenbad,
+    Rutschen) zählen nicht, die Sportbecken von Freizeitbädern schon."""
+    return b["typ"] == "hallenbad" and b["kategorie"] == "staedtisch" and not b.get("freizeitbad")
+
+
 def stadt_kennzahlen(baeder: list[dict], einwohner: int, filt=None) -> dict:
-    filt = filt or (lambda b: b["typ"] == "hallenbad" and b["kategorie"] == "staedtisch")
+    filt = filt or ist_kern
     sel = [b for b in baeder if filt(b)]
     ks = [bad_kennzahlen(b) for b in sel]
     h = sum(k["stunden_woche"] for k in ks)
     m2h = sum(k["m2h_woche"] or 0 for k in ks)
     flaeche = sum((b.get("wasserflaeche_m2") or 0) for b, k in zip(sel, ks) if k["stunden_woche"] > 0)
+    flaeche_fehlt = [b["name"] for b, k in zip(sel, ks) if k["stunden_woche"] > 0 and not b.get("wasserflaeche_m2")]
+    if flaeche_fehlt:  # unvollständige Flächen würden die Kennzahl verzerren
+        return {
+            "anzahl_baeder": len(sel),
+            "anzahl_baeder_oeffentlich": sum(1 for k in ks if k["stunden_woche"] > 0),
+            "stunden_woche": round(h, 1),
+            "m2h_woche": None,
+            "wasserflaeche_oeffentlich_m2": None,
+            "einwohner": einwohner,
+            "stunden_je_10k_ew": round(h / einwohner * 10_000, 2),
+            "m2h_je_1000_ew": None,
+            "wasserflaeche_m2_je_1000_ew": None,
+            "datenluecken": [f"Wasserfläche fehlt: {n}" for n in flaeche_fehlt]
+                            + [b["name"] for b in sel if b.get("zeiten_unbekannt")],
+        }
     return {
         "anzahl_baeder": len(sel),
         "anzahl_baeder_oeffentlich": sum(1 for k in ks if k["stunden_woche"] > 0),

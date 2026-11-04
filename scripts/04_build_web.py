@@ -12,7 +12,7 @@ import json
 import numpy as np
 import pandas as pd
 
-from metrics import bad_kennzahlen, stadt_kennzahlen
+from metrics import bad_kennzahlen, ist_kern, stadt_kennzahlen
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -24,7 +24,7 @@ pop = {r["ags"]: (r["stadt"], int(r["einwohner_31_12_2025"]))
        for r in csv.DictReader(open(DATA / "nrw_population.csv", encoding="utf-8"))}
 
 FILTER = {
-    "kern": lambda b: b["typ"] == "hallenbad" and b["kategorie"] == "staedtisch",
+    "kern": ist_kern,
     "staedtisch": lambda b: b["kategorie"] == "staedtisch",
     "alle": lambda b: True,
 }

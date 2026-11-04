@@ -564,7 +564,8 @@ function update() {
 function renderNrw() {
   const m = METRICS[state.metric];
   document.getElementById('metric-note').textContent = m.note;
-  const done = NRW.staedte.filter(s => s.kennzahlen);
+  const done = NRW.staedte.filter(s => s.kennzahlen && s.kennzahlen[state.metric] != null);
+  const noArea = NRW.staedte.filter(s => s.kennzahlen && s.kennzahlen[state.metric] == null);
   const open = NRW.staedte.filter(s => !s.kennzahlen);
   done.sort((a, b) => b.kennzahlen[state.metric] - a.kennzahlen[state.metric]);
   const max = Math.max(...done.map(s => s.kennzahlen[state.metric]), 1);
@@ -576,13 +577,17 @@ function renderNrw() {
       <span class="track"><span class="fill" style="display:block;width:${(v / max) * 100}%"></span></span>
       <span class="val">${m.fmt(v)}</span></div>`;
   }).join('');
-  document.getElementById('missing').innerHTML = open.length
-    ? `<p class="missing"><b>Noch nicht erfasst (${open.length} von ${NRW.staedte.length}):</b> ${open.map(s => esc(s.stadt)).join(', ')}</p>` : '';
-  const rows = done.map(s => {
-    const k = s.kennzahlen;
-    return `<tr><td>${esc(s.stadt)}</td><td>${fmt0(s.einwohner)}</td><td>${k.anzahl_baeder_oeffentlich}</td><td>${fmt1(k.stunden_woche)}</td>
-      <td>${fmt1(k.stunden_je_10k_ew)}</td><td>${fmt0(k.m2h_je_1000_ew)}</td><td>${fmt1(k.wasserflaeche_m2_je_1000_ew)}</td></tr>`;
-  }).join('');
+  document.getElementById('missing').innerHTML =
+    (noArea.length ? `<p class="missing"><b>Wasserflächen nicht veröffentlicht (${noArea.length}):</b> ${noArea.map(s => esc(s.stadt)).join(', ')} – für diese Kennzahl nicht vergleichbar.</p>` : '') +
+    (open.length ? `<p class="missing"><b>Noch nicht erfasst (${open.length} von ${NRW.staedte.length}):</b> ${open.map(s => esc(s.stadt)).join(', ')}</p>` : '');
+  const dash = (v, f) => (v == null ? '–' : f(v));
+  const rows = NRW.staedte.filter(s => s.kennzahlen)
+    .sort((a, b) => b.kennzahlen.stunden_je_10k_ew - a.kennzahlen.stunden_je_10k_ew).map(s => {
+      const k = s.kennzahlen;
+      const tip = [s.hinweis, ...(k.datenluecken || [])].filter(Boolean).join(' · ');
+      return `<tr title="${esc(tip)}"><td>${esc(s.stadt)}</td><td>${fmt0(s.einwohner)}</td><td>${k.anzahl_baeder_oeffentlich}</td><td>${fmt1(k.stunden_woche)}</td>
+      <td>${fmt1(k.stunden_je_10k_ew)}</td><td>${dash(k.m2h_je_1000_ew, fmt0)}</td><td>${dash(k.wasserflaeche_m2_je_1000_ew, fmt1)}</td></tr>`;
+    }).join('');
   document.getElementById('nrw-table').innerHTML = `<table class="data">
     <thead><tr><th>Stadt</th><th>Einw.</th><th>Bäder</th><th>h/Wo.</th><th>h/10k</th><th>m²·h/1k</th><th>m²/1k</th></tr></thead>
     <tbody>${rows}</tbody></table>
