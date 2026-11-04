@@ -1,0 +1,41 @@
+{
+ "ags": "05916",
+ "stadt": "Herne",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Herner Bädergesellschaft. Wananas (Sport- und Erlebnisbad, ersetzt Hallenbad Eickel): Öffnungszeiten laut Tarifseite (Mo 14–20, Di–So 8–20) plus Frühschwimmen im Sportbad Di–So 6–8 Uhr; Sport- und Erlebnisbereich nicht getrennt ausgewiesen. Südpool: laut Betreiber eingeschränkter öffentlicher Betrieb wegen Vereinsbelegungen. Wasserflächen nicht veröffentlicht.",
+ "baeder": [
+  {
+   "name": "Wananas",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Herner Bädergesellschaft (HBG, Stadtwerke Herne)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 14:00-20:00",
+    "Di-So 06:00-08:00 Frühschwimmen Sportbad",
+    "Di-So 08:00-20:00"
+   ],
+   "quelle": {
+    "url": "https://www.wananas.de/preise-zeiten/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Südpool (Hallenbad)",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Herner Bädergesellschaft (HBG, Stadtwerke Herne)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Di-So 06:30-08:00",
+    "Di,Do,Fr,Sa,So 09:00-20:00",
+    "Mi 09:00-16:00"
+   ],
+   "quelle": {
+    "url": "https://www.suedpool-herne.de/",
+    "abgerufen": "2026-11-04"
+   }
+  }
+ ]
+}
