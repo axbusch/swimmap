@@ -1,0 +1,65 @@
+{
+ "ags": "05162024",
+ "stadt": "Neuss",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Stadtwerke Neuss, Wasserflächen laut Betreiber (Hallenbereich). Stadtbad seit 03.09.2026 wegen technischen Defekts bis auf Weiteres geschlossen – regulärer Plan gezählt. Nordbad mittwochs nur in den Sommerferien geöffnet (außerhalb nicht gezählt). Belegungspläne Schule/Verein parallel.",
+ "baeder": [
+  {
+   "name": "Südbad (Hallenbereich)",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadtwerke Neuss (NBE)",
+   "wasserflaeche_m2": 803.5,
+   "slots": [
+    "Mo,Di,Do 08:00-21:00",
+    "Mi 06:30-21:00",
+    "Fr-So 08:00-20:00"
+   ],
+   "quelle": {
+    "url": "https://www.stadtwerke-neuss.de/baeder-eishalle/suedbad",
+    "abgerufen": "2026-11-04"
+   },
+   "ausstattung": "Schwimmerbecken 25 × 12,5 m, Lehrschwimmbecken, Springerbecken, Freizeitbecken innen 204 m²"
+  },
+  {
+   "name": "Nordbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadtwerke Neuss (NBE)",
+   "wasserflaeche_m2": 412.5,
+   "slots": [
+    "Mo 10:00-20:00",
+    "Di 06:30-20:00",
+    "Do,Fr 06:30-20:00",
+    "Sa 08:00-18:00",
+    "So 10:00-18:00"
+   ],
+   "quelle": {
+    "url": "https://www.stadtwerke-neuss.de/baeder-eishalle/nordbad",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Stadtbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadtwerke Neuss (NBE)",
+   "wasserflaeche_m2": 1137,
+   "slots": [
+    "Di 07:00-21:00",
+    "Mi 06:30-21:00",
+    "Do 10:15-14:00",
+    "Fr 07:00-21:00",
+    "Sa 08:00-13:00",
+    "So 08:00-17:00"
+   ],
+   "quelle": {
+    "url": "https://www.stadtwerke-neuss.de/baeder-eishalle/stadtbad",
+    "abgerufen": "2026-11-04"
+   },
+   "hinweis": "seit 03.09.2026 wegen technischen Defekts geschlossen",
+   "ausstattung": "Wellenbecken 50 × 21 m, Freizeit- und Planschbecken"
+  }
+ ]
+}

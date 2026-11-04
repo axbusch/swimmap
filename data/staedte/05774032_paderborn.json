@@ -1,0 +1,79 @@
+{
+ "ags": "05774032",
+ "stadt": "Paderborn",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Paderborner Bäder, Zeiten außerhalb der NRW-Ferien. Residenzbad dienstags: Eltern-Kind/Senioren- und Damenzeit als Zielgruppe. Wasserflächen nicht veröffentlicht.",
+ "baeder": [
+  {
+   "name": "Schwimmoper",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Paderborner Bäder (Stadtwerke/Stadt Paderborn)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo,Di,Fr 06:00-08:00",
+    "Mo,Di,Fr 13:30-21:45",
+    "Mi 06:00-23:00",
+    "Do 06:00-08:00",
+    "Do 13:30-17:15",
+    "Sa 06:00-20:00",
+    "So 07:00-20:00"
+   ],
+   "quelle": {
+    "url": "https://www.paderbaeder.de/hallenbad-schwimmoper/",
+    "abgerufen": "2026-11-04"
+   },
+   "ausstattung": "50-m-Becken 8 Bahnen, Sprungtürme, Nichtschwimmer- und Variobecken"
+  },
+  {
+   "name": "Alisobad Elsen",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Paderborner Bäder (Stadtwerke/Stadt Paderborn)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 15:30-21:00",
+    "Di 06:00-08:00",
+    "Di 15:30-21:00",
+    "Mi 13:30-21:00",
+    "Do 06:00-08:00",
+    "Do 13:30-17:00",
+    "Fr 13:30-18:00",
+    "Fr 19:00-21:00",
+    "Sa 06:00-18:00",
+    "So 08:00-12:00"
+   ],
+   "quelle": {
+    "url": "https://www.paderbaeder.de/hallenbad-alisobad-elsen/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Residenzbad Schloss Neuhaus",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Paderborner Bäder (Stadtwerke/Stadt Paderborn)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo-Fr 06:00-08:00",
+    "Mo 13:30-17:00",
+    "Mo 19:00-22:00",
+    "Di 13:30-14:00",
+    "Di 14:00-16:00 ziel Eltern/Kinder und Senioren",
+    "Di 16:00-19:00",
+    "Di 19:00-21:00 ziel Damen",
+    "Mi 13:30-18:00",
+    "Do 15:00-17:00",
+    "Do 19:00-22:00",
+    "Fr 13:30-20:00",
+    "Sa 06:00-18:00",
+    "So 08:00-12:00"
+   ],
+   "quelle": {
+    "url": "https://www.paderbaeder.de/hallenbad-residenzbad-schloss-neuhaus/",
+    "abgerufen": "2026-11-04"
+   }
+  }
+ ]
+}
