@@ -1,0 +1,48 @@
+{
+ "ags": "05562032",
+ "stadt": "Recklinghausen",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Stadt Recklinghausen. Herner Straße: nur Sportbecken (Lehrbecken dauerhaft vermietet). Südbad: Frühschwimmen nur für Jahreskarteninhaber und Frauen-/Mädchenzeiten als Zielgruppe. Wasserflächen nicht veröffentlicht.",
+ "baeder": [
+  {
+   "name": "Hallenbad Herner Straße",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadt Recklinghausen",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo,Do 08:00-15:00",
+    "Di,Mi,Fr 07:00-15:00",
+    "Sa 07:00-12:00"
+   ],
+   "quelle": {
+    "url": "https://www.recklinghausen.de/inhalte/startseite/freizeit_tourismus/sport/frei_und_hallenbaeder/index.asp",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Südbad (Hallenbad)",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadt Recklinghausen",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo,Mi,Fr 07:00-08:00 ziel nur Jahreskarte",
+    "Mo 15:00-21:00",
+    "Di 15:00-20:00",
+    "Mi 19:30-21:00",
+    "Do 15:00-19:00",
+    "Do 19:00-21:00 ziel Frauen und Mädchen",
+    "Fr 15:00-21:00",
+    "Sa 07:00-18:00",
+    "So 07:30-12:00",
+    "So 12:00-14:00 ziel Frauen und Mädchen"
+   ],
+   "quelle": {
+    "url": "https://www.recklinghausen.de/inhalte/startseite/freizeit_tourismus/sport/frei_und_hallenbaeder/index.asp",
+    "abgerufen": "2026-11-04"
+   }
+  }
+ ]
+}

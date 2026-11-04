@@ -1,0 +1,40 @@
+{
+ "ags": "05120",
+ "stadt": "Remscheid",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "H2O Sauna- und Badeparadies (Freizeitbad mit 25-m-Sportbecken; Sport- und Freizeitbereich nicht getrennt ausgewiesen, daher ganz gezählt) und Sportbad am Stadtpark (überwiegend Vereine, öffentlich nur Frühschwimmen und Einzelstunden). Wasserflächen nicht veröffentlicht.",
+ "baeder": [
+  {
+   "name": "H2O Badeparadies",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "H2O Remscheid (Stadtwerke/Stadt Remscheid)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Di-Sa 10:00-22:00",
+    "So 10:00-21:00"
+   ],
+   "quelle": {
+    "url": "https://www.h2o-badeparadies.de/preise-oeffnungszeiten/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Sportbad am Stadtpark",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "H2O Remscheid (Stadtwerke/Stadt Remscheid)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo-Fr 06:30-08:00",
+    "Mo,Mi 13:00-14:00",
+    "Sa 14:00-15:00"
+   ],
+   "quelle": {
+    "url": "https://www.h2o-badeparadies.de/sportbad-am-stadtpark/",
+    "abgerufen": "2026-11-04"
+   }
+  }
+ ]
+}

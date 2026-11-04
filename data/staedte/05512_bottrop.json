@@ -1,0 +1,63 @@
+{
+ "ags": "05512",
+ "stadt": "Bottrop",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Stadt Bottrop; 'Frühschwimmen' und 'Familienbad' = öffentlicher Badebetrieb, 'Frauenbad' als Zielgruppe. Wasserflächen aus Beckenmaßen der Stadt. Laut Stadt kann Kurs-/Vereinsbetrieb parallel einschränken.",
+ "baeder": [
+  {
+   "name": "Hallenbad im Sportpark",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadt Bottrop, Sport- und Bäderbetrieb",
+   "wasserflaeche_m2": 529,
+   "slots": [
+    "Mo-Do 06:30-10:00",
+    "Fr 06:30-08:30",
+    "Fr 08:30-10:00 ziel Frauenbad",
+    "Di,Mi,Fr 13:30-17:30",
+    "Do 16:00-21:00",
+    "Sa,So 09:00-14:00"
+   ],
+   "quelle": {
+    "url": "https://www.bottrop.de/sport/baeder/Hallenbad_im_Sportpark.php",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Hallenbad Kirchhellen",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadt Bottrop, Sport- und Bäderbetrieb",
+   "wasserflaeche_m2": 250,
+   "slots": [
+    "Mo,Di,Do 06:30-10:00",
+    "Mi 06:30-08:30",
+    "Mi 08:30-10:00 ziel Frauenbad",
+    "Fr 06:30-09:00",
+    "Di,Do,Fr 13:30-17:30",
+    "Mi 16:00-21:00",
+    "Sa,So 08:00-13:00"
+   ],
+   "quelle": {
+    "url": "https://www.bottrop.de/sport/baeder/Hallenbad_Kirchhellen.php",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Hallenbad Boy/Welheim",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadt Bottrop, Sport- und Bäderbetrieb",
+   "wasserflaeche_m2": 312.5,
+   "slots": [
+    "Mo 06:30-08:15",
+    "Sa,So 07:00-12:00"
+   ],
+   "quelle": {
+    "url": "https://www.bottrop.de/sport/baeder/Hallenbad_Boy_Welheim.php",
+    "abgerufen": "2026-11-04"
+   }
+  }
+ ]
+}
