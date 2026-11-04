@@ -1,0 +1,185 @@
+{
+ "ags": "05315",
+ "stadt": "Köln",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Betreiber KölnBäder GmbH. Zeiten aus dem Öffnungszeiten-Widget (eaero) der Betreiberseite für KW 45 (2.–8.11.2026, reguläre Schulwoche). FS/HS = Frauen-/Herrenschwimmen als Zielgruppe. Wasserflächen nicht veröffentlicht. Nippesbad seit Jahren geschlossen (nicht erfasst).",
+ "baeder": [
+  {
+   "name": "Agrippabad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "KölnBäder GmbH (Stadtwerke Köln)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo-Fr 06:30-22:00",
+    "Sa,So 09:00-21:00"
+   ],
+   "quelle": {
+    "url": "https://koelnbaeder.de/baeder/agrippabad/",
+    "abgerufen": "2026-11-04"
+   },
+   "ausstattung": "Sportbecken 8 Bahnen, Sprungbecken bis 10 m, Rutsche, Lehrschwimmbecken"
+  },
+  {
+   "name": "Chorweilerbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "KölnBäder GmbH (Stadtwerke Köln)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 06:30-08:00",
+    "Mo 16:00-21:30",
+    "Di,Mi 06:30-21:30 Warmbadetag",
+    "Fr 06:30-08:00",
+    "Sa 09:00-14:30",
+    "Sa 15:00-17:30 ziel Frauenschwimmen",
+    "So 09:00-17:30"
+   ],
+   "quelle": {
+    "url": "https://koelnbaeder.de/baeder/chorweilerbad/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Genovevabad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "KölnBäder GmbH (Stadtwerke Köln)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mi 06:30-08:00",
+    "Mi 15:00-20:30",
+    "Fr 15:00-18:00 ziel Frauenschwimmen",
+    "Fr 18:30-20:30 ziel Herrenschwimmen"
+   ],
+   "quelle": {
+    "url": "https://koelnbaeder.de/baeder/genovevabad/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Höhenbergbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "KölnBäder GmbH (Stadtwerke Köln)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 06:30-08:00",
+    "Mo 16:00-21:30",
+    "Di 06:30-21:30",
+    "Do 06:30-08:00",
+    "Do 16:00-21:30",
+    "Fr 06:30-21:30",
+    "Sa,So 09:00-17:00"
+   ],
+   "quelle": {
+    "url": "https://koelnbaeder.de/baeder/hoehenbergbad/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Lentpark",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "KölnBäder GmbH (Stadtwerke Köln)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Di 16:00-22:00",
+    "Mi 06:30-22:00",
+    "Do 06:30-08:00",
+    "Do 16:00-22:00",
+    "Fr 06:30-22:00",
+    "Sa,So 09:00-21:00"
+   ],
+   "quelle": {
+    "url": "https://koelnbaeder.de/baeder/lentpark/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Ossendorfbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "KölnBäder GmbH (Stadtwerke Köln)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo,Di 06:30-22:00",
+    "Mi 06:30-08:00",
+    "Do,Fr 06:30-22:00",
+    "Sa,So 09:00-21:00"
+   ],
+   "quelle": {
+    "url": "https://koelnbaeder.de/baeder/ossendorfbad/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Rodenkirchenbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "KölnBäder GmbH (Stadtwerke Köln)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Di 13:15-21:30",
+    "Fr 06:30-08:00",
+    "Fr 12:00-21:30"
+   ],
+   "quelle": {
+    "url": "https://koelnbaeder.de/baeder/rodenkirchenbad/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Wahnbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "KölnBäder GmbH (Stadtwerke Köln)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Fr 06:30-20:30",
+    "Sa,So 08:00-16:00"
+   ],
+   "quelle": {
+    "url": "https://koelnbaeder.de/baeder/wahnbad/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Zollstockbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "KölnBäder GmbH (Stadtwerke Köln)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 16:00-21:30",
+    "Di 06:30-08:00",
+    "Mi 06:30-21:30",
+    "Fr 06:30-21:30",
+    "Sa,So 09:00-17:00"
+   ],
+   "quelle": {
+    "url": "https://koelnbaeder.de/baeder/zollstockbad/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Zündorfbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "KölnBäder GmbH (Stadtwerke Köln)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 10:00-21:30",
+    "Di,Mi 06:30-21:30",
+    "Do 10:00-21:30",
+    "Fr 06:30-21:30",
+    "Sa,So 10:00-21:00"
+   ],
+   "quelle": {
+    "url": "https://koelnbaeder.de/baeder/zuendorfbad/",
+    "abgerufen": "2026-11-04"
+   }
+  }
+ ]
+}

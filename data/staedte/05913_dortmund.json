@@ -1,0 +1,115 @@
+{
+ "ags": "05913",
+ "stadt": "Dortmund",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Nord- und Südbad: Stadt Dortmund; Brackel, Hombruch, Lütgendortmund, Mengede: Sportwelt Dortmund gGmbH (gemeinnützige Betreibergesellschaft). Wasserflächen aus den Beckenmaßen der Betreiberseiten berechnet. Weitere Bäder in Vereins-/Bürgerträgerschaft (z. B. Eving, Scharnhorst) nicht in der Kernkennzahl.",
+ "baeder": [
+  {
+   "name": "Nordbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadt Dortmund, Sport- und Freizeitbetriebe",
+   "wasserflaeche_m2": 743,
+   "slots": [
+    "Di 06:30-21:30",
+    "Mi-Fr 06:30-19:00",
+    "Sa,So 08:00-15:00"
+   ],
+   "quelle": {
+    "url": "https://www.dortmund.de/themen/sport/schwimmbaeder/nordbad/",
+    "abgerufen": "2026-11-04"
+   },
+   "ausstattung": "Schwimmerbecken 25 × 10 m, Freizeitbecken 385 m², Springerbecken 12 × 9 m"
+  },
+  {
+   "name": "Südbad",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadt Dortmund, Sport- und Freizeitbetriebe",
+   "wasserflaeche_m2": 1200,
+   "slots": [
+    "Di 06:00-19:00",
+    "Mi 06:00-20:00",
+    "Do 06:00-19:00",
+    "Fr 06:00-18:30",
+    "Sa 08:00-16:00",
+    "So 08:00-12:00"
+   ],
+   "quelle": {
+    "url": "https://www.dortmund.de/themen/sport/schwimmbaeder/suedbad/",
+    "abgerufen": "2026-11-04"
+   },
+   "ausstattung": "50 × 20 m Schwimmerbecken, Lehrschwimmbecken 20 × 10 m",
+   "hinweis": "laut Belegungsplan Einschränkungen im öffentlichen Betrieb Di–Sa"
+  },
+  {
+   "name": "Hallenbad Brackel",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Sportwelt Dortmund gGmbH (im Auftrag der Stadt)",
+   "wasserflaeche_m2": 412.5,
+   "slots": [
+    "Di,Do 15:00-19:00",
+    "Mi,Fr 15:00-20:00",
+    "Sa,So 08:00-14:00"
+   ],
+   "quelle": {
+    "url": "https://sportwelt-dortmund.de/hallenbaeder/brackel/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Hallenbad Hombruch",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Sportwelt Dortmund gGmbH (im Auftrag der Stadt)",
+   "wasserflaeche_m2": 412.5,
+   "slots": [
+    "Di 15:00-20:00",
+    "Mi 14:00-19:00",
+    "Do 14:00-18:00",
+    "Fr 14:00-20:00",
+    "Sa,So 08:00-13:00"
+   ],
+   "quelle": {
+    "url": "https://sportwelt-dortmund.de/hallenbaeder/hombruch/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Hallenbad Lütgendortmund",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Sportwelt Dortmund gGmbH (im Auftrag der Stadt)",
+   "wasserflaeche_m2": 412.5,
+   "slots": [
+    "Di,Fr 14:00-21:30",
+    "Mi 14:00-18:00",
+    "Do 14:00-19:00",
+    "Sa 08:00-14:00",
+    "So 08:00-12:00"
+   ],
+   "quelle": {
+    "url": "https://sportwelt-dortmund.de/hallenbaeder/luetgendortmund/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Hallenbad Mengede",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Sportwelt Dortmund gGmbH (im Auftrag der Stadt)",
+   "wasserflaeche_m2": 412.5,
+   "slots": [
+    "Di,Do 14:00-21:00",
+    "Mi,Fr 14:00-18:30",
+    "Sa,So 08:00-12:30"
+   ],
+   "quelle": {
+    "url": "https://sportwelt-dortmund.de/hallenbaeder/mengede/",
+    "abgerufen": "2026-11-04"
+   }
+  }
+ ]
+}

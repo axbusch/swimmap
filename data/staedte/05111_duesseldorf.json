@@ -1,0 +1,188 @@
+{
+ "ags": "05111",
+ "stadt": "Düsseldorf",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Betreiber Bädergesellschaft Düsseldorf. Laut Betreiber gilt eine durchgehende Tagesöffnung; Schul-, Vereins- und Kursbetrieb läuft teils parallel ('eingeschränkter Badebetrieb möglich') – die Stunden sind daher eher eine Obergrenze und nicht voll mit Münster vergleichbar (dort sind Schul-/Vereinszeiten meist komplett nicht öffentlich). Rheinbad 50-m-Halle mit nur 25-m-Bahn als Teilfläche. Düsselstrand und Vitalbereich Benrath als Freizeitbereich. Wasserflächen nicht veröffentlicht.",
+ "baeder": [
+  {
+   "name": "Freizeitbad Düsselstrand",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Bädergesellschaft Düsseldorf mbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo-Fr 09:00-22:00",
+    "Sa,So 08:00-20:00"
+   ],
+   "quelle": {
+    "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/freizeitbad/freizeitbad-duesselstrand/",
+    "abgerufen": "2026-11-04"
+   },
+   "freizeitbad": true
+  },
+  {
+   "name": "Rheinblick 741",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Bädergesellschaft Düsseldorf mbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo,Di,Do,Fr 06:00-21:00",
+    "Mi 06:00-19:00",
+    "Sa,So 09:00-17:00"
+   ],
+   "quelle": {
+    "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/rheinblick-741/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Hallenbad Allwetterbad Flingern",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Bädergesellschaft Düsseldorf mbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo-Fr 06:00-09:00",
+    "Di-Fr 14:00-20:00",
+    "Sa,So 09:00-17:00"
+   ],
+   "quelle": {
+    "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/hallenbad-allwetterbad-flingern/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Münster-Therme",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Bädergesellschaft Düsseldorf mbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Di-Fr 06:30-21:00",
+    "Sa,So 09:00-17:00",
+    "Mo 11:00-14:00 ziel Seniorenschwimmen",
+    "Sa 17:30-19:00 ziel x0.75 Damenschwimmen (1./2./4. Sa)",
+    "Sa 17:30-19:00 ziel x0.25 Herrenschwimmen (3. Sa)"
+   ],
+   "quelle": {
+    "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/muenster-therme/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Rheinbad – 33-m-Halle",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Bädergesellschaft Düsseldorf mbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo-Fr 14:00-21:00",
+    "Sa,So 08:00-16:00"
+   ],
+   "quelle": {
+    "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/hallenbad-rheinbad/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Rheinbad – 50-m-Halle",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Bädergesellschaft Düsseldorf mbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo,Mi,Fr 06:00-08:00",
+    "Mo,Mi,Fr 08:00-14:00 teil 0.5 nur 25-m-Bahn",
+    "Mo,Mi,Fr 17:00-19:00",
+    "Di,Do 06:00-14:00",
+    "Di,Do 17:00-19:00",
+    "Sa,So 08:00-15:00"
+   ],
+   "quelle": {
+    "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/hallenbad-rheinbad/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Schwimm' in Bilk",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Bädergesellschaft Düsseldorf mbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo-Fr 06:30-21:00",
+    "Sa,So 08:00-16:00"
+   ],
+   "quelle": {
+    "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/schwimm-in-bilk/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Familienbad Niederheid",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Bädergesellschaft Düsseldorf mbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 06:00-08:00",
+    "Di,Do 06:00-21:00",
+    "Mi,Fr 14:00-21:00",
+    "Sa,So 11:00-19:00"
+   ],
+   "quelle": {
+    "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/familienbad-niederheid/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Gartenhallenbad Unterrath",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Bädergesellschaft Düsseldorf mbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Di-Fr 07:00-21:00",
+    "Sa,So 10:00-18:00"
+   ],
+   "quelle": {
+    "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/gartenhallenbad-unterrath/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Badehaus Benrath – Sportbereich",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Bädergesellschaft Düsseldorf mbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo,Di,Do 08:00-21:00",
+    "Mi,Fr 06:00-21:00",
+    "Sa,So 09:00-17:00"
+   ],
+   "quelle": {
+    "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/badehaus-benrath/",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Badehaus Benrath – Vitalbereich",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Bädergesellschaft Düsseldorf mbH",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo-Fr 10:00-21:00",
+    "Sa,So 09:00-17:00"
+   ],
+   "quelle": {
+    "url": "https://www.baeder-duesseldorf.de/oeffnungszeiten/hallenbaeder/badehaus-benrath/",
+    "abgerufen": "2026-11-04"
+   },
+   "freizeitbad": true
+  }
+ ]
+}

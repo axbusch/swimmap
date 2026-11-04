@@ -64,10 +64,18 @@ for mode in ("walk", "bike", "pt"):
 print("Raster:", len(cells), "Zellen, Modi:", list(raster["tt"]))
 
 # --- NRW-Vergleich ----------------------------------------------------------
-nrw_src = json.loads((DATA / "nrw_staedte.json").read_text(encoding="utf-8"))
+METHODIK_NRW = (
+    "Je Stadt werden nur kommunale Hallenbäder (Stadt oder städtische Bäder-/Stadtwerkegesellschaft) mit ihren "
+    "Zeiten für allgemeines öffentliches Schwimmen im regulären Winter-Wochenplan erfasst – nach denselben Regeln "
+    "wie für Münster. Reine Freizeitbereiche (Wellenbad, Rutschenwelt) werden erfasst, zählen aber nicht zur "
+    "Kernkennzahl; die Sportbecken von Freizeitbädern zählen.")
+nrw_src = {}
+for f in sorted((DATA / "staedte").glob("*.json")):
+    e = json.loads(f.read_text(encoding="utf-8"))
+    nrw_src[e["ags"]] = e
 staedte = []
 for ags, (name, ew) in pop.items():
-    eintrag = nrw_src["staedte"].get(ags, {"status": "offen"})
+    eintrag = nrw_src.get(ags, {"status": "offen"})
     out = {"ags": ags, "stadt": name, "einwohner": ew, "status": eintrag.get("status", "offen"),
            "hinweis": eintrag.get("hinweis", ""), "stand": eintrag.get("stand")}
     if ags == "05515":
@@ -84,7 +92,7 @@ for ags, (name, ew) in pop.items():
                           "quelle": b.get("quelle", {}).get("url")}
                          for b in baeder if FILTER["kern"](b)]
     staedte.append(out)
-(WEB / "nrw.json").write_text(json.dumps({"staedte": staedte, "methodik": nrw_src.get("methodik", "")},
+(WEB / "nrw.json").write_text(json.dumps({"staedte": staedte, "methodik": METHODIK_NRW},
                                          ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 print("NRW:", sum(1 for s in staedte if s["status"] != "offen"), "von", len(staedte), "Städten erfasst")
 

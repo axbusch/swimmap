@@ -33,11 +33,60 @@ def slot_dauer(s: dict) -> float:
     return max(0.0, _h(s["bis"]) - _h(s["von"]))
 
 
+def parse_slot(s) -> dict:
+    """Slot als dict oder Kurzform-String:
+    'Mo 06:30-22:00'                     öffentlich
+    'Mi 08:00-13:00 teil 0.28'           Teilfläche (Flächenanteil 0,28)
+    'Sa 10:00-12:00 ziel Frauenschwimmen' Zielgruppe (+ Hinweis)
+    'Sa 10:00-16:00 x0.5'                nicht jede Woche (Häufigkeit)
+    Mehrere Tage: 'Mo,Di,Mi 06:30-08:00' bzw. 'Mo-Fr 06:30-08:00'.
+    """
+    if isinstance(s, dict):
+        return [s]
+    parts = s.split()
+    tage_raw, zeit, rest = parts[0], parts[1], parts[2:]
+    if "-" in tage_raw and "," not in tage_raw:
+        a, b = tage_raw.split("-")
+        tage = TAGE[TAGE.index(a): TAGE.index(b) + 1]
+    else:
+        tage = tage_raw.split(",")
+    von, bis = zeit.split("-")
+    d = {"von": von, "bis": bis, "art": "oeffentlich"}
+    i = 0
+    hinweis = []
+    while i < len(rest):
+        tok = rest[i]
+        if tok == "teil":
+            d["art"] = "teiloeffentlich"
+            if i + 1 < len(rest):
+                try:
+                    d["flaechenanteil"] = float(rest[i + 1]); i += 1
+                except ValueError:
+                    pass
+        elif tok == "ziel":
+            d["art"] = "zielgruppe"
+        elif tok.startswith("x"):
+            try:
+                d["haeufigkeit"] = float(tok[1:])
+            except ValueError:
+                hinweis.append(tok)
+        else:
+            hinweis.append(tok)
+        i += 1
+    if hinweis:
+        d["hinweis"] = " ".join(hinweis)
+    return [dict(d, tag=t) for t in tage]
+
+
+def slots_of(bad: dict) -> list[dict]:
+    return [x for s in bad.get("slots", []) for x in parse_slot(s)]
+
+
 def bad_kennzahlen(bad: dict) -> dict:
     flaeche = bad.get("wasserflaeche_m2")
     h = hv = hz = wfh = 0.0
     pro_tag = {t: 0.0 for t in TAGE}
-    for s in bad.get("slots", []):
+    for s in slots_of(bad):
         d = slot_dauer(s) * s.get("haeufigkeit", 1.0)
         art = s["art"]
         if art in OEFFENTLICH:
