@@ -1,13 +1,14 @@
-# Schwimmzeiten in Münster
+# Schwimmzeiten in Münster und den NRW-Großstädten
 
-Interaktive Karte der öffentlichen Schwimmbäder in Münster (Westfalen) mit
+Interaktive Karte der öffentlichen Schwimmbäder in Münster (Westfalen) und 25 weiteren NRW-Großstädten mit
 
 - **öffentlichen Schwimmzeiten** je Bad (Stunden pro Woche, Wochenplan),
 - **Einzugsbereichen** zu Fuß, mit dem Rad und mit dem ÖPNV (Reisezeit auf 100-m-Raster),
 - **Kennzahlen** zum Vergleich mit den übrigen NRW-Großstädten (Stunden je 10.000 Einwohner u. a.).
 
 Die Webseite liegt in [`docs/`](docs/) und ist eine statische Seite (Leaflet, keine API-Schlüssel). Zum
-Anschauen genügt ein Doppelklick auf `docs/index.html`, weil die Daten als `docs/data/bundle.js` eingebettet sind.
+Anschauen genügt ein Doppelklick auf `docs/index.html`: Die Daten liegen als Skriptdateien vor (`docs/data/index.js`
+und je Stadt `docs/data/st/<stadt>.js`, nachgeladen bei Auswahl der Stadt).
 Veröffentlichen lässt sie sich z. B. über GitHub Pages (Quelle: Branch `master`, Ordner `/docs`). Alternativ
 lokal mit einem Webserver:
 
@@ -61,12 +62,16 @@ curl -L -o cache/zensus/z22_pop.zip https://www.destatis.de/static/DE/zensus/git
 curl -L -o cache/gtfs/de_nv.zip https://download.gtfs.de/germany/nv_free/latest.zip
 
 cd scripts
-python 01_grundlagen.py          # Stadtgrenze, Raster, Wegenetze
-python 02_gtfs_filter.py 2026-11-10   # Fahrplan Raum Münster, Stichtag (Dienstag)
-python 03_erreichbarkeit.py      # Reisezeiten Fuß/Rad/ÖPNV (einige Minuten)
-python 04_build_web.py           # docs/data/*.json
+python 10_geocode.py             # Koordinaten der Bäder (Nominatim), nur für neue Bäder
+python 02_gtfs_filter.py 2026-11-10   # Fahrplan NRW, Stichtag (Dienstag)
+python 01_grundlagen.py all      # je Stadt: Grenze, Zensus-Raster, Fuß-/Radnetz (lange, Overpass)
+python 03_erreichbarkeit.py all  # je Stadt: Reisezeiten Fuß/Rad/ÖPNV
+python 04_build_web.py           # docs/data/index.js, docs/data/st/*.js, nrw.json
 python metrics.py                # Kennzahlen Münster auf der Konsole
 ```
+
+Einzelne Städte lassen sich mit ihrem Gemeindeschlüssel rechnen, z. B. `python 01_grundlagen.py 05315` (Köln).
+Zwischenergebnisse liegen in `cache/st/<stadt>/`.
 
 Hinweis: Der GTFS-Feed gilt jeweils nur einige Wochen. Der Stichtag muss im Gültigkeitszeitraum liegen.
 
@@ -75,7 +80,7 @@ Hinweis: Der GTFS-Feed gilt jeweils nur einige Wochen. Der Stichtag muss im Gül
 Öffnungszeiten ändern sich häufig (Ferien, Revisionen, Personalmangel). Zum Aktualisieren die Slots in
 `data/muenster_baeder.json` bzw. `data/staedte/<AGS>_<stadt>.json` anpassen, `stand` und `quelle.abgerufen` setzen und
 `scripts/04_build_web.py` ausführen. Die Reisezeiten müssen nur neu berechnet werden, wenn Bäder hinzukommen oder
-wegfallen.
+wegfallen (`10_geocode.py`, dann `03_erreichbarkeit.py <AGS>`), und wenn der Fahrplan abläuft (ÖPNV, `02` und `03 --modes=pt --force`).
 
 ## Stand NRW-Vergleich
 

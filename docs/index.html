@@ -3,27 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Schwimmzeiten Münster</title>
-  <meta name="description" content="Öffentliche Schwimmzeiten der Bäder in Münster, Einzugsbereiche zu Fuß, mit dem Rad und mit dem ÖPNV sowie ein Vergleich mit den NRW-Großstädten.">
+  <title>Schwimmzeiten NRW</title>
+  <meta name="description" content="Öffentliche Schwimmzeiten der kommunalen Bäder in Münster und den NRW-Großstädten, Einzugsbereiche zu Fuß, mit dem Rad und mit dem ÖPNV sowie ein Städtevergleich.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="top">
-    <h1>Schwimmzeiten in Münster</h1>
+    <h1 id="title">Schwimmzeiten</h1>
+    <label class="citysel">Stadt
+      <select id="city" aria-label="Stadt auswählen"></select>
+    </label>
     <span class="sub" id="stand">Öffentliche Schwimmzeiten, Einzugsbereiche und NRW-Vergleich</span>
   </header>
   <div class="layout">
-    <div id="map" role="region" aria-label="Karte der Bäder in Münster"></div>
+    <div id="map" role="region" aria-label="Karte der Bäder"></div>
     <aside class="panel">
       <div class="tabs" role="tablist">
-        <button role="tab" id="tab-ms" aria-controls="p-ms" aria-selected="true">Münster</button>
+        <button role="tab" id="tab-ms" aria-controls="p-ms" aria-selected="true">Stadt</button>
         <button role="tab" id="tab-nrw" aria-controls="p-nrw" aria-selected="false">NRW-Vergleich</button>
         <button role="tab" id="tab-meth" aria-controls="p-meth" aria-selected="false">Methodik</button>
       </div>
 
       <section class="tabpanel" id="p-ms" role="tabpanel" aria-labelledby="tab-ms">
         <div class="kpis" id="kpis"></div>
+        <div id="city-note"></div>
 
         <div class="ctrl">
           <div class="lbl">Bäder</div>
@@ -48,8 +52,8 @@
       </section>
 
       <section class="tabpanel" id="p-nrw" role="tabpanel" aria-labelledby="tab-nrw" hidden>
-        <h2>Münster im Vergleich der NRW-Großstädte</h2>
-        <p class="note">Nur kommunale Hallenbäder, allgemeines öffentliches Schwimmen, regulärer Winter-Wochenplan. Einwohner: IT.NRW, 31.12.2025.</p>
+        <h2>Vergleich der NRW-Großstädte</h2>
+        <p class="note">Nur kommunale Hallenbäder, allgemeines öffentliches Schwimmen, regulärer Winter-Wochenplan. Einwohner: IT.NRW, 31.12.2025. Klick auf eine Stadt öffnet ihre Karte.</p>
         <div class="ctrl">
           <div class="lbl">Kennzahl</div>
           <div class="seg" id="metric" role="group" aria-label="Kennzahl"></div>
@@ -69,7 +73,7 @@
     </aside>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-  <script src="data/bundle.js"></script>
+  <script src="data/index.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
