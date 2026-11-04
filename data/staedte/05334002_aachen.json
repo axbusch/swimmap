@@ -1,0 +1,77 @@
+{
+ "ags": "05334002",
+ "stadt": "Aachen",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Offizielle Übersicht 'angepasste Öffnungszeiten aller städtischen Schwimmbäder ab 14.09.2026'. Ulla-Klinger-Halle wegen Deckensanierung bis vsl. Februar 2027 geschlossen (kein Regelplan veröffentlicht, 0 h). Osthalle nicht mehr im öffentlichen Angebot. Spiel-/Flossenstunden innerhalb der Öffnungszeit zählen als öffentlich. Wasserflächen nicht veröffentlicht.",
+ "baeder": [
+  {
+   "name": "Elisabethhalle",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadt Aachen, Fachbereich Sport",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 06:30-13:00",
+    "Di 06:30-21:00",
+    "Do 06:30-13:00",
+    "Fr 06:30-21:00",
+    "Sa 06:30-12:00"
+   ],
+   "quelle": {
+    "url": "https://www.aachen.de/in-aachen-leben/sportportal/schwimmbaeder/oeffnungszeiten-schwimmbaeder-260914.pdf",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Schwimmhalle Süd",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadt Aachen, Fachbereich Sport",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo-Mi 06:30-21:00",
+    "Do 12:00-21:00",
+    "Fr 06:30-21:00",
+    "Sa,So 07:00-20:00"
+   ],
+   "quelle": {
+    "url": "https://www.aachen.de/in-aachen-leben/sportportal/schwimmbaeder/oeffnungszeiten-schwimmbaeder-260914.pdf",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Schwimmhalle Brand",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadt Aachen, Fachbereich Sport",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 06:30-17:00",
+    "Di 12:00-18:00",
+    "Mi 06:30-22:00",
+    "Do 06:30-17:00",
+    "Fr 06:30-18:00",
+    "Sa 07:00-16:00",
+    "So 08:00-13:30"
+   ],
+   "quelle": {
+    "url": "https://www.aachen.de/in-aachen-leben/sportportal/schwimmbaeder/oeffnungszeiten-schwimmbaeder-260914.pdf",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Ulla-Klinger-Halle",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadt Aachen, Fachbereich Sport",
+   "wasserflaeche_m2": null,
+   "slots": [],
+   "quelle": {
+    "url": "https://www.aachen.de/in-aachen-leben/sportportal/schwimmbaeder/oeffnungszeiten-schwimmbaeder-260914.pdf",
+    "abgerufen": "2026-11-04"
+   },
+   "hinweis": "Deckensanierung, geschlossen bis vsl. Februar 2027"
+  }
+ ]
+}

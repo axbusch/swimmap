@@ -1,0 +1,48 @@
+{
+ "ags": "05119",
+ "stadt": "Oberhausen",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Servicebetriebe Oberhausen. Laut Betreiber stehen der Öffentlichkeit während der gesamten Öffnungszeit nur 3 Bahnen zur Verfügung (Oberhausen: 3 von 6, Sterkrade: 3 von 5) – als Teilfläche erfasst. Sonntage nur zweimal im Monat (Faktor 0,46). Aquapark (privat) nicht gezählt. Wasserflächen nicht veröffentlicht.",
+ "baeder": [
+  {
+   "name": "Hallenbad Oberhausen",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Servicebetriebe Oberhausen (SBO, städtisch)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 06:30-17:00 teil 0.5",
+    "Di 06:30-16:30 teil 0.5",
+    "Mi 06:30-17:00 teil 0.5",
+    "Do 06:30-22:00 teil 0.5",
+    "Fr 06:30-17:00 teil 0.5",
+    "Sa 08:00-15:00 teil 0.5",
+    "So 08:00-15:00 teil 0.5 x0.46 2./4. Sonntag"
+   ],
+   "quelle": {
+    "url": "https://sbo.oberhausen.de/dienstleistungen/schwimmbaeder/hallenbad-oberhausen",
+    "abgerufen": "2026-11-04"
+   }
+  },
+  {
+   "name": "Hallenbad Sterkrade",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Servicebetriebe Oberhausen (SBO, städtisch)",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 06:30-16:30 teil 0.6",
+    "Di 06:30-17:00 teil 0.6",
+    "Mi 06:30-22:00 teil 0.6",
+    "Do,Fr 06:30-17:00 teil 0.6",
+    "Sa 08:00-15:00 teil 0.6",
+    "So 08:00-15:00 teil 0.6 x0.46 1./3. Sonntag"
+   ],
+   "quelle": {
+    "url": "https://sbo.oberhausen.de/dienstleistungen/schwimmbaeder/hallenbad-sterkrade",
+    "abgerufen": "2026-11-04"
+   }
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "ags": "05114",
+ "stadt": "Krefeld",
+ "status": "erfasst",
+ "stand": "2026-11-04",
+ "hinweis": "Laut Stadt Krefeld gibt es nur im Badezentrum Bockum und im Bad am Stadtpark Fischeln ein öffentliches Schwimmangebot; die Hallenbäder Uerdingen und die Lehrschwimmbäder (Gartenstadt, Linn) dienen Schulen/Vereinen. Zeiten ab 21.09.2026. Wasserflächen nicht veröffentlicht.",
+ "baeder": [
+  {
+   "name": "Badezentrum Bockum",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadt Krefeld, Fachbereich Sport und Sportförderung",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo 14:30-21:00",
+    "Di-Fr 06:30-08:00",
+    "Di,Do,Fr 14:30-19:00",
+    "Mi 14:30-21:00",
+    "Sa,So 08:00-16:00"
+   ],
+   "quelle": {
+    "url": "https://www.krefeld.de/schwimmen",
+    "abgerufen": "2026-11-04"
+   },
+   "ausstattung": "50-m-Sportbecken, Sprunganlage bis 7 m, Lehrschwimmbecken"
+  },
+  {
+   "name": "Bad am Stadtpark Fischeln",
+   "typ": "hallenbad",
+   "kategorie": "staedtisch",
+   "traeger": "Stadt Krefeld, Fachbereich Sport und Sportförderung",
+   "wasserflaeche_m2": null,
+   "slots": [
+    "Mo-Mi 06:00-08:00",
+    "Fr 06:00-08:00",
+    "Mo,Do 14:30-20:00",
+    "Di,Mi,Fr 14:30-17:00",
+    "Sa 08:00-13:00"
+   ],
+   "quelle": {
+    "url": "https://www.krefeld.de/schwimmen",
+    "abgerufen": "2026-11-04"
+   },
+   "ausstattung": "Variobecken 25 m"
+  }
+ ]
+}
