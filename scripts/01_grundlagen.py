@@ -1,6 +1,6 @@
 """Grundlagen je Stadt: Stadtgrenze, Bevölkerungsraster (Zensus 2022, 100 m), Wegenetze.
 
-  python 01_grundlagen.py <ags|all> [...]
+  python 01_grundlagen.py <ags|all> [...] [--ohne-netze]
 
 Ausgaben je Stadt in cache/st/<slug>/:
   grenze.gpkg, grenze.geojson (vereinfacht, WGS84), raster.csv (x, y, lon, lat, ew),
@@ -61,7 +61,7 @@ def grenze_holen(ags: str, name: str):
     return g[["geometry"]].to_crs(3035)
 
 
-def stadt(ags: str, pop: pd.DataFrame):
+def stadt(ags: str, pop: pd.DataFrame, netze: bool = True):
     name = einwohner()[ags][0]
     out = CACHE / "st" / slugify(name)
     out.mkdir(parents=True, exist_ok=True)
@@ -90,6 +90,8 @@ def stadt(ags: str, pop: pd.DataFrame):
         cells[["x", "y", "lon", "lat", "ew"]].to_csv(out / "raster.csv", index=False)
         print(f"  Zellen {len(cells)}, Einwohner (Zensus) {int(cells.ew.sum())}", flush=True)
 
+    if not netze:
+        return
     puffer = gpd.GeoSeries([poly.buffer(3000)], crs=3035).to_crs(4326).iloc[0]
     for typ in ("walk", "bike"):
         f = out / f"net_{typ}.graphml"
@@ -120,11 +122,12 @@ def netz_laden(poly, typ):
 
 
 if __name__ == "__main__":
-    args = sys.argv[1:]
+    netze = "--ohne-netze" not in sys.argv  # Netze alternativ aus OSM-Extrakt: 01b_netze_pbf.py
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
     todo = alle_mit_daten() if (not args or args == ["all"]) else args
     pop = zensus_nrw()
     for ags in todo:
         try:
-            stadt(ags, pop)
+            stadt(ags, pop, netze)
         except Exception as e:  # noqa: BLE001
             print(f"  FEHLER {ags}: {e}", flush=True)
