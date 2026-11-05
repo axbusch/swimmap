@@ -15,6 +15,7 @@
       <select id="city" aria-label="Stadt auswählen"></select>
     </label>
     <span class="sub" id="stand">Öffentliche Schwimmzeiten, Einzugsbereiche und NRW-Vergleich</span>
+    <a class="implink" href="#tab=info" id="impressum-link">Impressum</a>
   </header>
   <div class="layout">
     <div id="map" role="region" aria-label="Karte der Bäder"></div>
@@ -23,6 +24,7 @@
         <button role="tab" id="tab-ms" aria-controls="p-ms" aria-selected="true">Stadt</button>
         <button role="tab" id="tab-nrw" aria-controls="p-nrw" aria-selected="false">NRW-Vergleich</button>
         <button role="tab" id="tab-meth" aria-controls="p-meth" aria-selected="false">Methodik</button>
+        <button role="tab" id="tab-info" aria-controls="p-info" aria-selected="false">Info</button>
       </div>
 
       <section class="tabpanel" id="p-ms" role="tabpanel" aria-labelledby="tab-ms">
@@ -77,10 +79,52 @@
       <section class="tabpanel" id="p-meth" role="tabpanel" aria-labelledby="tab-meth" hidden>
         <div id="methodik"></div>
       </section>
+
+      <section class="tabpanel" id="p-info" role="tabpanel" aria-labelledby="tab-info" hidden>
+        <p class="note">Projektbeschreibung aus der <a href="https://github.com/axbusch/swimmap#readme" target="_blank" rel="noopener">README im Repository</a>. Impressum und Kontakt <a href="#impressum" id="to-impressum">weiter unten</a>.</p>
+        <div class="readme" id="readme"></div>
+
+        <!-- ============================================================
+             IMPRESSUM – Platzhalter [in eckigen Klammern] ersetzen
+             ============================================================ -->
+        <section class="impressum" id="impressum">
+          <h2>Impressum</h2>
+          <p><b>Angaben gemäß § 5 DDG</b><br>
+            <span class="ph">[Vorname Nachname]</span><br>
+            <span class="ph">[Straße Hausnummer]</span><br>
+            <span class="ph">[PLZ Ort]</span></p>
+          <p><b>Kontakt</b><br>
+            E-Mail: <span class="ph">[E-Mail-Adresse]</span><br>
+            <span class="ph">[optional: Telefon / Mastodon / weitere Kontaktmöglichkeit]</span></p>
+          <p><b>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</b><br>
+            <span class="ph">[Vorname Nachname]</span>, Anschrift wie oben</p>
+          <p><b>Hinweis zu den Daten</b><br>
+            Private, nicht-kommerzielle Auswertung öffentlich zugänglicher Daten. Öffnungszeiten, Schließungen und
+            Einwohnerzahlen stammen aus den je Bad und Ereignis genannten Quellen (Stand siehe Kopfzeile). Trotz
+            sorgfältiger Erhebung keine Gewähr für Richtigkeit und Vollständigkeit – maßgeblich sind die Angaben der
+            Betreiber. Hinweise auf Fehler bitte an die oben genannte Adresse oder als
+            <a href="https://github.com/axbusch/swimmap/issues" target="_blank" rel="noopener">Issue im Repository</a>.</p>
+          <p><b>Haftung für Links</b><br>
+            Für Inhalte verlinkter externer Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+
+          <h2>Datenschutz</h2>
+          <p>Diese Seite setzt keine Cookies, verwendet kein Tracking und speichert keine Eingaben. Beim Aufruf werden
+            Inhalte von Drittanbietern geladen; dabei wird technisch bedingt Ihre IP-Adresse an diese übermittelt:</p>
+          <ul>
+            <li>Kartenkacheln: basemap.de (Bundesamt für Kartographie und Geodäsie) bzw. tile.openstreetmap.org (OpenStreetMap Foundation)</li>
+            <li>Kartenbibliothek Leaflet: cdnjs.cloudflare.com (Cloudflare, Inc.)</li>
+            <li>Hosting: <span class="ph">[Hoster, z. B. Cloudflare Pages oder GitHub Pages]</span> – der Hoster verarbeitet beim Aufruf technisch notwendige Zugriffsdaten (u. a. IP-Adresse, Zeitpunkt).</li>
+          </ul>
+          <p>Verantwortlich im Sinne der DSGVO: <span class="ph">[Vorname Nachname, Anschrift wie oben]</span>.
+            Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung sowie ein
+            Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde.</p>
+        </section>
+      </section>
     </aside>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="data/index.js"></script>
+  <script src="data/readme.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

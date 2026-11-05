@@ -9,7 +9,8 @@ Interaktive Karte der öffentlichen Schwimmbäder in Münster (Westfalen) und 25
 Die Webseite liegt in [`docs/`](docs/) und ist eine statische Seite (Leaflet, keine API-Schlüssel). Zum
 Anschauen genügt ein Doppelklick auf `docs/index.html`: Die Daten liegen als Skriptdateien vor (`docs/data/index.js`
 und je Stadt `docs/data/st/<stadt>.js`, nachgeladen bei Auswahl der Stadt).
-Veröffentlichen lässt sie sich z. B. über GitHub Pages (Quelle: Branch `master`, Ordner `/docs`). Alternativ
+Veröffentlichen lässt sie sich z. B. über GitHub Pages (Quelle: Branch `main`, Ordner `/docs`) oder Cloudflare Pages
+(Git-Anbindung, kein Build-Befehl, Ausgabeordner `docs`; jeder Push auf `main` wird automatisch veröffentlicht). Alternativ
 lokal mit einem Webserver:
 
 ```sh

@@ -153,6 +153,7 @@ async function init() {
   initControls(tab);
   renderNrw();
   renderMethodik();
+  renderInfo();
   await selectCity(state.city, { keepFocus: true });
 }
 
@@ -978,6 +979,19 @@ function renderMethodik() {
   <h2>Daten &amp; Code</h2>
   <p>Rohdaten mit Quellen: <a href="data/nrw.json">nrw.json</a> sowie je Stadt <code>data/st/&lt;stadt&gt;-baeder.json</code> (z. B. <a href="data/st/muenster-baeder.json">Münster</a>). Die Skripte zur Erhebung und Berechnung liegen im <a href="https://github.com/axbusch/swimmap" target="_blank" rel="noopener">Repository</a> (Ordner <code>scripts/</code>); ausführliche Projektbeschreibung und Anleitung zum Nachrechnen in der <a href="https://github.com/axbusch/swimmap#readme" target="_blank" rel="noopener">README</a>.</p>
   <p class="note">Kartengrundlage: basemap.de / BKG (CC BY 4.0) bzw. © OpenStreetMap-Mitwirkende (ODbL). Wegenetz und Lage der Bäder: OpenStreetMap (ODbL). ÖPNV: gtfs.de, DELFI e.V. (CC BY 4.0). Bevölkerung und Altersgruppen: Zensus 2022, Statistische Ämter des Bundes und der Länder (dl-de/by-2-0). Einwohner: IT.NRW (dl-de/by-2-0).</p>`;
+}
+
+function renderInfo() {
+  const el = document.getElementById('readme');
+  el.innerHTML = window.SWIMMAP_README || '<p class="note">README nicht gefunden.</p>';
+  el.querySelector('h1')?.remove();  // Titel steht schon in der Kopfzeile
+  const toImp = e => {
+    e.preventDefault();
+    document.getElementById('tab-info').click();
+    document.getElementById('impressum').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+  document.getElementById('impressum-link').addEventListener('click', toImp);
+  document.getElementById('to-impressum').addEventListener('click', toImp);
 }
 
 init().catch(err => {
