@@ -1003,9 +1003,10 @@ function renderInfo() {
     if (target) document.getElementById(target).scrollIntoView({ behavior: 'smooth', block: 'start' });
     else document.querySelector('.panel').scrollTop = 0;
   };
-  document.getElementById('impressum-link').addEventListener('click', go('tab-info', 'impressum'));
-  document.getElementById('to-impressum').addEventListener('click', go('tab-info', 'impressum'));
-  document.getElementById('to-methodik').addEventListener('click', go('tab-meth'));
+  // Links sind optional – fehlt einer im HTML, wird er einfach übergangen
+  document.getElementById('impressum-link')?.addEventListener('click', go('tab-info', 'impressum'));
+  document.getElementById('to-impressum')?.addEventListener('click', go('tab-info', 'impressum'));
+  document.getElementById('to-methodik')?.addEventListener('click', go('tab-meth'));
 }
 
 /* README-Abschnitte zur Datenherleitung für den Reiter „Methodik“ */
