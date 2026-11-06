@@ -199,8 +199,18 @@ function setCityChrome() {
   document.getElementById('title').textContent = `Schwimmzeiten in ${C.stadt}`;
   document.title = `Schwimmzeiten ${C.stadt}`;
   document.getElementById('tab-ms').textContent = C.stadt;
-  document.getElementById('stand').textContent =
-    `Öffentliche Schwimmzeiten, Einzugsbereiche und NRW-Vergleich · Stand ${fmtDate(C.stand)}`;
+  document.getElementById('stand').textContent = 'Öffentliche Schwimmzeiten, Einzugsbereiche und NRW-Vergleich';
+  const S = C.schliessungen;
+  const teile = [
+    `Öffnungszeiten: <b>${fmtDate(C.stand)}</b>`,
+    S ? `Schließungen: ${fmtDate(S.zeitraum.von)} – ${fmtDate(S.zeitraum.bis)}` : null,
+    'Einwohner: 31.12.2025 (IT.NRW)',
+    `ÖPNV-Fahrplan: ${fmtDate(INDEX.oepnv.stichtag)}`,
+  ].filter(Boolean);
+  const ds = document.getElementById('datastand');
+  ds.innerHTML = `Datenstand <b>${fmtDate(C.stand)}</b>`;
+  ds.title = teile.join(' · ').replace(/<[^>]+>/g, '');
+  document.getElementById('standline').innerHTML = `<span class="lbl">Datenstand ${esc(C.stadt)}</span> ${teile.join(' · ')}`;
   const h = document.getElementById('city-note');
   h.innerHTML = C.hinweis
     ? `<details><summary>Hinweise zur Datenlage in ${esc(C.stadt)}</summary><p class="note">${esc(C.hinweis)}</p></details>` : '';
@@ -856,6 +866,8 @@ function update() {
 /* NRW-Vergleich                                                       */
 /* ------------------------------------------------------------------ */
 function renderNrw() {
+  const stands = [...new Set(INDEX.staedte.filter(s => s.kennzahlen).map(s => s.stand))].sort();
+  document.getElementById('standline-nrw').innerHTML = `<span class="lbl">Datenstand</span> Öffnungszeiten aller Städte: <b>${stands.map(fmtDate).join(' – ')}</b> · Schließungen: 2025 (7 Städte) · Einwohner: 31.12.2025`;
   const m = METRICS[state.metric];
   document.getElementById('metric-note').textContent = m.note;
   const all = INDEX.staedte;

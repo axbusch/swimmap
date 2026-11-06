@@ -268,3 +268,14 @@ header.top .implink { margin-left: auto; font-size: 13px; color: var(--text-seco
 .impressum { margin-top: 28px; padding-top: 8px; border-top: 1px solid var(--border); font-size: 14px; scroll-margin-top: 72px; }
 .impressum h2 { font-size: 17px; }
 .impressum .ph { background: var(--warn-bg); color: var(--warn-ink); padding: 0 4px; border-radius: 4px; }
+
+/* Datenstand */
+header.top .datastand { font-size: 13px; padding: 3px 10px; border-radius: 999px; background: var(--warn-bg); color: var(--warn-ink); white-space: nowrap; cursor: help; }
+.standline { font-size: 13px; color: var(--text-secondary); margin: 0 0 10px; padding: 6px 10px; border-left: 3px solid var(--series-4); background: var(--surface-2); border-radius: 0 6px 6px 0; }
+.standline .lbl { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin-bottom: 2px; }
+.standline b { color: var(--text-primary); }
+@media (max-width: 600px) {
+  header.top { gap: 8px 12px; align-items: center; }
+  header.top .sub { display: none; }
+  header.top .implink { margin-left: 0; }
+}

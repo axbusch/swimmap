@@ -14,6 +14,7 @@
     <label class="citysel">Stadt
       <select id="city" aria-label="Stadt auswählen"></select>
     </label>
+    <span class="datastand" id="datastand">Datenstand –</span>
     <span class="sub" id="stand">Öffentliche Schwimmzeiten, Einzugsbereiche und NRW-Vergleich</span>
     <a class="implink" href="#tab=info" id="impressum-link">Impressum</a>
   </header>
@@ -28,6 +29,7 @@
       </div>
 
       <section class="tabpanel" id="p-ms" role="tabpanel" aria-labelledby="tab-ms">
+        <p class="standline" id="standline"></p>
         <div class="kpis" id="kpis"></div>
         <div id="city-note"></div>
 
@@ -62,6 +64,7 @@
 
       <section class="tabpanel" id="p-nrw" role="tabpanel" aria-labelledby="tab-nrw" hidden>
         <h2>Vergleich der NRW-Großstädte</h2>
+        <p class="standline" id="standline-nrw"></p>
         <p class="note">Nur kommunale Hallenbäder, allgemeines öffentliches Schwimmen, regulärer Winter-Wochenplan. Einwohner: IT.NRW, 31.12.2025. Klick auf eine Stadt öffnet ihre Karte.</p>
         <div class="ctrl">
           <div class="lbl">Kennzahl</div>
