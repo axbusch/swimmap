@@ -120,13 +120,23 @@ for ags, (name, ew) in einwohner().items():
                               + json.dumps(index, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
 (WEB / "nrw.json").write_text(json.dumps({"staedte": nrw_rows, "methodik": METHODIK_NRW}, ensure_ascii=False,
                                          indent=1), encoding="utf-8")
-# README als HTML für den Reiter „Info“ (relative Links zeigen auf GitHub)
+# README als HTML, aufgeteilt nach Abschnitten (## …); die Webseite zeigt die Abschnitte zur Datenherleitung im
+# Reiter „Methodik“. Relative Links zeigen auf GitHub.
 REPO = "https://github.com/axbusch/swimmap/blob/main/"
-html = markdown.markdown((ROOT / "README.md").read_text(encoding="utf-8"), extensions=["tables", "fenced_code"])
-html = re.sub(r'href="(?!https?:|#|mailto:)([^"]+)"', lambda m: f'href="{REPO}{m.group(1)}"', html)
-html = re.sub(r'href="(https?:[^"]+)"', r'href="\1" target="_blank" rel="noopener"', html)
+
+
+def md_html(text):
+    h = markdown.markdown(text, extensions=["tables", "fenced_code"])
+    h = re.sub(r'href="(?!https?:|#|mailto:)([^"]+)"', lambda m: f'href="{REPO}{m.group(1)}"', h)
+    return re.sub(r'href="(https?:[^"]+)"', r'href="\1" target="_blank" rel="noopener"', h)
+
+
+teile = re.split(r"^## +(.+)$", (ROOT / "README.md").read_text(encoding="utf-8"), flags=re.M)
+readme = {"intro": md_html(re.sub(r"^# .+\n", "", teile[0], count=1)),
+          "abschnitte": [{"titel": teile[i].strip(), "html": md_html(teile[i + 1])} for i in range(1, len(teile), 2)]}
 (WEB / "readme.js").write_text("/* erzeugt von scripts/04_build_web.py aus README.md */\nwindow.SWIMMAP_README = "
-                               + json.dumps(html, ensure_ascii=False) + ";\n", encoding="utf-8")
+                               + json.dumps(readme, ensure_ascii=False) + ";\n", encoding="utf-8")
+
 # Altlasten des Ein-Stadt-Formats entfernen
 for old in ("bundle.js", "muenster.json", "raster.json", "grenze.geojson"):
     (WEB / old).unlink(missing_ok=True)

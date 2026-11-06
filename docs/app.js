@@ -932,6 +932,7 @@ const SCHL_NAMEN = { defekt: 'Defekt', revision: 'Revision', ferien: 'Ferien', s
 function renderMethodik() {
   const ms = INDEX.staedte.find(s => s.slug === 'muenster');
   const k = ms.kennzahlen, oe = INDEX.oepnv;
+  const rd = readmeMethodik();
   document.getElementById('methodik').innerHTML = `
   <h2>Was gezählt wird</h2>
   <p>Erfasst sind die <b>Zeiten für allgemeines öffentliches Schwimmen</b>, also Zeiten, in denen jede Person mit Eintrittskarte schwimmen kann. Schul-, Vereins- und Kurszeiten zählen nicht. Grundlage ist der reguläre Wochenplan im Winterhalbjahr 2026/27, Stand ${fmtDate(ms.stand)}. Ferien- und Feiertagsregelungen sind nicht eingerechnet.</p>
@@ -988,22 +989,37 @@ function renderMethodik() {
     <li>Münster: Die Wasserfläche des Südbads ist aus Planunterlagen geschätzt (≈ 444 m²). Die Zeiten des Bürgerbads Handorf stammen aus einer Drittquelle, für das Freibad Sudmühle sind keine Zeiten veröffentlicht.</li>
     <li>Im Sommer entfällt das öffentliche Schwimmen in mehreren Hallenbädern. Dann übernehmen die Freibäder. Der Vergleich bezieht sich auf den Winterbetrieb.</li>
   </ul>
+  ${rd.sicht}
   <h2>Daten &amp; Code</h2>
-  <p>Rohdaten mit Quellen: <a href="data/nrw.json">nrw.json</a> sowie je Stadt <code>data/st/&lt;stadt&gt;-baeder.json</code> (z. B. <a href="data/st/muenster-baeder.json">Münster</a>). Die Skripte zur Erhebung und Berechnung liegen im <a href="https://github.com/axbusch/swimmap" target="_blank" rel="noopener">Repository</a> (Ordner <code>scripts/</code>); ausführliche Projektbeschreibung und Anleitung zum Nachrechnen in der <a href="https://github.com/axbusch/swimmap#readme" target="_blank" rel="noopener">README</a>.</p>
-  <p class="note">Kartengrundlage: basemap.de / BKG (CC BY 4.0) bzw. © OpenStreetMap-Mitwirkende (ODbL). Wegenetz und Lage der Bäder: OpenStreetMap (ODbL). ÖPNV: gtfs.de, DELFI e.V. (CC BY 4.0). Bevölkerung und Altersgruppen: Zensus 2022, Statistische Ämter des Bundes und der Länder (dl-de/by-2-0). Einwohner: IT.NRW (dl-de/by-2-0).</p>`;
+  <p>Rohdaten mit Quellen: <a href="data/nrw.json">nrw.json</a> sowie je Stadt <code>data/st/&lt;stadt&gt;-baeder.json</code> (z. B. <a href="data/st/muenster-baeder.json">Münster</a>). Die Skripte zur Erhebung und Berechnung liegen im <a href="https://github.com/axbusch/swimmap" target="_blank" rel="noopener">Repository</a> (Ordner <code>scripts/</code>); Anleitung zum Nachrechnen unten und in der <a href="https://github.com/axbusch/swimmap#readme" target="_blank" rel="noopener">README</a>.</p>
+  <p class="note">Kartengrundlage: basemap.de / BKG (CC BY 4.0) bzw. © OpenStreetMap-Mitwirkende (ODbL). Wegenetz und Lage der Bäder: OpenStreetMap (ODbL). ÖPNV: gtfs.de, DELFI e.V. (CC BY 4.0). Bevölkerung und Altersgruppen: Zensus 2022, Statistische Ämter des Bundes und der Länder (dl-de/by-2-0). Einwohner: IT.NRW (dl-de/by-2-0).</p>
+  ${rd.technik}`;
 }
 
 function renderInfo() {
-  const el = document.getElementById('readme');
-  el.innerHTML = window.SWIMMAP_README || '<p class="note">README nicht gefunden.</p>';
-  el.querySelector('h1')?.remove();  // Titel steht schon in der Kopfzeile
-  const toImp = e => {
+  const go = (tab, target) => e => {
     e.preventDefault();
-    document.getElementById('tab-info').click();
-    document.getElementById('impressum').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.getElementById(tab).click();
+    if (target) document.getElementById(target).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    else document.querySelector('.panel').scrollTop = 0;
   };
-  document.getElementById('impressum-link').addEventListener('click', toImp);
-  document.getElementById('to-impressum').addEventListener('click', toImp);
+  document.getElementById('impressum-link').addEventListener('click', go('tab-info', 'impressum'));
+  document.getElementById('to-impressum').addEventListener('click', go('tab-info', 'impressum'));
+  document.getElementById('to-methodik').addEventListener('click', go('tab-meth'));
+}
+
+/* README-Abschnitte zur Datenherleitung für den Reiter „Methodik“ */
+const README_SICHTBAR = ['Daten', 'Stand NRW-Vergleich'];
+const README_AUSLASSEN = ['Methodik in Kürze'];  // steht ausführlicher im Reiter
+function readmeMethodik() {
+  const R = window.SWIMMAP_README;
+  if (!R) return { sicht: '', technik: '' };
+  const demote = h => h.replace(/<(\/?)h([1-5])>/g, (m, s, n) => `<${s}h${Math.min(6, +n + 1)}>`);
+  const sicht = R.abschnitte.filter(a => README_SICHTBAR.includes(a.titel));
+  const technik = R.abschnitte.filter(a => !README_SICHTBAR.includes(a.titel) && !README_AUSLASSEN.includes(a.titel));
+  return { sicht: sicht.map(a => `<h2>${esc(a.titel === 'Daten' ? 'Datenquellen' : a.titel)}</h2><div class="readme">${demote(a.html)}</div>`).join(''),
+    technik: technik.length ? `<details class="readme-tech"><summary>Für Nachrechner: Skripte, Datenformate, Aktualisierung</summary>
+      <div class="readme">${technik.map(a => `<h3>${esc(a.titel)}</h3>${demote(demote(a.html))}`).join('')}</div></details>` : '' };
 }
 
 init().catch(err => {

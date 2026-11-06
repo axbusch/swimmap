@@ -279,3 +279,6 @@ header.top .datastand { font-size: 13px; padding: 3px 10px; border-radius: 999px
   header.top .sub { display: none; }
   header.top .implink { margin-left: 0; }
 }
+.readme-tech { margin-top: 18px; }
+.readme-tech summary { font-weight: 600; cursor: pointer; }
+.readme a { overflow-wrap: anywhere; }
